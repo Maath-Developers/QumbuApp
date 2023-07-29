@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Qumbu_Community_Health_Care_Center</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    @* <link rel="stylesheet" href="~/Qumbu_Community_Health_Care_Center.styles.css" asp-append-version="true" />*@
+</head>
+<body>
+    <header>
+        <div id="header">
+            <img width="110" height="75" src="~/css/LOGO.png" alt="" />
+
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="fa fa-bars"></span> Menu
+                </button>
+                <div class="order-lg-last">
+                   
+                    <a class="btn btn-success" id="login" asp-area="Identity" asp-page="/Account/Login">Login</a>
+                    <a class="btn btn-success" id="login" asp-area="Identity" asp-page="/Account/Register">Register</a>
+                </div>
+                <div class="collapse navbar-collapse" id="ftco-nav">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active"><a class="nav-link" asp-controller="Home" asp-action="Index">Home</a></li>
+                        <li class="nav-item"><a asp-controller="Home" asp-action="Index" class="nav-link">About us</a></li>
+                        <li class="nav-item"><a asp-controller="Home" asp-action="Index" class="nav-link">Team</a></li>
+                        <li class="nav-item"><a asp-controller="Home" asp-action="Index" class="nav-link">Services</a></li>
+                        <li class="nav-item"><a asp-controller="Home" asp-action="Index" class="nav-link">Departments</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+      
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+

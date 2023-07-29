@@ -1,0 +1,78 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using Qumbu_Community_Health_Care_Center.Areas.Identity.Data
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+<style>
+    .col-2 {
+        background: rgba( 86, 89, 209, 0.2 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 16.5px );
+        -webkit-backdrop-filter: blur( 16.5px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        padding: 10px;
+        text-align: center;
+        margin-right: 10px; /* Add margin between div containers */
+    }
+
+        /* Remove right margin from the last .col-2 element */
+        .col-2:last-child {
+            margin-right: 0;
+        }
+</style>
+<div class="container mt-3">
+    <div class="row">
+        @if(User.IsInRole("Patient"))
+        {
+            <div class="col-2">
+                <p>
+                    <a class="nav-link text-dark" asp-controller="Vaccs" asp-action="Patient">Vaccination</a>
+                </p>
+            </div>
+            <div class="col-2">
+                <a class="nav-link text-dark" asp-controller="FamilyPlan" asp-action="Patient">Family_Plan</a>
+            </div>
+            <div class="col-2">
+                <a class="nav-link text-dark" asp-controller="PreNatalCare" asp-action="Patient">Pre-Natal_Care</a>
+            </div>
+            <div class="col-2">
+                <p>
+                    <a class="nav-link text-dark" asp-controller="Counseller" asp-action="Patient">Counselling</a>
+                </p>
+            </div>
+            <div class="col-2">
+                <p>
+                    <a class="nav-link text-dark" asp-controller="Walk" asp-action="Admnin">Walk-in</a>
+                </p>
+            </div>
+        } 
+        @if(User.IsInRole("Admin"))
+        {
+            <div class="col-2">
+                <p>
+                    <a class="nav-link text-dark" asp-controller="Vaccs" asp-action="Admin">Vaccination</a>
+                </p>
+            </div>
+            <div class="col-2">
+                <a class="nav-link text-dark" asp-controller="FamilyPlan" asp-action="Admin">Family_Plan</a>
+            </div>
+            <div class="col-2">
+                <a class="nav-link text-dark" asp-controller="PreNatalCare" asp-action="Admin">Pre-Natal_Care</a>
+            </div>
+            <div class="col-2">
+                <p>
+                    <a class="nav-link text-dark" asp-controller="Counseller" asp-action="Admin">Counselling</a>
+                </p>
+            </div>
+            <div class="col-2">
+                <p>
+                    <a class="nav-link text-dark" asp-controller="Walk" asp-action="Admnin">Walk-in</a>
+                </p>
+            </div>
+        }
+
+        
+    </div>
+</div>
+ 
