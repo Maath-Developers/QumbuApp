@@ -1,14 +1,11 @@
-﻿@{
-    ViewData["Title"] = "Landing Page";
-}
-@{
-    Layout = "_Landing2";
-}
-@using Microsoft.AspNetCore.Identity
+﻿@using Microsoft.AspNetCore.Identity
 @using Qumbu_Community_Health_Care_Center.Areas.Identity.Data
 
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
+@{
+    Layout = "_Landing2";
+}
 <style>
     .col-2 {
         background: rgba( 86, 89, 209, 0.2 );
@@ -29,7 +26,7 @@
 </style>
 <div class="container mt-3">
     <div class="row">
-        @if (User.IsInRole("Patient"))
+        @if(User.IsInRole("Patient"))
         {
             <div class="col-2">
                 <p>
@@ -52,60 +49,105 @@
                     <a class="nav-link text-dark" asp-controller="Walk" asp-action="Admnin">Walk-in</a>
                 </p>
             </div>
-        }
-        @if  (User.IsInRole("Admin"))
+        } 
+        @if(User.IsInRole("Admin"))
         {
             <div class="col-2">
                 <p>
-                    <a class="nav-link text-dark" asp-controller="Vaccs" asp-action="Admin_Clerk">Vaccination</a>
+                    <a class="nav-link text-dark" asp-controller="Vaccs" asp-action="Admin">Vaccination</a>
                 </p>
             </div>
             <div class="col-2">
-                <a class="nav-link text-dark" asp-controller="FamilyPlan" asp-action="Admin_Clerk">Family_Plan</a>
+                <a class="nav-link text-dark" asp-controller="FamilyPlan" asp-action="Admin">Family_Plan</a>
             </div>
             <div class="col-2">
-                <a class="nav-link text-dark" asp-controller="PreNatalCare" asp-action="Admin_Clerk">Pre-Natal_Care</a>
+                <a class="nav-link text-dark" asp-controller="PreNatalCare" asp-action="Admin">Pre-Natal_Care</a>
             </div>
             <div class="col-2">
                 <p>
-                    <a class="nav-link text-dark" asp-controller="Counseller" asp-action="Admin_Clerk">Counselling</a>
+                    <a class="nav-link text-dark" asp-controller="Counseller" asp-action="Admin">Counselling</a>
                 </p>
             </div>
             <div class="col-2">
                 <p>
-                    <a class="nav-link text-dark" asp-controller="Walk" asp-action="Admin_Clerk">Walk-in</a>
+                    <a class="nav-link text-dark" asp-controller="Walk" asp-action="Admnin">Walk-in</a>
                 </p>
             </div>
         }
         @if (User.IsInRole("Nurse"))
         {
-            <div class="col-2">
-                <p>
-                    <a class="nav-link text-dark" asp-controller="Vaccs" asp-action="Nurse">Vaccination</a>
-                </p>
-            </div>
-            <div class="col-2">
-                <a class="nav-link text-dark" asp-controller="FamilyPlan" asp-action="Nurse">Family_Plan</a>
-            </div>
-            <div class="col-2">
-                <a class="nav-link text-dark" asp-controller="PreNatalCare" asp-action="Nurse">Pre-Natal_Care</a>
-            </div>
-            <div class="col-2">
-                <p>
-                    <a class="nav-link text-dark" asp-controller="Counseller" asp-action="Nurse">Counselling</a>
-                </p>
-            </div>
-            <div class="col-2">
-                <p>
-                    <a class="nav-link text-dark" asp-controller="Walk" asp-action="Nurse">Walk-in</a>
-                </p>
-            </div>
+                <div class="col-2">
+                    <p>
+                        <a class="nav-link text-dark" asp-controller="Vaccs" asp-action="Admin">Vaccination</a>
+                    </p>
+                </div>
+                <div class="col-2">
+                    <a class="nav-link text-dark" asp-controller="FamilyPlan" asp-action="Admin">Family_Plan</a>
+                </div>
+                <div class="col-2">
+                    <a class="nav-link text-dark" asp-controller="PreNatalCare" asp-action="Admin">Pre-Natal_Care</a>
+                </div>
+                <div class="col-2">
+                    <p>
+                        <a class="nav-link text-dark" asp-controller="Counseller" asp-action="Admin">Counselling</a>
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p>
+                        <a class="nav-link text-dark" asp-controller="Walk" asp-action="Admnin">Walk-in</a>
+                    </p>
+                </div>
+        }
+        @if (User.IsInRole("Doctor"))
+        {
+                    <div class="col-2">
+                        <p>
+                            <a class="nav-link text-dark" asp-controller="Vaccs" asp-action="Admin">Vaccination</a>
+                        </p>
+                    </div>
+                    <div class="col-2">
+                        <a class="nav-link text-dark" asp-controller="FamilyPlan" asp-action="Admin">Family_Plan</a>
+                    </div>
+                    <div class="col-2">
+                        <a class="nav-link text-dark" asp-controller="PreNatalCare" asp-action="Admin">Pre-Natal_Care</a>
+                    </div>
+                    <div class="col-2">
+                        <p>
+                            <a class="nav-link text-dark" asp-controller="Counseller" asp-action="Admin">Counselling</a>
+                        </p>
+                    </div>
+                    <div class="col-2">
+                        <p>
+                            <a class="nav-link text-dark" asp-controller="Walk" asp-action="Admnin">Walk-in</a>
+                        </p>
+                    </div>
+        }
+        @if (User.IsInRole("Unit-Manager"))
+        {
+                    <div class="col-2">
+                        <p>
+                            <a class="nav-link text-dark" asp-controller="Vaccs" asp-action="Admin">Vaccination</a>
+                        </p>
+                    </div>
+                    <div class="col-2">
+                        <a class="nav-link text-dark" asp-controller="FamilyPlan" asp-action="Admin">Family_Plan</a>
+                    </div>
+                    <div class="col-2">
+                        <a class="nav-link text-dark" asp-controller="PreNatalCare" asp-action="Admin">Pre-Natal_Care</a>
+                    </div>
+                    <div class="col-2">
+                        <p>
+                            <a class="nav-link text-dark" asp-controller="Counseller" asp-action="Admin">Counselling</a>
+                        </p>
+                    </div>
+                    <div class="col-2">
+                        <p>
+                            <a class="nav-link text-dark" asp-controller="Walk" asp-action="Admnin">Walk-in</a>
+                        </p>
+                    </div>
         }
 
-
+        
     </div>
 </div>
-
-}
-
-
+ 

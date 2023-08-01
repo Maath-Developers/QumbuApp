@@ -116,7 +116,7 @@ namespace Qumbu_Community_Health_Care_Center.Areas.Identity.Pages.Account
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
-                    return RedirectToAction("Workshop","Home");
+                    return RedirectToAction("Landing2","Home");
                 }
                 if (result.RequiresTwoFactor)
                 {
