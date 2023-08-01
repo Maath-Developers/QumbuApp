@@ -37,6 +37,16 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
         {
             Name = "Nurse",
             NormalizedName = "NURSE"
+        },
+         new IdentityRole
+        {
+            Name = "DOCTOR",
+            NormalizedName = "Doctor"
+        },
+         new IdentityRole
+        {
+            Name = "UNIT-MANAGER",
+            NormalizedName = "Unit-Manager"
         });
 
 
