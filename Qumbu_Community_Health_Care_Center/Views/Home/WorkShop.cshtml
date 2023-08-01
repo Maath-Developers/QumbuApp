@@ -1,3 +1,222 @@
 ﻿@{
-    Layout = "workshop";
+    Layout = "_workshop";
 }
+
+@using Microsoft.AspNetCore.Identity
+@using Qumbu_Community_Health_Care_Center.Areas.Identity.Data
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<link rel="stylesheet" href="~/css/StyleSheet/Workshop_StyleSheet.css">
+<div class="container">
+    <div class="row">
+        @if (User.IsInRole("Nurse"))
+
+        {
+            <!-- Card 1 -->
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 1</h5>
+                        <p class="card-text">Content of card 1 goes here.</p>
+                        <button>MORE</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 2</h5>
+                        <p class="card-text">Content of card 2 goes here.</p>
+                        <button>MORE</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">WALK-IN PATIENT</h5>
+                        <p class="card-text">Only for patients without bookings and have no access to online booking</p>
+                        <button>
+                            <a class="nav-link text-dark" asp-controller="Walk" asp-action="Dashboard">More info...</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 4</h5>
+                        <p class="card-text">Content of card 4 goes here.</p>
+                        <button>MORE</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Card 5</h5>
+                    <p class="card-text">Content of card 5 goes here.</p>
+                    <button>MORE</button>
+                </div>
+            </div>
+            </div>
+        }
+        @if (User.IsInRole("Patient"))
+        {
+            <!-- Card 1 -->
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 1</h5>
+                        <p class="card-text">Content of card 1 goes here.</p>
+                        <button>MORE</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 2</h5>
+                        <p class="card-text">Content of card 2 goes here.</p>
+                        <button>MORE</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">WALK-IN PATIENT</h5>
+                        <p class="card-text">Only for patients without bookings and have no access to online booking</p>
+                        <button>
+                            <a class="nav-link text-dark" asp-controller="Walk" asp-action="Dashboard">More info...</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 4</h5>
+                        <p class="card-text">Content of card 4 goes here.</p>
+                        <button>MORE</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 5</h5>
+                        <p class="card-text">Content of card 5 goes here.</p>
+                        <button>MORE</button>
+                    </div>
+                </div>
+            </div>
+        }
+        @if (User.IsInRole("Admin"))
+        {
+            <!-- Card 1 -->
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 1</h5>
+                        <p class="card-text">Content of card 1 goes here.</p>
+                        <button>MORE</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 2</h5>
+                        <p class="card-text">Content of card 2 goes here.</p>
+                        <button>MORE</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">WALK-IN PATIENT</h5>
+                        <p class="card-text">Only for patients without bookings and have no access to online booking</p>
+                        <button>
+                            <a class="nav-link text-dark" asp-controller="Walk" asp-action="Dashboard">More info...</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 4</h5>
+                        <p class="card-text">Content of card 4 goes here.</p>
+                        <button>MORE</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 5</h5>
+                        <p class="card-text">Content of card 5 goes here.</p>
+                        <button>MORE</button>
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+            <h3>Loged out</h3>
+        }
+    </div>
+</div>
+
+@*<div class="container">
+    <div class="row-cols-lg-6">
+        <div >
+            <div class="col-2">
+                <p>
+                    <a class="nav-link text-dark" asp-controller="Vaccs" asp-action="Patient">Vaccination</a>
+                </p>
+            </div>
+            <div class="col-2">
+                <a class="nav-link text-dark" asp-controller="FamilyPlan" asp-action="Patient">Family_Plan</a>
+            </div>
+            <div class="col-2">
+                <a class="nav-link text-dark" asp-controller="PreNatalCare" asp-action="Patient">Pre-Natal_Care</a>
+            </div>
+            <div class="col-2">
+                <p>
+                    <a class="nav-link text-dark" asp-controller="Counseller" asp-action="Patient">Counselling</a>
+                </p>
+            </div>
+            <div class="col-2">
+                <p>
+                    <a class="nav-link text-dark" asp-controller="Walk" asp-action="Admnin">Walk-in</a>
+                </p>
+            </div>
+        </div>
+       
+
+    </div>
+</div>*@
+

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Qumbu_Community_Health_Care_Center.Areas.Identity.Data;
 
@@ -11,9 +12,10 @@ using Qumbu_Community_Health_Care_Center.Areas.Identity.Data;
 namespace Qumbu_Community_Health_Care_Center.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230731181605_proj")]
+    partial class proj
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -51,22 +53,22 @@ namespace Qumbu_Community_Health_Care_Center.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "988b2202-0f8a-4ae5-9c7b-f3457fe855b3",
-                            ConcurrencyStamp = "eceab874-9939-4bf5-802a-d5d12f59e4ee",
+                            Id = "8179f3a8-9420-49c3-93d0-681e6c9232fa",
+                            ConcurrencyStamp = "e7320701-2587-4761-9241-1dbf2b9cb1d8",
                             Name = "Patient",
                             NormalizedName = "PATIENT"
                         },
                         new
                         {
-                            Id = "64325158-0aa2-48ae-bc04-ec782b10a1c8",
-                            ConcurrencyStamp = "aac99463-2dbc-48d2-b009-e4d52f929102",
+                            Id = "9ad656bf-47db-4e69-a6c5-5566bcfe9b5e",
+                            ConcurrencyStamp = "2d4757d8-5882-4a74-afd2-34885e600c12",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "fb711a29-1981-484c-9f5a-9f7b0605f100",
-                            ConcurrencyStamp = "5ec51de9-29e1-424d-b670-59800d0d7502",
+                            Id = "f6c43095-9cc8-4327-a9bf-9432303dd1ef",
+                            ConcurrencyStamp = "1cccc760-d96a-4b48-a19e-0e3e863b087b",
                             Name = "Nurse",
                             NormalizedName = "NURSE"
                         });
