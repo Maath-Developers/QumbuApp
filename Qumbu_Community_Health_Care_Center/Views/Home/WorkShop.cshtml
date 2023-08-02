@@ -11,6 +11,59 @@
 <link rel="stylesheet" href="~/css/StyleSheet/Workshop_StyleSheet.css">
 <div class="container">
     <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Card 1</h5>
+                    <p class="card-text">Content of card 1 goes here.</p>
+                    <button>MORE</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Card 2</h5>
+                    <p class="card-text">Content of card 2 goes here.</p>
+                    <button>MORE</button>
+                </div>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">WALK-IN PATIENT</h5>
+                    <p class="card-text">Only for patients without bookings and have no access to online booking</p>
+                    <button>
+                        <a class="nav-link text-dark" asp-controller="Walk" asp-action="Dashboard">More info...</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Card 4</h5>
+                    <p class="card-text">Content of card 4 goes here.</p>
+                    <button>MORE</button>
+                </div>
+            </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Card 5</h5>
+                    <p class="card-text">Content of card 5 goes here.</p>
+                    <button>MORE</button>
+                </div>
+            </div>
+        </div>
         @if (User.IsInRole("Nurse"))
 
         {
@@ -183,10 +236,7 @@
                 </div>
             </div>
         }
-        else
-        {
-            <h3>Loged out</h3>
-        }
+        
     </div>
 </div>
 
