@@ -47,12 +47,17 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
         {
             Name = "UNIT-MANAGER",
             NormalizedName = "Unit-Manager"
-        });
+        },
+          new IdentityRole
+		{
+			Name = "COUNSELLOR",
+			NormalizedName = "Counsellor"
+         });
 
 
 
 
-    }
+	}
     public class ApplicationUserEntityConfiguration : IEntityTypeConfiguration<ApplicationUser>
     {
         public void Configure(EntityTypeBuilder<ApplicationUser> builder)
