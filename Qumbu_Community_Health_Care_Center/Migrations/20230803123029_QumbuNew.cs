@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Qumbu_Community_Health_Care_Center.Migrations
 {
-    public partial class loss : Migration
+    public partial class QumbuNew : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -167,12 +167,12 @@ namespace Qumbu_Community_Health_Care_Center.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "187ffbe8-189c-4bff-8f9b-cf4d9aa0a12b", "4f468a8d-789f-4c31-a657-fca26b6048c3", "Unit-Manager", "UNIT-MANAGER" },
-                    { "4d848853-7596-4e08-b7b1-1a51aed37d14", "3f71cc24-745f-41f5-b175-4549c4e37f7a", "Admin", "ADMIN" },
-                    { "6dcefdff-e00a-4fc8-a883-791110e74d04", "fb622c98-aa3c-480e-a67c-c65cd0a19951", "Patient", "PATIENT" },
-                    { "7c3c8352-7103-47bd-adbb-83ac3725c78f", "15df2543-c330-4a24-9438-637ea9f42b68", "Nurse", "NURSE" },
-                    { "c7553846-e4f7-4de9-a479-31b896ad4a81", "6819260f-49a7-411e-ab44-4d1caadc8b5b", "Counsellor", "COUNSELLOR" },
-                    { "eef101ad-adcd-496a-9e9f-f3732600a065", "b209b515-857d-451f-ab2d-d564b48a42cf", "Doctor", "DOCTOR" }
+                    { "0bc45f0c-aea8-402f-9dc0-8375f8858a2e", "3a074359-20a7-412f-acdd-ec80d12e6c40", "Patient", "PATIENT" },
+                    { "1b47a865-dcf6-4468-a72b-55ff99799c18", "3136ba46-0ed4-4003-b55f-3bc0e853ccd7", "Unit-Manager", "UNIT-MANAGER" },
+                    { "7df5f903-d350-4b5b-a2b1-488c11423ab6", "b8e16f8b-639d-4eca-bd30-277fbc6aba80", "Counsellor", "COUNSELLOR" },
+                    { "922bbecd-f879-4024-ab7b-d1f1e6eb6866", "45798bf9-17ad-419f-95fd-00c468a45465", "Doctor", "DOCTOR" },
+                    { "acfdaa26-6a0c-4041-a75a-6d091599e317", "1779c3ad-1114-4b40-9dab-8f054f797a91", "Admin", "ADMIN" },
+                    { "f242c338-828e-480c-a566-815ebe0d9992", "5d7117a1-7951-4a05-bc85-6d85289e15d4", "Nurse", "NURSE" }
                 });
 
             migrationBuilder.CreateIndex(
