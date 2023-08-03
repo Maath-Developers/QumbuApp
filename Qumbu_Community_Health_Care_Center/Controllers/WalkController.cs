@@ -20,5 +20,9 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         {
             return View();
         }
+        public IActionResult Patient()
+        {
+            return View();
+        }
     }
 }
