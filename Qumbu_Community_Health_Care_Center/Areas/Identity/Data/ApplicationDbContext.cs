@@ -40,19 +40,19 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
         },
          new IdentityRole
         {
-            Name = "DOCTOR",
-            NormalizedName = "Doctor"
-        },
+            Name = "Doctor",
+            NormalizedName = "DOCTOR"
+         },
          new IdentityRole
         {
-            Name = "UNIT-MANAGER",
-            NormalizedName = "Unit-Manager"
-        },
+            Name = "Unit-Manager",
+            NormalizedName = "UNIT-MANAGER"
+         },
           new IdentityRole
 		{
-			Name = "COUNSELLOR",
-			NormalizedName = "Counsellor"
-         });
+			Name = "Counsellor",
+			NormalizedName = "COUNSELLOR"
+          });
 
 
 

@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Qumbu_Community_Health_Care_Center.Migrations
 {
-    public partial class Init : Migration
+    public partial class initialize : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -30,11 +30,11 @@ namespace Qumbu_Community_Health_Care_Center.Migrations
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     FirstName = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
-                    DateOfBirth = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Gender = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Address = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    City = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Role = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    DateOfBirth = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    Gender = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Address = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    City = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Role = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     MobileNumber = table.Column<int>(type: "int", nullable: false),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -167,11 +167,12 @@ namespace Qumbu_Community_Health_Care_Center.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "7993e869-d2da-4782-8eef-396aad63ef0e", "6fcad22d-459f-4376-9403-bcb558c271cc", " Nurse", "NURSE" },
-                    { "823a254f-06fa-49e4-aca6-81abe63ca48a", "56494002-975e-4ccb-a244-87be98e27d08", " Counsellor", "COUNSELLOR" },
-                    { "a1abc635-1017-46b1-9fc5-94b7f938fb83", "00d8898b-a6b0-4311-a59e-d49193959e03", " Doctor", "DOCTOR" },
-                    { "ee4c082a-464d-4d42-aa21-631f1a692260", "e799b642-149d-44b1-816f-1e1389270f84", " Patient", "PATIENT" },
-                    { "f8608932-ed80-419d-a921-f23dbaa26b30", "ee525706-0aa2-4826-9c54-af2da2b2694a", " Admin", "ADMIN" }
+                    { "232fbde1-fa3d-424a-8c15-d7e8c7d32f8f", "66d70d65-84a7-4a9b-a850-33351dd1fb27", "Admin", "ADMIN" },
+                    { "3bdf6ecf-a469-4f8e-a518-3b22bfaa0d53", "e6e5ca9d-5845-4a30-83e6-6381a9124789", "Patient", "PATIENT" },
+                    { "3bf5aa18-c4cb-472b-9d6b-c3261485f442", "409a8cbb-912c-4d32-9c82-edfe6ea99f58", "Unit-Manager", "UNIT-MANAGER" },
+                    { "405b2609-0c56-464b-91ea-40bc6279d3db", "9411d21a-bb58-438c-bf87-0c0440e9a958", "Counsellor", "COUNSELLOR" },
+                    { "b048e6fa-a5e9-412e-a4b1-46459c8700b3", "20e7edfb-cbe7-45ca-8d1f-066fadccdafe", "Doctor", "DOCTOR" },
+                    { "c1e0c2d3-36ad-44f6-b2cb-1c9cf09984c3", "5b9c6854-65ff-445e-a327-5daaca4734bf", "Nurse", "NURSE" }
                 });
 
             migrationBuilder.CreateIndex(

@@ -51,45 +51,45 @@ namespace Qumbu_Community_Health_Care_Center.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "929e9674-4eb8-48cd-b7f9-813c69f78fa7",
-                            ConcurrencyStamp = "a045def7-9642-4314-98c3-44b5fd7b6689",
+                            Id = "3bdf6ecf-a469-4f8e-a518-3b22bfaa0d53",
+                            ConcurrencyStamp = "e6e5ca9d-5845-4a30-83e6-6381a9124789",
                             Name = "Patient",
                             NormalizedName = "PATIENT"
                         },
                         new
                         {
-                            Id = "e799e8c9-75fe-459f-afc8-270e16356410",
-                            ConcurrencyStamp = "299b69e1-f91e-4eee-bca2-fcc66163f5ca",
+                            Id = "232fbde1-fa3d-424a-8c15-d7e8c7d32f8f",
+                            ConcurrencyStamp = "66d70d65-84a7-4a9b-a850-33351dd1fb27",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "75048efe-124a-4f68-8704-07e7b34dc034",
-                            ConcurrencyStamp = "2829aa9b-2c3a-4e6c-b6b3-6f81c3d6f14d",
+                            Id = "c1e0c2d3-36ad-44f6-b2cb-1c9cf09984c3",
+                            ConcurrencyStamp = "5b9c6854-65ff-445e-a327-5daaca4734bf",
                             Name = "Nurse",
                             NormalizedName = "NURSE"
                         },
                         new
                         {
-                            Id = "1e976115-0001-4df7-a6ff-e0983bca2b31",
-                            ConcurrencyStamp = "d24110d4-a295-4c41-b57a-1ae6c20c7639",
-                            Name = "DOCTOR",
-                            NormalizedName = "Doctor"
+                            Id = "b048e6fa-a5e9-412e-a4b1-46459c8700b3",
+                            ConcurrencyStamp = "20e7edfb-cbe7-45ca-8d1f-066fadccdafe",
+                            Name = "Doctor",
+                            NormalizedName = "DOCTOR"
                         },
                         new
                         {
-                            Id = "4e98195a-7fac-4acf-824d-7debe307360a",
-                            ConcurrencyStamp = "b387498a-0b0a-4bb3-b98d-1553f886d1bc",
-                            Name = "UNIT-MANAGER",
-                            NormalizedName = "Unit-Manager"
+                            Id = "3bf5aa18-c4cb-472b-9d6b-c3261485f442",
+                            ConcurrencyStamp = "409a8cbb-912c-4d32-9c82-edfe6ea99f58",
+                            Name = "Unit-Manager",
+                            NormalizedName = "UNIT-MANAGER"
                         },
                         new
                         {
-                            Id = "7cb8dceb-e8f9-4ebf-b4c7-9a92c83431ba",
-                            ConcurrencyStamp = "0dcde23e-0b2e-4d4a-8922-23840fa2ad15",
-                            Name = "COUNSELLOR",
-                            NormalizedName = "Counsellor"
+                            Id = "405b2609-0c56-464b-91ea-40bc6279d3db",
+                            ConcurrencyStamp = "9411d21a-bb58-438c-bf87-0c0440e9a958",
+                            Name = "Counsellor",
+                            NormalizedName = "COUNSELLOR"
                         });
                 });
 

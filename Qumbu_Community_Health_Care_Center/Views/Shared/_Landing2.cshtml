@@ -31,8 +31,8 @@
 
 
 	<div class="wrap">
-		<div class="container">
-			<div class="row justify-content-between">
+		<div class="container-fluid">
+			<div class="row ">
 				<div class="col-md-3 mb-md-0 mb-4 d-flex align-items-center">
 					<a class="navbar-brand" href="index.html">Qumbu Community Healthcare</a>
 				</div>
@@ -56,7 +56,7 @@
 		</div>
 	</div>
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-		<div class="container">
+		<div class="container-fluid">
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="fa fa-bars"></span> Menu
 			</button>
@@ -71,50 +71,24 @@
 
 
 				</ul>
-				<ul class="navbar-nav mr-auto">
-					@if (SignInManager.IsSignedIn(User))
-					{
-
-						<li class="nav-item">
-							<a id="manage" class="btn btn-secondary" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage"> @UserManager.GetUserName(User)</a>
-						</li>
-						<li class="nav-item">
-							    |
-						</li>
-						<li class="nav-item">
-							<form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
-								<button id="logout" type="submit" class="btn btn-secondary">Logout</button>
-							</form>
-						</li>
-
-
-
-
-					}
-					else
-					{
+				<ul class="navbar-nav mr-1">
+					
 						@*<li class="nav-item ">
 					<form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Register" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
 					<button id="register" type="submit" class="nav-link btn btn-link text-dark">Register</button>
 					</form>
 					<a class="nav-link text-primary" id="register" asp-area="Identity" asp-page="/Account/Register">Register</a>
 					</li>*@
-						<li class="nav-item">
-							<a class="nav-link text-primary" id="login" asp-area="Identity" asp-page="/Account/Login">Login</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link text-primary" id="login" asp-area="Identity" asp-page="/Account/Register">Register</a>
+						<partial name="_LoginPartial" />
 
-						</li>
-
-					}
+					
 				</ul>
 
 			</div>
 		</div>
 	</nav>
 
-	<div class="container mt-3">
+	<div class="container-fluid mt-3">
 		<main role="main" class="pb-3">
 			@RenderBody()
 		</main>
