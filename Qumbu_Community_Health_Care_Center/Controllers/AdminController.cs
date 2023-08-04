@@ -4,7 +4,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
 {
     public class AdminController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Admin_Dashboard()
         {
             return View();
         }
