@@ -123,119 +123,7 @@
                 <div class="sidebar_blog_2">
                     <h4>General</h4>
                     <ul class="list-unstyled components">
-                        @if (User.IsInRole("Admin"))
-                        {
-                            <li class="active">
-                                <a href="#dashboard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-dashboard yellow_color"></i> <span>Manage Appointments</span></a>
-                                <ul class="collapse list-unstyled" id="dashboard">
-                                    <li>
-                                        <a href="dashboard.html">> <span>View</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="dashboard_2.html">> <span>Cancel</span></a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            @*<li><a href="widgets.html"><i class="fa fa-clock-o orange_color"></i> <span>Widgets</span></a></li>*@
-                            <li>
-                                <a href="#element" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-diamond purple_color"></i> <span>Manage Files</span></a>
-                                <ul class="collapse list-unstyled" id="element">
-                                    <li><a href="general_elements.html">> <span>Create File</span></a></li>
-                                    <li><a href="media_gallery.html">> <span>Update File</span></a></li>
-                                    <li><a href="icons.html">> <span>View</span></a></li>
-                                    @*<li><a href="invoice.html">> <span>Invoice</span></a></li>*@
-                                </ul>
-                            </li>
-                            @*<li><a href="tables.html"><i class="fa fa-table purple_color2"></i> <span>Tables</span></a></li>*@
-                            <li>
-                                <a href="#apps" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-object-group blue2_color"></i> <span>Manage Referrals</span></a>
-                                <ul class="collapse list-unstyled" id="apps">
-                                    <li><a href="email.html">> <span>View</span></a></li>
-                                    @*<li><a href="calendar.html">> <span>Calendar</span></a></li>
-                                <li><a href="media_gallery.html">> <span>Media Gallery</span></a></li>*@
-                                </ul>
-                            </li>
-                            @*<li><a href="price.html"><i class="fa fa-briefcase blue1_color"></i> <span>Pricing Tables</span></a></li>*@
-                            <li>
-                               @* <a href="contact.html">
-                                     <i class="fa fa-paper-plane red_color"></i> <span>Contact</span>
-                                </a>*@
-                            </li>
-                            <li class="active">
-                                @* <a href="#additional_page" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-clone yellow_color"></i> <span>Counselling</span></a>*@
-                                <ul class="collapse list-unstyled" id="additional_page">
-                                    <li>
-                                        @* <a href="profile.html">> <span>Profile</span></a>*@
-                                    </li>
-                                    <li>
-                                        @* <a href="project.html">> <span>Projects</span></a>*@
-                                    </li>
-                                    <li>
-                                        @*<a href="login.html">> <span>Login</span></a>*@
-                                    </li>
-                                    <li>
-                                        @*<a href="404_error.html">> <span>404 Error</span></a>*@
-                                    </li>
-                                </ul>
-                            </li>
-                        } @if (User.IsInRole("Admin"))
-                        {
-                            <li class="active">
-                                <a href="#dashboard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-dashboard yellow_color"></i> <span>Manage Appointments</span></a>
-                                <ul class="collapse list-unstyled" id="dashboard">
-                                    <li>
-                                        <a href="dashboard.html">> <span>View</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="dashboard_2.html">> <span>Cancel</span></a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            @*<li><a href="widgets.html"><i class="fa fa-clock-o orange_color"></i> <span>Widgets</span></a></li>*@
-                            <li>
-                                <a href="#element" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-diamond purple_color"></i> <span>Manage Files</span></a>
-                                <ul class="collapse list-unstyled" id="element">
-                                    <li><a href="general_elements.html">> <span>Create File</span></a></li>
-                                    <li><a href="media_gallery.html">> <span>Update File</span></a></li>
-                                    <li><a href="icons.html">> <span>View</span></a></li>
-                                    @*<li><a href="invoice.html">> <span>Invoice</span></a></li>*@
-                                </ul>
-                            </li>
-                            @*<li><a href="tables.html"><i class="fa fa-table purple_color2"></i> <span>Tables</span></a></li>*@
-                            <li>
-                                <a href="#apps" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-object-group blue2_color"></i> <span>Manage Referrals</span></a>
-                                <ul class="collapse list-unstyled" id="apps">
-                                    <li><a href="email.html">> <span>View</span></a></li>
-                                    @*<li><a href="calendar.html">> <span>Calendar</span></a></li>
-                                <li><a href="media_gallery.html">> <span>Media Gallery</span></a></li>*@
-                                </ul>
-                            </li>
-                            @*<li><a href="price.html"><i class="fa fa-briefcase blue1_color"></i> <span>Pricing Tables</span></a></li>*@
-                            <li>
-                               @* <a href="contact.html">
-                                     <i class="fa fa-paper-plane red_color"></i> <span>Contact</span>
-                                </a>*@
-                            </li>
-                            <li class="active">
-                                @* <a href="#additional_page" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-clone yellow_color"></i> <span>Counselling</span></a>*@
-                                <ul class="collapse list-unstyled" id="additional_page">
-                                    <li>
-                                        @* <a href="profile.html">> <span>Profile</span></a>*@
-                                    </li>
-                                    <li>
-                                        @* <a href="project.html">> <span>Projects</span></a>*@
-                                    </li>
-                                    <li>
-                                        @*<a href="login.html">> <span>Login</span></a>*@
-                                    </li>
-                                    <li>
-                                        @*<a href="404_error.html">> <span>404 Error</span></a>*@
-                                    </li>
-                                </ul>
-                            </li>
-                        }
+                       
                         @if (User.IsInRole("Counsellor"))
                         {
                             <li class="active">
@@ -296,23 +184,23 @@
                         @if (User.IsInRole("Patient"))
                         {
                             <li class="active">
-                                <a href="#dashboard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-dashboard yellow_color"></i> <span>Manage Appointments</span></a>
+                                <a href="#dashboard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-dashboard yellow_color"></i> <span>Appointments</span></a>
                                 <ul class="collapse list-unstyled" id="dashboard">
                                     <li>
-                                        <a href="dashboard.html">> <span>Booking</span></a>
+                                       @* <a href="dashboard.html">> <span></span></a>*@
                                     </li>
                                     <li>
                                         <a href="dashboard.html">> <span>View</span></a>
                                     </li>
                                     <li>
-                                        <a href="dashboard_2.html">> <span>Cancel</span></a>
+                                       @* <a href="dashboard_2.html">> <span>Cancel</span></a>*@
                                     </li>
                                 </ul>
                             </li>
 
                             @*<li><a href="widgets.html"><i class="fa fa-clock-o orange_color"></i> <span>Widgets</span></a></li>*@
                             <li>
-                                <a href="#element" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-diamond purple_color"></i> <span>Manage Files</span></a>
+                                <a href="#element" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-diamond purple_color"></i> <span>Files</span></a>
                                 <ul class="collapse list-unstyled" id="element">
                                     @*<li><a href="general_elements.html">> <span>Create File</span></a></li>
                                 <li><a href="media_gallery.html">> <span>Update File</span></a></li>*@
@@ -331,7 +219,7 @@
                             </li>
                             @*<li><a href="tables.html"><i class="fa fa-table purple_color2"></i> <span>Tables</span></a></li>*@
                             <li>
-                                <a href="#apps" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-object-group blue2_color"></i> <span>Manage Referrals</span></a>
+                                <a href="#apps" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-object-group blue2_color"></i> <span>Referrals</span></a>
                                 <ul class="collapse list-unstyled" id="apps">
                                     <li><a href="email.html">> <span>View</span></a></li>
                                     @*<li><a href="calendar.html">> <span>Calendar</span></a></li>
@@ -360,10 +248,26 @@
                                         @*<a href="404_error.html">> <span>404 Error</span></a>*@
                                     </li>
                                 </ul>
+                            </li> <li class="active">
+                                 <a href="#additional_page" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-clone yellow_color"></i> <span>Setting</span></a>
+                                <ul class="collapse list-unstyled" id="additional_page">
+                                    <li>
+                                         <a href="profile.html">> <span>Logout</span></a>
+                                    </li>
+                                    <li>
+                                        @*<a href="project.html">> <span>Projects</span></a>*@
+                                    </li>
+                                    <li>
+                                       @* <a href="login.html">> <span>Login</span></a>*@
+                                    </li>
+                                    <li>
+                                       @* <a href="404_error.html">> <span>404 Error</span></a>*@
+                                    </li>
+                                </ul>
                             </li>
                            @* <li><a href="map.html"><i class="fa fa-map purple_color2"></i> <span>Map</span></a></li>
                             <li><a href="charts.html"><i class="fa fa-bar-chart-o green_color"></i> <span>Charts</span></a></li>*@
-                            <li><a href="settings.html"><i class="fa fa-cog yellow_color"></i> <span>Settings</span></a></li>
+                           @* <li><a href="settings.html"><i class="fa fa-cog yellow_color"></i> <span>Settings</span></a></li>*@
                         }
                     </ul>
                 </div>
@@ -456,13 +360,7 @@
                                                     </div>
                                                 }
                                             }
-                                            @* <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="images/layout_img/user_img.jpg" alt="#" /><span class="name_user">John David</span></a>*@
-                                            @* <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="profile.html">My Profile</a>
-                                            <a class="dropdown-item" href="settings.html">Settings</a>
-                                            <a class="dropdown-item" href="help.html">Help</a>
-                                            <a class="dropdown-item" href="#"><span>Log Out</span> <i class="fa fa-sign-out"></i></a>
-                                            </div>*@
+                                           
                                         </li>
                                     </ul>
                                 </div>
@@ -473,7 +371,7 @@
                 <!-- end topbar -->
                 <!-- dashboard inner -->
                 <div class="midde_cont">
-                </div>
+                    <div class="row">
                 @if (User.IsInRole("Counsellor"))
                 {
                     <!-- Card 1 -->
@@ -514,88 +412,9 @@
                             </div>
                         </div>
                     </div>
-                }@if (User.IsInRole("Counsellor"))
-                {
-                    <!-- Card 1 -->
-                    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Appointments</h5>
-                                <a href="index.html"><img class="img-responsive" src="~/images/images/logo/booking.png" alt="#" /></a>
-                                <button>
-                                    <a class="nav-link text-dark" asp-controller="Counsellor" asp-action="Appointment">More info...</a>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 2 -->
-                    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Files</h5>
-                                <a href="index.html"><img class="img-responsive" src="~/images/images/logo/Files.png" alt="#" /></a>
-                                <button>
-                                    <a class="nav-link text-dark" asp-controller="Counsellor" asp-action="File">More info...</a>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card 3 -->
-                    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Referrals</h5>
-                                <a href="index.html"><img class="img-responsive" src="~/images/images/logo/Ref.png" alt="#" /></a>
-
-                                <button>
-                                    <a class="nav-link text-dark" asp-controller="Counsellor" asp-action="Referrals">More info...</a>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
                 }
-                @if (User.IsInRole("Admin"))
-                {
-                    <!-- Card 1 -->
-                    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Appointments</h5>
-                                <a href="index.html"><img class="img-responsive" src="~/images/images/logo/booking.png" alt="#" /></a>
-                                <button>
-                                    <a class="nav-link text-dark" asp-controller="Counsellor" asp-action="Appointment">More info...</a>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 2 -->
-                    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Files</h5>
-                                <a href="index.html"><img class="img-responsive" src="~/images/images/logo/Files.png" alt="#" /></a>
-                                <button>
-                                    <a class="nav-link text-dark" asp-controller="Counsellor" asp-action="File">More info...</a>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card 3 -->
-                    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Referrals</h5>
-                                <a href="index.html"><img class="img-responsive" src="~/images/images/logo/Ref.png" alt="#" /></a>
-
-                                <button>
-                                    <a class="nav-link text-dark" asp-controller="Counsellor" asp-action="Referrals">More info...</a>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                }
+               
+                
                 <!-- end dashboard inner -->
             </div>
         </div>
