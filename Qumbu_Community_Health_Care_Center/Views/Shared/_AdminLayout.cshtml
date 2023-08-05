@@ -1,0 +1,443 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using Qumbu_Community_Health_Care_Center.Areas.Identity.Data
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>Dashborad</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- site icon -->
+    <link rel="icon" href="~/images/images/fevicon.png" type="image/png" />
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="~/css/css/css/css/bootstrap.min.css" />
+    <!-- site css -->
+    <link rel="stylesheet" href="~/css/css/css/css/style.css" />
+    <!-- responsive css -->
+    <link rel="stylesheet" href="~/css/css/css/css/responsive.css" />
+    <!-- color css -->
+    <link rel="stylesheet" href="~/css/css/css/css/colors.css" />
+    <!-- select bootstrap -->
+    <link rel="stylesheet" href="~/css/css/css/css/bootstrap-select.css" />
+    <!-- scrollbar css -->
+    <link rel="stylesheet" href="~/css/css/css/css/perfect-scrollbar.css" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="~/css/css/css/css/custom.css" />
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+@*<div class="container">
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+</div*@>
+<body class="dashboard dashboard_1">
+    <div class="full_container">
+        <div class="inner_container">
+            <!-- Sidebar  -->
+            <nav id="sidebar">
+                <div class="sidebar_blog_1">
+                    <div class="sidebar-header">
+                        <div class="logo_section">
+                            @*<a href="index.html"><img class="logo_icon img-responsive" src="~/images/images/logo/logo_icon.png" alt="#" /></a>*@
+                        </div>
+                    </div>
+                    <div class="sidebar_user_info">
+                        <div class="icon_setting"></div>
+                        <div class="user_profle_side">
+                            <div class="user_img"><img class="img-responsive" src="~/images/images/logo/user.png" alt="#" /></div>
+                            <div class="user_info">
+                                @if (User.IsInRole("Admin"))
+                                {
+                                    @*<a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="~/images/images/layout_img/user_img.jpg" alt="#" />*@
+                                    <span class="name_user">Welcome back Admin</span>
+                                    @*<div class="dropdown-menu">
+                                <a class="dropdown-item" href="profile.html">My Profile</a>
+                                <a class="dropdown-item" href="settings.html">Settings</a>
+                                <a class="dropdown-item" href="help.html">Help</a>
+                                <a class="dropdown-item" href="#"><span>Log Out</span> <i class="fa fa-sign-out"></i></a>
+                                </div>*@
+                                }@if (User.IsInRole("Patient"))
+                                {
+                                    @*<a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="~/images/images/layout_img/user_img.jpg" alt="#" />*@
+                                    <span class="name_user">Welcome back Patient</span>
+                                    @*<div class="dropdown-menu">
+                                <a class="dropdown-item" href="profile.html">My Profile</a>
+                                <a class="dropdown-item" href="settings.html">Settings</a>
+                                <a class="dropdown-item" href="help.html">Help</a>
+                                <a class="dropdown-item" href="#"><span>Log Out</span> <i class="fa fa-sign-out"></i></a>
+                                </div>*@
+                                }@if (User.IsInRole("Counsellor"))
+                                {
+                                    @*<a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="~/images/images/layout_img/user_img.jpg" alt="#" />*@
+                                    <span class="name_user">Welcome back Counsellor</span>
+                                    @*<div class="dropdown-menu">
+                                <a class="dropdown-item" href="profile.html">My Profile</a>
+                                <a class="dropdown-item" href="settings.html">Settings</a>
+                                <a class="dropdown-item" href="help.html">Help</a>
+                                <a class="dropdown-item" href="#"><span>Log Out</span> <i class="fa fa-sign-out"></i></a>
+                                </div>*@
+                                }@if (User.IsInRole("Unit Manager"))
+                                {
+                                    @* <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="~/images/images/layout_img/user_img.jpg" alt="#" />*@
+                                    <span class="name_user">Welcome back Unit-Manager</span>
+                                    @*<div class="dropdown-menu">
+                                <a class="dropdown-item" href="profile.html">My Profile</a>
+                                <a class="dropdown-item" href="settings.html">Settings</a>
+                                <a class="dropdown-item" href="help.html">Help</a>
+                                <a class="dropdown-item" href="#"><span>Log Out</span> <i class="fa fa-sign-out"></i></a>
+                                </div>*@
+                                }@if (User.IsInRole("Doctor"))
+                                {
+                                    @*<a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="~/images/images/layout_img/user_img.jpg" alt="#" />*@
+                                    <span class="name_user">Welcome back Doctor</span>
+                                    @*<div class="dropdown-menu">
+                                <a class="dropdown-item" href="profile.html">My Profile</a>
+                                <a class="dropdown-item" href="settings.html">Settings</a>
+                                <a class="dropdown-item" href="help.html">Help</a>
+                                <a class="dropdown-item" href="#"><span>Log Out</span> <i class="fa fa-sign-out"></i></a>
+                                </div>*@
+                                }@if (User.IsInRole("Nurse"))
+                                {
+                                    @* <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="~/images/images/layout_img/user_img.jpg" alt="#" />*@
+                                    <span class="name_user">Welcome back Nurse</span>
+                                    @*<div class="dropdown-menu">
+                                <a class="dropdown-item" href="profile.html">My Profile</a>
+                                <a class="dropdown-item" href="settings.html">Settings</a>
+                                <a class="dropdown-item" href="help.html">Help</a>
+                                <a class="dropdown-item" href="#"><span>Log Out</span> <i class="fa fa-sign-out"></i></a>
+                                </div>*@
+                                }
+                                @*<h6>John David</h6>*@
+                                @*<p><span class="online_animation"></span> Online</p>*@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar_blog_2">
+                    <h4>General</h4>
+                    <ul class="list-unstyled components">
+
+                        @if (User.IsInRole("Counsellor"))
+                        {
+                            <li class="active">
+                                <a href="#dashboard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-dashboard yellow_color"></i> <span>Manage Appointments</span></a>
+                                <ul class="collapse list-unstyled" id="dashboard">
+                                    <li>
+                                        <a href="dashboard.html">> <span>View</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="dashboard_2.html">> <span>Cancel</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            @*<li><a href="widgets.html"><i class="fa fa-clock-o orange_color"></i> <span>Widgets</span></a></li>*@
+                            <li>
+                                <a href="#element" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-diamond purple_color"></i> <span>Manage Files</span></a>
+                                <ul class="collapse list-unstyled" id="element">
+                                    <li><a href="general_elements.html">> <span>Add Record</span></a></li>
+                                    <li><a href="media_gallery.html">> <span>Update Record</span></a></li>
+                                    <li><a href="icons.html">> <span>View</span></a></li>
+                                    @*<li><a href="invoice.html">> <span>Invoice</span></a></li>*@
+                                </ul>
+                            </li>
+                            @*<li><a href="tables.html"><i class="fa fa-table purple_color2"></i> <span>Tables</span></a></li>*@
+                            <li>
+                                <a href="#apps" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-object-group blue2_color"></i> <span>Manage Referrals</span></a>
+                                <ul class="collapse list-unstyled" id="apps">
+                                    <li><a href="email.html">> <span>View</span></a></li>
+                                    <li><a href="calendar.html">> <span>Referr</span></a></li>
+                                    @* <li><a href="media_gallery.html">> <span>Media Gallery</span></a></li>*@
+                                </ul>
+                            </li>
+                            @*<li><a href="price.html"><i class="fa fa-briefcase blue1_color"></i> <span>Pricing Tables</span></a></li>*@
+                            <li>
+                                @* <a href="contact.html">
+                            <i class="fa fa-paper-plane red_color"></i> <span>Contact</span>
+                            </a>*@
+                            </li>
+                            <li class="active">
+                                @* <a href="#additional_page" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-clone yellow_color"></i> <span>Counselling</span></a>*@
+                                <ul class="collapse list-unstyled" id="additional_page">
+                                    <li>
+                                        @* <a href="profile.html">> <span>Profile</span></a>*@
+                                    </li>
+                                    <li>
+                                        @* <a href="project.html">> <span>Projects</span></a>*@
+                                    </li>
+                                    <li>
+                                        @*<a href="login.html">> <span>Login</span></a>*@
+                                    </li>
+                                    <li>
+                                        @*<a href="404_error.html">> <span>404 Error</span></a>*@
+                                    </li>
+                                </ul>
+                            </li>
+                        }
+                        @if (User.IsInRole("Patient"))
+                        {
+
+                            <li class="active">
+                                <a href="#dashboard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-dashboard yellow_color"></i> <span>Appointments</span></a>
+                                <ul class="collapse list-unstyled" id="dashboard">
+                                    <li>
+                                        <a href="dashboard.html">> <span>View</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="dashboard_2.html">> <span>Cancel</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            @*<li><a href="widgets.html"><i class="fa fa-clock-o orange_color"></i> <span>Widgets</span></a></li>*@
+                            <li>
+                                <a href="#element" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-diamond purple_color"></i> <span>Files</span></a>
+                                <ul class="collapse list-unstyled" id="element">
+                                    <li><a href="general_elements.html">> <span>Add Record</span></a></li>
+                                    <li><a href="media_gallery.html">> <span>Update Record</span></a></li>
+                                    <li><a href="icons.html">> <span>View</span></a></li>
+                                    @*<li><a href="invoice.html">> <span>Invoice</span></a></li>*@
+                                </ul>
+                            </li>
+                            @*<li><a href="tables.html"><i class="fa fa-table purple_color2"></i> <span>Tables</span></a></li>*@
+                            <li>
+                                <a href="#apps" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-object-group blue2_color"></i> <span>Referrals</span></a>
+                                <ul class="collapse list-unstyled" id="apps">
+                                    <li><a href="email.html">> <span>View</span></a></li>
+                                    <li><a href="calendar.html">> <span>Referr</span></a></li>
+                                    @* <li><a href="media_gallery.html">> <span>Media Gallery</span></a></li>*@
+                                </ul>
+                            </li>
+
+                            @*<li><a href="price.html"><i class="fa fa-briefcase blue1_color"></i> <span>Pricing Tables</span></a></li>*@
+                            <li>
+                                @* <a href="contact.html">
+                            <i class="fa fa-paper-plane red_color"></i> <span>Contact</span>
+                            </a>*@
+                            </li>
+                            <li class="active">
+                                <a href="#additional_page" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-clone yellow_color"></i> <span>Ratings</span></a>
+                                <ul class="collapse list-unstyled" id="additional_page">
+                                    <li>
+                                        <a href="profile.html">> <span>Rate</span></a>
+                                    </li>
+                                    <li>
+                                        @* <a href="project.html">> <span>Projects</span></a>*@
+                                    </li>
+                                    <li>
+                                        @*<a href="login.html">> <span>Login</span></a>*@
+                                    </li>
+                                    <li>
+                                        @*<a href="404_error.html">> <span>404 Error</span></a>*@
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="active">
+                                <a href="#additional_page" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-clone yellow_color"></i> <span>Settings</span></a>
+                                <ul class="collapse list-unstyled" id="addition">
+                                    <li>
+                                        <a href="profile.html">> <span>Logout</span></a>
+                                    </li>
+                                    <li>
+                                        @* <a href="project.html">> <span>Projects</span></a>*@
+                                    </li>
+                                    <li>
+                                        @*<a href="login.html">> <span>Login</span></a>*@
+                                    </li>
+                                    <li>
+                                        @*<a href="404_error.html">> <span>404 Error</span></a>*@
+                                    </li>
+                                </ul>
+                            </li>
+
+                        }
+                    </ul>
+                </div>
+            </nav>
+            <!-- end sidebar -->
+            <!-- right content -->
+            <div id="content">
+                <div class="container">
+                    <main role="main" class="pb-3">
+                        @RenderBody()
+                    </main>
+                </div>
+                <!-- topbar -->
+                <div class="topbar">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <div class="full">
+                            <button type="button" id="sidebarCollapse" class="sidebar_toggle"><i class="fa fa-bars"></i></button>
+                            <div class="logo_section">
+                                <a href="index.html"><img class="img-responsive" src="~/images/images/logo/logo.png" alt="#" /></a>
+                            </div>
+                            <div class="right_topbar">
+                                <div class="icon_info">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-bell-o"></i><span class="badge">2</span></a></li>
+                                        <li><a href="#"><i class="fa fa-question-circle"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-envelope-o"></i><span class="badge">3</span></a></li>
+                                    </ul>
+                                    <ul class="user_profile_dd">
+                                        <li>
+                                            @if (SignInManager.IsSignedIn(User))
+                                            {
+                                                @if (User.IsInRole("Admin"))
+                                                {
+                                                    <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="~/images/images/logo/user.png" alt="#" /><span class="name_user">Admin</span></a>
+                                                    <div class="dropdown-menu">
+                                                        <a class="dropdown-item" href="profile.html">My Profile</a>
+                                                        <a class="dropdown-item" href="settings.html">Settings</a>
+                                                        <a class="dropdown-item" href="help.html">Help</a>
+                                                        <a class="dropdown-item" href="#"><span>Log Out</span> <i class="fa fa-sign-out"></i></a>
+                                                    </div>
+                                                }
+                                                @if (User.IsInRole("Nurse"))
+                                                {
+                                                    <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="~/images/images/logo/user.png" alt="#" /><span class="name_user">Nurse</span></a>
+                                                    <div class="dropdown-menu">
+                                                        <a class="dropdown-item" href="profile.html">My Profile</a>
+                                                        <a class="dropdown-item" href="settings.html">Settings</a>
+                                                        <a class="dropdown-item" href="help.html">Help</a>
+                                                        <a class="dropdown-item" href="#"><span>Log Out</span> <i class="fa fa-sign-out"></i></a>
+                                                    </div>
+                                                }
+                                                @if (User.IsInRole("Counsellor"))
+                                                {
+                                                    <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="~/images/images/logo/user.png" alt="#" /><span class="name_user">Counsellor</span></a>
+                                                    <div class="dropdown-menu">
+                                                        <a class="dropdown-item" href="profile.html">My Profile</a>
+                                                        <a class="dropdown-item" href="settings.html">Settings</a>
+                                                        <a class="dropdown-item" href="help.html">Help</a>
+                                                        <a class="dropdown-item" href="#"><span>Log Out</span> <i class="fa fa-sign-out"></i></a>
+                                                    </div>
+                                                }
+                                                @if (User.IsInRole("Unit-Manager"))
+                                                {
+                                                    <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="~/images/images/logo/user.png" alt="#" /><span class="name_user">Unit-Manager</span></a>
+                                                    <div class="dropdown-menu">
+                                                        <a class="dropdown-item" href="profile.html">My Profile</a>
+                                                        <a class="dropdown-item" href="settings.html">Settings</a>
+                                                        <a class="dropdown-item" href="help.html">Help</a>
+                                                        <a class="dropdown-item" href="#"><span>Log Out</span> <i class="fa fa-sign-out"></i></a>
+                                                    </div>
+                                                }
+                                                @if (User.IsInRole("Patient"))
+                                                {
+                                                    <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="~/images/images/logo/user.png" alt="#" /><span class="name_user">Patient</span></a>
+                                                    <div class="dropdown-menu">
+                                                        <a class="dropdown-item" href="profile.html">My Profile</a>
+                                                        <a class="dropdown-item" href="settings.html">Settings</a>
+                                                        <a class="dropdown-item" href="help.html">Help</a>
+                                                        <a class="dropdown-item" href="#"><span>Log Out</span> <i class="fa fa-sign-out"></i></a>
+                                                    </div>
+                                                }
+                                                @if (User.IsInRole("Doctor"))
+                                                {
+                                                    <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="~/images/images/logo/user.png" alt="#" /><span class="name_user">Doctor</span></a>
+                                                    <div class="dropdown-menu">
+                                                        <a class="dropdown-item" href="profile.html">My Profile</a>
+                                                        <a class="dropdown-item" href="settings.html">Settings</a>
+                                                        <a class="dropdown-item" href="help.html">Help</a>
+                                                        <a class="dropdown-item" href="#"><span>Log Out</span> <i class="fa fa-sign-out"></i></a>
+                                                    </div>
+                                                }
+                                            }
+
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <!-- end topbar -->
+                <!-- dashboard inner -->
+                <div class="midde_cont">
+                    <div class="row">
+                        @if (User.IsInRole("Counsellor"))
+                        {
+                            <!-- Card 1 -->
+                            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Appointments</h5>
+                                        <a href="index.html"><img class="img-responsive" src="~/images/images/logo/booking.png" alt="#" /></a>
+                                        <button>
+                                            <a class="nav-link text-dark" asp-controller="Counsellor" asp-action="Appointment">More info...</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 2 -->
+                            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Files</h5>
+                                        <a href="index.html"><img class="img-responsive" src="~/images/images/logo/Files.png" alt="#" /></a>
+                                        <button>
+                                            <a class="nav-link text-dark" asp-controller="Counsellor" asp-action="File">More info...</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 3 -->
+                            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Referrals</h5>
+                                        <a href="index.html"><img class="img-responsive" src="~/images/images/logo/Ref.png" alt="#" /></a>
+
+                                        <button>
+                                            <a class="nav-link text-dark" asp-controller="Counsellor" asp-action="Referrals">More info...</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+
+                        <!-- end dashboard inner -->
+                    </div>
+                </div>
+            </div>
+            <!-- jQuery -->
+            <script src="~/js/js/jquery.min.js"></script>
+            <script src="~/js/js/popper.min.js"></script>
+            <script src="~/js/bootstrap.min.js"></script>
+            <!-- wow animation -->
+            <script src="~/js/js/animate.js"></script>
+            <!-- select country -->
+            <script src="~/js/js/bootstrap-select.js"></script>
+            <!-- owl carousel -->
+            <script src="~/js/js/owl.carousel.js"></script>
+            <!-- chart js -->
+            <script src="~/js/js/Chart.min.js"></script>
+            <script src="~/js/js/Chart.bundle.min.js"></script>
+            <script src="~/js/js/utils.js"></script>
+            <script src="~/js/js/analyser.js"></script>
+            <!-- nice scrollbar -->
+            <script src="~/js/js/perfect-scrollbar.min.js"></script>
+            <script>
+                var ps = new PerfectScrollbar('#sidebar');
+            </script>
+            <!-- custom js -->
+            <script src="~/js/js/custom.js"></script>
+            <script src="~/js/js/chart_custom_style1.js"></script>
+</body>
+</html>
+
+
