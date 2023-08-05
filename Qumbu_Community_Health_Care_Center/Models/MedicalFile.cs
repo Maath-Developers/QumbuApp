@@ -27,18 +27,21 @@ namespace Qumbu_Community_Health_Care_Center.Models
         public string? Gender { get; set; }
 
         public string? Address { get; set; }
-
-
-        public string? City { get; set; }
-        [DisplayName("Patient Diagnosis")]
-        public string PatientDiagnosis { get; set; }
+        public string? Province { get; set; }
 
         [DisplayName("Marital Stataus")]
-        public string MaritalStatus { get; set; }
-        public string Nationality { get; set; }
+        public string? MaritalStatus { get; set; }
+        public string? Nationality { get; set; }
 
         [Required]
-        public string Laguage { get; set; }
+        public string? Laguage { get; set; }
+        [DisplayName("Next Of Kin Name")]
+        public string? NextOfKinFirstName { get; set; }
+        [DisplayName("Next Of Kin Surname")]
+        public string? NextOfKinLastName { get; set; }
+
+        [DisplayName("Next Of Kin Cell Number")]
+        public string? NextOfKinCellNumber { get; set; }
 
 
     }

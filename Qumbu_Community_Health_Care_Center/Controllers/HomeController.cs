@@ -36,10 +36,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             return View();
         }
 
-        public IActionResult Admin_dashboard()
-        {
-            return View();
-        }
+      
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

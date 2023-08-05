@@ -51,43 +51,43 @@ namespace Qumbu_Community_Health_Care_Center.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "35250752-514c-4546-97b6-c922d2b0f0d3",
-                            ConcurrencyStamp = "b95d8e2a-c641-4402-acd7-9a518b2f5ed3",
+                            Id = "bf7d1241-b666-4e75-b05a-c84682b5fce3",
+                            ConcurrencyStamp = "e8d499ed-362b-45df-b0a2-94e2d9441288",
                             Name = "Patient",
                             NormalizedName = "PATIENT"
                         },
                         new
                         {
-                            Id = "023d0daf-7693-4c49-be1b-f83fa78efc50",
-                            ConcurrencyStamp = "b5dabb6f-022a-4d5e-9d78-7160d09f310d",
+                            Id = "1bbcf66b-6904-41d2-9ccf-0ec52f196b90",
+                            ConcurrencyStamp = "49930c27-edb1-4ac9-ae59-a85f204ea93d",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "c1df5aae-39c7-49a8-aae1-970503d0ae64",
-                            ConcurrencyStamp = "68c3370c-02c0-4202-b3ac-3036e234549a",
+                            Id = "899b2561-7d42-4726-8287-6d8109cd196b",
+                            ConcurrencyStamp = "479e5724-0a68-4970-a8e4-ede601f8cf04",
                             Name = "Nurse",
                             NormalizedName = "NURSE"
                         },
                         new
                         {
-                            Id = "73010c6a-b54d-493c-b46f-045430ffe098",
-                            ConcurrencyStamp = "6eb25249-b2e2-4e35-b008-6964dc108282",
+                            Id = "1e9b167f-b5fe-4612-955c-9a0ee3e2e433",
+                            ConcurrencyStamp = "6d169d56-d8c2-4226-ab05-e8dc5d9b2b49",
                             Name = "Doctor",
                             NormalizedName = "DOCTOR"
                         },
                         new
                         {
-                            Id = "0b855305-577c-4208-80a4-46fe93659b67",
-                            ConcurrencyStamp = "21262c5c-95de-42b2-bbca-89d823771f01",
+                            Id = "855add58-c068-40e8-916b-cc05d9a9a59e",
+                            ConcurrencyStamp = "4525a480-1d26-4720-b8c5-bfff0f9aebfe",
                             Name = "Unit-Manager",
                             NormalizedName = "UNIT-MANAGER"
                         },
                         new
                         {
-                            Id = "6174857e-423e-4e12-b2de-f12305702484",
-                            ConcurrencyStamp = "fc4d5447-2758-4f58-8454-19954954b48f",
+                            Id = "06a55c69-accc-4402-bf54-da9a2b578eff",
+                            ConcurrencyStamp = "e6e161ee-a1a4-4178-b1b6-af1867b04b68",
                             Name = "Counsellor",
                             NormalizedName = "COUNSELLOR"
                         });
@@ -296,6 +296,63 @@ namespace Qumbu_Community_Health_Care_Center.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("Qumbu_Community_Health_Care_Center.Models.MedicalFile", b =>
+                {
+                    b.Property<int>("MedicalID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MedicalID"), 1L, 1);
+
+                    b.Property<string>("Address")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DateOfBirth")
+                        .IsRequired()
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Gender")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("IDno")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Laguage")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MaritalStatus")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nationality")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NextOfKinCellNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NextOfKinFirstName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NextOfKinLastName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Province")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("MedicalID");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("MedicalFile");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -345,6 +402,15 @@ namespace Qumbu_Community_Health_Care_Center.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Qumbu_Community_Health_Care_Center.Models.MedicalFile", b =>
+                {
+                    b.HasOne("Qumbu_Community_Health_Care_Center.Areas.Identity.Data.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("User");
                 });
 #pragma warning restore 612, 618
         }
