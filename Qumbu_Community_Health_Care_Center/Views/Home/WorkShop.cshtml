@@ -1,4 +1,114 @@
 ﻿@{
     Layout = "_AdminLayout";
 }
-<h1>admin layout</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Aid Card</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+    <div class="container mt-4">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">Medical Aid Card</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="memberName">Member Name:</label>
+                            <input type="text" class="form-control" id="memberName" placeholder="Enter Member Name">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="membershipNumber">Membership/Policy Number:</label>
+                            <input type="text" class="form-control" id="membershipNumber" placeholder="Enter Membership/Policy Number">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="validityPeriod">Validity Period:</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="validityPeriod" placeholder="Select Validity Period"
+                                       readonly>
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false"></button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Option 1</a>
+                                        <a class="dropdown-item" href="#">Option 2</a>
+                                        <a class="dropdown-item" href="#">Option 3</a>
+                                        <!-- Add more options as needed -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more rows (sections) as needed -->
+            </div>
+        </div>
+
+    </div>
+    <div class="container mt-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">Medical Aid Card</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="memberName">Member Name:</label>
+                                <input type="text" class="form-control" id="memberName" placeholder="Enter Member Name">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="membershipNumber">Membership/Policy Number:</label>
+                                <input type="text" class="form-control" id="membershipNumber" placeholder="Enter Membership/Policy Number">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="validityPeriod">Validity Period:</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="validityPeriod" placeholder="Select Validity Period"
+                                           readonly>
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false"></button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Option 1</a>
+                                            <a class="dropdown-item" href="#">Option 2</a>
+                                            <a class="dropdown-item" href="#">Option 3</a>
+                                            <!-- Add more options as needed -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more rows (sections) as needed -->
+                </div>
+
+            </div>
+    </div>
+
+    <!-- Bootstrap JS (Optional, only needed if you use Bootstrap's JavaScript components) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
