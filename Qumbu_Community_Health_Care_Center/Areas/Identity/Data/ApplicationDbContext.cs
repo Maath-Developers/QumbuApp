@@ -3,15 +3,19 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Qumbu_Community_Health_Care_Center.Areas.Identity.Data;
+using Qumbu_Community_Health_Care_Center.Models;
 
 namespace Qumbu_Community_Health_Care_Center.Areas.Identity.Data;
 
 public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
 {
+   
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options)
     {
+       
     }
+    public DbSet<MedicalFile> MedicalFiles { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
