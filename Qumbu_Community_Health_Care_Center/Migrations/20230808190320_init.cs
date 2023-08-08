@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Qumbu_Community_Health_Care_Center.Migrations
 {
-    public partial class time : Migration
+    public partial class init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -212,12 +212,12 @@ namespace Qumbu_Community_Health_Care_Center.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "75063d75-8adb-4520-885d-5f81883e5446", "21fc4552-d95d-47d9-a32c-63b936671f41", "Nurse", "NURSE" },
-                    { "b2a23ecc-0651-412c-a0a7-33d9001f86e3", "280ac7ba-1707-4201-92ba-aa613b2c066f", "Unit-Manager", "UNIT-MANAGER" },
-                    { "b8763339-852e-457a-8eb7-dff3cd9bbc1c", "035bf7ab-ad27-4233-bca4-e80dabd8a749", "Doctor", "DOCTOR" },
-                    { "deb76afc-9ff8-4d28-a358-b94f89ec1b2a", "654ec683-f6ce-4cf9-b647-a92c3d8186b0", "Admin", "ADMIN" },
-                    { "f0878eb0-f328-484f-b58a-e9e99ce325e8", "76b465df-c481-47be-bb17-2ab1a91af2f3", "Patient", "PATIENT" },
-                    { "f6b7a9f9-3c91-44fe-8960-31291b181181", "9a7ccd0b-b6aa-45dd-ab9e-7fce644e17dc", "Counsellor", "COUNSELLOR" }
+                    { "68476f62-c5b8-4dfe-91a3-a36ac20e56d8", "b89462ce-0eaa-45bf-a90a-d156a9f0c029", "Patient", "PATIENT" },
+                    { "80b366d6-8862-492c-9c9f-fa53705e7f54", "adba8f41-d57c-4941-95d1-df7208379f75", "Doctor", "DOCTOR" },
+                    { "81de1ad2-7324-4c8d-beac-5d7801af513a", "99d39104-31ff-41b6-92ab-2afc50e81dff", "Counsellor", "COUNSELLOR" },
+                    { "cfa1e6d5-55b8-4b80-979e-a7fda5abf785", "ee6bdf2a-5ec6-41ba-837e-3f08be5f05e1", "Admin", "ADMIN" },
+                    { "db674fdd-22ed-4be5-9c6b-f53871c204c1", "e53f532f-d95c-4a64-98ad-d71d2ecc153a", "Nurse", "NURSE" },
+                    { "f984db30-a1ee-4933-9711-1dcf15f25d78", "dee91ef6-0b18-4e94-a36c-7af77c2c2f51", "Unit-Manager", "UNIT-MANAGER" }
                 });
 
             migrationBuilder.CreateIndex(
