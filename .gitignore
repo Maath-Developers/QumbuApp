@@ -396,3 +396,4 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/Qumbu_Community_Health_Care_Center/Controllers/CounsellerController.cs
