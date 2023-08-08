@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
 namespace Qumbu_Community_Health_Care_Center.Controllers
+    private readonly DbContext Context;
+    public CounsellorController ()
 {
     public class CounsellerController : Controller
     {
@@ -19,6 +21,10 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         public IActionResult NoAccess()
         {
             return View();
+        }
+        public IActionResult Booking() 
+        {
+            IEnumerable<Bookings> book=
         }
     }
 }
