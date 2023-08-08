@@ -5,6 +5,11 @@
 @{
     ViewData["Title"] = "";
 }
+@{
+    Layout = "_LoginPartial";
+}
+@*for icon*@
+<link rel="icon" href="~/_Images/favicon.ico" type="image/png" />
 <link rel="stylesheet" href="~/css/StyleSheet/Login.css" asp-append-version="true" />
 <h1>@ViewData["Title"]</h1>
 <section class="vh-100 gradient-custom">
@@ -16,7 +21,7 @@
 
                         <div class="mb-md-5 mt-md-4 pb-5">
 
-                            <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
+                            <h2 class="fw-bold mb-2 text-white">LOG-IN</h2>
                             <p class="text-white-50 mb-5">Please enter your login and password!</p>
 
                             <form id="account" method="post">
@@ -70,41 +75,8 @@
 <div class="row">
     
 
-    @*<div class="col-6 h-25">
-        <img width="700" height="450" src="~ /images/images/logo/Log_Pic.jpg" alt="#" />
-    </div>*@
-    @*<div class="col-md-6 col-md-offset-2">
-        <section>
-            <h3>Use another service to log in.</h3>
-            <hr />
-            @{
-                if ((Model.ExternalLogins?.Count ?? 0) == 0)
-                {
-                    <div>
-                        <p>
-                            There are no external authentication services configured. See this <a href="https://go.microsoft.com/fwlink/?LinkID=532715">article
-                            about setting up this ASP.NET application to support logging in via external services</a>.
-                        </p>
-                    </div>
-                }
-                else
-                {
-                    <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
-                        <div>
-                            <p>
-                                @foreach (var provider in Model.ExternalLogins!)
-                                {
-                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
-                                }
-                            </p>
-                        </div>
-                    </form>
-                }
-            }
-        </section>
-    </div>*@
-</div>
+   
 
-@section Scripts {
+@*@section Scripts {
     <partial name="_ValidationScriptsPartial" />
-}
+}*@

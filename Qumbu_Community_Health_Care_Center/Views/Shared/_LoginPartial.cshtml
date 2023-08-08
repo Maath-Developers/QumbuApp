@@ -5,38 +5,99 @@
 @inject UserManager<ApplicationUser> UserManager
 
 
-<ul class="navbar-nav">
-@if (SignInManager.IsSignedIn(User))
-{
-       
-    <li class="nav-item mr-1">
-            <a id="manage" class="btn btn-secondary" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage"> @UserManager.GetUserName(User)!</a>
-    </li>
-    <li class="nav-item">
-        <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
-                <button id="logout" type="submit" class="btn btn-secondary">Logout</button>
-        </form>
-    </li>
-        
-       
 
-    
-}
-else
-{
-    @*<li class="nav-item ">
-            <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Register" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
-                <button id="register" type="submit" class="nav-link btn btn-link text-dark">Register</button>
-            </form>
-        <a class="nav-link text-primary" id="register" asp-area="Identity" asp-page="/Account/Register">Register</a>
-    </li>*@
-    <li class="nav-item">
-        <a class="nav-link text-primary" id="login" asp-area="Identity" asp-page="/Account/Login">Login</a>
-    </li>
-        <li class="nav-item">
-            <a class="nav-link text-primary" id="login" asp-area="Identity" asp-page="/Account/Register">Register</a>
-            
-        </li>
-        
-}
-</ul>
+@*for icon*@
+<link rel="icon" href="~/_Images/favicon.ico" type="image/png" />
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Qumbu Community Health Care by MAATH developers</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	@*for icon*@
+	<link rel="icon" href="~/_Images/favicon.ico" type="image/png" />
+	<link rel="stylesheet" href="~/css/css/animate.css">
+
+	<link rel="stylesheet" href="~/css/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="~/css/css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="~/css/magnific-popup.css">
+
+	<link rel="stylesheet" href="~/css/css/bootstrap-datepicker.css">
+	<link rel="stylesheet" href="~/css/css/jquery.timepicker.css">
+
+	<link rel="stylesheet" href="~/css/css/flaticon.css">
+	<link rel="stylesheet" href="~/css/css/style.css">
+</head>
+<body>
+
+
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+		<div class="container-fluid">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="fa fa-bars"></span> Menu
+			</button>
+
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active"><a class="nav-link" asp-controller="Home" asp-action="Index">Home</a></li>
+					<li class="nav-item"><a asp-controller="Home" asp-action="Index" class="nav-link">About us</a></li>
+					<li class="nav-item"><a asp-controller="Home" asp-action="Index" class="nav-link">Team</a></li>
+					<li class="nav-item"><a asp-controller="Home" asp-action="Index" class="nav-link">Services</a></li>
+					<li class="nav-item"><a asp-controller="Home" asp-action="Index" class="nav-link">Departments</a></li>
+
+
+				</ul>
+				<ul class="navbar-nav">
+					@if (SignInManager.IsSignedIn(User))
+					{
+
+						<li class="nav-item mr-1">
+							<a id="manage" class="btn btn-secondary" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage"> @UserManager.GetUserName(User)!</a>
+						</li>
+						<li class="nav-item">
+							<form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+								<button id="logout" type="submit" class="btn btn-secondary">Logout</button>
+							</form>
+						</li>
+
+
+
+
+					}
+					else
+					{
+						@*<li class="nav-item ">
+					<form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Register" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+					<button id="register" type="submit" class="nav-link btn btn-link text-dark">Register</button>
+					</form>
+					<a class="nav-link text-primary" id="register" asp-area="Identity" asp-page="/Account/Register">Register</a>
+					</li>*@
+						<li class="nav-item">
+							<a class="nav-link text-primary" id="login" asp-area="Identity" asp-page="/Account/Login">Login</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-primary" id="login" asp-area="Identity" asp-page="/Account/Register">Register</a>
+
+						</li>
+
+					}
+				</ul>
+
+			</div>
+		</div>
+	</nav>
+
+	<div class="container-fluid mt-3">
+		<main role="main" class="pb-3">
+			@RenderBody()
+		</main>
+	</div>
+
+</body>
+
+</html>
