@@ -1,11 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Qumbu_Community_Health_Care_Center.Areas.Identity.Data;
+using Qumbu_Community_Health_Care_Center.Models;
+
 
 namespace Qumbu_Community_Health_Care_Center.Controllers
-    private readonly DbContext Context;
-    public CounsellorController ()
+ 
 {
     public class CounsellerController : Controller
     {
+        private readonly ApplicationDbContext Context;
+        public CounsellerController(ApplicationDbContext DbContext)
+        {
+            Context = DbContext;
+        }
         public IActionResult Patient()
         {
             return View();
@@ -22,9 +30,22 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         {
             return View();
         }
-        public IActionResult Booking() 
+        public IActionResult Booking()
         {
-            IEnumerable<Bookings> book=
+            IEnumerable<Bookings> book = Context.Bookings;
+            return View(book);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult create(Bookings book)
+        {
+            if (ModelState.IsValid)
+            {
+                Context.Bookings.Add(book);
+                Context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(book);
         }
     }
 }

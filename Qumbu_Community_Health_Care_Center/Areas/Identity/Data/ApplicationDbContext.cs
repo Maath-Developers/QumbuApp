@@ -16,6 +16,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
        
     }
     public DbSet<MedicalFile> MedicalFile { get; set; }
+    public DbSet<Bookings> Bookings { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
