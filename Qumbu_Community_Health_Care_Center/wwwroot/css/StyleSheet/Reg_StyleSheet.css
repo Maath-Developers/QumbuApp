@@ -1,7 +1,7 @@
 ﻿body {
-    /*background-image: url(reg_pic.jpeg);*/
-    background-color: lightgray;
+    margin-bottom: 60px;
+    background-image: url('Log2_Pic.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
-button{
-    color:darkolivegreen;
-}
+
