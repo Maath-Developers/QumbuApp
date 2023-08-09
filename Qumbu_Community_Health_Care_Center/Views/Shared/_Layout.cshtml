@@ -8,6 +8,17 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 	@*for icon*@
 	<link rel="icon" href="~/_Images/favicon.ico" type="image/png" />
+	<link rel="stylesheet" href="~/css/css/animate.css">
+
+	<link rel="stylesheet" href="~/css/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="~/css/css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="~/css/magnific-popup.css">
+
+	<link rel="stylesheet" href="~/css/css/bootstrap-datepicker.css">
+	<link rel="stylesheet" href="~/css/css/jquery.timepicker.css">
+
+	<link rel="stylesheet" href="~/css/css/flaticon.css">
+	<link rel="stylesheet" href="~/css/css/style.css">
 
 </head>
 <body>
@@ -29,15 +40,17 @@
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="fa fa-bars"></span> Menu
 				</button>
-				<div class="order-lg-last">
-					
+				<div class="order-last nav-item">
+					@*<a href="#" class="btn btn-primary">Make an appointment</a>*@
 					<partial name="_LoginPartial" />
-					</div>
+					@*<a class="btn btn-secondary" id="login" asp-area="Identity" asp-page="/Account/Login">Login</a>
+					<a class="btn btn-secondary" id="login" asp-area="Identity" asp-page="/Account/Register">Register</a>*@
+				</div>
 				<div class="collapse navbar-collapse" id="ftco-nav">
 					<ul class="navbar-nav mr-auto">
-						<li class="nav-item active"><a class="nav-link" asp-controller="Home" asp-action="Index">Home</a></li>
+						<li class="nav-item "><a asp-controller="Home" asp-action="Index" class="nav-link">Home</a></li>
 						<li class="nav-item"><a asp-controller="Home" asp-action="Index" class="nav-link">About us</a></li>
-						<li class="nav-item"><a asp-controller="Home" asp-action="Index" class="nav-link">Team</a></li>
+						<li class="nav-item "><a asp-controller="Home" asp-action="Index" class="nav-link">Team</a></li>
 						<li class="nav-item"><a asp-controller="Home" asp-action="Index" class="nav-link">Services</a></li>
 						<li class="nav-item"><a asp-controller="Home" asp-action="Index" class="nav-link">Departments</a></li>
 						<li class="nav-item"><a asp-controller="Home" asp-action="WorkShop" class="nav-link">Work_Shop</a></li>
@@ -46,7 +59,6 @@
 				</div>
 			</div>
 		</nav>
-
 
 	</header>
     <div class="container-fluid">
