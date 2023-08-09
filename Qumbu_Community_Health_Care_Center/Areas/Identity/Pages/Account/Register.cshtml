@@ -7,6 +7,7 @@
 
 @*for icon*@
 <link rel="icon" href="~/_Images/favicon.ico" type="image/png" />
+<link rel="stylesheet" href="~/https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="~/css/StyleSheet/Reg_StyleSheet.css" asp-append-version="true" />
 <div class="row col-xl-12 bg-opacity-50">
 
@@ -19,7 +20,7 @@
                         <div class="card-body p-5 text-center">
 
                             <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="bg-opacity-50">
-                                <h1>@ViewData["Title"]</h1> @*This displays REGISTER*@
+                                <h1 class="text-center">@ViewData["Title"]</h1> @*This displays REGISTER*@
                                 <h6>Create a new account.</h6>
 
 
