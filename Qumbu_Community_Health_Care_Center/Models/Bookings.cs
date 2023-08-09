@@ -1,10 +1,16 @@
-﻿namespace Qumbu_Community_Health_Care_Center.Models
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+
+
+namespace Qumbu_Community_Health_Care_Center.Models
 {
     public class Bookings
     {
+        [Key]
         public int BookingId { get; set; }
         public string? Name { get; set; }
         public DateTime Date { get; set; }
-        public TimeZone? Time { get; set; }
+        
+        public TimeSpan? Time { get; set; }
     }
 }
