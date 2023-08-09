@@ -12,15 +12,15 @@
 }
 
 .sidebar_toggle {
-    background: #0971b8;
+    background: #0fb809;
 }
 
 .icon_info ul.user_profile_dd > li {
-    background: #0971b8;
+    background: #0fb809;
 }
 
 .icon_info span.badge {
-    background: #0971b8;
+    background: #0fb809;
 }
 
 .icon_info ul li a {
@@ -69,22 +69,22 @@
     color: #333;
 }
 
-#sidebar ul.components ul li a:hover {
-    color: #0971b8;
-}
+    #sidebar ul.components ul li a:hover {
+        color: #0fb809;
+    }
 
 #sidebar ul li a:hover, #sidebar ul li a:focus {
     color: #222;
 }
 
 .dark_bg {
-    background: #0971b8;
+    background: #0fb809;
 }
 
 .progress.skill-bar .progress-bar {
-    background-color: #0971b8;
+    background-color: #0fb809;
 }
 
 .dash_head {
-    background-color: #0971b8;
+    background-color: #0fb809;
 }
