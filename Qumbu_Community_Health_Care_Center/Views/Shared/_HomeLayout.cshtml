@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+@using Qumbu_Community_Health_Care_Center.Areas.Identity.Data
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<title>Qumbu Community Health Care by MAATH developers</title>
@@ -64,11 +68,15 @@
 			</div>
 			<div class="collapse navbar-collapse" id="ftco-nav">
 				<ul class="navbar-nav mr-auto">
-					<li class="nav-item "><a asp-controller="Home" asp-action="Index" class="nav-link">Home</a></li>
+					<li class="nav-item active"><a asp-controller="Home" asp-action="Index" class="nav-link">Home</a></li>
 					<li class="nav-item"><a asp-controller="Home" asp-action="Index" class="nav-link">About us</a></li>
 					<li class="nav-item "><a asp-controller="Home" asp-action="Index" class="nav-link">Team</a></li>
 					<li class="nav-item"><a asp-controller="Home" asp-action="Index" class="nav-link">Services</a></li>
-					<li class="nav-item"><a asp-controller="Home" asp-action="Index" class="nav-link">Departments</a></li>
+					@if (SignInManager.IsSignedIn(User))
+					{
+						<li class="nav-item"><a asp-controller="Home" asp-action="Landing2" class="nav-link">Departments</a></li>
+
+					}
 					<li class="nav-item"><a asp-controller="Home" asp-action="WorkShop" class="nav-link">Work_Shop</a></li>
 					
 				</ul>

@@ -1,0 +1,102 @@
+﻿@model Qumbu_Community_Health_Care_Center.Models.Appointment;
+@{
+	ViewData["Title"] = "CreateAppointment";
+	Layout = "~/Views/Shared/_FamilyPlanLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<title>Appointment Booking</title>
+</head>
+		
+<body>
+	<div class="container">
+		
+		<form method="post" asp-action="CreateAppointment">
+
+			  <button type="submit" class="btn btn-primary w-50">Book</button>
+
+
+			<label for="date">Preferred Date:</label>
+			<input type="date" id="date" name="date" required>
+
+
+			<label for="time">Preferred Time:</label>
+			<input type="time" id="time" name="time" required>
+
+			<label for="message">Additional Notes:</label>
+			<textarea id="message" name="message" rows="4"></textarea>
+
+			
+		
+		</form>
+
+	</div>
+</body>
+</html>
+
+<style>
+	body {
+		font-family: Arial, sans-serif;
+		margin: 0;
+		padding: 0;
+		background-color: #f5f5f5;
+	}
+
+	.container {
+		max-width: 800px;
+		margin: 50px auto;
+		padding: 30px;
+		background-color: #fff;
+		border-radius: 5px;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	}
+
+	h2 {
+		text-align: center;
+	}
+
+	form {
+		display: flex;
+		flex-direction: column;
+	}
+
+	label {
+		margin-top: 10px;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="date"],
+	input[type="time"],
+	textarea {
+		padding: 10px;
+		margin-bottom: 10px;
+		border: 1px solid #ccc;
+		border-radius: 3px;
+		font-size: 14px;
+	}
+
+	textarea {
+		resize: vertical;
+	}
+
+	button {
+		background-color: #007bff;
+		color: #fff;
+		border: none;
+		padding: 10px 20px;
+		border-radius: 3px;
+		cursor: pointer;
+		font-size: 16px;
+	}
+
+		button:hover {
+			background-color: #0056b3;
+		}
+</style>
