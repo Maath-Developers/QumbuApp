@@ -33,13 +33,13 @@
             </thead>
 
             <tbody>
-                @foreach (var hero in Model)
+                @foreach (var app in Model)
                 {
                     <tr>
-                        <td width="30%">@hero.Name</td>
-                        <td width="30%">@hero.Date</td>
-                        <td width="30%">@hero.Time</td> 
-                        <td width="30%">@hero.Contact</td>
+                        <td width="30%">@app.Names</td>
+                        <td width="30%">@app.Date</td>
+                        <td width="30%">@app.Time</td> 
+                        <td width="30%">@app.Contact</td>
                     </tr>
                 }
             </tbody>

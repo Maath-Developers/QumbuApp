@@ -59,62 +59,7 @@
                         <div class="user_profle_side">
                             <div class="user_img"><img class="img-responsive" src="~/images/images/logo/user.png" alt="#" /></div>
                             <div class="user_info">
-                                @if (User.IsInRole("Admin"))
-                                {
-                                    @*<a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="~/images/images/layout_img/user_img.jpg" alt="#" />*@<span class="name_user">Welcome back Admin</span>
-                                    @*<div class="dropdown-menu">
-                                <a class="dropdown-item" href="profile.html">My Profile</a>
-                                <a class="dropdown-item" href="settings.html">Settings</a>
-                                <a class="dropdown-item" href="help.html">Help</a>
-                                <a class="dropdown-item" href="#"><span>Log Out</span> <i class="fa fa-sign-out"></i></a>
-                                </div>*@
-                                }@if (User.IsInRole("Patient"))
-                                {
-                                    @*<a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="~/images/images/layout_img/user_img.jpg" alt="#" />*@<span class="name_user">Welcome back Patient</span>
-                                    @*<div class="dropdown-menu">
-                                <a class="dropdown-item" href="profile.html">My Profile</a>
-                                <a class="dropdown-item" href="settings.html">Settings</a>
-                                <a class="dropdown-item" href="help.html">Help</a>
-                                <a class="dropdown-item" href="#"><span>Log Out</span> <i class="fa fa-sign-out"></i></a>
-                                </div>*@
-                                }@if (User.IsInRole("Counsellor"))
-                                {
-                                    @*<a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="~/images/images/layout_img/user_img.jpg" alt="#" />*@<span class="name_user">Welcome back Counsellor</span>
-                                    @*<div class="dropdown-menu">
-                                <a class="dropdown-item" href="profile.html">My Profile</a>
-                                <a class="dropdown-item" href="settings.html">Settings</a>
-                                <a class="dropdown-item" href="help.html">Help</a>
-                                <a class="dropdown-item" href="#"><span>Log Out</span> <i class="fa fa-sign-out"></i></a>
-                                </div>*@
-                                }@if (User.IsInRole("Unit Manager"))
-                                {
-                                   @* <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="~/images/images/layout_img/user_img.jpg" alt="#" />*@<span class="name_user">Welcome back Unit-Manager</span>
-                                    @*<div class="dropdown-menu">
-                                <a class="dropdown-item" href="profile.html">My Profile</a>
-                                <a class="dropdown-item" href="settings.html">Settings</a>
-                                <a class="dropdown-item" href="help.html">Help</a>
-                                <a class="dropdown-item" href="#"><span>Log Out</span> <i class="fa fa-sign-out"></i></a>
-                                </div>*@
-                                }@if (User.IsInRole("Doctor"))
-                                {
-                                    @*<a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="~/images/images/layout_img/user_img.jpg" alt="#" />*@<span class="name_user">Welcome back Doctor</span>
-                                    @*<div class="dropdown-menu">
-                                <a class="dropdown-item" href="profile.html">My Profile</a>
-                                <a class="dropdown-item" href="settings.html">Settings</a>
-                                <a class="dropdown-item" href="help.html">Help</a>
-                                <a class="dropdown-item" href="#"><span>Log Out</span> <i class="fa fa-sign-out"></i></a>
-                                </div>*@
-                                }@if (User.IsInRole("Nurse"))
-                                {
-                                   @* <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="~/images/images/layout_img/user_img.jpg" alt="#" />*@<span class="name_user">Welcome back Nurse</span>
-                                    @*<div class="dropdown-menu">
-                                <a class="dropdown-item" href="profile.html">My Profile</a>
-                                <a class="dropdown-item" href="settings.html">Settings</a>
-                                <a class="dropdown-item" href="help.html">Help</a>
-                                <a class="dropdown-item" href="#"><span>Log Out</span> <i class="fa fa-sign-out"></i></a>
-                                </div>*@
-                                }
-                                @*<h6>John David</h6>*@
+                               @* <h6>@UserManager.GetUserAsync(User).Result.FirstName @UserManager.GetUserAsync(User).Result.LastName</h6>*@
                                 @*<p><span class="online_animation"></span> Online</p>*@
                             </div>
                         </div>
@@ -188,7 +133,13 @@
                                     <a href="#dashboard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-dashboard yellow_color"></i> <span>Appointments</span></a>
                                     <ul class="collapse list-unstyled" id="dashboard">
                                         <li>
-                                            <a href="dashboard.html">> <span>View</span></a>
+                                            <a asp-controller="Counseller" asp-action="Create" class="sidebar-link">
+                                              <span>Booking</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a asp-controller="Counseller" asp-action="Booking" class="sidebar-link">
+                                            <span>View</span></a>
                                         </li>
                                         <li>
                                             <a href="dashboard_2.html">> <span>Cancel</span></a>
@@ -265,7 +216,7 @@
                         <div class="full">
                             <button type="button" id="sidebarCollapse" class="sidebar_toggle"><i class="fa fa-bars"></i></button>
                             <div class="logo_section">
-                                <a href="index.html"><img class="img-responsive" src="~/images/images/logo/logo.png" alt="#" /></a>
+                                <a href="index.html"><img class="img-responsive" src="~_Images/1.png" alt="#" /></a>
                             </div>
                             <div class="right_topbar">
                                 <div class="icon_info">
@@ -278,16 +229,15 @@
                                         <li>
                                             @if (SignInManager.IsSignedIn(User))
                                             {
-                                                @if (User.IsInRole("Admin"))
-                                                {
-                                                    <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="~/images/images/logo/user.png" alt="#" /><span class="name_user">Admin</span></a>
+
+                                                <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="~/images/images/logo/user.png" alt="#" /> <h6>@UserManager.GetUserAsync(User).Result.FirstName @UserManager.GetUserAsync(User).Result.LastName</h6></a>
                                                     <div class="dropdown-menu">
                                                         <a class="dropdown-item" href="profile.html">My Profile</a>
                                                         <a class="dropdown-item" href="settings.html">Settings</a>
                                                         <a class="dropdown-item" href="help.html">Help</a>
                                                         <a class="dropdown-item" href="#"><span>Log Out</span> <i class="fa fa-sign-out"></i></a>
                                                     </div>
-                                                } 
+                                           @*     } 
                                                 @if (User.IsInRole("Nurse"))
                                                 {
                                                     <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="~/images/images/logo/user.png" alt="#" /><span class="name_user">Nurse</span></a>
@@ -337,7 +287,7 @@
                                                         <a class="dropdown-item" href="help.html">Help</a>
                                                         <a class="dropdown-item" href="#"><span>Log Out</span> <i class="fa fa-sign-out"></i></a>
                                                     </div>
-                                                }
+                                                }*@
                                             }
                                            
                                         </li>
