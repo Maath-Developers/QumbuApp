@@ -51,10 +51,26 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             }
             return View(book);
         }
-        //public IActionResult PatientC()
-        //{
-        //    IEnumerable<PatientReg> pat = Context.PatientReg;
-        //    return View(pat);
-        //}
+        public IActionResult PatientC()
+        {
+            IEnumerable<PatientReg> pat = Context.PatientReg;
+            return View(pat);
+        }
+        public IActionResult CreateR()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult CreateR(PatientReg pat)
+        {
+            if (ModelState.IsValid)
+            {
+                Context.PatientReg.Add(pat);
+                Context.SaveChanges();
+                return RedirectToAction("PatientC");
+            }
+            return View(pat);
+        }
     }
 }

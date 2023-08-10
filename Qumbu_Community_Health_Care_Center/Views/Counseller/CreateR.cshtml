@@ -1,5 +1,104 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model Qumbu_Community_Health_Care_Center.Models.PatientReg
+
+
+<form method="post" asp-action="Create">
+	<div class="border p-3">
+		<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+		<div class="form-group row">
+			<h2 class="text-black-50 pl-3">If you are new, please register</h2>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<div class="form-group">
+					<div class="col-4">
+						<label asp-for="Names"></label>
+						<input asp-for="Names" class="form-control" />
+						<span asp-validation-for="Names" class="text-danger"></span>
+					</div>
+					<div class="col-4">
+						<label asp-for="DOB"></label>
+						<input asp-for="DOB" class="form-control" />
+						<span asp-validation-for="DOB" class="text-danger"></span>
+					</div>
+					<div class="col-4">
+						<label asp-for="Address"></label>
+						<input asp-for="Address" class="form-control" />
+						<span asp-validation-for="Address" class="text-danger"></span>
+					</div>
+					<div class="col-4">
+						<label asp-for="Cell"></label>
+						<input asp-for="Cell" class="form-control" />
+						<span asp-validation-for="Cell" class="text-danger"></span>
+					</div>
+					<div class="col-4">
+						<label asp-for="Email"></label>
+						<input asp-for="Email" class="form-control" />
+						<span asp-validation-for="Email" class="text-danger"></span>
+					</div>
+					<div class="col-4">
+						<label asp-for="KinName"></label>
+						<input asp-for="KinName" class="form-control" />
+						<span asp-validation-for="KinName" class="text-danger"></span>
+					</div>
+					<div class="col-4">
+						<label asp-for="KinRel"></label>
+						<input asp-for="KinRel" class="form-control" />
+						<span asp-validation-for="KinRel" class="text-danger"></span>
+					</div>
+					<div class="col-4">
+						<label asp-for="KinCell"></label>
+						<input asp-for="KinCell" class="form-control" />
+						<span asp-validation-for="KinCell" class="text-danger"></span>
+					</div>
+					<div class="col-4">
+						<label asp-for="Source"></label>
+						<input asp-for="Source" class="form-control" />
+						<span asp-validation-for="Source" class="text-danger"></span>
+					</div>
+					<div class="col-4">
+						<label asp-for="CounExperience"></label>
+						<input asp-for="CounExperience" class="form-control" />
+						<span asp-validation-for="CounExperience" class="text-danger"></span>
+					</div>
+					<div class="col-4">
+						<label asp-for="MedHealth"></label>
+						<input asp-for="MedHealth" class="form-control" />
+						<span asp-validation-for="MedHealth" class="text-danger"></span>
+					</div>
+					<div class="col-4">
+						<label asp-for="CurrentMed"></label>
+						<input asp-for="CurrentMed" class="form-control" />
+						<span asp-validation-for="CurrentMed" class="text-danger"></span>
+					</div>
+					<div class="col-4">
+						<label asp-for="FamHis"></label>
+						<input asp-for="FamHis" class="form-control" />
+						<span asp-validation-for="FamHis" class="text-danger"></span>
+					</div>
+					<div class="col-4">
+						<label asp-for="Comm"></label>
+						<input asp-for="Comm" class="form-control" />
+						<span asp-validation-for="Comm" class="text-danger"></span>
+					</div>
+					<div class="col-4">
+						<label asp-for="CurrStress"></label>
+						<input asp-for="CurrStress" class="form-control" />
+						<span asp-validation-for="CurrStress" class="text-danger"></span>
+					</div>
+				</div>
+				<div class="form-group row">
+					<div class="col-8 offset-2 row">
+						<div class="col">
+							<input type="submit" class="btn btn-info w-75" value="Submit" />
+						</div>
+						<div class="col">
+							<a asp-action="Booking" class="btn btn-danger w-75">Back</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
+
+

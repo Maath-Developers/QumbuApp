@@ -1,5 +1,104 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model IEnumerable<Qumbu_Community_Health_Care_Center.Models.PatientReg>
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">You have the following form</h2>
+        </div>
+        <div class="col-6 text-right">
+            <a asp-controller="Counseller" asp-action="CreateR" class="btn btn-primary">Fill in the form</a>
+        </div>
+    </div>
+    <br />
+
+    @if (Model.Count() > 0)
+    {
+
+        <table class="table table-bordered table-striped" style="width:100%">
+            <thead>
+                <tr>
+                    <th>
+                        Names
+                    </th>
+                    <th>
+                        DOB
+                    </th>
+                    <th>
+                        Address
+                    </th>
+                    <th>
+                        Cell
+                    </th>
+                    <th>
+                        Email
+                    </th>
+                    <th>
+                        KinName
+                    </th>
+                    <th>
+                        KinRel
+                    </th> 
+                    <th>
+                        KinCell
+                    </th>
+                    <th>
+                        Source
+                    </th>
+                    <th>
+                        CounExperience
+                    </th>
+                    <th>
+                        MedHealth
+                    </th>
+                    <th>
+                        CurrentMed
+                    </th> 
+                    <th>
+                        FamHis
+                    </th> 
+                    <th>
+                        Comm
+                    </th> 
+                    <th>
+                        CurrStress
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var pa in Model)
+                {
+                    <tr>
+                        <td width="30%">@pa.Names</td>
+                        <td width="30%">@pa.DOB</td>
+                        <td width="30%">@pa.Address</td>
+                        <td width="30%">@pa.Cell</td>
+                        <td width="30%">@pa.Email</td>
+                        <td width="30%">@pa.KinName</td>
+                        <td width="30%">@pa.KinRel</td>
+                        <td width="30%">@pa.KinCell</td> 
+                        <td width="30%">@pa.Source</td>
+                        <td width="30%">@pa.CounExperience</td>
+                        <td width="30%">@pa.MedHealth</td>
+                        <td width="30%">@pa.CurrentMed</td>
+                        <td width="30%">@pa.FamHis</td>
+                        <td width="30%">@pa.Comm</td>
+                        <td width="30%">@pa.CurrStress</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    }
+    else
+    {
+        <p>No form has been submitted added yet</p>
+    }
+
+</div>
+
+
+
+
+
+
