@@ -1,25 +1,26 @@
-﻿@{
+﻿@model Qumbu_Community_Health_Care_Center.Models.Appointment;
+@{
 	ViewData["Title"] = "CreateAppointment";
 	Layout = "~/Views/Shared/_FamilyPlanLayout.cshtml";
 }
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="styles.css">
 	<title>Appointment Booking</title>
 </head>
+		
 <body>
 	<div class="container">
-		<h2>Book an Appointment</h2>
-		<form id="appointment-form">
-			<label for="name">Full Name:</label>
-			<input type="text" id="name" name="name" required>
+		
+		<form method="post" asp-action="CreateAppointment">
 
-			<label for="email">Email:</label>
-			<input type="email" id="email" name="email" required>
+			  <button type="submit" class="btn btn-primary w-50">Book</button>
+
 
 			<label for="date">Preferred Date:</label>
 			<input type="date" id="date" name="date" required>
@@ -31,9 +32,10 @@
 			<label for="message">Additional Notes:</label>
 			<textarea id="message" name="message" rows="4"></textarea>
 
-
-			<button type="submit">Book Appointment</button>
+			
+		
 		</form>
+
 	</div>
 </body>
 </html>
@@ -47,9 +49,9 @@
 	}
 
 	.container {
-		max-width: 500px;
+		max-width: 800px;
 		margin: 50px auto;
-		padding: 20px;
+		padding: 30px;
 		background-color: #fff;
 		border-radius: 5px;
 		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);

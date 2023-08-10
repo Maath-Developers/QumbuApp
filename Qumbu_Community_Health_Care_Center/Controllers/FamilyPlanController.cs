@@ -1,9 +1,17 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Qumbu_Community_Health_Care_Center.Areas.Identity.Data;
+using Qumbu_Community_Health_Care_Center.Models;
+
 
 namespace Qumbu_Community_Health_Care_Center.Controllers
 {
     public class FamilyPlanController : Controller
     {
+        private readonly ApplicationDbContext dbContext;
+        public FamilyPlanController(ApplicationDbContext dbC)
+        {
+            dbContext = dbC;
+        }
         
         public IActionResult Patient()
         {
@@ -23,7 +31,27 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         }
 		public IActionResult CreateAppointment()
 		{
+
 			return View();
 		}
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult CreateAppointment(Appointment appointment)
+		{
+            if(ModelState.IsValid)
+            {
+                dbContext.Appointments.Add(appointment);
+                dbContext.SaveChanges();
+                return RedirectToAction("ViewAppointment");
+            }
+			return View(appointment);
+		}
+
+
+        public ActionResult ViewAppointment()
+        {
+            IEnumerable<Appointment>oblList=dbContext.Appointments;
+            return View(oblList);
+        }
 	}
 }
