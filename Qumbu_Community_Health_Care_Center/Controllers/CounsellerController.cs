@@ -35,15 +35,19 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             IEnumerable<Bookings> book = Context.Bookings;
             return View(book);
         }
+        public IActionResult Create()
+        {
+            return View();
+        }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult create(Bookings book)
+        public IActionResult Create(Bookings book)
         {
             if (ModelState.IsValid)
             {
                 Context.Bookings.Add(book);
                 Context.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Booking");
             }
             return View(book);
         }
