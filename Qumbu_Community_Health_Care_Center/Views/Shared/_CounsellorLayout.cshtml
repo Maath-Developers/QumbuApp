@@ -75,7 +75,9 @@
                                 <a href="#dashboard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-dashboard yellow_color"></i> <span>Manage Appointments</span></a>
                                 <ul class="collapse list-unstyled" id="dashboard">
                                     <li>
-                                        <a href="dashboard.html">> <span>View</span></a>
+                                        <a asp-controller="Counseller" asp-action="Booking" class="sidebar-link">
+                                            <span>View</span>
+                                        </a>
                                     </li>
                                     <li>
                                         <a href="dashboard_2.html">> <span>Cancel</span></a>
@@ -88,13 +90,13 @@
                                 <a href="#element" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-diamond purple_color"></i> <span>Manage Files</span></a>
                                 <ul class="collapse list-unstyled" id="element">
                                     <li>
-                                        <a asp-controller="Counseller" asp-action="CreateR" class="sidebar-link">
+                                        <a asp-controller="Counseller" asp-action="CreateRe" class="sidebar-link">
                                             <span>Add Record</span>
                                         </a>
                                     </li>
                                     <li><a href="media_gallery.html"> <span>Update Record</span></a></li>
                                     <li>
-                                    <a asp-controller="Counseller" asp-action="PatientC" class="sidebar-link">
+                                    <a asp-controller="Counseller" asp-action="Record" class="sidebar-link">
                                         <span>View</span>
                                     </a>
                                     </li>
@@ -105,8 +107,8 @@
                             <li>
                                 <a href="#apps" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-object-group blue2_color"></i> <span>Manage Referrals</span></a>
                                 <ul class="collapse list-unstyled" id="ref">
-                                    <li><a href="emal.html">> <span>View</span></a></li>
-                                    <li><a href="calendar.html">> <span>Referr</span></a></li>
+                                    <li><a href="emal.html"> <span>View</span></a></li>
+                                    <li><a href="calendar.html"> <span>Referr</span></a></li>
                                @* <li><a href="media_gallery.html">> <span>Media Gallery</span></a></li>*@
                                 </ul>
                             </li>
@@ -160,8 +162,8 @@
                                     <a href="#element" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-diamond purple_color"></i> <span>Files</span></a>
                                     <ul class="collapse list-unstyled" id="element">
                                     <li> <a asp-controller="Counseller" asp-action="CreateR" class="sidebar-link"> <span>Submit form</span></a></li>
-                                    <li><a asp-controller="Counseller" asp-action="PatientC" class="sidebar-link"> <span>Update Details</span></a></li>
-                                        <li><a href="icons.html"> <span>View</span></a></li>
+                                    <li><a asp-controller="Counseller" asp-action="PatientC" class="sidebar-link"> <span>View</span></a></li>
+                                        <li><a href="icons.html"> <span>Update Details</span></a></li>
                                         @*<li><a href="invoice.html">> <span>Invoice</span></a></li>*@
                                     </ul>
                                 </li>

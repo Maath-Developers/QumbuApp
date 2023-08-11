@@ -5,7 +5,7 @@
 	<div class="border p-3">
 		<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 		<div class="form-group row">
-			<h2 class="text-black-50 pl-3">If you are new, please register</h2>
+			<h2 class="text-black-50 pl-3">Only for Authorized persons</h2>
 		</div>
 		<div class="row">
 			<div class="col-12">
@@ -51,39 +51,49 @@
 						<span asp-validation-for="Cell" class="text-danger"></span>
 					</div>
 					<div class="col-4">
-						<label asp-for="Source"></label>
-						<input asp-for="Source" class="form-control" />
-						<span asp-validation-for="Source" class="text-danger"></span>
+						<label asp-for="Reason"></label>
+						<input asp-for="Reason" class="form-control" />
+						<span asp-validation-for="Reason" class="text-danger"></span>
 					</div>
 					<div class="col-4">
-						<label asp-for="Experience"></label>
-						<input asp-for="Experience" class="form-control" />
-						<span asp-validation-for="Experience" class="text-danger"></span>
+						<label asp-for="MentalHis"></label>
+						<input asp-for="MentalHis" class="form-control" />
+						<span asp-validation-for="MentalHis" class="text-danger"></span>
 					</div>
 					<div class="col-4">
-						<label asp-for="Health"></label>
-						<input asp-for="Health" class="form-control" />
-						<span asp-validation-for="Health" class="text-danger"></span>
+						<label asp-for="Background"></label>
+						<input asp-for="Background" class="form-control" />
+						<span asp-validation-for="Background" class="text-danger"></span>
 					</div>
 					<div class="col-4">
-						<label asp-for="Medication"></label>
-						<input asp-for="Medication" class="form-control" />
-						<span asp-validation-for="Medication" class="text-danger"></span>
+						<label asp-for="Symptoms"></label>
+						<input asp-for="Symptoms" class="form-control" />
+						<span asp-validation-for="Symptoms" class="text-danger"></span>
 					</div>
 					<div class="col-4">
-						<label asp-for="History"></label>
-						<input asp-for="History" class="form-control" />
-						<span asp-validation-for="History" class="text-danger"></span>
+						<label asp-for="Expectations"></label>
+						<input asp-for="Expectations" class="form-control" />
+						<span asp-validation-for="Expectations" class="text-danger"></span>
 					</div>
 					<div class="col-4">
-						<label asp-for="Communication"></label>
-						<input asp-for="Communication" class="form-control" />
-						<span asp-validation-for="Communication" class="text-danger"></span>
+						<label asp-for="SocialInfo"></label>
+						<input asp-for="SocialInfo" class="form-control" />
+						<span asp-validation-for="SocialInfo" class="text-danger"></span>
 					</div>
 					<div class="col-4">
-						<label asp-for="CurrentStressors"></label>
-						<input asp-for="CurrentStressors" class="form-control" />
-						<span asp-validation-for="CurrentStressors" class="text-danger"></span>
+						<label asp-for="Safety"></label>
+						<input asp-for="Safety" class="form-control" />
+						<span asp-validation-for="Safety" class="text-danger"></span>
+					</div>
+					<div class="col-4">
+						<label asp-for="Consent"></label>
+						<input asp-for="Consent" class="form-control" />
+						<span asp-validation-for="Consent" class="text-danger"></span>
+					</div>
+					<div class="col-4">
+						<label asp-for="Sign"></label>
+						<input asp-for="Sign" class="form-control" />
+						<span asp-validation-for="Sign" class="text-danger"></span>
 					</div>
 				</div>
 				<div class="form-group row">
@@ -92,7 +102,7 @@
 							<input type="submit" class="btn btn-info w-75" value="Submit" />
 						</div>
 						<div class="col">
-							<a asp-action="Patient" class="btn btn-danger w-75">Back</a>
+							<a asp-action="Counsellor" class="btn btn-danger w-75">Back</a>
 						</div>
 					</div>
 				</div>
