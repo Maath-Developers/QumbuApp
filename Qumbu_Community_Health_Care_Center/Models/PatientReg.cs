@@ -9,7 +9,10 @@ namespace Qumbu_Community_Health_Care_Center.Models
         public int PatientRegId { get; set; }
         [Required]
         [DisplayName("FullNames")]
-        public string? Names { get; set; }
+        public string? Names { get; set; } 
+        [Required]
+        [DisplayName("Next of Kins Names")]
+        public string? Name { get; set; }
         [Required]
         [DisplayName("D.O.B")]
         public string? DOB { get; set; }
@@ -17,35 +20,54 @@ namespace Qumbu_Community_Health_Care_Center.Models
         public string? Cell { get; set; }
         public string ?Email { get; set; }
         [Required]
-        [DisplayName("Names")]
-        public string? KinName { get; set; }
-        [Required]
-        [DisplayName("Relationship to client: ")]
-        public string? KinRel { get; set; }
-        [Required]
-        [DisplayName("Cell Number")]
-        public string? KinCell { get; set; }
+        [DisplayName("Relation to the client: ")]
+        public string? Relationship { get; set; }
         [Required]
         [DisplayName("Referral Source")]
         public string? Source { get; set; }
         [Required]
         [DisplayName("Previous Counselling Experience")]
-        public string? CounExperience { get; set; }
+        public string? Experience { get; set; }
         [Required]
         [DisplayName("Medical & Mental Health")]
-        public string? MedHealth { get; set; }
+        public string? Health { get; set; }
         [Required]
         [DisplayName("Current Medication")]
-        public string? CurrentMed { get; set; }
+        public string? Medication { get; set; }
         [Required]
         [DisplayName("Family History")]
-        public string? FamHis { get; set; }
+        public string? History { get; set; }
         [Required]
         [DisplayName("Preferred Communication & Consent")]
-        public string? Comm { get; set; }
+        public string? Communication { get; set; }
         [Required]
         [DisplayName("Current Stressors")]
-        public string? CurrStress { get; set; }
-
+        public string? CurrentStressors { get; set; }
+        [Required]
+        [DisplayName("Reason for Seeking Counselling: ")]
+        public string? Reason { get; set; }
+        [Required]
+        [DisplayName("Mental Health History")]
+        public string? MentalHis { get; set; }
+        [DisplayName("Background and History")]
+        public string? Background { get; set; }
+        [Required]
+        [DisplayName("Current Concerns and Symptoms: ")]
+        public string? Symptoms { get; set; }
+        [Required]
+        [DisplayName("Goals and Expectations")]
+        public string? Expectations { get; set; }
+        [Required]
+        [DisplayName("Cultural and Social Information")]
+        public string? SocialInfo { get; set; }
+        [Required]
+        [DisplayName("Legal or Safety Concerns: ")]
+        public string? Safety { get; set; }
+        [Required]
+        [DisplayName("Consent & Confidentiality: ")]
+        public string? Consent { get; set; }
+        [Required]
+        [DisplayName("Signature & Date: ")]
+        public string? Sign { get; set; }
     }
 }

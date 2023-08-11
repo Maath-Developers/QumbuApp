@@ -1,0 +1,114 @@
+﻿@model Qumbu_Community_Health_Care_Center.Models.PatientReg
+
+
+<form method="post" asp-action="Create">
+	<div class="border p-3">
+		<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+		<div class="form-group row">
+			<h2 class="text-black-50 pl-3">Only for Authorized persons</h2>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<div class="form-group">
+					<div class="col-4">
+						<label asp-for="Names"></label>
+						<input asp-for="Names" class="form-control" />
+						<span asp-validation-for="Names" class="text-danger"></span>
+					</div>
+					<div class="col-4">
+						<label asp-for="DOB"></label>
+						<input asp-for="DOB" class="form-control" />
+						<span asp-validation-for="DOB" class="text-danger"></span>
+					</div>
+					<div class="col-4">
+						<label asp-for="Address"></label>
+						<input asp-for="Address" class="form-control" />
+						<span asp-validation-for="Address" class="text-danger"></span>
+					</div>
+					<div class="col-4">
+						<label asp-for="Cell"></label>
+						<input asp-for="Cell" class="form-control" />
+						<span asp-validation-for="Cell" class="text-danger"></span>
+					</div>
+					<div class="col-4">
+						<label asp-for="Email"></label>
+						<input asp-for="Email" class="form-control" />
+						<span asp-validation-for="Email" class="text-danger"></span>
+					</div>
+					<div class="col-4">
+						<label asp-for="Name"></label>
+						<input asp-for="Name" class="form-control" />
+						<span asp-validation-for="Name" class="text-danger"></span>
+					</div>
+					<div class="col-4">
+						<label asp-for="Relationship"></label>
+						<input asp-for="Relationship" class="form-control" />
+						<span asp-validation-for="Relationship" class="text-danger"></span>
+					</div>
+					<div class="col-4">
+						<label asp-for="Cell"></label>
+						<input asp-for="Cell" class="form-control" />
+						<span asp-validation-for="Cell" class="text-danger"></span>
+					</div>
+					<div class="col-4">
+						<label asp-for="Reason"></label>
+						<input asp-for="Reason" class="form-control" />
+						<span asp-validation-for="Reason" class="text-danger"></span>
+					</div>
+					<div class="col-4">
+						<label asp-for="MentalHis"></label>
+						<input asp-for="MentalHis" class="form-control" />
+						<span asp-validation-for="MentalHis" class="text-danger"></span>
+					</div>
+					<div class="col-4">
+						<label asp-for="Background"></label>
+						<input asp-for="Background" class="form-control" />
+						<span asp-validation-for="Background" class="text-danger"></span>
+					</div>
+					<div class="col-4">
+						<label asp-for="Symptoms"></label>
+						<input asp-for="Symptoms" class="form-control" />
+						<span asp-validation-for="Symptoms" class="text-danger"></span>
+					</div>
+					<div class="col-4">
+						<label asp-for="Expectations"></label>
+						<input asp-for="Expectations" class="form-control" />
+						<span asp-validation-for="Expectations" class="text-danger"></span>
+					</div>
+					<div class="col-4">
+						<label asp-for="SocialInfo"></label>
+						<input asp-for="SocialInfo" class="form-control" />
+						<span asp-validation-for="SocialInfo" class="text-danger"></span>
+					</div>
+					<div class="col-4">
+						<label asp-for="Safety"></label>
+						<input asp-for="Safety" class="form-control" />
+						<span asp-validation-for="Safety" class="text-danger"></span>
+					</div>
+					<div class="col-4">
+						<label asp-for="Consent"></label>
+						<input asp-for="Consent" class="form-control" />
+						<span asp-validation-for="Consent" class="text-danger"></span>
+					</div>
+					<div class="col-4">
+						<label asp-for="Sign"></label>
+						<input asp-for="Sign" class="form-control" />
+						<span asp-validation-for="Sign" class="text-danger"></span>
+					</div>
+				</div>
+				<div class="form-group row">
+					<div class="col-8 offset-2 row">
+						<div class="col">
+							<input type="submit" class="btn btn-info w-75" value="Submit" />
+						</div>
+						<div class="col">
+							<a asp-action="Counsellor" class="btn btn-danger w-75">Back</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
+
+
