@@ -7,6 +7,3227 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="wwwroot - Copy\css\bg-pic.jpg" />
+    <None Remove="wwwroot - Copy\css\css\.DS_Store" />
+    <None Remove="wwwroot - Copy\css\css\ajax-loader.gif" />
+    <None Remove="wwwroot - Copy\css\css\animate.css" />
+    <None Remove="wwwroot - Copy\css\css\bootstrap-datepicker.css" />
+    <None Remove="wwwroot - Copy\css\css\bootstrap.min.css" />
+    <None Remove="wwwroot - Copy\css\css\bootstrap\.DS_Store" />
+    <None Remove="wwwroot - Copy\css\css\bootstrap\bootstrap-grid.css" />
+    <None Remove="wwwroot - Copy\css\css\bootstrap\bootstrap-reboot.css" />
+    <None Remove="wwwroot - Copy\css\css\css\.DS_Store" />
+    <None Remove="wwwroot - Copy\css\css\css\bootstrap-reboot.css" />
+    <None Remove="wwwroot - Copy\css\css\css\css\animate.css" />
+    <None Remove="wwwroot - Copy\css\css\css\css\baguetteBox.min.css" />
+    <None Remove="wwwroot - Copy\css\css\css\css\bootstrap-grid.css" />
+    <None Remove="wwwroot - Copy\css\css\css\css\bootstrap-grid.css.map" />
+    <None Remove="wwwroot - Copy\css\css\css\css\bootstrap-grid.min.css" />
+    <None Remove="wwwroot - Copy\css\css\css\css\bootstrap-grid.min.css.map" />
+    <None Remove="wwwroot - Copy\css\css\css\css\bootstrap-reboot.css" />
+    <None Remove="wwwroot - Copy\css\css\css\css\bootstrap-reboot.css.map" />
+    <None Remove="wwwroot - Copy\css\css\css\css\bootstrap-reboot.min.css" />
+    <None Remove="wwwroot - Copy\css\css\css\css\bootstrap-reboot.min.css.map" />
+    <None Remove="wwwroot - Copy\css\css\css\css\bootstrap-select.css" />
+    <None Remove="wwwroot - Copy\css\css\css\css\bootstrap.css" />
+    <None Remove="wwwroot - Copy\css\css\css\css\bootstrap.css.map" />
+    <None Remove="wwwroot - Copy\css\css\css\css\bootstrap.min.css" />
+    <None Remove="wwwroot - Copy\css\css\css\css\bootstrap.min.css.map" />
+    <None Remove="wwwroot - Copy\css\css\css\css\calendar.css" />
+    <None Remove="wwwroot - Copy\css\css\css\css\calendar.min.css" />
+    <None Remove="wwwroot - Copy\css\css\css\css\color_2.css" />
+    <None Remove="wwwroot - Copy\css\css\css\css\custom.css" />
+    <None Remove="wwwroot - Copy\css\css\css\css\flaticon.css" />
+    <None Remove="wwwroot - Copy\css\css\css\css\font-awesome.css" />
+    <None Remove="wwwroot - Copy\css\css\css\css\font-awesome.min.css" />
+    <None Remove="wwwroot - Copy\css\css\css\css\jquery.fancybox.css" />
+    <None Remove="wwwroot - Copy\css\css\css\css\jquery.fancybox.min.css" />
+    <None Remove="wwwroot - Copy\css\css\css\css\owl.carousel.css" />
+    <None Remove="wwwroot - Copy\css\css\css\css\perfect-scrollbar.css" />
+    <None Remove="wwwroot - Copy\css\css\css\css\responsive.css" />
+    <None Remove="wwwroot - Copy\css\css\css\css\semantic.min.css" />
+    <None Remove="wwwroot - Copy\css\css\css\css\style.css" />
+    <None Remove="wwwroot - Copy\css\css\css\mixins\_text-hide.css" />
+    <None Remove="wwwroot - Copy\css\css\flaticon.css" />
+    <None Remove="wwwroot - Copy\css\css\jquery.timepicker.css" />
+    <None Remove="wwwroot - Copy\css\css\magnific-popup.css" />
+    <None Remove="wwwroot - Copy\css\css\owl.carousel.min.css" />
+    <None Remove="wwwroot - Copy\css\css\owl.theme.default.min.css" />
+    <None Remove="wwwroot - Copy\css\css\style.css" />
+    <None Remove="wwwroot - Copy\css\Home.css" />
+    <None Remove="wwwroot - Copy\css\LandingStyle.css" />
+    <None Remove="wwwroot - Copy\css\LOGO.png" />
+    <None Remove="wwwroot - Copy\css\Pictures\authe.jpg" />
+    <None Remove="wwwroot - Copy\css\Pictures\counseling-icon-4.jpeg" />
+    <None Remove="wwwroot - Copy\css\Pictures\family.jpeg" />
+    <None Remove="wwwroot - Copy\css\Pictures\healthyLivivng.png" />
+    <None Remove="wwwroot - Copy\css\Pictures\loging.jpeg" />
+    <None Remove="wwwroot - Copy\css\Pictures\LOGO-removebg-preview.png" />
+    <None Remove="wwwroot - Copy\css\Pictures\Prenatal.jpeg" />
+    <None Remove="wwwroot - Copy\css\Pictures\reg.jpeg" />
+    <None Remove="wwwroot - Copy\css\Pictures\reg_pic.jpeg" />
+    <None Remove="wwwroot - Copy\css\Pictures\vacc.jpeg" />
+    <None Remove="wwwroot - Copy\css\Pictures\walk_in.jpeg" />
+    <None Remove="wwwroot - Copy\css\site.css" />
+    <None Remove="wwwroot - Copy\css\StyleSheet\Landing2StyleSheet.css" />
+    <None Remove="wwwroot - Copy\css\StyleSheet\Log2_Pic.jpg" />
+    <None Remove="wwwroot - Copy\css\StyleSheet\Login.css" />
+    <None Remove="wwwroot - Copy\css\StyleSheet\LogIn_StyleSheet.css" />
+    <None Remove="wwwroot - Copy\css\StyleSheet\Reg_StyleSheet.css" />
+    <None Remove="wwwroot - Copy\css\StyleSheet\Workshop_StyleSheet.css" />
+    <None Remove="wwwroot - Copy\favicon.ico" />
+    <None Remove="wwwroot - Copy\icons.html" />
+    <None Remove="wwwroot - Copy\images\.DS_Store" />
+    <None Remove="wwwroot - Copy\images\404_error.html" />
+    <None Remove="wwwroot - Copy\images\about.jpg" />
+    <None Remove="wwwroot - Copy\images\bg_1.jpg" />
+    <None Remove="wwwroot - Copy\images\bg_2.jpg" />
+    <None Remove="wwwroot - Copy\images\bg_3.jpg" />
+    <None Remove="wwwroot - Copy\images\calendar.html" />
+    <None Remove="wwwroot - Copy\images\charts.html" />
+    <None Remove="wwwroot - Copy\images\contact.html" />
+    <None Remove="wwwroot - Copy\images\dashboard.html" />
+    <None Remove="wwwroot - Copy\images\dashboard_2.html" />
+    <None Remove="wwwroot - Copy\images\email.html" />
+    <None Remove="wwwroot - Copy\images\general_elements.html" />
+    <None Remove="wwwroot - Copy\images\hpslide1.jpg" />
+    <None Remove="wwwroot - Copy\images\hpslide2.jpg" />
+    <None Remove="wwwroot - Copy\images\hpslide3.jpg" />
+    <None Remove="wwwroot - Copy\images\hpslide4.jpg" />
+    <None Remove="wwwroot - Copy\images\icons.html" />
+    <None Remove="wwwroot - Copy\images\images\.DS_Store" />
+    <None Remove="wwwroot - Copy\images\images\landing_page\stack-of-three-black-hot-stones-spa-salon-vector-16122479.jpg" />
+    <None Remove="wwwroot - Copy\images\images\layout_img\.DS_Store" />
+    <None Remove="wwwroot - Copy\images\images\layout_img\american-express.png" />
+    <None Remove="wwwroot - Copy\images\images\layout_img\bg1.png" />
+    <None Remove="wwwroot - Copy\images\images\layout_img\error.png" />
+    <None Remove="wwwroot - Copy\images\images\layout_img\g1.jpg" />
+    <None Remove="wwwroot - Copy\images\images\layout_img\g10.jpg" />
+    <None Remove="wwwroot - Copy\images\images\layout_img\g11.jpg" />
+    <None Remove="wwwroot - Copy\images\images\layout_img\g12.jpg" />
+    <None Remove="wwwroot - Copy\images\images\layout_img\g13.jpg" />
+    <None Remove="wwwroot - Copy\images\images\layout_img\g14.jpg" />
+    <None Remove="wwwroot - Copy\images\images\layout_img\g15.jpg" />
+    <None Remove="wwwroot - Copy\images\images\layout_img\g16.jpg" />
+    <None Remove="wwwroot - Copy\images\images\layout_img\g2.jpg" />
+    <None Remove="wwwroot - Copy\images\images\layout_img\g3.jpg" />
+    <None Remove="wwwroot - Copy\images\images\layout_img\g4.jpg" />
+    <None Remove="wwwroot - Copy\images\images\layout_img\g5.jpg" />
+    <None Remove="wwwroot - Copy\images\images\layout_img\g6.jpg" />
+    <None Remove="wwwroot - Copy\images\images\layout_img\g7.jpg" />
+    <None Remove="wwwroot - Copy\images\images\layout_img\g8.jpg" />
+    <None Remove="wwwroot - Copy\images\images\layout_img\g9.jpg" />
+    <None Remove="wwwroot - Copy\images\images\layout_img\login_image.jpg" />
+    <None Remove="wwwroot - Copy\images\images\layout_img\map_icon.png" />
+    <None Remove="wwwroot - Copy\images\images\layout_img\mastercard.png" />
+    <None Remove="wwwroot - Copy\images\images\layout_img\msg1.png" />
+    <None Remove="wwwroot - Copy\images\images\layout_img\msg2.png" />
+    <None Remove="wwwroot - Copy\images\images\layout_img\msg3.png" />
+    <None Remove="wwwroot - Copy\images\images\layout_img\msg4.png" />
+    <None Remove="wwwroot - Copy\images\images\layout_img\msg5.png" />
+    <None Remove="wwwroot - Copy\images\images\layout_img\pattern.png" />
+    <None Remove="wwwroot - Copy\images\images\layout_img\pattern_h.png" />
+    <None Remove="wwwroot - Copy\images\images\layout_img\paypal.png" />
+    <None Remove="wwwroot - Copy\images\images\layout_img\user_img.jpg" />
+    <None Remove="wwwroot - Copy\images\images\layout_img\visa.png" />
+    <None Remove="wwwroot - Copy\images\images\logo\Appointments.avif" />
+    <None Remove="wwwroot - Copy\images\images\logo\booking.png" />
+    <None Remove="wwwroot - Copy\images\images\logo\Files.png" />
+    <None Remove="wwwroot - Copy\images\images\logo\logo.png" />
+    <None Remove="wwwroot - Copy\images\images\logo\logo_black.png" />
+    <None Remove="wwwroot - Copy\images\images\logo\logo_icon.png" />
+    <None Remove="wwwroot - Copy\images\images\logo\Log_Pic.jpg" />
+    <None Remove="wwwroot - Copy\images\images\logo\Ref.png" />
+    <None Remove="wwwroot - Copy\images\images\logo\user.png" />
+    <None Remove="wwwroot - Copy\images\image_1.jpg" />
+    <None Remove="wwwroot - Copy\images\image_2.jpg" />
+    <None Remove="wwwroot - Copy\images\image_3.jpg" />
+    <None Remove="wwwroot - Copy\images\image_4.jpg" />
+    <None Remove="wwwroot - Copy\images\image_5.jpg" />
+    <None Remove="wwwroot - Copy\images\image_6.jpg" />
+    <None Remove="wwwroot - Copy\images\index.html" />
+    <None Remove="wwwroot - Copy\images\invoice.html" />
+    <None Remove="wwwroot - Copy\images\loc.png" />
+    <None Remove="wwwroot - Copy\images\map.html" />
+    <None Remove="wwwroot - Copy\images\media_gallery.html" />
+    <None Remove="wwwroot - Copy\images\person_1.jpg" />
+    <None Remove="wwwroot - Copy\images\person_2.jpg" />
+    <None Remove="wwwroot - Copy\images\person_3.jpg" />
+    <None Remove="wwwroot - Copy\images\person_4.jpg" />
+    <None Remove="wwwroot - Copy\images\price.html" />
+    <None Remove="wwwroot - Copy\images\profile.html" />
+    <None Remove="wwwroot - Copy\images\settings.html" />
+    <None Remove="wwwroot - Copy\images\staff-1.jpg" />
+    <None Remove="wwwroot - Copy\images\staff-2.jpg" />
+    <None Remove="wwwroot - Copy\images\staff-3.jpg" />
+    <None Remove="wwwroot - Copy\images\staff-4.jpg" />
+    <None Remove="wwwroot - Copy\images\staff-5.jpg" />
+    <None Remove="wwwroot - Copy\images\staff-6.jpg" />
+    <None Remove="wwwroot - Copy\images\staff-7.jpg" />
+    <None Remove="wwwroot - Copy\images\staff-8.jpg" />
+    <None Remove="wwwroot - Copy\images\tables.html" />
+    <None Remove="wwwroot - Copy\images\widgets.html" />
+    <None Remove="wwwroot - Copy\images\work-1.jpg" />
+    <None Remove="wwwroot - Copy\images\work-2.jpg" />
+    <None Remove="wwwroot - Copy\images\work-3.jpg" />
+    <None Remove="wwwroot - Copy\images\work-4.jpg" />
+    <None Remove="wwwroot - Copy\images\work-5.jpg" />
+    <None Remove="wwwroot - Copy\images\work-6.jpg" />
+    <None Remove="wwwroot - Copy\images\work-7.jpg" />
+    <None Remove="wwwroot - Copy\images\work-8.jpg" />
+    <None Remove="wwwroot - Copy\js\.DS_Store" />
+    <None Remove="wwwroot - Copy\js\bootstrap-datepicker.js" />
+    <None Remove="wwwroot - Copy\js\bootstrap.min.js" />
+    <None Remove="wwwroot - Copy\js\google-map.js" />
+    <None Remove="wwwroot - Copy\js\jquery-3.2.1.min.js" />
+    <None Remove="wwwroot - Copy\js\jquery-migrate-3.0.1.min.js" />
+    <None Remove="wwwroot - Copy\js\jquery.animateNumber.min.js" />
+    <None Remove="wwwroot - Copy\js\jquery.easing.1.3.js" />
+    <None Remove="wwwroot - Copy\js\jquery.magnific-popup.min.js" />
+    <None Remove="wwwroot - Copy\js\jquery.min.js" />
+    <None Remove="wwwroot - Copy\js\jquery.stellar.min.js" />
+    <None Remove="wwwroot - Copy\js\jquery.timepicker.min.js" />
+    <None Remove="wwwroot - Copy\js\jquery.waypoints.min.js" />
+    <None Remove="wwwroot - Copy\js\js\analyser.js" />
+    <None Remove="wwwroot - Copy\js\js\animate.js" />
+    <None Remove="wwwroot - Copy\js\js\bootstrap-select.js" />
+    <None Remove="wwwroot - Copy\js\js\bootstrap.bundle.js" />
+    <None Remove="wwwroot - Copy\js\js\bootstrap.bundle.js.map" />
+    <None Remove="wwwroot - Copy\js\js\bootstrap.bundle.min.js" />
+    <None Remove="wwwroot - Copy\js\js\bootstrap.bundle.min.js.map" />
+    <None Remove="wwwroot - Copy\js\js\bootstrap.js" />
+    <None Remove="wwwroot - Copy\js\js\bootstrap.js.map" />
+    <None Remove="wwwroot - Copy\js\js\bootstrap.min.js" />
+    <None Remove="wwwroot - Copy\js\js\bootstrap.min.js.map" />
+    <None Remove="wwwroot - Copy\js\js\calendar.js" />
+    <None Remove="wwwroot - Copy\js\js\calendar.min.js" />
+    <None Remove="wwwroot - Copy\js\js\Chart.bundle.js" />
+    <None Remove="wwwroot - Copy\js\js\Chart.bundle.min.js" />
+    <None Remove="wwwroot - Copy\js\js\Chart.js" />
+    <None Remove="wwwroot - Copy\js\js\Chart.min.js" />
+    <None Remove="wwwroot - Copy\js\js\chart_custom_style1.js" />
+    <None Remove="wwwroot - Copy\js\js\chart_custom_style2.js" />
+    <None Remove="wwwroot - Copy\js\js\custom.js" />
+    <None Remove="wwwroot - Copy\js\js\custom_chart.js" />
+    <None Remove="wwwroot - Copy\js\js\jquery-3.3.1.min.js" />
+    <None Remove="wwwroot - Copy\js\js\jquery.fancybox.js" />
+    <None Remove="wwwroot - Copy\js\js\jquery.fancybox.min.js" />
+    <None Remove="wwwroot - Copy\js\js\jquery.min.js" />
+    <None Remove="wwwroot - Copy\js\js\owl.carousel.js" />
+    <None Remove="wwwroot - Copy\js\js\perfect-scrollbar.min.js" />
+    <None Remove="wwwroot - Copy\js\js\popper.min.js" />
+    <None Remove="wwwroot - Copy\js\js\semantic.min.js" />
+    <None Remove="wwwroot - Copy\js\js\settings.html" />
+    <None Remove="wwwroot - Copy\js\js\utils.js" />
+    <None Remove="wwwroot - Copy\js\main.js" />
+    <None Remove="wwwroot - Copy\js\owl.carousel.min.js" />
+    <None Remove="wwwroot - Copy\js\popper.min.js" />
+    <None Remove="wwwroot - Copy\js\scrollax.min.js" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-grid.css" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-grid.min.css" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-grid.min.css.map" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-grid.rtl.css" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-reboot.css" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-reboot.css.map" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-reboot.min.css" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-utilities.css" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-utilities.css.map" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-utilities.min.css" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap.css" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap.css.map" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap.min.css" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap.rtl.css" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap.rtl.css.map" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap.rtl.min.css" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\js\bootstrap.bundle.js" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\js\bootstrap.bundle.js.map" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\js\bootstrap.bundle.min.js" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\js\bootstrap.esm.js" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\js\bootstrap.esm.js.map" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\js\bootstrap.esm.min.js" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\js\bootstrap.esm.min.js.map" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\js\bootstrap.js" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\js\bootstrap.js.map" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\js\bootstrap.min.js" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\dist\js\bootstrap.min.js.map" />
+    <None Remove="wwwroot - Copy\lib\bootstrap\LICENSE" />
+    <None Remove="wwwroot - Copy\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+    <None Remove="wwwroot - Copy\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+    <None Remove="wwwroot - Copy\lib\jquery-validation-unobtrusive\LICENSE.txt" />
+    <None Remove="wwwroot - Copy\lib\jquery-validation\dist\additional-methods.js" />
+    <None Remove="wwwroot - Copy\lib\jquery-validation\dist\additional-methods.min.js" />
+    <None Remove="wwwroot - Copy\lib\jquery-validation\dist\jquery.validate.js" />
+    <None Remove="wwwroot - Copy\lib\jquery-validation\dist\jquery.validate.min.js" />
+    <None Remove="wwwroot - Copy\lib\jquery-validation\LICENSE.md" />
+    <None Remove="wwwroot - Copy\lib\jquery\dist\jquery.js" />
+    <None Remove="wwwroot - Copy\lib\jquery\dist\jquery.min.js" />
+    <None Remove="wwwroot - Copy\lib\jquery\dist\jquery.min.map" />
+    <None Remove="wwwroot - Copy\lib\jquery\LICENSE.txt" />
+    <None Remove="wwwroot - Copy\modules\.DS_Store" />
+    <None Remove="wwwroot - Copy\modules\icons.html" />
+    <None Remove="wwwroot - Copy\modules\zingchart-3d.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-animation.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-api-annotations.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-api-rules.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-api.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-area.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-area3d.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-boxplot.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-bubble.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-bubblepie.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-calendar.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-chord.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-core.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-csv.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-debug.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-dragging.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-errorbars.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-export.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-gauge.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-grid.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-guide.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-hbar.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-hbar3d.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-hbubble.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-hbullet.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-hfunnel.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-history.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-hscatter.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-legend.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-line.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-line3d.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-afg.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-ago.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-alb.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-and.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-are.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-arg.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-arm.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-aus.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-aut.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-aze.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-bdi.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-bel.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-ben.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-bfa.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-bgr.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-bih.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-blr.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-bol.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-bra.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-brn.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-btn.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-bwa.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-caf.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-can.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-che.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-chl.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-chn.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-civ.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-cmr.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-cod.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-cog.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-col.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-cri.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-cub.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-cyp.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-cze.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-deu.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-dnk.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-ecu.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-egy.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-esp.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-espL2.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-est.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-eth.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-fin.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-fra.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-fraL2.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-gab.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-gbr.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-gbrL2.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-geojson.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-gha.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-gmb.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-gnb.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-grc.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-gtm.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-guf.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-guy.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-hrv.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-hun.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-ind.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-irl.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-irn.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-isl.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-isr.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-ita.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-jpn.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-kaz.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-ken.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-kor.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-kwt.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-lao.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-lbr.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-lie.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-ltu.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-lux.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-lva.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-mda.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-mex.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-mkd.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-mne.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-moz.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-nam.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-ncl.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-nga.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-nld.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-nor.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-nzl.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-omn.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-pak.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-pan.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-per.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-phl.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-png.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-pol.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-prt.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-qat.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-rou.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-rus.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-rwa.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-sen.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-slv.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-srb.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-sur.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-svk.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-svn.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-swe.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-tha.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-tjk.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-topojson.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-tun.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-tur.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-twn.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-uga.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-ukr.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-ury.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_ak.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_al.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_ar.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_az.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_ca.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_co.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_ct.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_dc.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_de.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_fl.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_ga.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_hi.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_ia.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_id.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_il.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_in.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_ks.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_ky.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_la.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_ma.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_md.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_me.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_mi.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_mn.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_mo.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_ms.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_mt.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_nc.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_nd.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_ne.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_nh.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_nj.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_nm.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_nv.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_ny.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_oh.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_ok.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_or.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_pa.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_ri.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_sc.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_sd.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_tn.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_tx.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_ut.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_va.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_vt.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_wa.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_wi.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_wv.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-usa_wy.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-uzb.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-ven.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-vnm.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-world-continents.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-world-countries.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-yem.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-zaf.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-zmb.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps-zwe.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-maps.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-navpie.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-nestedpie.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-objects.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-pareto.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-patterns.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-piano.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-pie.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-pie3d.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-populationpyramid.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-preview.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-r.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-radar.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-range.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-rankflow.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-refresh.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-scalemarkers.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-scatter.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-scroll.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-selection-tool.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-selection.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-stock.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-stream.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-svg-simple-selection.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-toolbar3d.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-tooltip.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-treemap.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-varea.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-vbar.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-vbar3d.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-vbullet.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-venn.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-vfunnel.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-vline.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-waterfall.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-wordcloud.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-xy.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-yx.min.js" />
+    <None Remove="wwwroot - Copy\modules\zingchart-zoom.min.js" />
+    <None Remove="wwwroot - Copy\Qumbu.zip" />
+    <None Remove="wwwroot - Copy\Sidebar\css\app.css" />
+    <None Remove="wwwroot - Copy\Sidebar\css\app.css.map" />
+    <None Remove="wwwroot - Copy\Sidebar\fonts\.gitkeep" />
+    <None Remove="wwwroot - Copy\Sidebar\img\avatars\avatar-2.jpg" />
+    <None Remove="wwwroot - Copy\Sidebar\img\avatars\avatar-3.jpg" />
+    <None Remove="wwwroot - Copy\Sidebar\img\avatars\avatar-4.jpg" />
+    <None Remove="wwwroot - Copy\Sidebar\img\avatars\avatar-5.jpg" />
+    <None Remove="wwwroot - Copy\Sidebar\img\avatars\avatar.jpg" />
+    <None Remove="wwwroot - Copy\Sidebar\img\icons\icon-48x48.png" />
+    <None Remove="wwwroot - Copy\Sidebar\img\photos\unsplash-1.jpg" />
+    <None Remove="wwwroot - Copy\Sidebar\img\photos\unsplash-2.jpg" />
+    <None Remove="wwwroot - Copy\Sidebar\img\photos\unsplash-3.jpg" />
+    <None Remove="wwwroot - Copy\Sidebar\js\app.js" />
+    <None Remove="wwwroot - Copy\Sidebar\js\app.js.LICENSE.txt" />
+    <None Remove="wwwroot - Copy\Sidebar\js\app.js.map" />
+    <None Remove="wwwroot - Copy\_css\animate.css" />
+    <None Remove="wwwroot - Copy\_css\baguetteBox.min.css" />
+    <None Remove="wwwroot - Copy\_css\bootstrap-grid.css" />
+    <None Remove="wwwroot - Copy\_css\bootstrap-grid.css.map" />
+    <None Remove="wwwroot - Copy\_css\bootstrap-grid.min.css" />
+    <None Remove="wwwroot - Copy\_css\bootstrap-grid.min.css.map" />
+    <None Remove="wwwroot - Copy\_css\bootstrap-reboot.css" />
+    <None Remove="wwwroot - Copy\_css\bootstrap-reboot.css.map" />
+    <None Remove="wwwroot - Copy\_css\bootstrap-reboot.min.css" />
+    <None Remove="wwwroot - Copy\_css\bootstrap-reboot.min.css.map" />
+    <None Remove="wwwroot - Copy\_css\bootstrap-select.css" />
+    <None Remove="wwwroot - Copy\_css\bootstrap.css" />
+    <None Remove="wwwroot - Copy\_css\bootstrap.css.map" />
+    <None Remove="wwwroot - Copy\_css\bootstrap.min.css" />
+    <None Remove="wwwroot - Copy\_css\bootstrap.min.css.map" />
+    <None Remove="wwwroot - Copy\_css\calendar.css" />
+    <None Remove="wwwroot - Copy\_css\calendar.min.css" />
+    <None Remove="wwwroot - Copy\_css\color_2.css" />
+    <None Remove="wwwroot - Copy\_css\custom.css" />
+    <None Remove="wwwroot - Copy\_css\flaticon.css" />
+    <None Remove="wwwroot - Copy\_css\font-awesome.css" />
+    <None Remove="wwwroot - Copy\_css\font-awesome.min.css" />
+    <None Remove="wwwroot - Copy\_css\jquery.fancybox.css" />
+    <None Remove="wwwroot - Copy\_css\jquery.fancybox.min.css" />
+    <None Remove="wwwroot - Copy\_css\owl.carousel.css" />
+    <None Remove="wwwroot - Copy\_css\perfect-scrollbar.css" />
+    <None Remove="wwwroot - Copy\_css\responsive.css" />
+    <None Remove="wwwroot - Copy\_css\semantic.min.css" />
+    <None Remove="wwwroot - Copy\_css\style.css" />
+    <None Remove="wwwroot - Copy\_Images\.DS_Store" />
+    <None Remove="wwwroot - Copy\_Images\1.png" />
+    <None Remove="wwwroot - Copy\_Images\2.png" />
+    <None Remove="wwwroot - Copy\_Images\3.png" />
+    <None Remove="wwwroot - Copy\_Images\favicon.ico" />
+    <None Remove="wwwroot - Copy\_Images\landing_page\stack-of-three-black-hot-stones-spa-salon-vector-16122479.jpg" />
+    <None Remove="wwwroot - Copy\_Images\layout_img\.DS_Store" />
+    <None Remove="wwwroot - Copy\_Images\layout_img\american-express.png" />
+    <None Remove="wwwroot - Copy\_Images\layout_img\bg1.png" />
+    <None Remove="wwwroot - Copy\_Images\layout_img\error.png" />
+    <None Remove="wwwroot - Copy\_Images\layout_img\g1.jpg" />
+    <None Remove="wwwroot - Copy\_Images\layout_img\g10.jpg" />
+    <None Remove="wwwroot - Copy\_Images\layout_img\g11.jpg" />
+    <None Remove="wwwroot - Copy\_Images\layout_img\g12.jpg" />
+    <None Remove="wwwroot - Copy\_Images\layout_img\g13.jpg" />
+    <None Remove="wwwroot - Copy\_Images\layout_img\g14.jpg" />
+    <None Remove="wwwroot - Copy\_Images\layout_img\g15.jpg" />
+    <None Remove="wwwroot - Copy\_Images\layout_img\g16.jpg" />
+    <None Remove="wwwroot - Copy\_Images\layout_img\g2.jpg" />
+    <None Remove="wwwroot - Copy\_Images\layout_img\g3.jpg" />
+    <None Remove="wwwroot - Copy\_Images\layout_img\g4.jpg" />
+    <None Remove="wwwroot - Copy\_Images\layout_img\g5.jpg" />
+    <None Remove="wwwroot - Copy\_Images\layout_img\g6.jpg" />
+    <None Remove="wwwroot - Copy\_Images\layout_img\g7.jpg" />
+    <None Remove="wwwroot - Copy\_Images\layout_img\g8.jpg" />
+    <None Remove="wwwroot - Copy\_Images\layout_img\g9.jpg" />
+    <None Remove="wwwroot - Copy\_Images\layout_img\login_image.jpg" />
+    <None Remove="wwwroot - Copy\_Images\layout_img\map_icon.png" />
+    <None Remove="wwwroot - Copy\_Images\layout_img\mastercard.png" />
+    <None Remove="wwwroot - Copy\_Images\layout_img\msg1.png" />
+    <None Remove="wwwroot - Copy\_Images\layout_img\msg2.png" />
+    <None Remove="wwwroot - Copy\_Images\layout_img\msg3.png" />
+    <None Remove="wwwroot - Copy\_Images\layout_img\msg4.png" />
+    <None Remove="wwwroot - Copy\_Images\layout_img\msg5.png" />
+    <None Remove="wwwroot - Copy\_Images\layout_img\pattern.png" />
+    <None Remove="wwwroot - Copy\_Images\layout_img\pattern_h.png" />
+    <None Remove="wwwroot - Copy\_Images\layout_img\paypal.png" />
+    <None Remove="wwwroot - Copy\_Images\layout_img\user_img.jpg" />
+    <None Remove="wwwroot - Copy\_Images\layout_img\visa.png" />
+    <None Remove="wwwroot - Copy\_Images\logo\1.png" />
+    <None Remove="wwwroot - Copy\_Images\logo\3.png" />
+    <None Remove="wwwroot - Copy\_Images\logo\logo.png" />
+    <None Remove="wwwroot - Copy\_Images\logo\logo_black.png" />
+    <None Remove="wwwroot - Copy\_Images\logo\logo_icon.png" />
+    <None Remove="wwwroot - Copy\_Images\logo\user-solid.svg" />
+    <None Remove="wwwroot - Copy\_js\analyser.js" />
+    <None Remove="wwwroot - Copy\_js\animate.js" />
+    <None Remove="wwwroot - Copy\_js\bootstrap-select.js" />
+    <None Remove="wwwroot - Copy\_js\bootstrap.bundle.js" />
+    <None Remove="wwwroot - Copy\_js\bootstrap.bundle.js.map" />
+    <None Remove="wwwroot - Copy\_js\bootstrap.bundle.min.js" />
+    <None Remove="wwwroot - Copy\_js\bootstrap.bundle.min.js.map" />
+    <None Remove="wwwroot - Copy\_js\bootstrap.js" />
+    <None Remove="wwwroot - Copy\_js\bootstrap.js.map" />
+    <None Remove="wwwroot - Copy\_js\bootstrap.min.js" />
+    <None Remove="wwwroot - Copy\_js\bootstrap.min.js.map" />
+    <None Remove="wwwroot - Copy\_js\calendar.js" />
+    <None Remove="wwwroot - Copy\_js\calendar.min.js" />
+    <None Remove="wwwroot - Copy\_js\Chart.bundle.js" />
+    <None Remove="wwwroot - Copy\_js\Chart.bundle.min.js" />
+    <None Remove="wwwroot - Copy\_js\Chart.js" />
+    <None Remove="wwwroot - Copy\_js\Chart.min.js" />
+    <None Remove="wwwroot - Copy\_js\chart_custom_style1.js" />
+    <None Remove="wwwroot - Copy\_js\chart_custom_style2.js" />
+    <None Remove="wwwroot - Copy\_js\custom.js" />
+    <None Remove="wwwroot - Copy\_js\custom_chart.js" />
+    <None Remove="wwwroot - Copy\_js\jquery-3.3.1.min.js" />
+    <None Remove="wwwroot - Copy\_js\jquery.fancybox.js" />
+    <None Remove="wwwroot - Copy\_js\jquery.fancybox.min.js" />
+    <None Remove="wwwroot - Copy\_js\jquery.min.js" />
+    <None Remove="wwwroot - Copy\_js\owl.carousel.js" />
+    <None Remove="wwwroot - Copy\_js\perfect-scrollbar.min.js" />
+    <None Remove="wwwroot - Copy\_js\popper.min.js" />
+    <None Remove="wwwroot - Copy\_js\semantic.min.js" />
+    <None Remove="wwwroot - Copy\_js\settings.html" />
+    <None Remove="wwwroot - Copy\_js\utils.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="wwwroot - Copy\css\bg-pic.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\.DS_Store">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\ajax-loader.gif">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\animate.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\bootstrap-datepicker.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\bootstrap.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\bootstrap\.DS_Store">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\bootstrap\bootstrap-grid.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\bootstrap\bootstrap-reboot.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\css\.DS_Store">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\css\bootstrap-reboot.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\css\css\animate.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\css\css\baguetteBox.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\css\css\bootstrap-grid.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\css\css\bootstrap-grid.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\css\css\bootstrap-grid.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\css\css\bootstrap-grid.min.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\css\css\bootstrap-reboot.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\css\css\bootstrap-reboot.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\css\css\bootstrap-reboot.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\css\css\bootstrap-reboot.min.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\css\css\bootstrap-select.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\css\css\bootstrap.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\css\css\bootstrap.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\css\css\bootstrap.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\css\css\bootstrap.min.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\css\css\calendar.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\css\css\calendar.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\css\css\color_2.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\css\css\custom.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\css\css\flaticon.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\css\css\font-awesome.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\css\css\font-awesome.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\css\css\jquery.fancybox.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\css\css\jquery.fancybox.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\css\css\owl.carousel.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\css\css\perfect-scrollbar.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\css\css\responsive.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\css\css\semantic.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\css\css\style.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\css\mixins\_text-hide.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\flaticon.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\jquery.timepicker.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\magnific-popup.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\owl.carousel.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\owl.theme.default.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\css\style.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\Home.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\LandingStyle.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\LOGO.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\Pictures\authe.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\Pictures\counseling-icon-4.jpeg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\Pictures\family.jpeg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\Pictures\healthyLivivng.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\Pictures\loging.jpeg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\Pictures\LOGO-removebg-preview.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\Pictures\Prenatal.jpeg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\Pictures\reg.jpeg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\Pictures\reg_pic.jpeg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\Pictures\vacc.jpeg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\Pictures\walk_in.jpeg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\site.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\StyleSheet\Landing2StyleSheet.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\StyleSheet\Log2_Pic.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\StyleSheet\Login.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\StyleSheet\LogIn_StyleSheet.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\StyleSheet\Reg_StyleSheet.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\css\StyleSheet\Workshop_StyleSheet.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\favicon.ico">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\icons.html">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\.DS_Store">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\404_error.html">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\about.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\bg_1.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\bg_2.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\bg_3.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\calendar.html">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\charts.html">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\contact.html">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\dashboard.html">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\dashboard_2.html">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\email.html">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\general_elements.html">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\hpslide1.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\hpslide2.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\hpslide3.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\hpslide4.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\icons.html">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\.DS_Store">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\landing_page\stack-of-three-black-hot-stones-spa-salon-vector-16122479.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\layout_img\.DS_Store">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\layout_img\american-express.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\layout_img\bg1.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\layout_img\error.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\layout_img\g1.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\layout_img\g10.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\layout_img\g11.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\layout_img\g12.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\layout_img\g13.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\layout_img\g14.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\layout_img\g15.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\layout_img\g16.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\layout_img\g2.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\layout_img\g3.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\layout_img\g4.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\layout_img\g5.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\layout_img\g6.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\layout_img\g7.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\layout_img\g8.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\layout_img\g9.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\layout_img\login_image.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\layout_img\map_icon.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\layout_img\mastercard.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\layout_img\msg1.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\layout_img\msg2.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\layout_img\msg3.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\layout_img\msg4.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\layout_img\msg5.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\layout_img\pattern.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\layout_img\pattern_h.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\layout_img\paypal.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\layout_img\user_img.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\layout_img\visa.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\logo\Appointments.avif">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\logo\booking.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\logo\Files.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\logo\logo.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\logo\logo_black.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\logo\logo_icon.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\logo\Log_Pic.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\logo\Ref.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\images\logo\user.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\image_1.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\image_2.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\image_3.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\image_4.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\image_5.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\image_6.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\index.html">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\invoice.html">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\loc.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\map.html">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\media_gallery.html">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\person_1.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\person_2.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\person_3.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\person_4.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\price.html">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\profile.html">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\settings.html">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\staff-1.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\staff-2.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\staff-3.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\staff-4.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\staff-5.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\staff-6.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\staff-7.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\staff-8.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\tables.html">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\widgets.html">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\work-1.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\work-2.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\work-3.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\work-4.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\work-5.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\work-6.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\work-7.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\images\work-8.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\.DS_Store">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\bootstrap-datepicker.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\bootstrap.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\google-map.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\jquery-3.2.1.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\jquery-migrate-3.0.1.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\jquery.animateNumber.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\jquery.easing.1.3.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\jquery.magnific-popup.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\jquery.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\jquery.stellar.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\jquery.timepicker.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\jquery.waypoints.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\js\analyser.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\js\animate.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\js\bootstrap-select.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\js\bootstrap.bundle.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\js\bootstrap.bundle.js.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\js\bootstrap.bundle.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\js\bootstrap.bundle.min.js.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\js\bootstrap.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\js\bootstrap.js.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\js\bootstrap.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\js\bootstrap.min.js.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\js\calendar.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\js\calendar.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\js\Chart.bundle.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\js\Chart.bundle.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\js\Chart.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\js\Chart.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\js\chart_custom_style1.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\js\chart_custom_style2.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\js\custom.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\js\custom_chart.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\js\jquery-3.3.1.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\js\jquery.fancybox.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\js\jquery.fancybox.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\js\jquery.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\js\owl.carousel.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\js\perfect-scrollbar.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\js\popper.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\js\semantic.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\js\settings.html">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\js\utils.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\main.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\owl.carousel.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\popper.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\js\scrollax.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-grid.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-grid.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-grid.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-grid.min.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-grid.rtl.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-reboot.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-reboot.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-reboot.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-utilities.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-utilities.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-utilities.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap.min.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap.rtl.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap.rtl.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap.rtl.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\js\bootstrap.bundle.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\js\bootstrap.bundle.js.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\js\bootstrap.bundle.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\js\bootstrap.esm.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\js\bootstrap.esm.js.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\js\bootstrap.esm.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\js\bootstrap.esm.min.js.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\js\bootstrap.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\js\bootstrap.js.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\js\bootstrap.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\dist\js\bootstrap.min.js.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\bootstrap\LICENSE">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\jquery-validation-unobtrusive\LICENSE.txt">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\jquery-validation\dist\additional-methods.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\jquery-validation\dist\additional-methods.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\jquery-validation\dist\jquery.validate.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\jquery-validation\dist\jquery.validate.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\jquery-validation\LICENSE.md">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\jquery\dist\jquery.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\jquery\dist\jquery.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\jquery\dist\jquery.min.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\lib\jquery\LICENSE.txt">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\.DS_Store">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\icons.html">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-3d.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-animation.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-api-annotations.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-api-rules.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-api.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-area.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-area3d.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-boxplot.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-bubble.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-bubblepie.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-calendar.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-chord.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-core.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-csv.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-debug.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-dragging.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-errorbars.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-export.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-gauge.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-grid.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-guide.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-hbar.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-hbar3d.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-hbubble.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-hbullet.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-hfunnel.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-history.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-hscatter.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-legend.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-line.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-line3d.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-afg.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-ago.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-alb.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-and.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-are.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-arg.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-arm.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-aus.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-aut.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-aze.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-bdi.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-bel.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-ben.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-bfa.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-bgr.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-bih.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-blr.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-bol.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-bra.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-brn.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-btn.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-bwa.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-caf.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-can.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-che.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-chl.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-chn.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-civ.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-cmr.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-cod.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-cog.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-col.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-cri.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-cub.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-cyp.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-cze.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-deu.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-dnk.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-ecu.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-egy.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-esp.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-espL2.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-est.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-eth.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-fin.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-fra.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-fraL2.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-gab.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-gbr.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-gbrL2.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-geojson.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-gha.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-gmb.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-gnb.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-grc.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-gtm.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-guf.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-guy.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-hrv.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-hun.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-ind.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-irl.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-irn.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-isl.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-isr.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-ita.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-jpn.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-kaz.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-ken.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-kor.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-kwt.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-lao.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-lbr.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-lie.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-ltu.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-lux.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-lva.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-mda.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-mex.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-mkd.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-mne.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-moz.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-nam.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-ncl.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-nga.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-nld.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-nor.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-nzl.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-omn.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-pak.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-pan.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-per.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-phl.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-png.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-pol.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-prt.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-qat.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-rou.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-rus.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-rwa.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-sen.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-slv.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-srb.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-sur.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-svk.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-svn.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-swe.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-tha.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-tjk.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-topojson.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-tun.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-tur.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-twn.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-uga.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-ukr.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-ury.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_ak.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_al.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_ar.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_az.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_ca.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_co.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_ct.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_dc.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_de.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_fl.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_ga.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_hi.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_ia.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_id.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_il.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_in.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_ks.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_ky.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_la.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_ma.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_md.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_me.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_mi.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_mn.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_mo.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_ms.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_mt.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_nc.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_nd.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_ne.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_nh.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_nj.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_nm.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_nv.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_ny.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_oh.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_ok.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_or.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_pa.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_ri.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_sc.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_sd.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_tn.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_tx.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_ut.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_va.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_vt.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_wa.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_wi.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_wv.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-usa_wy.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-uzb.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-ven.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-vnm.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-world-continents.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-world-countries.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-yem.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-zaf.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-zmb.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps-zwe.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-maps.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-navpie.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-nestedpie.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-objects.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-pareto.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-patterns.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-piano.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-pie.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-pie3d.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-populationpyramid.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-preview.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-r.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-radar.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-range.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-rankflow.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-refresh.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-scalemarkers.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-scatter.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-scroll.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-selection-tool.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-selection.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-stock.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-stream.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-svg-simple-selection.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-toolbar3d.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-tooltip.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-treemap.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-varea.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-vbar.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-vbar3d.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-vbullet.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-venn.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-vfunnel.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-vline.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-waterfall.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-wordcloud.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-xy.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-yx.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\modules\zingchart-zoom.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\Qumbu.zip">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\Sidebar\css\app.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\Sidebar\css\app.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\Sidebar\fonts\.gitkeep">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\Sidebar\img\avatars\avatar-2.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\Sidebar\img\avatars\avatar-3.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\Sidebar\img\avatars\avatar-4.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\Sidebar\img\avatars\avatar-5.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\Sidebar\img\avatars\avatar.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\Sidebar\img\icons\icon-48x48.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\Sidebar\img\photos\unsplash-1.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\Sidebar\img\photos\unsplash-2.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\Sidebar\img\photos\unsplash-3.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\Sidebar\js\app.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\Sidebar\js\app.js.LICENSE.txt">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\Sidebar\js\app.js.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_css\animate.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_css\baguetteBox.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_css\bootstrap-grid.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_css\bootstrap-grid.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_css\bootstrap-grid.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_css\bootstrap-grid.min.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_css\bootstrap-reboot.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_css\bootstrap-reboot.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_css\bootstrap-reboot.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_css\bootstrap-reboot.min.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_css\bootstrap-select.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_css\bootstrap.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_css\bootstrap.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_css\bootstrap.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_css\bootstrap.min.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_css\calendar.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_css\calendar.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_css\color_2.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_css\custom.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_css\flaticon.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_css\font-awesome.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_css\font-awesome.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_css\jquery.fancybox.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_css\jquery.fancybox.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_css\owl.carousel.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_css\perfect-scrollbar.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_css\responsive.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_css\semantic.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_css\style.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\.DS_Store">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\1.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\2.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\3.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\favicon.ico">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\landing_page\stack-of-three-black-hot-stones-spa-salon-vector-16122479.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\layout_img\.DS_Store">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\layout_img\american-express.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\layout_img\bg1.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\layout_img\error.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\layout_img\g1.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\layout_img\g10.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\layout_img\g11.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\layout_img\g12.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\layout_img\g13.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\layout_img\g14.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\layout_img\g15.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\layout_img\g16.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\layout_img\g2.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\layout_img\g3.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\layout_img\g4.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\layout_img\g5.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\layout_img\g6.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\layout_img\g7.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\layout_img\g8.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\layout_img\g9.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\layout_img\login_image.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\layout_img\map_icon.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\layout_img\mastercard.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\layout_img\msg1.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\layout_img\msg2.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\layout_img\msg3.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\layout_img\msg4.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\layout_img\msg5.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\layout_img\pattern.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\layout_img\pattern_h.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\layout_img\paypal.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\layout_img\user_img.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\layout_img\visa.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\logo\1.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\logo\3.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\logo\logo.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\logo\logo_black.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\logo\logo_icon.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_Images\logo\user-solid.svg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_js\analyser.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_js\animate.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_js\bootstrap-select.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_js\bootstrap.bundle.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_js\bootstrap.bundle.js.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_js\bootstrap.bundle.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_js\bootstrap.bundle.min.js.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_js\bootstrap.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_js\bootstrap.js.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_js\bootstrap.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_js\bootstrap.min.js.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_js\calendar.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_js\calendar.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_js\Chart.bundle.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_js\Chart.bundle.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_js\Chart.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_js\Chart.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_js\chart_custom_style1.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_js\chart_custom_style2.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_js\custom.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_js\custom_chart.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_js\jquery-3.3.1.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_js\jquery.fancybox.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_js\jquery.fancybox.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_js\jquery.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_js\owl.carousel.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_js\perfect-scrollbar.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_js\popper.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_js\semantic.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_js\settings.html">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot - Copy\_js\utils.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="wwwroot\js\site.js" />
   </ItemGroup>
 

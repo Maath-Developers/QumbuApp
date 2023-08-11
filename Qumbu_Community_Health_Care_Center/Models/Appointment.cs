@@ -6,7 +6,7 @@ namespace Qumbu_Community_Health_Care_Center.Models
 	{
 		[Key]
 		public int AppointmentId { get; set; }
-		
+
 
 		public DateTime Date { get; set; }
 
