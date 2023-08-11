@@ -1,27 +1,59 @@
 ﻿@{
-    Layout = "_VaccsLayout";
+    Layout = "Vaccs";
 }
-@if (User.IsInRole("Admin"))
-{
-    <h1>Admin</h1>
-}
-@if (User.IsInRole("Nurse"))
-{
-    <h1>Nurse</h1>
-}
-@if (User.IsInRole("Doctor"))
-{
-    <h1>Doctor</h1>
-}
-@if (User.IsInRole("Patient"))
-{
-    <h1>Patient</h1>
-}
-@if (User.IsInRole("Unit-Manager"))
-{
-    <h1>Manager</h1>
-}
-@if (User.IsInRole("Counsellor"))
-{
-    <h1>Counsellor</h1>
-}
+
+<div class="container mt-3">
+    <div class="row">
+       @if (User.IsInRole("Patient"))
+       {
+             @*<h1>Patient</h1>*@
+
+             <div>
+                <div class="row column1">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="full white_shd margin_bottom_30">
+                            <div class="info_people">
+                                <div class="p_info_img">
+                                    <img src="images/layout_img/msg2.png" alt="#" />
+                                </div>
+                                <div class="user_info_cont">
+                                    <h4>Smith</h4>
+                                    <p>developer@gmail.com</p>
+                                    <p class="p_status">Developer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="full white_shd margin_bottom_30">
+                            <div class="info_people">
+                                <div class="p_info_img">
+                                    <img src="images/layout_img/msg3.png" alt="#" />
+                                </div>
+                                <div class="user_info_cont">
+                                    <h4>David</h4>
+                                    <p>developer@gmail.com</p>
+                                    <p class="p_status">Developer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="full white_shd margin_bottom_30">
+                            <div class="info_people">
+                                <div class="p_info_img">
+                                    <img src="images/layout_img/msg4.png" alt="#" />
+                                </div>
+                                <div class="user_info_cont">
+                                    <h4>John</h4>
+                                    <p>developer@gmail.com</p>
+                                    <p class="p_status">Tester</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </div>
+       }
+</div>
+</div>

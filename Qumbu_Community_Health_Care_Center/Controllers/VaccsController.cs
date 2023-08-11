@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-
+using Qumbu_Community_Health_Care_Center.Models;
+//using Qumbu_Community_Health_Care_Center.Data;
 namespace Qumbu_Community_Health_Care_Center.Controllers
 {
 	public class VaccsController : Controller
@@ -21,6 +22,10 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
 			return View();
 		}
         public IActionResult NoAccess()
+        {
+            return View();
+        }
+        public IActionResult Dashboard()
         {
             return View();
         }
