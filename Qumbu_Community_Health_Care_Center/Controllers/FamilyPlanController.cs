@@ -52,6 +52,34 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         {
             IEnumerable<Appointment>oblList=dbContext.Appointments;
             return View(oblList);
+        } 
+        public ActionResult VievContraceptives()
+        {
+            IEnumerable<Appointment>Contraceptives=dbContext.Appointments;
+            return View(Contraceptives);
         }
+        public ActionResult CreateScreening() 
+        {
+            return View();
+        }
+        public ActionResult CreateFeedback()
+        {
+            return View();
+        }
+
+		[HttpPost]
+		[ValidateAntiForgeryToken]
+		public IActionResult CreateFeedback(Feedbacks feedback)
+		{
+			if (ModelState.IsValid)
+			{
+				dbContext.Feedbacks.Add(feedback);
+				dbContext.SaveChanges();
+				return RedirectToAction("ViewAppointment");
+			}
+			return View(feedback);
+		}
+
+
 	}
 }

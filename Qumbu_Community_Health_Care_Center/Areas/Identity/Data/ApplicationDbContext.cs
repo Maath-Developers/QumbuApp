@@ -19,6 +19,10 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<Bookings> Bookings { get; set; }
     public DbSet<PatientReg> PatientReg { get; set; }
     public DbSet<Appointment> Appointments { get; set; }
+    public DbSet<Feedbacks> Feedbacks { get; set; }
+
+   
+
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
