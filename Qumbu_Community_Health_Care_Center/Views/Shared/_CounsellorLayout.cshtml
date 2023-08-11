@@ -57,7 +57,7 @@
                     <div class="sidebar_user_info">
                         <div class="icon_setting"></div>
                         <div class="user_profle_side">
-                            <div class="user_img"><img class="img-responsive" src="~/images/images/logo/user.png" alt="#" /></div>
+                            <div class="user_img"><img class="img-responsive" src="~/_Images/1.png" alt="#" /></div>
                             <div class="user_info">
                                @* <h6>@UserManager.GetUserAsync(User).Result.FirstName @UserManager.GetUserAsync(User).Result.LastName</h6>*@
                                 @*<p><span class="online_animation"></span> Online</p>*@
@@ -87,9 +87,17 @@
                             <li>
                                 <a href="#element" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-diamond purple_color"></i> <span>Manage Files</span></a>
                                 <ul class="collapse list-unstyled" id="element">
-                                    <li><a href="general_elements.html">> <span>Add Record</span></a></li>
-                                    <li><a href="media_gallery.html">> <span>Update Record</span></a></li>
-                                    <li><a href="icons.html">> <span>View</span></a></li>
+                                    <li>
+                                        <a asp-controller="Counseller" asp-action="CreateR" class="sidebar-link">
+                                            <span>Add Record</span>
+                                        </a>
+                                    </li>
+                                    <li><a href="media_gallery.html"> <span>Update Record</span></a></li>
+                                    <li>
+                                    <a asp-controller="Counseller" asp-action="PatientC" class="sidebar-link">
+                                        <span>View</span>
+                                    </a>
+                                    </li>
                                     @*<li><a href="invoice.html">> <span>Invoice</span></a></li>*@
                                 </ul>
                             </li>
@@ -151,9 +159,9 @@
                                 <li>
                                     <a href="#element" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-diamond purple_color"></i> <span>Files</span></a>
                                     <ul class="collapse list-unstyled" id="element">
-                                        <li><a href="general_elements.html">> <span>Add Record</span></a></li>
-                                        <li><a href="media_gallery.html">> <span>Update Record</span></a></li>
-                                        <li><a href="icons.html">> <span>View</span></a></li>
+                                    <li> <a asp-controller="Counseller" asp-action="CreateR" class="sidebar-link"> <span>Submit form</span></a></li>
+                                    <li><a asp-controller="Counseller" asp-action="PatientC" class="sidebar-link"> <span>Update Details</span></a></li>
+                                        <li><a href="icons.html"> <span>View</span></a></li>
                                         @*<li><a href="invoice.html">> <span>Invoice</span></a></li>*@
                                     </ul>
                                 </li>
@@ -216,7 +224,7 @@
                         <div class="full">
                             <button type="button" id="sidebarCollapse" class="sidebar_toggle"><i class="fa fa-bars"></i></button>
                             <div class="logo_section">
-                                <a href="index.html"><img class="img-responsive" src="~_Images/1.png" alt="#" /></a>
+                                <a href="index.html"><img class="img-responsive" src="~/_Images/1.png" alt="#" /></a>
                             </div>
                             <div class="right_topbar">
                                 <div class="icon_info">
@@ -310,7 +318,7 @@
                                 <h5 class="card-title">Appointments</h5>
                                 <a href="index.html"><img class="img-responsive" src="~/images/images/logo/booking.png" alt="#" /></a>
                                 <button>
-                                    <a class="nav-link text-dark" asp-controller="Counsellor" asp-action="Appointment">More info...</a>
+                                    <a class="nav-link text-dark" asp-controller="Counseller" asp-action="Booking">Click here...</a>
                                 </button>
                             </div>
                         </div>
@@ -323,7 +331,7 @@
                                 <h5 class="card-title">Files</h5>
                                 <a href="index.html"><img class="img-responsive" src="~/images/images/logo/Files.png" alt="#" /></a>
                                 <button>
-                                    <a class="nav-link text-dark" asp-controller="Counsellor" asp-action="File">More info...</a>
+                                    <a class="nav-link text-dark" asp-controller="Counseller" asp-action="PatientC">Click here...</a>
                                 </button>
                             </div>
                         </div>
@@ -336,7 +344,7 @@
                                 <a href="index.html"><img class="img-responsive" src="~/images/images/logo/Ref.png" alt="#" /></a>
 
                                 <button>
-                                    <a class="nav-link text-dark" asp-controller="Counsellor" asp-action="Referrals">More info...</a>
+                                    <a class="nav-link text-dark" asp-controller="Counsellor" asp-action="Referrals">Click here...</a>
                                 </button>
                             </div>
                         </div>
