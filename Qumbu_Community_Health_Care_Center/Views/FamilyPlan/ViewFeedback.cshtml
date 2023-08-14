@@ -1,18 +1,15 @@
-﻿
+﻿@model IEnumerable<Qumbu_Community_Health_Care_Center.Models.Feedbacks>
 @{
-    ViewData["Title"] = "ViewAppointment";
+    ViewData["Title"] = "ViewFeedback";
     Layout = "~/Views/Shared/_FamilyPlanLayout.cshtml";
 }
-
-@model IEnumerable<Qumbu_Community_Health_Care_Center.Models.Appointment>
-
 <div class="container p-3">
     <div class="row pt-4">
         <div class="col-6">
             <h2 class="text-primary">List of Appointments</h2>
         </div>
         <div class="col-6 text-right">
-            <a asp-controller="FamilyPlan" asp-action="CreateAppointment" class="btn btn-primary">Create New</a>
+            <a asp-controller="FamilyPlan" asp-action="CreateFeedback" class="btn btn-primary">Create New</a>
         </div>
     </div>
     <br />
@@ -23,35 +20,31 @@
         <table class="table table-bordered table-striped" style="width:100%">
             <thead>
                 <tr>
-                    
+
                     <th>
-                        FirstName
+                        Name
                     </th>
                     <th>
-                        LastName
+                       Surname
                     </th>
                     <th>
-                        Date
+                        Side Effects
                     </th>
                     <th>
-                        Time
-                    </th>
-                    <th>
-                       Note
+                        Message
                     </th>
                 </tr>
             </thead>
 
             <tbody>
-                @foreach (var app in Model)
+                @foreach (var fed in Model)
                 {
                     <tr>
-                       
-                        <td width="30%">@app.FirstName</td>
-                        <td width="30%">@app.LastName</td>
-                        <td width="30%">@app.Date</td>
-                        <td width="30%">@app.Time</td>
-                        <td width="30%">@app.Notes</td>
+
+                        <td width="30%">@fed.Name</td>
+                        <td width="30%">@fed.Surname</td>
+                        <td width="30%">@fed.experience</td>
+                        <td width="30%">@fed.Description</td>
                     </tr>
                 }
             </tbody>

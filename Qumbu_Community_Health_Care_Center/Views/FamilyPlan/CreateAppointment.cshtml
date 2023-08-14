@@ -4,42 +4,56 @@
 	Layout = "~/Views/Shared/_FamilyPlanLayout.cshtml";
 }
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="styles.css">
-	<title>Appointment Booking</title>
-</head>
-		
-<body>
-	<div class="container">
-		
-		<form method="post" asp-action="CreateAppointment">
-
-			  <button type="submit" class="btn btn-primary w-50">Book</button>
-			<label for="name">Name:</label>
-			<input type="text" id="name" name="name" required>
-
-			<label for="date">Preferred Date:</label>
-			<input type="date" id="date" name="date" required>
-
-
-			<label for="time">Preferred Time:</label>
-			<input type="time" id="time" name="time" required>
-
-			<label for="message">Additional Notes:</label>
-			<textarea id="message" name="message" rows="4"></textarea>
-
-			
-		
-		</form>
-
+<form method="post" asp-action="CreateAppointment">
+	<div class="border p-3">
+		<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+		<div class="form-group row">
+			<h2 class="text-black-50 pe-lg-5">Make your Appointment</h2>
+		</div>
+		<div class="form-group row">
+			<div class="col-8 offset-2 row">
+				<div class="col">
+					<input type="submit" class="btn btn-info w-50" value="Book Now" />
+				</div>
+				<div class="col">
+					<a asp-action="ViewAppointment" class="btn btn-info w-50">View</a>
+				</div>
+			</div>
+		</div>
+		<div class="row align-middle ">
+			<div class="col-12 align-middle align-content-center align-items-center">
+				<div class="form-group align-content-center align-items-center">
+					<div class="col-4 align-items-center align-content-center align-items-center">
+						<label asp-for="FirstName"></label>
+						<input asp-for="FirstName" class="form-control" />
+						<span asp-validation-for="FirstName" class="text-danger"></span>
+					</div>
+					<div class="col-4">
+						<label asp-for="LastName"></label>
+						<input asp-for="LastName" class="form-control" />
+						<span asp-validation-for="LastName" class="text-danger"></span>
+					</div>
+					<div class="col-4">
+						<label asp-for="Date"></label>
+						<input asp-for="Date" class="form-control" />
+						<span asp-validation-for="Date" class="text-danger"></span>
+					</div>
+					<div class="col-4">
+						<label asp-for="Time"></label>
+						<input asp-for="Time" class="form-control" />
+						<span asp-validation-for="Time" class="text-danger"></span>
+					</div>
+					<div class="col-4">
+						<label asp-for="Notes"></label>
+						<input asp-for="Notes" class="form-control" />
+						<span asp-validation-for="Notes" class="text-danger"></span>
+					</div>
+				</div>
+				
+			</div>
+		</div>
 	</div>
-</body>
-</html>
+</form>
 
 <style>
 	body {
@@ -50,9 +64,9 @@
 	}
 
 	.container {
-		max-width: 800px;
-		margin: 50px auto;
-		padding: 30px;
+		max-width: 1000px;
+		margin: 80px auto;
+		padding: 50px;
 		background-color: #fff;
 		border-radius: 5px;
 		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -72,7 +86,7 @@
 	}
 
 	input[type="text"],
-	input[type="email"],
+	input[type="text"],
 	input[type="date"],
 	input[type="time"],
 	textarea {

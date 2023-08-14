@@ -42,14 +42,13 @@
 						</li>
 
 						<li class="sidebar-item">
-							<a asp-controller="FamilyPlan" asp-action="CreateAppointment" class="sidebar-link" >
-								<i class="align-middle" data-feather="calendar"></i> <span class="align-middle">Appointment</span>
-							</a>
-						</li>
-
-						<li class="sidebar-item">
 							<a asp-controller="FamilyPlan" asp-action="VievContraceptives" class="sidebar-link">
 								<i class="align-middle" data-feather="thermometer"></i> <span class="align-middle">Contraceptives</span>
+							</a>
+						</li>
+						<li class="sidebar-item">
+							<a asp-controller="FamilyPlan" asp-action="CreateAppointment" class="sidebar-link">
+								<i class="align-middle" data-feather="calendar"></i> <span class="align-middle">Appointment</span>
 							</a>
 						</li>
 
@@ -84,7 +83,7 @@
 								</a>
 
 								<a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
-									<img src="~/_Images/logo/user-solid.svg" class="avatar img-fluid rounded me-1" alt="Charles Hall" /> <span class="text-dark">@UserManager.GetUserAsync(User).Result.FirstName</span>
+									<img src="~/_Images/logo/user-solid.svg" class="avatar img-fluid rounded me-1" alt="Charles Hall" /> <span class="text-dark">@UserManager.GetUserAsync(User).Result.FirstName  @UserManager.GetUserAsync(User).Result.LastName</span>
 								</a>
 								<div class="dropdown-menu dropdown-menu-end">
 									<a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
@@ -380,25 +379,25 @@
 						</li>
 
 						<li class="sidebar-item active">
-							<a class="sidebar-link" href="index.html">
+							<a asp-controller="FamilyPlan" asp-action="Nurse" class="sidebar-link">
 								<i class="align-middle" data-feather="home"></i> <span class="align-middle">Dashboard</span>
 							</a>
 						</li>
 
 						<li class="sidebar-item">
-							<a class="sidebar-link" href="pages-profile.html">
+							<a asp-controller="FamilyPlan" asp-action="ViewAppointment" class="sidebar-link">
 								<i class="align-middle" data-feather="folder"></i> <span class="align-middle">Manage Bookings</span>
 							</a>
 						</li>
 
 						<li class="sidebar-item">
-							<a class="sidebar-link" href="pages-sign-in.html">
+							<a asp-controller="FamilyPlan" asp-action="Nurse" class="sidebar-link">
 								<i class="align-middle" data-feather="file-text"></i> <span class="align-middle">Manage File</span>
 							</a>
 						</li>
 
 						<li class="sidebar-item">
-							<a class="sidebar-link" href="pages-sign-up.html">
+							<a asp-controller="FamilyPlan" asp-action="ViewFeedback" class="sidebar-link">
 								<i class="align-middle" data-feather="share-2"></i> <span class="align-middle">Referrals</span>
 							</a>
 						</li>
@@ -424,7 +423,7 @@
 								</a>
 
 								<a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
-									<img src="~/_Images/logo/user-solid.svg" class="avatar img-fluid rounded me-1" alt="Charles Hall" /> <span class="text-dark">@UserManager.GetUserAsync(User).Result.FirstName</span>
+									<img src="~/_Images/logo/user-solid.svg" class="avatar img-fluid rounded me-1" alt="Charles Hall" /> <span class="text-dark">@UserManager.GetUserAsync(User).Result.FirstName  @UserManager.GetUserAsync(User).Result.LastName</span>
 								</a>
 								<div class="dropdown-menu dropdown-menu-end">
 									<a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
