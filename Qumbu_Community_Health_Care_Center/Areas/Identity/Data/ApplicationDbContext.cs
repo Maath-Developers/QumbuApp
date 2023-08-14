@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Qumbu_Community_Health_Care_Center.Areas.Identity.Data;
 using Qumbu_Community_Health_Care_Center.Models;
+using Qumbu_Community_Health_Care_Center.Models.Qumbu_Community_Health_Care_Center.Models;
 
 namespace Qumbu_Community_Health_Care_Center.Areas.Identity.Data;
 
@@ -31,6 +32,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<Appointment> Appointments { get; set; }
     //public DbSet<ScreeningTool> Srcreening { get; set; }
     public DbSet<Feedbacks> Feedbacks { get; set; }
+    public DbSet<HealthRecord> HealthRecords { get; set; }
 
 
 
