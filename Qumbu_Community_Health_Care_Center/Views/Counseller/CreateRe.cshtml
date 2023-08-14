@@ -1,114 +1,404 @@
 ﻿@model Qumbu_Community_Health_Care_Center.Models.PatientReg
 
-
+@*<link rel="stylesheet" href="~/css/StyleSheet/Workshop_StyleSheet.css">*@
 <form method="post" asp-action="Create">
 	<div class="border p-3">
 		<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 		<div class="form-group row">
 			<h2 class="text-black-50 pl-3">Only for Authorized persons</h2>
 		</div>
-		<div class="row">
-			<div class="col-12">
+		
+		<div class="container mt-4">
+			<div class="card">
 				<div class="form-group">
-					<div class="col-4">
-						<label asp-for="Names"></label>
-						<input asp-for="Names" class="form-control" />
-						<span asp-validation-for="Names" class="text-danger"></span>
+					<div class="card-header bg-secondary opacity-25">
+						<h5 class="card-title">Personal Details</h5>
 					</div>
-					<div class="col-4">
-						<label asp-for="DOB"></label>
-						<input asp-for="DOB" class="form-control" />
-						<span asp-validation-for="DOB" class="text-danger"></span>
-					</div>
-					<div class="col-4">
-						<label asp-for="Address"></label>
-						<input asp-for="Address" class="form-control" />
-						<span asp-validation-for="Address" class="text-danger"></span>
-					</div>
-					<div class="col-4">
-						<label asp-for="Cell"></label>
-						<input asp-for="Cell" class="form-control" />
-						<span asp-validation-for="Cell" class="text-danger"></span>
-					</div>
-					<div class="col-4">
-						<label asp-for="Email"></label>
-						<input asp-for="Email" class="form-control" />
-						<span asp-validation-for="Email" class="text-danger"></span>
-					</div>
-					<div class="col-4">
-						<label asp-for="Name"></label>
-						<input asp-for="Name" class="form-control" />
-						<span asp-validation-for="Name" class="text-danger"></span>
-					</div>
-					<div class="col-4">
-						<label asp-for="Relationship"></label>
-						<input asp-for="Relationship" class="form-control" />
-						<span asp-validation-for="Relationship" class="text-danger"></span>
-					</div>
-					<div class="col-4">
-						<label asp-for="Cell"></label>
-						<input asp-for="Cell" class="form-control" />
-						<span asp-validation-for="Cell" class="text-danger"></span>
-					</div>
-					<div class="col-4">
-						<label asp-for="Reason"></label>
-						<input asp-for="Reason" class="form-control" />
-						<span asp-validation-for="Reason" class="text-danger"></span>
-					</div>
-					<div class="col-4">
-						<label asp-for="MentalHis"></label>
-						<input asp-for="MentalHis" class="form-control" />
-						<span asp-validation-for="MentalHis" class="text-danger"></span>
-					</div>
-					<div class="col-4">
-						<label asp-for="Background"></label>
-						<input asp-for="Background" class="form-control" />
-						<span asp-validation-for="Background" class="text-danger"></span>
-					</div>
-					<div class="col-4">
-						<label asp-for="Symptoms"></label>
-						<input asp-for="Symptoms" class="form-control" />
-						<span asp-validation-for="Symptoms" class="text-danger"></span>
-					</div>
-					<div class="col-4">
-						<label asp-for="Expectations"></label>
-						<input asp-for="Expectations" class="form-control" />
-						<span asp-validation-for="Expectations" class="text-danger"></span>
-					</div>
-					<div class="col-4">
-						<label asp-for="SocialInfo"></label>
-						<input asp-for="SocialInfo" class="form-control" />
-						<span asp-validation-for="SocialInfo" class="text-danger"></span>
-					</div>
-					<div class="col-4">
-						<label asp-for="Safety"></label>
-						<input asp-for="Safety" class="form-control" />
-						<span asp-validation-for="Safety" class="text-danger"></span>
-					</div>
-					<div class="col-4">
-						<label asp-for="Consent"></label>
-						<input asp-for="Consent" class="form-control" />
-						<span asp-validation-for="Consent" class="text-danger"></span>
-					</div>
-					<div class="col-4">
-						<label asp-for="Sign"></label>
-						<input asp-for="Sign" class="form-control" />
-						<span asp-validation-for="Sign" class="text-danger"></span>
-					</div>
-				</div>
-				<div class="form-group row">
-					<div class="col-8 offset-2 row">
-						<div class="col">
-							<input type="submit" class="btn btn-info w-75" value="Submit" />
+					<div class="card-body">
+						<div class="row">
+							<div class="col-md-3">
+								<div class="form-group">
+									<label for="FullNames">FullNames</label>
+									<input type="text" class="form-control" id="memberName" placeholder="Enter your Names">
+								</div>
+							</div>
+						
+						    <div class="col-md-3">
+								<div class="form-group">
+									<label for="validityPeriod">Gender</label>
+									<div class="input-group">
+										<input type="text" class="form-control" id="validityPeriod" placeholder="Select Gender"
+											   readonly>
+										<div class="input-group-append">
+											<button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+													aria-haspopup="true" aria-expanded="false"></button>
+											<div class="dropdown-menu">
+												<a class="dropdown-item" href="#">Male</a>
+												<a class="dropdown-item" href="#">Female</a>
+			
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						    <div class="col-md-3">
+							<div class="form-group">
+								<label for="dateOfBirth">Date of Birth:</label>
+								<input type="date" class="form-control" id="dateOfBirth">
+							</div>
+							<div class="col-md-3">
+								<div class="form-group">
+									<label for="Cell">Cell</label>
+									<input type="text" class="form-control" id="cell" placeholder="Enter your Cell Number">
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="form-group">
+									<label for="Email">Email</label>
+									<input type="text" class="form-control" id="email" placeholder="Enter your email">
+								</div>
+							</div>
+							<div class="col-md-8">
+								<div class="form-group">
+									<label for="address">Address:</label>
+									<textarea class="form-control" id="address" rows="4" placeholder="Enter Address"></textarea>
+								</div>
+							</div>
+
 						</div>
-						<div class="col">
-							<a asp-action="Counsellor" class="btn btn-danger w-75">Back</a>
+						</div>
+
+						<div class="row">
+							<div class="col-md-4">
+								<div class="form-group">
+									<label for="validityPeriod">Province</label>
+									<div class="input-group">
+										<input type="text" class="form-control" id="validityPeriod" placeholder="Select Province"
+											   readonly>
+										<div class="input-group-append">
+											<button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+													aria-haspopup="true" aria-expanded="false"></button>
+											<div class="dropdown-menu">
+												<a class="dropdown-item" href="#">Eastern Cape</a>
+												<a class="dropdown-item" href="#">Mpumalanga</a>
+												<a class="dropdown-item" href="#">Gauteng</a>
+												<a class="dropdown-item" href="#">Free State</a>
+												<a class="dropdown-item" href="#">North West</a>
+												<a class="dropdown-item" href="#">Kwazulu-Natal</a>
+												<a class="dropdown-item" href="#">Western Cape</a>
+												<a class="dropdown-item" href="#">Northern Cape</a>
+												<a class="dropdown-item" href="#">Limpopo</a>
+												<!-- Add more options as needed -->
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<div class="container mt-4">
+			<div class="card">
+				<div class="card-header  bg-secondary">
+					<h5 class="card-title">Next of Kin</h5>
+				</div>
+				<div class="card-body">
+					<div class="row">
+
+						<div class="col-md-4">
+							<div class="form-group">
+								<label for="memberName">Name</label>
+								<input type="text" class="form-control" id="memberName" placeholder="Enter Next of Kin Name">
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<label for="memberName">Surnamer</label>
+								<input type="text" class="form-control" id="memberName" placeholder="Enter Next of Kin Surname">
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<label for="memberName">Cellphone Number</label>
+								<input type="text" class="form-control" id="cell" placeholder="Enter Next of Kin Cellphone Number">
+							</div>
+						</div>
+
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="address">Address:</label>
+								<textarea class="form-control" id="address" rows="4" placeholder="Enter Next of Kin Address"></textarea>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="validityPeriod">Province</label>
+								<div class="input-group">
+									<input type="text" class="form-control" id="validityPeriod" placeholder="Select Next of Kin Province"
+										   readonly>
+									<div class="input-group-append">
+										<button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+												aria-haspopup="true" aria-expanded="false"></button>
+										<div class="dropdown-menu">
+											<a class="dropdown-item" href="#">Eastern Cape</a>
+											<a class="dropdown-item" href="#">Mpumalanga</a>
+											<a class="dropdown-item" href="#">Gauteng</a>
+											<a class="dropdown-item" href="#">Free State</a>
+											<a class="dropdown-item" href="#">North West</a>
+											<a class="dropdown-item" href="#">Kwazulu-Natal</a>
+											<a class="dropdown-item" href="#">Western Cape</a>
+											<a class="dropdown-item" href="#">Northern Cape</a>
+											<a class="dropdown-item" href="#">Limpopo</a>
+											<!-- Add more options as needed -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="validityPeriod">RelationShip</label>
+								<div class="input-group">
+									<input type="text" class="form-control" id="validityPeriod" placeholder="Select Relation"
+										   readonly>
+									<div class="input-group-append">
+										<button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+												aria-haspopup="true" aria-expanded="false"></button>
+										<div class="dropdown-menu">
+											<a class="dropdown-item" href="#">Mother</a>
+											<a class="dropdown-item" href="#">Father</a>
+											<a class="dropdown-item" href="#">Sister</a>
+											<a class="dropdown-item" href="#">Brother</a>
+											<a class="dropdown-item" href="#">Other</a>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+					<div class="container mt-4">
+						<div class="card">
+							<div class="card-header  bg-secondary">
+								<h5 class="card-title">Health History</h5>
+							</div>
+							<div class="card-body">
+								<div class="row">
+										<div class="col-md-6">
+											<div class="form-group">
+												<label for="validityPeriod">Referral Source</label>
+												<div class="input-group">
+													<input type="text" class="form-control" id="validityPeriod" placeholder="Select "
+														   readonly>
+													<div class="input-group-append">
+														<button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+																aria-haspopup="true" aria-expanded="false"></button>
+														<div class="dropdown-menu">
+															<a class="dropdown-item" href="#">Teacher</a>
+															<a class="dropdown-item" href="#">Friend</a>
+															<a class="dropdown-item" href="#">Relative</a>
+															<a class="dropdown-item" href="#">Nurse</a>
+															<a class="dropdown-item" href="#">Other</a>
+
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label for="validityPeriod">Previous Counselling Experience</label>
+												<div class="input-group">
+													<input type="text" class="form-control" id="validityPeriod" placeholder="Select "
+														   readonly>
+													<div class="input-group-append">
+														<button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+																aria-haspopup="true" aria-expanded="false"></button>
+														<div class="dropdown-menu">
+															<a class="dropdown-item" href="#">Yes</a>
+															<a class="dropdown-item" href="#">No</a>
+														@*<a class="dropdown-item" href="#">Sister</a>
+															<a class="dropdown-item" href="#">Brother</a>
+															<a class="dropdown-item" href="#">Other</a>*@
+
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
+													<label for="address">Medical & Mental Health</label>
+													<textarea class="form-control" id="his" rows="4" placeholder="Enter your medical"></textarea>
+												</div>
+											</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label for="validityPeriod">Current Medication</label>
+												<div class="input-group">
+													<input type="text" class="form-control" id="validityPeriod" placeholder="Select "
+														   readonly>
+													<div class="input-group-append">
+														<button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+																aria-haspopup="true" aria-expanded="false"></button>
+														<div class="dropdown-menu">
+															<a class="dropdown-item" href="#">Yes</a>
+															<a class="dropdown-item" href="#">No</a>
+															@*<a class="dropdown-item" href="#">Sister</a>
+															<a class="dropdown-item" href="#">Brother</a>
+															<a class="dropdown-item" href="#">Other</a>*@
+
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+								</div>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="address">Family History</label>
+											<textarea class="form-control" id="his" rows="4" placeholder="Enter your history"></textarea>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="validityPeriod">Preferred Communication & Conset</label>
+											<div class="input-group">
+												<input type="text" class="form-control" id="validityPeriod" placeholder="Select means of communication"
+													   readonly>
+												<div class="input-group-append">
+													<button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+															aria-haspopup="true" aria-expanded="false"></button>
+													<div class="dropdown-menu">
+														<a class="dropdown-item" href="#">Call</a>
+														<a class="dropdown-item" href="#">Email</a>
+														<a class="dropdown-item" href="#">SMS</a>
+														<a class="dropdown-item" href="#">In Person</a>
+														
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="validityPeriod">Current Stressors</label>
+											<div class="input-group">
+												<input type="text" class="form-control" id="validityPeriod" placeholder="Select stressor"
+													   readonly>
+												<div class="input-group-append">
+													<button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+															aria-haspopup="true" aria-expanded="false"></button>
+													<div class="dropdown-menu">
+														<a class="dropdown-item" href="#">Friends</a>
+														<a class="dropdown-item" href="#">Family</a>
+														<a class="dropdown-item" href="#">Realtionship</a>
+														<a class="dropdown-item" href="#">Money</a>
+														<a class="dropdown-item" href="#">Other</a>
+
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+						</div>
+					</div>
+				@*<div class="form-group row">
+					<div class="col-8 offset-2 row">
+						<div class="col">
+							<input type="submit" class="btn btn-info w-75 text" value="Submit" />
+						</div>
+						<div class="col">
+							<a asp-action="Counsellor" class="btn btn-danger w-75">Back</a>
+						</div>
+					</div>
+				</div>*@
+			</div>
+		</div>
 	</div>
+	<br />
+		<div class="form-group row">
+			<div class="col-8 offset-2 row">
+				<div class="col">
+					<input type="submit" class="btn btn-info w-75 text" value="Submit" />
+				</div>
+				<div class="col">
+					<a asp-action="Counsellor" class="btn btn-danger w-75">Back</a>
+				</div>
+			</div>
+		</div>
+	@*<style>
+		input[type=text], select {
+			width: 50%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+		}
+
+		input[type=submit] {
+			width: 100%;
+			background-color: #4CAF50;
+			color: white;
+			padding: 14px 20px;
+			margin: 8px 0;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+
+			input[type=submit]:hover {
+				background-color: #45a049;
+			}
+
+		div {
+			border-radius: 5px;
+			background-color: #f2f2f2;
+			padding: 20px;
+
+	</style>*@
 </form>
+@*/*<style>
+input[type=text], select {
+	width: 50%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
 
+input[type=submit] {
+	width: 100%;
+	background-color: #4CAF50;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
 
+	input[type=submit]:hover {
+		background-color: #45a049;
+	}
+
+div {
+	border-radius: 5px;
+	background-color: #f2f2f2;
+	padding: 20px;
+
+</style>*/*@
