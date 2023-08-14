@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Qumbu_Community_Health_Care_Center.Areas.Identity.Data;
+using Qumbu_Community_Health_Care_Center.Models;
 
 namespace Qumbu_Community_Health_Care_Center.Controllers
 {
@@ -10,10 +12,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         {
             dbContext = _dbContext;
         }
-        public IActionResult PatientDashboard()
-        {
-            return View();
-        }
+
         public IActionResult Patient()
         {
             return View();
@@ -26,9 +25,36 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         {
             return View();
         }
+        public IActionResult PatientDashboard()
+        {
+            return View();
+        }
         public IActionResult NurseDashboard()
         {
             return View();
+        }
+        public IActionResult IndexRecord()
+        {
+            IEnumerable<HealthRecord> objList = dbContext.HealthRecords;
+            return View(objList);
+        }
+        [HttpGet]
+        public IActionResult CreateRecord()
+        {
+            // Display a form for users to input health data
+            return View();
+        }
+        [HttpPost]
+        public IActionResult CreateRecord(HealthRecord record)
+        {
+            if (ModelState.IsValid)
+            {
+                // Save the recorded health data to the database
+                dbContext.HealthRecords.Add(record);
+                dbContext.SaveChanges();
+                return RedirectToAction("RecordIndex"); // Redirect to dashboard
+            }
+            return View(record);
         }
     }
 }

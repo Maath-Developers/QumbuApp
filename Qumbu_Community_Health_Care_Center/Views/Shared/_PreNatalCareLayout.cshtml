@@ -148,17 +148,30 @@
                         {
                             <li class="sidebar-item">
                                 
-                            <a asp-controller="PrenatalCare" asp-action="PatientDashboard" class="sidebar-link">
-@*                                    a href="widgets.html"><span><i class="bi bi-house-door"></i>Dashboard</span>
-*@                                    <i class="align-middle" data-feather="calendar"></i><i class="bi bi-house-door"></i> <span class="align-middle">Dashboard</span>
+                                <a asp-controller="PrenatalCare" asp-action="PatientDashboard" class="sidebar-link">
+                                    <i class="align-middle" data-feather="calendar"></i><i class="bi bi-house-door"></i> <span class="align-middle">Dashboard</span>
 
                                 </a>
                             </li>
-                            
-                   
-                       
-     
-                            <li><a href="charts.html"><i class="bi bi-clipboard2-check"></i><span>Appointments</span></a></li>
+
+                            <li class="sidebar-item">
+
+                                <a asp-controller="PrenatalCare" asp-action="IndexRecord" class="sidebar-link">
+                                    <i class="align-middle" data-feather="calendar"></i><i class="bi bi-clipboard2-check"></i><span class="align-middle">Appointment</span>
+
+                                </a>
+                            </li>
+
+                            <li class="sidebar-item">
+
+                                <a asp-controller="PrenatalCare" asp-action="IndexRecord" class="sidebar-link">
+                                    <i class="align-middle" data-feather="calendar"></i><i class="bi bi-heart-pulse"></i> <span class="align-middle">Health Record</span>
+
+                                </a>
+                            </li>
+
+
+                            <li><a href="charts.html"><span></span></a></li>
 
                             <li><a href="map.html"><i class="bi bi-info-circle"></i> <span>Education and Information</span></a></li>
                             <li><a href="price.html"><i class="bi bi-file-medical"></i> <span>Medical History</span></a></li>
