@@ -9,6 +9,7 @@ namespace Qumbu_Community_Health_Care_Center.Models
         [Key]
         public int Id { get; set; }
         [Required]
+        [DisplayName("Full Name")]
         public string UserId { get; set; }
         [Required]
         [DisplayName("Recorded Date")]

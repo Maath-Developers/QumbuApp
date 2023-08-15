@@ -52,9 +52,43 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
                 // Save the recorded health data to the database
                 dbContext.HealthRecords.Add(record);
                 dbContext.SaveChanges();
-                return RedirectToAction("RecordIndex"); // Redirect to dashboard
+                return RedirectToAction("IndexRecord"); // Redirect to dashboard
             }
             return View(record);
+        }
+        public IActionResult UpdateRecord(int? ID)
+        {
+            if (ID == null || ID == 0)
+            {
+                return NotFound();
+            }
+            var obj = dbContext.HealthRecords.Find(ID);
+            if (obj == null)
+            {
+                return NotFound();
+            }
+
+            return View(obj);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult UpdateRecord(HealthRecord record)
+        {
+            dbContext.HealthRecords.Update(record);
+            dbContext.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        public IActionResult Delete(int? ID)
+        {
+            var obj = dbContext.HealthRecords.Find(ID);
+            if (obj == null)
+            {
+                return NotFound();
+            }
+
+            dbContext.HealthRecords.Remove(obj);
+            dbContext.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

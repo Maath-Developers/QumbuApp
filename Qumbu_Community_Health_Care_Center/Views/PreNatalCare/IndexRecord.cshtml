@@ -22,7 +22,7 @@
             <thead>
                 <tr>
                     <th>
-                        User Name
+                        Full Name
                     </th>
                     <th>
                         Recorded Date
@@ -52,12 +52,12 @@
                         <td width="20%">@healthRecord.BloodPressureSystolic</td>
                         <td width="20%">@healthRecord.BloodPressureDiastolic</td>
                         <td width="10%">@healthRecord.Symptoms</td>
-                        @*<td width="10%">*@
-                        @*<div class="w-100 btn-group" role="group">
-                @*    <a asp-controller="Expense" asp-action="Update" asp-route-ID="@healthRecord.ID" class="btn btn-primary mx-1">Update</a>
-                <a asp-controller="Expense" asp-action="Delete" asp-route-ID="@healthRecord.ID" class="btn btn-danger mx-1">Delete</a>*@
-                        @*</div>*@
-                        @*</td>*@
+                        <td width="10%">
+                        <div class="w-100 btn-group" role="group">
+                                <a asp-controller="PrenatalCare" asp-action="UpdateRecord" asp-route-ID="@healthRecord.Id" class="btn btn-primary mx-1"><i class="bi bi-pencil-square"></i>Edit</a>
+@*                   <a asp-controller="Expense" asp-action="Delete" asp-route-ID="@healthRecord.Id" class="btn btn-danger mx-1">Delete</a>
+*@                        </div>
+                        </td>
 
                     </tr>
                 }
@@ -66,7 +66,7 @@
     }
     else
     {
-        <p>No Expenses created yet</p>
+        <p>No Health Record created yet</p>
     }
 </div>
 
