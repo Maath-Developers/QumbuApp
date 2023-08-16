@@ -1,11 +1,15 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+@using Qumbu_Community_Health_Care_Center.Areas.Identity.Data
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Qumbu_Community_Health_Care_Center</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"] - Qumbu_Community_Health_Care_Center</title>
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 	@*for icon*@
 	<link rel="icon" href="~/_Images/favicon.ico" type="image/png" />
 	<link rel="stylesheet" href="~/css/css/animate.css">
@@ -22,8 +26,8 @@
 
 </head>
 <body>
-    <header >
-        
+	<header>
+
 
 		<div class="wrap">
 			<div class="container-fluid">
@@ -31,7 +35,7 @@
 					<div class="logo_section bg-light">
 						<a href="index.html"><img class="img-responsive" src="~/_Images/1.png" alt="#" /></a>
 					</div>
-					
+
 				</div>
 			</div>
 		</div>
@@ -52,7 +56,10 @@
 						<li class="nav-item"><a asp-controller="Home" asp-action="Index" class="nav-link">About us</a></li>
 						<li class="nav-item "><a asp-controller="Home" asp-action="Index" class="nav-link">Team</a></li>
 						<li class="nav-item"><a asp-controller="Home" asp-action="Index" class="nav-link">Services</a></li>
-						<li class="nav-item"><a asp-controller="Home" asp-action="Index" class="nav-link">Departments</a></li>
+						@if (SignInManager.IsSignedIn(User))
+						{
+							<li class="nav-item"><a asp-controller="Home" asp-action="Index" class="nav-link">Departments</a></li>
+						}
 						<li class="nav-item"><a asp-controller="Home" asp-action="WorkShop" class="nav-link">Work_Shop</a></li>
 
 					</ul>
@@ -61,20 +68,20 @@
 		</nav>
 
 	</header>
-    <div class="container-fluid">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-    
-    @*<footer class="border-top footer text-black">
-        <div class="container">
-            &copy; 2023 - Qumbu_Community_Health_Care_Center - <a asp-area="" asp-controller="Home" asp-action="Privacy">Help</a>
-        </div>
-    </footer>*@
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+	<div class="container-fluid">
+		<main role="main" class="pb-3">
+			@RenderBody()
+		</main>
+	</div>
+
+	@*<footer class="border-top footer text-black">
+	<div class="container">
+	&copy; 2023 - Qumbu_Community_Health_Care_Center - <a asp-area="" asp-controller="Home" asp-action="Privacy">Help</a>
+	</div>
+	</footer>*@
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="~/js/site.js" asp-append-version="true"></script>
+	@await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

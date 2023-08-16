@@ -13,10 +13,10 @@ namespace Qumbu_Community_Health_Care_Center.Models
 		[Required]
 		public string? Surname { get; set; }
 		[Required]
-		[DisplayName("Side effects")]
+		[DisplayName("experience any effects ?")]
 		public string? experience { get; set; }
 		[Required]
-		[DisplayName("Message")]
+		[DisplayName("Describe side effects")]
 		public string? Description { get; set; }
 
 	}

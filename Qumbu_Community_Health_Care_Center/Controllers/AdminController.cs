@@ -8,5 +8,25 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         {
             return View();
         }
+        public IActionResult Patient_Reg()
+        {
+            return View();
+        }
+        public IActionResult Appointment_Booking()
+        {
+            return View();
+        }
+        public IActionResult Doctor_Availabilty()
+        {
+            return View();
+        }
+        public IActionResult Create_File()
+        {
+            return View();
+        }
+        public IActionResult Manage_Queue()
+        {
+            return View();
+        }
     }
 }
