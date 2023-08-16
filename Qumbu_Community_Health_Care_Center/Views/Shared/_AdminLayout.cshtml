@@ -41,86 +41,59 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
 </head>
-<body class="dashboard dashboard_1">
+<body>
+
     <div class="full_container">
         <div class="inner_container">
             <!-- Sidebar  -->
-            <nav id="sidebar">
-                <div class="sidebar_blog_1">
-                    <div class="sidebar_user_info">
-                        <div class="icon_setting"></div>
-                        <div class="user_profle_side">
-                            <div class="user_img"><img class="img-responsive" src="~/_Images/layout_img/user_img.jpg" alt="#" /></div>
-                            <div class="user_info">
-                                <h6>John David</h6>
-                                <p><span class="online_animation"></span> Online</p>
-                            </div>
-                        </div>
+            <div class="wrap">
+                <nav id="sidebar" class="justify-content-cente">
+                    <div class="logo_sectiont">
+                        <a href="index.html"><img class="img-responsive" src="~/_Images/1.png" alt="#" /></a>
                     </div>
-                </div>
-                <div class="sidebar_blog_2">
-                    <h4>General</h4>
-                    <ul class="list-unstyled components">
-                        <li class="active">
-                            <a href="~/images/dashboard.html" data-toggle="collapse" aria-expanded="false" ><i class="fa fa-dashboard"></i> <span>Create File</span></a>
-                            @*<ul class="collapse list-unstyled" id="dashboard">
-                                <li>
-                                    <a href="~/images/dashboard.html">> <span>Default Dashboard</span></a>
-                                </li>
-                                <li>
-                                    <a href="~/images/dashboard_2.html">> <span>Dashboard style 2</span></a>
-                                </li>
-                            </ul>*@
-                        </li>
-                        <li><a href="~/images/widgets.html"><i class="fa fa-clock-o orange_color"></i> <span>Manage Bookings</span></a></li>
-                       @* <li>
-                            <a href="#element" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-diamond purple_color"></i> <span>Elements</span></a>
-                            <ul class="collapse list-unstyled" id="element">
-                                <li><a href="~/images/general_elements.html">> <span>General Elements</span></a></li>
-                                <li><a href="~/images/media_gallery.html">> <span>Media Gallery</span></a></li>
-                                <li><a href="~/icons.html">> <span>Icons</span></a></li>
-                                <li><a href="~/images/invoice.html">> <span>Invoice</span></a></li>
-                            </ul>
-                        </li>
-                        <li><a href="~/images/tables.html"><i class="fa fa-table purple_color2"></i> <span>Tables</span></a></li>
-                        <li>
-                            <a href="~/images/apps" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-object-group blue2_color"></i> <span>Apps</span></a>
-                            <ul class="collapse list-unstyled" id="apps">
-                                <li><a href="~/images/email.html">> <span>Email</span></a></li>
-                                <li><a href="~/images/calendar.html">> <span>Calendar</span></a></li>
-                                <li><a href="~/images/media_gallery.html">> <span>Media Gallery</span></a></li>
-                            </ul>
-                        </li>
-                        <li><a href="~/images/price.html"><i class="fa fa-briefcase blue1_color"></i> <span>Pricing Tables</span></a></li>
-                        <li>
-                            <a href="~/images/contact.html">
-                                <i class="fa fa-paper-plane red_color"></i> <span>Contact</span>
-                            </a>
-                        </li>
-                        <li class="active">
-                            <a href="~/images/additional_page" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-clone blue2_color"></i> <span>Additional Pages</span></a>
-                            <ul class="collapse list-unstyled" id="additional_page">
-                                <li>
-                                    <a href="~/images/profile.html">> <span>Profile</span></a>
-                                </li>
-                                <li>
-                                    <a href="~/images/project.html">> <span>Projects</span></a>
-                                </li>
-                                <li>
-                                    <a href="~/images/login.html">> <span>Login</span></a>
-                                </li>
-                                <li>
-                                    <a href="~/images/404_error.html">> <span>404 Error</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="~/images/map.html"><i class="fa fa-map purple_color2"></i> <span>Map</span></a></li>
-                        <li><a href="~/images/charts.html"><i class="fa fa-bar-chart-o green_color"></i> <span>Charts</span></a></li>
-                        <li><a href="~/images/settings.html"><i class="fa fa-cog yellow_color"></i> <span>Settings</span></a></li>
-                    </ul>*@
-                </div>
-            </nav>
+                    <div class="sidebar_blog_2 justify-content-center">
+
+                        <ul class="list-unstyled components h4">
+                            <br>
+                            <br>
+                            <li>
+                                <button class="w-75 mb-3">
+                                    <a class="list-group-item bg bg-dark font-weight-bold" asp-controller="Admin" asp-action="Create_File">Dashboard</a>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="w-75 mb-3">
+                                    <a class="list-group-item bg bg-dark font-weight-bold" asp-controller="Admin" asp-action="Create_File">Create file</a>
+                                </button>
+                            </li>
+                            <li class="justify-content-center">
+                                <button class="w-75 mb-3">
+                                    <a class="list-group-item bg bg-dark font-weight-bold" asp-controller="Admin" asp-action="Create_File">Appointment</a>
+                                </button>
+                            </li>
+                            <li class="justify-content-center">
+                                <button class="w-75 mb-3">
+                                    <a class="list-group-item bg bg-dark font-weight-bold" asp-controller="Admin" asp-action="Create_File">Patient Registration</a>
+                                </button>
+                            </li>
+                            <li class="justify-content-center">
+                                <button class="w-75 mb-3">
+                                    <a class="list-group-item bg bg-dark font-weight-bold" asp-controller="Admin" asp-action="Create_File">Manage Queue</a>
+                                </button>
+                            </li>
+                            <li class="justify-content-center">
+                                <button class="w-75 mb-3">
+                                    <a class="list-group-item bg bg-dark font-weight-bold" asp-controller="Admin" asp-action="Create_File">Doctor Availability</a>
+                                </button>
+                            </li>
+
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
             <!-- end sidebar -->
             <!-- right content -->
             <div id="content">
@@ -128,9 +101,7 @@
                 <div class="topbar">
                     <nav class="navbar navbar-expand-lg navbar-light">
                         <div class="full">
-                            <div class="logo_section">
-                                <a href="~/images/index.html"><img class="img-responsive" src="~/_Images/logo/1.png" alt="#" /></a>
-                            </div>
+
                             <div class="right_topbar">
                                 <div class="icon_info">
                                     <ul>
