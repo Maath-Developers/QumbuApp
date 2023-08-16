@@ -72,7 +72,7 @@
                         @if (User.IsInRole("Counsellor"))
                         {
                             <li class="active">
-                                <a href="#dashboard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-dashboard yellow_color"></i> <span>Manage Appointments</span></a>
+                                <a href="#dashboard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="align middle" data-feather="clipboard"></i> <span class="align">Manage Appointments</span></a>
                                 <ul class="collapse list-unstyled" id="dashboard">
                                     <li>
                                         <a asp-controller="Counseller" asp-action="Booking" class="sidebar-link">
@@ -80,7 +80,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="dashboard_2.html">> <span>Cancel</span></a>
+                                        <a asp-controller="Counseller" asp-action="Delete" class="sidebar-link"> <span>Cancel</span></a>
                                     </li>
                                 </ul>
                             </li>
@@ -94,7 +94,7 @@
                                             <span>Add Record</span>
                                         </a>
                                     </li>
-                                    <li><a href="media_gallery.html"> <span>Update Record</span></a></li>
+                                    <li><a asp-controller="Counseller" asp-action="UpdateRe" class="sidebar-link"> <span>Update Record</span></a></li>
                                     <li>
                                     <a asp-controller="Counseller" asp-action="Record" class="sidebar-link">
                                         <span>View</span>
@@ -152,7 +152,7 @@
                                             <span>View</span></a>
                                         </li>
                                         <li>
-                                            <a href="dashboard_2.html">> <span>Cancel</span></a>
+                                        <a asp-controller="Counseller" asp-action="Delete" class="sidebar-link"> <span>Cancel</span></a>
                                         </li>
                                     </ul>
                                 </li>
@@ -163,7 +163,7 @@
                                     <ul class="collapse list-unstyled" id="element">
                                     <li> <a asp-controller="Counseller" asp-action="CreateR" class="sidebar-link"> <span>Submit form</span></a></li>
                                     <li><a asp-controller="Counseller" asp-action="PatientC" class="sidebar-link"> <span>View</span></a></li>
-                                        <li><a href="icons.html"> <span>Update Details</span></a></li>
+                                    <li><a asp-controller="Counseller" asp-action="Update" class="sidebar-link"> <span>Update Details</span></a></li>
                                         @*<li><a href="invoice.html">> <span>Invoice</span></a></li>*@
                                     </ul>
                                 </li>
@@ -231,9 +231,9 @@
                             <div class="right_topbar">
                                 <div class="icon_info">
                                     <ul>
-                                        <li><a href="#"><i class="fa fa-bell-o"></i><span class="badge">2</span></a></li>
+                                       @* <li><a href="#"><i class="fa fa-bell-o"></i><span class="badge">2</span></a></li>
                                         <li><a href="#"><i class="fa fa-question-circle"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-envelope-o"></i><span class="badge">3</span></a></li>
+                                        <li><a href="#"><i class="fa fa-envelope-o"></i><span class="badge">3</span></a></li>*@
                                     </ul>
                                     <ul class="user_profile_dd">
                                         <li>
@@ -318,7 +318,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Appointments</h5>
-                                <a href="index.html"><img class="img-responsive" src="~/images/images/logo/booking.png" alt="#" /></a>
+                                <a href="index.html"><img class="img-responsive" height="230" src="~/images/images/logo/booking.png" ] alt="#" /></a>
                                 <button>
                                     <a class="nav-link text-dark" asp-controller="Counseller" asp-action="Booking">Click here...</a>
                                 </button>

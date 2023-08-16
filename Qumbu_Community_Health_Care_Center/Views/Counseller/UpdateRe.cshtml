@@ -1,12 +1,13 @@
 ﻿@model Qumbu_Community_Health_Care_Center.Models.PatientReg
 
 @*<link rel="stylesheet" href="~/css/StyleSheet/Workshop_StyleSheet.css">*@
-<form method="post" asp-action="CreateRe">
-	<div class="border p-3">
-		<div asp-validation-summary="ModelOnly" class="text-danger"></div>
-		<div class="form-group row">
-			<h2 class="text-black-50 pl-3">Only for Authorized persons</h2>
-		</div>
+<form method="post" asp-action="UpdateRe">
+    <input asp-for="PatientRegId" hidden />
+    <div class="border p-3">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group row">
+            <h2 class="text-black-50 pl-3">Update Record</h2>
+        </div>
         <div class="container mt-4">
             <div class="card">
                 <div class="card-header bg-secondary">
@@ -20,7 +21,7 @@
                                 <label for="memberName">Full Names</label>
                                 <input type="text" class="form-control" id="memberName" placeholder="Enter your names">
                             </div>
-                        </div> 
+                        </div>
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label for="memberName">Cell</label>
@@ -84,53 +85,53 @@
                                 </div>
                             </div>
                         </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="validityPeriod">Province</label>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" id="validityPeriod" placeholder="Select Province"
-                                               readonly>
-                                        <div class="input-group-append">
-                                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
-                                                    aria-haspopup="true" aria-expanded="false"></button>
-                                            <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="#">Eastern Cape</a>
-                                                <a class="dropdown-item" href="#">Mpumalanga</a>
-                                                <a class="dropdown-item" href="#">Gauteng</a>
-                                                <a class="dropdown-item" href="#">Free State</a>
-                                                <a class="dropdown-item" href="#">North West</a>
-                                                <a class="dropdown-item" href="#">Kwazulu-Natal</a>
-                                                <a class="dropdown-item" href="#">Western Cape</a>
-                                                <a class="dropdown-item" href="#">Northern Cape</a>
-                                                <a class="dropdown-item" href="#">Limpopo</a>
-                                                <!-- Add more options as needed -->
-                                            </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="validityPeriod">Province</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="validityPeriod" placeholder="Select Province"
+                                           readonly>
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false"></button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Eastern Cape</a>
+                                            <a class="dropdown-item" href="#">Mpumalanga</a>
+                                            <a class="dropdown-item" href="#">Gauteng</a>
+                                            <a class="dropdown-item" href="#">Free State</a>
+                                            <a class="dropdown-item" href="#">North West</a>
+                                            <a class="dropdown-item" href="#">Kwazulu-Natal</a>
+                                            <a class="dropdown-item" href="#">Western Cape</a>
+                                            <a class="dropdown-item" href="#">Northern Cape</a>
+                                            <a class="dropdown-item" href="#">Limpopo</a>
+                                            <!-- Add more options as needed -->
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="validityPeriod">Race</label>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" id="validityPeriod" placeholder="Select Race"
-                                               readonly>
-                                        <div class="input-group-append">
-                                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
-                                                    aria-haspopup="true" aria-expanded="false"></button>
-                                            <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="#">Black</a>
-                                                <a class="dropdown-item" href="#">White</a>
-                                                <a class="dropdown-item" href="#">Indian</a>
-                                                <a class="dropdown-item" href="#">Colored</a>
-                                                <a class="dropdown-item" href="#">Mixed Raced</a>
-                                                <a class="dropdown-item" href="#">Otherl</a>
-                                                <!-- Add more options as needed -->
-                                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="validityPeriod">Race</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="validityPeriod" placeholder="Select Race"
+                                           readonly>
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false"></button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Black</a>
+                                            <a class="dropdown-item" href="#">White</a>
+                                            <a class="dropdown-item" href="#">Indian</a>
+                                            <a class="dropdown-item" href="#">Colored</a>
+                                            <a class="dropdown-item" href="#">Mixed Raced</a>
+                                            <a class="dropdown-item" href="#">Otherl</a>
+                                            <!-- Add more options as needed -->
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
                     </div>
 
                 </div>
@@ -151,7 +152,7 @@
                                 <input type="text" class="form-control" id="memberName" placeholder="Enter Names">
                             </div>
                         </div>
-                        
+
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="memberName">Cell</label>
@@ -302,17 +303,18 @@
             </div>
         </div>
     </div>
-	<br />
-		<div class="form-group row">
-			<div class="col-8 offset-2 row">
-				<div class="col">
-					<input type="submit" class="btn btn-info w-75 text" value="Submit" />
-				</div>
-				<div class="col">
-					<a asp-action="Counsellor" class="btn btn-danger w-75">Back</a>
-				</div>
-			</div>
-		</div>
+    <br />
+    <div class="form-group row">
+        <div class="col-8 offset-2 row">
+            <div class="col">
+                <input type="submit" class="btn btn-info w-75 text" value="Update" />
+            </div>
+            <div class="col">
+                <a asp-action="Counsellor" class="btn btn-danger w-75">Back</a>
+            </div>
+        </div>
+    </div>
 </form>
 
-<link rel="stylesheet" href="~/css/StyleSheet/Workshop_StyleSheet.css">
+@*<link rel="stylesheet" href="~/css/StyleSheet/Workshop_StyleSheet.css">
+*@

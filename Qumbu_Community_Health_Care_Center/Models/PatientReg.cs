@@ -19,6 +19,12 @@ namespace Qumbu_Community_Health_Care_Center.Models
         public string? Address { get; set; }
         public string? Cell { get; set; }
         public string ?Email { get; set; }
+        public string? Gender { get; set; }
+        public string? Province { get; set; }
+        public string? Race { get; set; }
+        [Required]
+        [DisplayName("Marital Status")]
+        public string? Status { get; set; }
         [Required]
         [DisplayName("Relation to the client: ")]
         public string? Relationship { get; set; }
