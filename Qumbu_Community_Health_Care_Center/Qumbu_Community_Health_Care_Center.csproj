@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="Views\Admin\Admin_Dashboard.cshtml" />
     <None Include="wwwroot\js\site.js" />
   </ItemGroup>
 
