@@ -2,10 +2,11 @@
 using Microsoft.EntityFrameworkCore;
 using Qumbu_Community_Health_Care_Center.Areas.Identity.Data;
 using Qumbu_Community_Health_Care_Center.Models;
+using System.IO;
 
 
 namespace Qumbu_Community_Health_Care_Center.Controllers
- 
+
 {
     public class CounsellerController : Controller
     {
@@ -161,5 +162,27 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             Context.SaveChanges();
             return RedirectToAction("Record");
         }
+        public IActionResult CreateF()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult CreateF(Referral referral)
+        {
+            if (ModelState.IsValid)
+            {
+                Context.Referral.Add(referral);
+                Context.SaveChanges();
+                return RedirectToAction("Referral");
+            }
+            return View(referral);
+        }
+        public IActionResult Referral()
+        {
+            IEnumerable<Referral> Referrals = Context.Referral;
+            return View(Referrals);
+        }
     }
 }
+

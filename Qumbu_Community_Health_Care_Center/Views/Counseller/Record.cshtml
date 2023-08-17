@@ -83,6 +83,9 @@
                     <th>
                         Sign
                     </th>
+                    <th>
+                       Update
+                    </th>
                 </tr>
             </thead>
 
@@ -107,6 +110,11 @@
                         <td width="30%">@pa.Safety</td>
                         <td width="30%">@pa.Consent</td>
                         <td width="30%">@pa.Sign</td>
+                        <td>
+                            <div class="w-100 btn-group" role="group">
+                                <a asp-controller="Counseller" asp-action="UpdateRe" asp-route-ID="@pa.PatientRegId" class="btn btn-blue-300 mx-1">Update</a>
+                                </div>
+                        </td>
                     </tr>
                 }
             </tbody>
