@@ -22,6 +22,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<Feedbacks> Feedbacks { get; set; }
     public DbSet<HealthRecord> HealthRecords { get; set; }
     public DbSet<Referral> Referral { get; set; }
+    public DbSet<FamilyReg> FamilyReg { get; set; }
 
 
 

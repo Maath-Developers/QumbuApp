@@ -1,0 +1,57 @@
+﻿@model Qumbu_Community_Health_Care_Center.Models.FamilyReg;
+@{
+	ViewData["Title"] = "CreateFamilyReg";
+	Layout = "~/Views/Shared/_FamilyPlanLayout.cshtml";
+}
+<form method="post" asp-action="CreateFamilyReg">
+	<div class="border p-3">
+		<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+		<div class="form-group row">
+			<h2 class="text-black-50 pe-lg-5 t">Let's have a chat</h2>
+		</div>
+		<br />
+		<div class="form-group row">
+			<div class="col-8 offset-2 row">
+				<div class="col">
+					<input type="submit" class="btn btn-info w-50" value="Submit" />
+				</div>
+				<div class="col">
+					<a asp-action="ViewFamilyReg" class="btn btn-info w-50">View</a>
+				</div>
+			</div>
+		</div>
+		<div class="row justify- ">
+			<div class="col-12 ">
+				<div class="form-group align-content-center align-items-center">
+					<div class="col-4 ">
+						<label asp-for="Description"></label>
+						<input asp-for="Description" class="form-control" />
+						<span asp-validation-for="Description" class="text-danger"></span>
+					</div>
+					<div class="col-4">
+						<label asp-for="Descriptions"></label>
+						<input asp-for="Descriptions" class="form-control" />
+						<span asp-validation-for="Descriptions" class="text-danger"></span>
+					</div>
+					<div class="col-4">
+						<label asp-for="expectection"></label>
+						<input asp-for="expectection" class="form-control" />
+						<span asp-validation-for="expectection" class="text-danger"></span>
+					</div>
+					<div class="col-4">
+						<label asp-for=" experience"></label>
+						<input asp-for=" experience" class="form-control" />
+						<span asp-validation-for=" experience" class="text-danger"></span>
+					</div>
+					<div class="col-4">
+						<label asp-for="type"></label>
+						<input asp-for="type" class="form-control" />
+						<span asp-validation-for="type" class="text-danger"></span>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</form>
+
