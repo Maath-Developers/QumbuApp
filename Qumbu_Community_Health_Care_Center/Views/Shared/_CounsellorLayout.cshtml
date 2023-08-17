@@ -240,64 +240,14 @@
                                             @if (SignInManager.IsSignedIn(User))
                                             {
 
-                                                <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="~/images/images/logo/user.png" alt="#" /> <h6>@UserManager.GetUserAsync(User).Result.FirstName @UserManager.GetUserAsync(User).Result.LastName</h6></a>
+                                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="~/_Images/logo/user-solid.svg" class="avatar img-fluid rounded me-1" alt="#" /> <h6>@UserManager.GetUserAsync(User).Result.FirstName @UserManager.GetUserAsync(User).Result.LastName</h6></a>
                                                     <div class="dropdown-menu">
                                                         <a class="dropdown-item" href="profile.html">My Profile</a>
                                                         <a class="dropdown-item" href="settings.html">Settings</a>
                                                         <a class="dropdown-item" href="help.html">Help</a>
                                                         <a class="dropdown-item" href="#"><span>Log Out</span> <i class="fa fa-sign-out"></i></a>
                                                     </div>
-                                           @*     } 
-                                                @if (User.IsInRole("Nurse"))
-                                                {
-                                                    <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="~/images/images/logo/user.png" alt="#" /><span class="name_user">Nurse</span></a>
-                                                    <div class="dropdown-menu">
-                                                        <a class="dropdown-item" href="profile.html">My Profile</a>
-                                                        <a class="dropdown-item" href="settings.html">Settings</a>
-                                                        <a class="dropdown-item" href="help.html">Help</a>
-                                                        <a class="dropdown-item" href="#"><span>Log Out</span> <i class="fa fa-sign-out"></i></a>
-                                                    </div>
-                                                }
-                                                @if (User.IsInRole("Counsellor"))
-                                                {
-                                                    <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="~/images/images/logo/user.png" alt="#" /><span class="name_user">Counsellor</span></a>
-                                                    <div class="dropdown-menu">
-                                                        <a class="dropdown-item" href="profile.html">My Profile</a>
-                                                        <a class="dropdown-item" href="settings.html">Settings</a>
-                                                        <a class="dropdown-item" href="help.html">Help</a>
-                                                        <a class="dropdown-item" href="#"><span>Log Out</span> <i class="fa fa-sign-out"></i></a>
-                                                    </div>
-                                                } 
-                                                @if (User.IsInRole("Unit-Manager"))
-                                                {
-                                                    <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="~/images/images/logo/user.png" alt="#" /><span class="name_user">Unit-Manager</span></a>
-                                                    <div class="dropdown-menu">
-                                                        <a class="dropdown-item" href="profile.html">My Profile</a>
-                                                        <a class="dropdown-item" href="settings.html">Settings</a>
-                                                        <a class="dropdown-item" href="help.html">Help</a>
-                                                        <a class="dropdown-item" href="#"><span>Log Out</span> <i class="fa fa-sign-out"></i></a>
-                                                    </div>
-                                                } 
-                                                @if (User.IsInRole("Patient"))
-                                                {
-                                                    <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="~/images/images/logo/user.png" alt="#" /><span class="name_user">Patient</span></a>
-                                                    <div class="dropdown-menu">
-                                                        <a class="dropdown-item" href="profile.html">My Profile</a>
-                                                        <a class="dropdown-item" href="settings.html">Settings</a>
-                                                        <a class="dropdown-item" href="help.html">Help</a>
-                                                        <a class="dropdown-item" href="#"><span>Log Out</span> <i class="fa fa-sign-out"></i></a>
-                                                    </div>
-                                                }
-                                                @if (User.IsInRole("Doctor"))
-                                                {
-                                                    <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="~/images/images/logo/user.png" alt="#" /><span class="name_user">Doctor</span></a>
-                                                    <div class="dropdown-menu">
-                                                        <a class="dropdown-item" href="profile.html">My Profile</a>
-                                                        <a class="dropdown-item" href="settings.html">Settings</a>
-                                                        <a class="dropdown-item" href="help.html">Help</a>
-                                                        <a class="dropdown-item" href="#"><span>Log Out</span> <i class="fa fa-sign-out"></i></a>
-                                                    </div>
-                                                }*@
+                                           
                                             }
                                            
                                         </li>
