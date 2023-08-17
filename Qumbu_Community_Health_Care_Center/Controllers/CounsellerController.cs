@@ -93,5 +93,73 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             }
             return View(pat);
         }
+        public IActionResult Update(int? ID)
+        {
+            if (ID == null || ID == 0)
+            {
+                return NotFound();
+            }
+            var obj = Context.PatientReg.Find(ID);
+            if (obj == null)
+            {
+                return NotFound();
+            }
+
+            return View(obj);
+
+        }
+
+
+
+        //POST-Update updating the current data we have 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Update(PatientReg pat)
+        {
+            Context.PatientReg.Update(pat);
+            Context.SaveChanges();
+            return RedirectToAction("PatientC");
+        }
+
+
+        public IActionResult Delete(int? ID)
+        {
+            var obj = Context.Bookings.Find(ID);
+            if (obj == null)
+            {
+                return NotFound();
+            }
+
+            Context.Bookings.Remove(obj);
+            Context.SaveChanges();
+            return RedirectToAction("Bookings");
+        }
+        public IActionResult UpdateRe(int? ID)
+        {
+            if (ID == null || ID == 0)
+            {
+                return NotFound();
+            }
+            var obj = Context.PatientReg.Find(ID);
+            if (obj == null)
+            {
+                return NotFound();
+            }
+
+            return View(obj);
+
+        }
+
+
+
+        //POST-Update updating the current data we have 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult UpdateRe(PatientReg pat)
+        {
+            Context.PatientReg.Update(pat);
+            Context.SaveChanges();
+            return RedirectToAction("Record");
+        }
     }
 }
