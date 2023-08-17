@@ -1,0 +1,70 @@
+﻿@{
+    ViewData["Title"] = "ListFamilyRegNurse";
+    Layout = "~/Views/Shared/_FamilyPlanLayout.cshtml";
+}
+@model IEnumerable<Qumbu_Community_Health_Care_Center.Models.FamilyReg>
+
+<div class="container p-3">
+<div class="row pt-4">
+    <div class="col-6">
+        <h2 class="text-primary">List of Appointments</h2>
+    </div>
+    <div class="col-6 text-right">
+        <a asp-controller="FamilyPlan" asp-action="CreateFamilyReg" class="btn btn-primary">Create New</a>
+    </div>
+</div>
+<br />
+
+@if (Model.Count() > 0)
+{
+
+    <table class="table table-bordered table-striped" style="width:100%">
+        <thead>
+            <tr>
+
+                <th>
+                    Answer
+                </th>
+                <th>
+                    Answer
+                </th>
+                <th>
+                    Answer
+                </th>
+                <th>
+                    Answer
+                </th>
+                <th>
+                    Answer
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var fed in Model)
+            {
+                <tr>
+
+                    <td width="30%">@fed.Description</td>
+                    <td width="30%">@fed.Descriptions</td>
+                    <td width="30%">@fed.experience</td>
+                    <td width="30%">@fed.expectection</td>
+                    <td width="30%">@fed.type</td>
+                    <td>
+                        <div class="w-100 btn-group" role="group">
+                            <a asp-controller="FamalyPlan" asp-action="updateAppointment" asp-route-ID="@fed.FamilyRegId" class="btn btn-info-300 mx-1">Update</a>
+                            <a asp-controller="FamalyPlan" asp-action="DeleteAppointment" asp-route-ID="@fed.FamilyRegId" class="btn btn-info-300 mx-1">Delete</a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+}
+else
+{
+    <p>No Appointments added yet</p>
+}
+
+</div>

@@ -21,6 +21,8 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<ScreeningTool> Srcreening { get; set; }
     public DbSet<Feedbacks> Feedbacks { get; set; }
     public DbSet<HealthRecord> HealthRecords { get; set; }
+    public DbSet<Referral> Referral { get; set; }
+    public DbSet<FamilyReg> FamilyReg { get; set; }
 
 
 

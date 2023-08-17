@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Qumbu_Community_Health_Care_Center.Models.Referral>
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">List of Referral</h2>
+        </div>
+        <div class="col-6 text-right">
+            <a asp-controller="Counseller" asp-action="CreateF" class="btn btn-primary">Referr Patient</a>
+        </div>
+        <div class="col-6 text-left">
+            <a asp-controller="Counseller" asp-action="Referral" class="btn btn-primary">Go Back</a>
+        </div>
+    </div>
+    <br />
+
+    @if (Model.Count() > 0)
+    {
+
+        <table class="table table-bordered table-striped" style="width:100%">
+            <thead>
+                <tr>
+                    <th>
+                        PatientName
+                    </th>
+                    <th>
+                        Departments
+                    </th>
+                    <th>
+                        Remarks
+                    </th>
+                   
+            </thead>
+
+            <tbody>
+                @foreach (var referrals in Model)
+                {
+                    <tr>
+                        <td width="30%">@referrals.PatientName</td>
+                        <td width="30%">@referrals.Departments</td>
+                        <td width="30%">@referrals.Remarks</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    }
+    else
+    {
+        <p>No referrals added yet</p>
+    }
+
+</div>
+
+
+
+
+

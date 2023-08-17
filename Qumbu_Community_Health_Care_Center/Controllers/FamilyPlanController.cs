@@ -88,7 +88,76 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             IEnumerable<Feedbacks> feedlist = dbContext.Feedbacks;
             return View(feedlist);
         }
+        public IActionResult CreateFamilyReg()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult CreateFamilyReg(FamilyReg familyReg)
+        {
+            if (ModelState.IsValid)
+            {
+                dbContext.FamilyReg.Add(familyReg);
+                dbContext.SaveChanges();
+                return RedirectToAction("ViewFamilyReg");
+
+            }
+            return View(familyReg);
+        }
+
+        public IActionResult ViewFamilyReg()
+        {
+            IEnumerable<FamilyReg> list = dbContext.FamilyReg;
+            return View(list);
+        }
+        public IActionResult ListFamilyRegNurse()
+        {
+            IEnumerable<FamilyReg> list = dbContext.FamilyReg;
+            return View(list);
+        }
+
+		public ActionResult NurseAppointment()
+		{
+			IEnumerable<Appointment> oblList = dbContext.Appointments;
+			return View(oblList);
+		}
+		public IActionResult updateAppointment(int? ID)
+		{
+			if (ID == null || ID == 0)
+			{
+				return NotFound();
+
+			}
+			var list = dbContext.Appointments.Find(ID);
+			if (list == null)
+			{
+				return NotFound();
+			}
+			return View(list);
+		}
+		[HttpPost]
+		[ValidateAntiForgeryToken]
+		public IActionResult updateAppointment(Appointment appointment)
+		{
+			dbContext.Appointments.Update(appointment);
+			dbContext.SaveChanges();
+			return RedirectToAction("ViewAppointment");
+		}
+
+		public IActionResult DeleteAppointment(int? ID)
+		{
+			var list = dbContext.Appointments.Find(ID);
+			if (list == null)
+			{
+				return NotFound();
+			}
+			dbContext.Appointments.Remove(list);
+			dbContext.SaveChanges();
+			return RedirectToAction("ViewAppointment");
+
+		}
 
 
-    }
+	}
 }

@@ -7,7 +7,52 @@
 }
 @if (User.IsInRole("Nurse"))
 {
-    <h1>Nurse</h1>
+    <div class="mt-2 p-3 bg-info text-black rounded">
+        <h1>
+            WELCOME TO FAMILY PLANNING
+            <a href="index.html"><img class="img-responsive" width="500" height="110" src="~/_Images/welcome.jpg" alt="#" /></a>
+            <a href="index.html"><img class="img-responsive" width="250" height="140" src="~/_Images/Fnurse.jpg" alt="#" /></a>
+
+        </h1>
+        @* <p class="align-text-bottom"><span>YOU WANNA KNOW MORE ABOUT BIRTH CONTROLS? CLICK ON CONTRACEPTIVE!!</span></p><span class="auto-type"></span>*@
+
+    </div>
+
+
+
+    <head>
+        <style>
+            .image-container {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .image {
+                width: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="image-container">
+            <a href="index.html"><img class="img-responsive" width="500" height="400" src="~/_Images/logo/FDashaboard.jpg" alt="#" /></a>
+
+            <a href="index.html"><img class="img-responsive" width="500" height="420" src="~/_Images/logo/FDashboard1.png" alt="#" /></a>
+
+        </div>
+    </body>
+
+
+    <script>
+        var typed = new typed(".auto-type", {
+            strings: ["YOU WANNA KNOW MORE ABOUT BIRTH CONTROLS?....", " CLICK ON CONTRACEPTIVE!!"]
+                        typesSpeed: 30
+                        backSpeed: 130
+                        loop = true
+        })
+    </script>
+    <script>
+        $('.carousel').carousel()
+    </script>
 }
 @if (User.IsInRole("Doctor"))
 {

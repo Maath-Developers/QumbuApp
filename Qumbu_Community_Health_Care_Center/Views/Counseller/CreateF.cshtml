@@ -1,0 +1,78 @@
+﻿@model Qumbu_Community_Health_Care_Center.Models.Referral
+
+
+<form method="post" asp-action="CreateF">
+    <div class="border p-3">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group row">
+            <h2 class="text-black-50 pl-3">Add Referred Patients</h2>
+        </div>
+        <div class="container mt-4">
+            <div class="card">
+                <div class="card-header bg-secondary">
+                    <h5 class="card-title">Referred Patients</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="validityPeriod">PatientName</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="validityPeriod" placeholder="Select"
+                                           readonly>
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false"></button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Male</a>
+                                            <a class="dropdown-item" href="#">Female</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="validityPeriod">Departments</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="validityPeriod" placeholder="Select"
+                                           readonly>
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false"></button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Single</a>
+                                            <a class="dropdown-item" href="#">Married</a>
+                                            <a class="dropdown-item" href="#">Devorced</a>
+                                            <a class="dropdown-item" href="#">Widowed/widower</a>
+                                            <a class="dropdown-item" href="#">Other</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <label for="address">Remarks</label>
+                                <textarea class="form-control" id="address" rows="4" placeholder="Enter remarks"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-8 offset-2 row">
+                                <div class="col">
+                                    <input type="submit" class="btn btn-info w-75" value="Submit" />
+                                </div>
+                                <div class="col">
+                                    <a asp-action="Referral" class="btn btn-danger w-75">Back</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+
