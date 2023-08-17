@@ -1,4 +1,5 @@
-﻿@{
+﻿
+@{
     Layout = "_AdminLayout";
 }
 <br />
@@ -25,7 +26,7 @@
             <h5 class="card-title text-center mb-4">Appointment</h5>
             <img src="~/images/appointment.jpg" alt="apointment image" class="img-fluid">
             <div class="d-flex justify-content-end">
-                <button class="btn btn-success">Book</button>
+                <button class="btn btn-success" id="button1">Book</button>
             </div>
         </div>
     </div>
@@ -34,44 +35,54 @@
             <h5 class="card-title text-center mb-4">Dr Availability</h5>
             <img src="~/images/dr avail.png" alt="Dr Availability image" class="img-fluid">
             <div class="d-flex justify-content-end">
-                <button class="btn btn-success">Check</button>
+                <button class="btn btn-success" id="button2">Check</button>
             </div>
         </div>
     </div>
     <div class="col-md-3 diagonal-card">
         <div class="card text-center bg-primary p-3">
-            <h5 class="card-title text-center mb-4">Appointment</h5>
-            <img src="~/images/appointment.jpg" alt="apointment image" class="img-fluid">
+            <h5 class="card-title text-center mb-4">Patient Registration</h5>
+            <img src="~/images/patient-registration-17674809.jpg" alt="Registration image" class="img-fluid">
             <div class="d-flex justify-content-end">
-                <button class="btn btn-success">Book</button>
+                <button class="btn btn-success" id="button3">Register</button>
             </div>
         </div>
     </div>
     <div class="col-md-3 diagonal-card">
         <div class="card text-center bg-secondary p-3">
-            <h5 class="card-title text-center mb-4">Dr Availability</h5>
-            <img src="~/images/dr avail.png" alt="Dr Availability image" class="img-fluid">
+            <h5 class="card-title text-center mb-4">Attendance Report</h5>
+            <img src="~/images/att_rep.png" alt="Report image" class="img-fluid">
             <div class="d-flex justify-content-end">
-                <button class="btn btn-success">Check</button>
+                <button class="btn btn-success" id="button5">Genenerate</button>
             </div>
         </div>
     </div>
     <div class="col-md-3 diagonal-card">
         <div class="card text-center bg-primary p-3">
-            <h5 class="card-title text-center mb-4">Appointment</h5>
-            <img src="~/images/appointment.jpg" alt="apointment image" class="img-fluid">
+            <h5 class="card-title text-center mb-4">Manage Queue</h5>
+            <img src="~/images/queue card.jpg" alt="Queue image" class="img-fluid">
             <div class="d-flex justify-content-end">
-                <button class="btn btn-success">Book</button>
+                <button class="btn btn-success" id="button4">Manage</button>
             </div>
         </div>
     </div>
+    
     <div class="col-md-3 diagonal-card">
         <div class="card text-center bg-secondary p-3">
-            <h5 class="card-title text-center mb-4">Dr Availability</h5>
-            <img src="~/images/dr avail.png" alt="Dr Availability image" class="img-fluid">
+            <h5 class="card-title text-center mb-4">Create File</h5>
+            <img src="~/images/medical-781422.jpg" alt="File image" class="img-fluid">
             <div class="d-flex justify-content-end">
-                <button class="btn btn-success">Check</button>
+                <button class="btn btn-success">Create</button>
             </div>
         </div>
     </div>
 </div>
+<!-- Include Bootstrap JS for button toggling -->
+<script src="~/https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>>
+<script src="~/https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    // Toggle active class when a button is clicked
+    $('#button1, #button2,#button3,#button4,#button5').click(function () {
+        $(this).toggleClass('active');
+    });
+</script>
