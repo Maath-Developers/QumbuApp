@@ -76,6 +76,9 @@
                     </th> 
                     <th>
                         CurrentStressors
+                    </th> 
+                    <th>
+                        Edit
                     </th>
                 </tr>
             </thead>
@@ -99,6 +102,11 @@
                         <td width="30%">@pa.History</td>
                         <td width="30%">@pa.Communication</td>
                         <td width="30%">@pa.CurrentStressors</td>
+                        <td>
+                            <div class="w-100 btn-group" role="group">
+                                <a asp-controller="Counseller" asp-action="Update" asp-route-ID="@pa.PatientRegId"  class="btn btn-blue-300 mx-1">Updade</a>
+                            </div>
+                        </td>
                     </tr>
                 }
             </tbody>

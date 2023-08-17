@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Qumbu_Community_Health_Care_Center.Migrations
 {
-    public partial class mzu : Migration
+    public partial class mk : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -80,7 +80,7 @@ namespace Qumbu_Community_Health_Care_Center.Migrations
                     BookingId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Names = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Date = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Date = table.Column<int>(type: "int", nullable: false),
                     Time = table.Column<TimeSpan>(type: "time", nullable: true),
                     Contact = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
@@ -160,6 +160,21 @@ namespace Qumbu_Community_Health_Care_Center.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_PatientReg", x => x.PatientRegId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Referral",
+                columns: table => new
+                {
+                    ReferralID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    PatientName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Departments = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Remarks = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Referral", x => x.ReferralID);
                 });
 
             migrationBuilder.CreateTable(
@@ -303,12 +318,12 @@ namespace Qumbu_Community_Health_Care_Center.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "63fc345a-6405-409c-bf59-e881651549c3", "5906344f-9cb4-496a-97d9-d6a5770f0c9d", "Nurse", "NURSE" },
-                    { "64c8e53f-6712-4771-8ade-12185f4980d1", "36e7af0f-5877-4e35-8e02-8dce33497e88", "Counsellor", "COUNSELLOR" },
-                    { "a3b0501e-8cd1-4639-add1-9803f95b2fb2", "580670ca-8ff3-423b-9451-14df3f06810f", "Unit-Manager", "UNIT-MANAGER" },
-                    { "a5d4a6fc-61f1-4877-90ad-f406ad4a5973", "bab490c2-a870-4832-b298-16dee27a691a", "Doctor", "DOCTOR" },
-                    { "d56c9fa5-640e-4afd-9e0a-b6de2c680611", "c6f65864-145c-48f9-8623-66bb988b83b7", "Patient", "PATIENT" },
-                    { "eaa5c4e6-42fa-4836-bc99-d801bae099c4", "64e446aa-8f65-46d3-9884-f682424cc2e8", "Admin", "ADMIN" }
+                    { "2311a054-1e82-49fd-9ba5-246cc4edbd2d", "465a5d9c-7c4c-40b3-aa8a-7e04da35d61f", "Doctor", "DOCTOR" },
+                    { "57c568d3-7e32-4fa7-8725-a083cb381448", "6bb3528b-2b48-4ced-9add-030b75193675", "Unit-Manager", "UNIT-MANAGER" },
+                    { "5d0aa96b-d45a-4fff-a02e-34f6574d2623", "4b263168-11a1-473d-af9c-3ae67c551491", "Admin", "ADMIN" },
+                    { "69091b14-27d1-4cb7-9749-37b242e5577e", "e800b719-2c5a-4189-88a5-e574c3d344b6", "Patient", "PATIENT" },
+                    { "be462293-5575-4520-907b-53e5793ff597", "a8d2733c-c46f-4e6f-90be-1afe7964f338", "Nurse", "NURSE" },
+                    { "e11b107c-3b73-4d1c-baf5-c42429ffb6b1", "12541cc1-f901-4cbf-b2c3-f39ed7eead50", "Counsellor", "COUNSELLOR" }
                 });
 
             migrationBuilder.CreateIndex(
@@ -390,6 +405,9 @@ namespace Qumbu_Community_Health_Care_Center.Migrations
 
             migrationBuilder.DropTable(
                 name: "PatientReg");
+
+            migrationBuilder.DropTable(
+                name: "Referral");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");

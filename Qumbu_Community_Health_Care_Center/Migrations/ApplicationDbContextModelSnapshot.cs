@@ -51,43 +51,43 @@ namespace Qumbu_Community_Health_Care_Center.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "d56c9fa5-640e-4afd-9e0a-b6de2c680611",
-                            ConcurrencyStamp = "c6f65864-145c-48f9-8623-66bb988b83b7",
+                            Id = "69091b14-27d1-4cb7-9749-37b242e5577e",
+                            ConcurrencyStamp = "e800b719-2c5a-4189-88a5-e574c3d344b6",
                             Name = "Patient",
                             NormalizedName = "PATIENT"
                         },
                         new
                         {
-                            Id = "eaa5c4e6-42fa-4836-bc99-d801bae099c4",
-                            ConcurrencyStamp = "64e446aa-8f65-46d3-9884-f682424cc2e8",
+                            Id = "5d0aa96b-d45a-4fff-a02e-34f6574d2623",
+                            ConcurrencyStamp = "4b263168-11a1-473d-af9c-3ae67c551491",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "63fc345a-6405-409c-bf59-e881651549c3",
-                            ConcurrencyStamp = "5906344f-9cb4-496a-97d9-d6a5770f0c9d",
+                            Id = "be462293-5575-4520-907b-53e5793ff597",
+                            ConcurrencyStamp = "a8d2733c-c46f-4e6f-90be-1afe7964f338",
                             Name = "Nurse",
                             NormalizedName = "NURSE"
                         },
                         new
                         {
-                            Id = "a5d4a6fc-61f1-4877-90ad-f406ad4a5973",
-                            ConcurrencyStamp = "bab490c2-a870-4832-b298-16dee27a691a",
+                            Id = "2311a054-1e82-49fd-9ba5-246cc4edbd2d",
+                            ConcurrencyStamp = "465a5d9c-7c4c-40b3-aa8a-7e04da35d61f",
                             Name = "Doctor",
                             NormalizedName = "DOCTOR"
                         },
                         new
                         {
-                            Id = "a3b0501e-8cd1-4639-add1-9803f95b2fb2",
-                            ConcurrencyStamp = "580670ca-8ff3-423b-9451-14df3f06810f",
+                            Id = "57c568d3-7e32-4fa7-8725-a083cb381448",
+                            ConcurrencyStamp = "6bb3528b-2b48-4ced-9add-030b75193675",
                             Name = "Unit-Manager",
                             NormalizedName = "UNIT-MANAGER"
                         },
                         new
                         {
-                            Id = "64c8e53f-6712-4771-8ade-12185f4980d1",
-                            ConcurrencyStamp = "36e7af0f-5877-4e35-8e02-8dce33497e88",
+                            Id = "e11b107c-3b73-4d1c-baf5-c42429ffb6b1",
+                            ConcurrencyStamp = "12541cc1-f901-4cbf-b2c3-f39ed7eead50",
                             Name = "Counsellor",
                             NormalizedName = "COUNSELLOR"
                         });
@@ -337,8 +337,8 @@ namespace Qumbu_Community_Health_Care_Center.Migrations
                     b.Property<string>("Contact")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("datetime2");
+                    b.Property<int>("Date")
+                        .HasColumnType("int");
 
                     b.Property<string>("Names")
                         .HasColumnType("nvarchar(max)");
@@ -582,6 +582,28 @@ namespace Qumbu_Community_Health_Care_Center.Migrations
                     b.HasKey("PatientRegId");
 
                     b.ToTable("PatientReg");
+                });
+
+            modelBuilder.Entity("Qumbu_Community_Health_Care_Center.Models.Referral", b =>
+                {
+                    b.Property<int>("ReferralID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ReferralID"), 1L, 1);
+
+                    b.Property<string>("Departments")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PatientName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Remarks")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ReferralID");
+
+                    b.ToTable("Referral");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
