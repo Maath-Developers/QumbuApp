@@ -12,6 +12,35 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         {
             return View();
         }
+        public IActionResult Nurse_Cons()
+        {
+            return View();
+        }
+        public IActionResult Nurse_Appointment()
+        {
+            return View();
+        }
+        public IActionResult Medical_Record()
+        {
+            return View();
+        }
+        public IActionResult Doctor_Availability()
+        {
+            return View();
+        }
+        public IActionResult Cons_Report()
+        {
+            return View();
+        }
+        public IActionResult FeedBack()
+        {
+            return View();
+        }
+        public IActionResult Dashboard()
+        {
+            return View();
+        }
+
         public IActionResult Layout()
         {
             return View();
