@@ -1,0 +1,120 @@
+﻿@model Qumbu_Community_Health_Care_Center.Models.ScreeningTool
+
+@{
+    Layout = "Vaccs";
+}
+@*<div class="container">
+  <div class="card"> <p class="h-1 fw-bold">MAKE AN APPOINTMENT</p> 
+    <div class="bar mb-3"></div> *@
+    <div class="mx-0 mx-sm-auto">
+        <div class="card w-75">
+          <div class="card-body" >
+            <form method="post" asp-action="IndexAppo">
+      <input asp-for="ID" hidden />
+        <div class="border p-3 bg-info">
+            <div>
+               <img class="img-responsive" src="~/_Images/Vaccs/istockphoto-1289951048-612x612.jpg" alt="#" />
+                       @* <div class="p-3 mb-2 bg-info"></div>*@
+           <div class="form-group row">
+               <h2 class="text-opacity-50 pl-3">MAKE AN APPOINTMENT</h2>
+           </div>
+           <div class="row">
+                       <div class="col-12"> <h3><p class="mb-2 text-black">Name</p> </h3>
+                         <div class=" box mb-3"> <input type="text" class="form-control" placeholder="type your name hare">
+                         @*  <div class="btn btn-outline-secondary" type="button"> <span class="fas fa-plus pe-2"></span>Add description </div> *@
+                         </div>
+                       </div> 
+                      <div class="col-12">
+                         <div class="row">
+                           <div class="col-md-4"> 
+                               <div> <h3><p class="mb-2 fw-bold text-black">Date</p></h3>
+                                  <div class="box">
+                                       <input class="form-control" type="text" placeholder="Jul 14, 2021"> <span class="fas fa-calendar-alt"></span>
+                                  </div>
+                               </div>
+                           </div>
+                           <div class="col-md-4 mt-md-0 mt-3">
+                                        <div>
+                                            <h3><p class="mb-2 fw-bold text-black">Time</p> </h3>
+                                    <div class="box"> 
+                                        <input class="form-control" type="text" placeholder="2:00 PM"> <span class="fas fa-stopwatch"></span> 
+                                    </div>
+                               </div>
+                           </div> 
+                          @* <div class="col-md-4 mt-md-0 mt-3">
+                               <div> <p class="mb-2">Duration</p>
+                                        <div class="box"> 
+                                            <input class="form-control" type="number" placeholder="1h 45m">*@
+                                            <!-- <div class="d-flex flex-column arrow"> <span class="fas fa-caret-up"></span> <span class="fas fa-caret-down"></span> </div> -->
+                                       @* </div>*@ 
+                           @*    </div>
+                           </div>*@
+                         </div>
+                           @*<p class="dis mt-3"><span class="fas fa-check-circle pe-1"></span>This event will take place on the july 14, 2021 form 02:00 PM untill 03:45 PM</p>*@
+                      </div>
+                       @* <div class="col-12"> <p>Location</p> 
+                         <div class="box">
+                             <input class="form-control" type="text" placeholder="Location">                   
+                                <div class="btn btn-outline-secondary"> 
+                                   <span class="fas fa-plus pe-1"></span> Set meeting room 
+                                </div>
+                          </div> <p class="bar2 mt-4"></p>
+                        </div>*@
+                          @*<div class="col-12"> <p>Add guests</p>
+                            <div class="box"> <input class="form-control" type="text" placeholder="Guest email">
+                                <div class="add btn btn-outline-secondary">Add</div> 
+                            </div>
+                          </div>*@
+           <div class="col-12"> 
+               <div class="d-flex align-items-center mt-4">
+                  @* <div class="pic"> 
+                        <img src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+                        <span class="fas fa-times"></span>
+                   </div> *@
+                  @* <div class="pic">
+                       <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt=""> 
+                       <span class="fas fa-times"></span>
+                   </div> 
+                   <div class="pic"> 
+                       <img src="https://images.pexels.com/photos/1704488/pexels-photo-1704488.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt=""> 
+                       <span class="fas fa-times"></span>
+                   </div>*@
+                   <!-- <div class="pic"> <img src="https://images.pexels.com/photos/2078265/pexels-photo-2078265.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt=""> <span class="fas fa-times"></span> </div> --> <!-- <div class="pic"> <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt=""> <span class="fas fa-times"></span> </div> -->
+                   @*<div class="rounded-circle">
+                       <span class="fas fa-plus"></span> 
+                       <span class="number">3</span> 
+                   </div>*@
+               </div>
+           </div>
+           <div class="col-12"> 
+               <div class="row">
+                                <div class="d-md-flex align-items-center mt-4">
+                                    <div class="d-flex flex-md-column align-sm-items-center justify-content-between me-md-4 me-0">
+                                            <h3><p class="mb-2 text-black"> Notification </p> </h3>
+                                        <div class="Radio form-control">
+                                            <label class="radio">
+                                                <input type="radio" name="send" value="Email" >
+                                                <span>Email</span>
+                                            </label>@* <label class="radio">
+                                            <input type="radio" name="send" value="Stack"> <span>Stack</span> </label>*@
+                                        </div>
+                                    </div>
+                                     <div class="col-md-4 ">
+                                              <h3><p class="mb-1 fw-bold text-black"> Set reminder </p> </h3>
+                                           <input class="form-control" type="number" placeholder="1 hour before event">
+                                    </div>
+                                    <div>
+                                        <button> <h7><a class="nav-link text-dark" asp-area="" asp-controller="Vaccs" asp-action="IndexScree">SUBMIT</a></h7></button>
+@*                                        <div class="btn btn-outline-secondary" type="button"> <span class="fas fa-plus pe-2"></span>SUBMIT </div>*@
+                                    </div>
+                                </div>
+               </div>
+               
+           </div>
+          </div>
+   </div>
+ </div>
+ </form>
+</div>
+</div>
+</div>
