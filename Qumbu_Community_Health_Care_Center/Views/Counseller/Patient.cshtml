@@ -15,70 +15,7 @@
 }
 @if (User.IsInRole("Patient"))
 {
- @* <!DOCTYPE html>
-    <html>
-    <head>
-        <title>Appointment Booking</title>
-        <style>
-            
-            body {
-                text-align: left;
-                margin: 0; 
-               
-            }
-            h1 {
-                font-size: 30px;
-            }
-            label {
-                display: inline-block;
-                width: 100px;
-                font-size: 20px;
-            }
-            input {
-                font-size: 20px;
-                padding: 5px; 
-                margin-bottom: 10px;
-                width: 200px; 
-            }
-
-                
-                input[type="submit"] {
-                    margin-top: 10px; 
-                }
-        </style>
-    </head>
-    <body>
-        <div class ="card-header bg-primary container-fluid">
-            <h1>Appointment Booking</h1>
-        </div>
-        <br>
-        <h1>Appointment Booking</h1>
-        <form action="/bookings/create" method="post">
-            <div class="form-container">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-
-            <div class="form-container">
-                <label for="date">Date:</label>
-                <input type="date" id="date" name="date" required>
-            </div>
-
-            <div class="form-container">
-                <label for="time">Time:</label>
-                <input type="time" id="time" name="time" required>
-            </div>
-
-            <div class="form-container">
-                <label for="contact">Contact:</label>
-                <input type="text" id="contact" name="contact" required>
-            </div>
-
-            <input type="submit" value="Book Now">
-        </form>
-    </body>
-    </html>
-*@
+ 
 <br />
     <head>
         <style>

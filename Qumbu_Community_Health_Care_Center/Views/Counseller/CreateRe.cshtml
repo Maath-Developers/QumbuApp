@@ -37,17 +37,12 @@
                             <div class="form-group">
                                 <label for="validityPeriod">Gender</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="validityPeriod" placeholder="Select Gender"
-                                           readonly>
-                                    <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
-                                                aria-haspopup="true" aria-expanded="false"></button>
-                                        <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="#">Male</a>
-                                            <a class="dropdown-item" href="#">Female</a>
-                                            <!-- Add more options as needed -->
-                                        </div>
-                                    </div>
+                                    <select id="GenderDropdown" asp-for="Gender" class="form-control" id="validationName" required>
+                                        <option value="Select" class="bg-opacity-50">Select</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                    </select>
+                                       
                                 </div>
                             </div>
                         </div>
@@ -67,20 +62,15 @@
                             <div class="form-group">
                                 <label for="validityPeriod">Marital Status</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="validityPeriod" placeholder="Select"
-                                           readonly>
-                                    <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
-                                                aria-haspopup="true" aria-expanded="false"></button>
-                                        <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="#">Single</a>
-                                            <a class="dropdown-item" href="#">Married</a>
-                                            <a class="dropdown-item" href="#">Devorced</a>
-                                            <a class="dropdown-item" href="#">Widowed/widower</a>
-                                            <a class="dropdown-item" href="#">Other</a>
-                                            <!-- Add more options as needed -->
-                                        </div>
-                                    </div>
+                                    <select id="GenderDropdown" asp-for="Status" class="form-control" id="validationName" required>
+                                        <option value="Select" class="bg-opacity-50">Select</option>
+                                        <option value="Single">Single</option>
+                                        <option value="Married">Married</option> 
+                                        <option value="Devorced">Devorced</option>
+                                        <option value="Widow">Widow</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                  
                                 </div>
                             </div>
                         </div>
@@ -88,46 +78,35 @@
                                 <div class="form-group">
                                     <label for="validityPeriod">Province</label>
                                     <div class="input-group">
-                                        <input type="text" class="form-control" id="validityPeriod" placeholder="Select Province"
-                                               readonly>
-                                        <div class="input-group-append">
-                                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
-                                                    aria-haspopup="true" aria-expanded="false"></button>
-                                            <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="#">Eastern Cape</a>
-                                                <a class="dropdown-item" href="#">Mpumalanga</a>
-                                                <a class="dropdown-item" href="#">Gauteng</a>
-                                                <a class="dropdown-item" href="#">Free State</a>
-                                                <a class="dropdown-item" href="#">North West</a>
-                                                <a class="dropdown-item" href="#">Kwazulu-Natal</a>
-                                                <a class="dropdown-item" href="#">Western Cape</a>
-                                                <a class="dropdown-item" href="#">Northern Cape</a>
-                                                <a class="dropdown-item" href="#">Limpopo</a>
-                                                <!-- Add more options as needed -->
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <select id="GenderDropdown" asp-for="Province" class="form-control" id="validationName" required>
+                                        <option value="Select" class="bg-opacity-50">Select</option>
+                                        <option value="Province">Eastern Cape</option>
+                                        <option value="Province">Mpumalanga</option>
+                                        <option value="Province">Gauteng</option>
+                                        <option value="Province">Free State</option>
+                                        <option value="Province">North West</option>
+                                        <option value="Province">Kwazulu-Natal</option>
+                                        <option value="Province">Western Cape</option>
+                                        <option value="Province">Northen Cape</option>
+                                        <option value="Province">Limpopo</option>
+                                    </select>
+
+                                   
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="validityPeriod">Race</label>
                                     <div class="input-group">
-                                        <input type="text" class="form-control" id="validityPeriod" placeholder="Select Race"
-                                               readonly>
-                                        <div class="input-group-append">
-                                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
-                                                    aria-haspopup="true" aria-expanded="false"></button>
-                                            <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="#">Black</a>
-                                                <a class="dropdown-item" href="#">White</a>
-                                                <a class="dropdown-item" href="#">Indian</a>
-                                                <a class="dropdown-item" href="#">Colored</a>
-                                                <a class="dropdown-item" href="#">Mixed Raced</a>
-                                                <a class="dropdown-item" href="#">Otherl</a>
-                                                <!-- Add more options as needed -->
-                                            </div>
-                                        </div>
+                                        <select id="GenderDropdown" asp-for="Race" class="form-control" id="validationName" required>
+                                            <option value="Select" class="bg-opacity-50">Select</option>
+                                            <option value="Race">Black</option>
+                                            <option value="Race">White</option>
+                                            <option value="Race">Indian</option>
+                                            <option value="Race">Colored</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                       
                                     </div>
                                 </div>
                             </div>
@@ -171,24 +150,18 @@
                             <div class="form-group">
                                 <label for="validityPeriod">Province</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="validityPeriod" placeholder="Select"
-                                           readonly>
-                                    <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
-                                                aria-haspopup="true" aria-expanded="false"></button>
-                                        <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="#">Eastern Cape</a>
-                                            <a class="dropdown-item" href="#">Mpumalanga</a>
-                                            <a class="dropdown-item" href="#">Gauteng</a>
-                                            <a class="dropdown-item" href="#">Free State</a>
-                                            <a class="dropdown-item" href="#">North West</a>
-                                            <a class="dropdown-item" href="#">Kwazulu-Natal</a>
-                                            <a class="dropdown-item" href="#">Western Cape</a>
-                                            <a class="dropdown-item" href="#">Northern Cape</a>
-                                            <a class="dropdown-item" href="#">Limpopo</a>
-                                            <!-- Add more options as needed -->
-                                        </div>
-                                    </div>
+                                        <select id="GenderDropdown" asp-for="Province" class="form-control" id="validationName" required>
+                                            <option value="Select" class="bg-opacity-50">Select</option>
+                                            <option value="Province">Eastern Cape</option>
+                                            <option value="Province">Mpumalanga</option>
+                                            <option value="Province">Gauteng</option>
+                                            <option value="Province">Free State</option>
+                                            <option value="Province">North West</option>
+                                            <option value="Province">Kwazulu-Natal</option>
+                                            <option value="Province">Western Cape</option>
+                                            <option value="Province">Northen Cape</option>
+                                            <option value="Province">Limpopo</option>
+                                        </select>
                                 </div>
                             </div>
                         </div>
@@ -197,105 +170,92 @@
                         <div class="form-group">
                             <label for="validityPeriod">Relationship</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="validityPeriod" placeholder="Select relation"
-                                       readonly>
-                                <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
-                                            aria-haspopup="true" aria-expanded="false"></button>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">Mother</a>
-                                        <a class="dropdown-item" href="#">Father</a>
-                                        <a class="dropdown-item" href="#">Brother</a>
-                                        <a class="dropdown-item" href="#">Gaurdian</a>
-                                        <a class="dropdown-item" href="#">Sister</a>
-                                        <a class="dropdown-item" href="#">Other</a>
-                                        @*<a class="dropdown-item" href="#">Western Cape</a>
-                                        <a class="dropdown-item" href="#">Northern Cape</a>
-                                        <a class="dropdown-item" href="#">Limpopo</a>*@
-                                        <!-- Add more options as needed -->
-                                    </div>
-                                </div>
+                                    <select id="GenderDropdown" asp-for="Relationship" class="form-control" id="validationName" required>
+                                        <option value="Select" class="bg-opacity-50">Select</option>
+                                        <option value="rel">Mother</option>
+                                        <option value="rel">Father</option>
+                                        <option value="rel">Brother</option>
+                                        <option value="rel">Gaurdian</option>
+                                        <option value="Other">Other</option>
+                                    </select>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container mt-4">
-        <div class="card">
-            <div class="card-header bg-secondary">
-                <h5 class="card-title">Counsel Information</h5>
-            </div>
-            <div class="card-body">
-                <div class="row">
+                    <div class="container mt-4">
+                        <div class="card">
+                            <div class="card-header bg-secondary">
+                                <h5 class="card-title">Counsel Information</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
 
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="address">Reason for Seeking Counselling</label>
-                            <textarea class="form-control" id="address" rows="4" placeholder="Enter the reason"></textarea>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="address">Mental Health History</label>
-                            <textarea class="form-control" id="address" rows="4" placeholder="Enter mental hsitory"></textarea>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="address">Background History</label>
-                            <textarea class="form-control" id="address" rows="4" placeholder="Enter"></textarea>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="validityPeriod">Current Concerns & Symptoms</label>
-                            <div class="input-group">
-                                <input type="text" class="form-control" id="validityPeriod" placeholder="Select"
-                                       readonly>
-                                <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
-                                            aria-haspopup="true" aria-expanded="false"></button>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">Sleepless</a>
-                                        <a class="dropdown-item" href="#">Stressed</a>
-                                        <a class="dropdown-item" href="#">Jumpy</a>
-                                        <a class="dropdown-item" href="#">Appetite loss</a>
-                                        <a class="dropdown-item" href="#">Trauma</a>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="address">Reason for Seeking Counselling</label>
+                                            <textarea class="form-control" id="address" rows="4" placeholder="Enter the reason"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="address">Mental Health History</label>
+                                            <textarea class="form-control" id="address" rows="4" placeholder="Enter mental hsitory"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="address">Background History</label>
+                                            <textarea class="form-control" id="address" rows="4" placeholder="Enter"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="validityPeriod">Current Concerns & Symptoms</label>
+                                            <div class="input-group">
+                                                    <select id="GenderDropdown" asp-for="Symptoms" class="form-control" id="validationName" required>
+                                                        <option value="Select" class="bg-opacity-50">Select</option>
+                                                        <option value="sy">Sleepless</option>
+                                                        <option value="sy">Stressed</option>
+                                                        <option value="sy">Jumpy</option>
+                                                        <option value="sy">Appetite</option>
+                                                        <option value="sy">Trauma</option>
+                                                    </select>
+
+                                                  
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="address">Goals & Expectations</label>
+                                            <textarea class="form-control" id="address" rows="4" placeholder="Enter"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="address">Cultural & Social Concerns</label>
+                                            <textarea class="form-control" id="address" rows="4" placeholder="Enter"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="address">Legal or Safety Concerns</label>
+                                            <textarea class="form-control" id="address" rows="4" placeholder="Enter"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="address">Consent & Confidentiality</label>
+                                            <textarea class="form-control" id="address" rows="4" placeholder="Enter"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="address">Signature & Date</label>
+                                            <textarea class="form-control" id="address" rows="4" placeholder="Enter"></textarea>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="address">Goals & Expectations</label>
-                            <textarea class="form-control" id="address" rows="4" placeholder="Enter"></textarea>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="address">Cultural & Social Concerns</label>
-                            <textarea class="form-control" id="address" rows="4" placeholder="Enter"></textarea>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="address">Legal or Safety Concerns</label>
-                            <textarea class="form-control" id="address" rows="4" placeholder="Enter"></textarea>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="address">Consent & Confidentiality</label>
-                            <textarea class="form-control" id="address" rows="4" placeholder="Enter"></textarea>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="address">Signature & Date</label>
-                            <textarea class="form-control" id="address" rows="4" placeholder="Enter"></textarea>
                         </div>
                     </div>
                 </div>
@@ -313,6 +273,5 @@
 				</div>
 			</div>
 		</div>
+    </div>
 </form>
-
-<link rel="stylesheet" href="~/css/StyleSheet/Workshop_StyleSheet.css">
