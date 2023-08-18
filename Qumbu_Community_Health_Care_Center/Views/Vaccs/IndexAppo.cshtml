@@ -8,18 +8,19 @@
     <div class="bar mb-3"></div> *@
     <div class="mx-0 mx-sm-auto">
         <div class="card w-75">
-          <div class="card-body" >
+          <div class="card-body bg-primary" >
             <form method="post" asp-action="IndexAppo">
       <input asp-for="ID" hidden />
-        <div class="border p-3 bg-info">
-            <div>
-               <img class="img-responsive" src="~/_Images/Vaccs/istockphoto-1289951048-612x612.jpg" alt="#" />
+                <div class="border p-3" style="background-image: url('https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTAwfHx2YWNjaW5lfGVufDB8fDB8fHww&auto=format&fit=crop&w=400&q=60');">
+           @* <div>
+                        <img class="card-img-top" src="~/_Images/Vaccs/istockphoto-1289951048-612x612.jpg" width="12" height="300" alt="#" />*@
                        @* <div class="p-3 mb-2 bg-info"></div>*@
            <div class="form-group row">
-               <h2 class="text-opacity-50 pl-3">MAKE AN APPOINTMENT</h2>
+                        <h2 class="text-opacity-50 pl-3 fw-bold">MAKE AN APPOINTMENT</h2>
            </div>
            <div class="row">
-                       <div class="col-12"> <h3><p class="mb-2 text-black">Name</p> </h3>
+                       <div class="col-12">
+                            <h4 class="text-justify ">Name</h4>
                          <div class=" box mb-3"> <input type="text" class="form-control" placeholder="type your name hare">
                          @*  <div class="btn btn-outline-secondary" type="button"> <span class="fas fa-plus pe-2"></span>Add description </div> *@
                          </div>
@@ -27,17 +28,17 @@
                       <div class="col-12">
                          <div class="row">
                            <div class="col-md-4"> 
-                               <div> <h3><p class="mb-2 fw-bold text-black">Date</p></h3>
+                               <div> <h4 class="text-justify">Date</h4>
                                   <div class="box">
-                                       <input class="form-control" type="text" placeholder="Jul 14, 2021"> <span class="fas fa-calendar-alt"></span>
+                                       <input class="form-control" type="text" placeholder="Jul 14, 2021"><span class=" fa-calendar"></span>
                                   </div>
                                </div>
                            </div>
                            <div class="col-md-4 mt-md-0 mt-3">
                                         <div>
-                                            <h3><p class="mb-2 fw-bold text-black">Time</p> </h3>
+                                        <h4 class="text-justify">Time</h4>
                                     <div class="box"> 
-                                        <input class="form-control" type="text" placeholder="2:00 PM"> <span class="fas fa-stopwatch"></span> 
+                                        <input class="form-control fas fa-user-times" type="text" placeholder="2:00 PM">@*<span class="fas fa-stopwatch"></span> *@
                                     </div>
                                </div>
                            </div> 
@@ -90,7 +91,7 @@
                <div class="row">
                                 <div class="d-md-flex align-items-center mt-4">
                                     <div class="d-flex flex-md-column align-sm-items-center justify-content-between me-md-4 me-0">
-                                            <h3><p class="mb-2 text-black"> Notification </p> </h3>
+                                        <h4 class="text-justify"> Notification </h4>
                                         <div class="Radio form-control">
                                             <label class="radio">
                                                 <input type="radio" name="send" value="Email" >
@@ -98,21 +99,24 @@
                                             </label>@* <label class="radio">
                                             <input type="radio" name="send" value="Stack"> <span>Stack</span> </label>*@
                                         </div>
-                                    </div>
+                                    </div><br/>
                                      <div class="col-md-4 ">
-                                              <h3><p class="mb-1 fw-bold text-black"> Set reminder </p> </h3>
+                                        <h4 class="text-justify"> Set reminder </h4>
                                            <input class="form-control" type="number" placeholder="1 hour before event">
                                     </div>
-                                    <div>
-                                        <button> <h7><a class="nav-link text-dark" asp-area="" asp-controller="Vaccs" asp-action="IndexScree">SUBMIT</a></h7></button>
-@*                                        <div class="btn btn-outline-secondary" type="button"> <span class="fas fa-plus pe-2"></span>SUBMIT </div>*@
+                                    <div class="col">
+                                        <a asp-action="IndexScree" class="btn btn-success w-40">SUBMIT</a>
                                     </div>
+                                   @* <div>
+                                        <button class="btn-info"> <a class="nav-link text-dark" asp-area="" asp-controller="Vaccs" asp-action="IndexScree">SUBMIT</a></button>
+                                
+                                    </div>*@
                                 </div>
                </div>
                
            </div>
           </div>
-   </div>
+   @*</div>*@
  </div>
  </form>
 </div>
