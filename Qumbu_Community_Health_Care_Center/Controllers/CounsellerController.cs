@@ -133,7 +133,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
 
             Context.Bookings.Remove(obj);
             Context.SaveChanges();
-            return RedirectToAction("Bookings");
+            return RedirectToAction("Booking");
         }
         public IActionResult UpdateRe(int? ID)
         {

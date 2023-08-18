@@ -57,7 +57,7 @@
                     <div class="sidebar_user_info">
                         <div class="icon_setting"></div>
                         <div class="user_profle_side">
-                            <div class="user_img"><img class="img-responsive" src="~/_Images/1.png" alt="#" /></div>
+                            <div class="user_img"><img class="img-responsive" src="~/_Images/3.png" alt="#" /></div>
                             <div class="user_info">
                                @* <h6>@UserManager.GetUserAsync(User).Result.FirstName @UserManager.GetUserAsync(User).Result.LastName</h6>*@
                                 @*<p><span class="online_animation"></span> Online</p>*@
@@ -72,7 +72,7 @@
                         @if (User.IsInRole("Counsellor"))
                         {
                             <li class="active">
-                                <a href="#dashboard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="align middle" data-feather="clipboard"></i><img class="img-responsive" width="40" height="40" src="~/_Images/booking (2).png" alt="#" /> <span class="align">Manage Appointments</span></a>
+                                <a href="#dashboard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="align middle" data-feather="clipboard"></i><img class="img-responsive" width="40" height="40" src="~/_Images/appointment_3281901.png" alt="#" /> <span class="align">Manage Appointments</span></a>
                                 <ul class="collapse list-unstyled" id="dashboard">
                                     <li>
                                         <a asp-controller="Counseller" asp-action="Booking" class="sidebar-link">
@@ -80,14 +80,14 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a asp-controller="Counseller" asp-action="Delete" class="sidebar-link"> <span>Cancel</span></a>
+                                        <a asp-controller="Counseller" asp-action="Booking" class="sidebar-link"> <span>Cancel</span></a>
                                     </li>
                                 </ul>
                             </li>
 
                             @*<li><a href="widgets.html"><i class="fa fa-clock-o orange_color"></i> <span>Widgets</span></a></li>*@
                             <li>
-                                <a href="#element" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-diamond purple_color"></i><img class="img-responsive" width="40" height="40" src="~/_Images/booking (2).png" alt="#" /> <span>Manage Files</span></a>
+                                <a href="#element" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-diamond purple_color"></i><img class="img-responsive" width="40" height="40" src="~/_Images/folders.png" alt="#" /> <span>Manage Files</span></a>
                                 <ul class="collapse list-unstyled" id="element">
                                     <li>
                                         <a asp-controller="Counseller" asp-action="CreateRe" class="sidebar-link">
@@ -105,7 +105,7 @@
                             </li>
                             @*<li><a href="tables.html"><i class="fa fa-table purple_color2"></i> <span>Tables</span></a></li>*@
                             <li>
-                                <a href="#apps" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-object-group blue2_color"></i><img class="img-responsive" width="40" height="40" src="~/_Images/booking (2).png" alt="#" /> <span>Manage Referrals</span></a>
+                                <a href="#apps" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-object-group blue2_color"></i><img class="img-responsive" width="40" height="40" src="~/_Images/social-network_3705640.png" alt="#" /> <span>Manage Referrals</span></a>
                                 <ul class="collapse list-unstyled" id="apps">
                                     <li><a asp-controller="Counseller" asp-action="Referral" class="sidebar-link"> <span>View</span></a></li>
                                     <li><a asp-controller="Counseller" asp-action="CreateF" class="sidebar-link"> <span>Referr</span></a></li>
