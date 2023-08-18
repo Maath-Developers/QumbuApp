@@ -1,9 +1,6 @@
-﻿
-@{
-    Layout = "_AdminLayout";
-    
+﻿@{
+    Layout = "_Walk-in-Layout";
 }
-
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <style>
     .diagonal-container {
@@ -26,10 +23,10 @@
     <div class="row">
         <div class="col-md-4">
             <div class="card">
-                <div class="card-body bg-primary p-3">
-                    <h5 class="card-title text-center mb-4">Patient Registration</h5>
-                    <img src="~/images/patient-registration-17674809.jpg" alt="Registration image" class="img-fluid" style="max-height: 145px; width: 265px;">
-                    <button class="btn btn-success btn-block text-center mt-3">Register</button>
+                <div class="card-body bg-secondary p-3">
+                    <h5 class="card-title text-center mb-4">Patient Consultation</h5>
+                    <img class="card-img-top" src="~/images/nurse_cons.png" alt="Registration image" class="img-fluid" style="max-height: 183px; width: auto;">
+                    <button class="btn btn-success btn-block text-center mt-3">Conducts</button>
                 </div>
             </div>
         </div>
@@ -37,16 +34,16 @@
             <div class="card">
                 <div class="card-body bg-secondary p-3">
                     <h5 class="card-title">Doctor Availability</h5>
-                    <img class="card-img-top" src="~/images/dr avail.png" alt="Doctor 2">
+                    <img class="card-img-top" src="~/images/dr avail.png" alt="Doctor 2" class="img-fluid" style="max-height: 250px; width: 330px;">
                     <button class="btn btn-success btn-block text-center mt-3">Check</button>
                 </div>
             </div>
         </div>
         <div class="col-md-4">
             <div class="card">
-                <div class="card-body bg-primary p-3">
+                <div class="card-body bg-secondary p-3">
                     <h5 class="card-title">Appointment</h5>
-                    <img class="card-img-top" src="~/images/appointment.jpg" alt="Doctor 2">
+                    <img class="card-img-top" src="~/images/appointment.jpg" class="img-fluid" style="max-height: 330px; width: 290px;" alt="Doctor 2">
                     <button class="btn btn-success btn-block text-center mt-3">Manage</button>
                 </div>
             </div>
@@ -56,10 +53,10 @@
     <div class="row">
 
         <div class="row diagonal-container">
-            
+
             <div class="col-md-3 diagonal-card">
                 <div class="card text-center bg-secondary p-3">
-                    <h5 class="card-title text-center mb-4">Attendance Report</h5>
+                    <h5 class="card-title text-center mb-4">Consultaion Report</h5>
                     <img src="~/images/att_rep.png" alt="Report image" class="img-fluid">
                     <div class="d-flex justify-content-end">
                         <button class="btn btn-success" id="button5">Genenerate</button>
@@ -67,18 +64,18 @@
                 </div>
             </div>
             <div class="col-md-3 diagonal-card">
-                <div class="card text-center bg-primary p-3">
-                    <h5 class="card-title text-center mb-4">Manage Queue</h5>
-                    <img src="~/images/queue card.jpg" alt="Queue image" class="img-fluid">
+                <div class="card text-center bg-secondary p-3">
+                    <h5 class="card-title text-center mb-4">FeedBack & Support</h5>
+                    <img src="~/images/feedback.png" alt="Queue image" class="img-fluid">
                     <div class="d-flex justify-content-end">
-                        <button class="btn btn-success" id="button4">Manage</button>
+                        <button class="btn btn-success" id="button4">Add</button>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-3 diagonal-card">
                 <div class="card text-center bg-secondary p-3">
-                    <h5 class="card-title text-center mb-4">Create File</h5>
+                    <h5 class="card-title text-center mb-4">Medical Record</h5>
                     <img src="~/images/medical-781422.jpg" alt="File image" class="img-fluid">
                     <div class="d-flex justify-content-end">
                         <button class="btn btn-success">Create</button>
@@ -99,3 +96,4 @@
         $(this).toggleClass('active');
     });
 </script>
+
