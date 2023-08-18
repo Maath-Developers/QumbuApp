@@ -24,6 +24,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<Referral> Referral { get; set; }
     public DbSet<FamilyReg> FamilyReg { get; set; }
     public DbSet<FeedbackV> VaccinationFeedback { get; set; }
+    public DbSet<VaccsAppointment> VaccinationAppointment { get; set; }
 
 
 
