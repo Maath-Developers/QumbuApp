@@ -1,6 +1,8 @@
 ﻿@model Qumbu_Community_Health_Care_Center.Models.Bookings
 
-
+@{
+	Layout = "_CounsellorLayout";
+}
 <form method="post" asp-action="Delete">
 	<input asp-for="BookingId" hidden />
 	<div class="border p-3">
