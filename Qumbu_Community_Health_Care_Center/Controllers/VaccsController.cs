@@ -49,6 +49,11 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         {
             return View();
         }
+        public IActionResult IndexAppo()
+        {
+            return View();
+        }
+
 
         //This method adds data to the database using the ApplicationDBContext and Saves the data and redirects the user to the Index page
         //POST-Create
