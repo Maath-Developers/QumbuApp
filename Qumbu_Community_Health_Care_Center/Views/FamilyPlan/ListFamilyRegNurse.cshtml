@@ -6,19 +6,18 @@
 
 <div class="container p-3">
 <div class="row pt-4">
-    <div class="col-6">
-        <h2 class="text-primary">List of Appointments</h2>
+    <div class="mt-2 p-2 bg-info text-black rounded">
+        <h2 class="text-center">list </h2>
     </div>
-    <div class="col-6 text-right">
-        <a asp-controller="FamilyPlan" asp-action="CreateFamilyReg" class="btn btn-primary">Create New</a>
-    </div>
+    <br/>
+   
 </div>
 <br />
 
 @if (Model.Count() > 0)
 {
 
-    <table class="table table-bordered table-striped" style="width:100%">
+        <table class="table  table-active table-bordered table-striped" style="width:100%">
         <thead>
             <tr>
 
@@ -45,21 +44,30 @@
             {
                 <tr>
 
-                    <td width="30%">@fed.Description</td>
-                    <td width="30%">@fed.Descriptions</td>
-                    <td width="30%">@fed.experience</td>
-                    <td width="30%">@fed.expectection</td>
+                    <td width="20%">@fed.Description</td>
+                    <td width="20%">@fed.Descriptions</td>
+                    <td width="10%">@fed.experience</td>
+                    <td width="10%">@fed.expectection</td>
                     <td width="30%">@fed.type</td>
                     <td>
                         <div class="w-100 btn-group" role="group">
-                            <a asp-controller="FamalyPlan" asp-action="updateAppointment" asp-route-ID="@fed.FamilyRegId" class="btn btn-info-300 mx-1">Update</a>
-                            <a asp-controller="FamalyPlan" asp-action="DeleteAppointment" asp-route-ID="@fed.FamilyRegId" class="btn btn-info-300 mx-1">Delete</a>
+                            <a asp-controller="FamalyPlan" asp-action="updateAppointment" asp-route-ID="@fed.FamilyRegId" class="btn btn-info">Approve</a>
+                            
                         </div>
                     </td>
+                        <td>
+                            <div class="w-100 btn-group" role="group">
+                               
+                                <a asp-controller="FamalyPlan" asp-action="DeleteAppointment" asp-route-ID="@fed.FamilyRegId" class="btn btn-danger ">Reject</a>
+                            </div>
+                        </td>
                 </tr>
             }
         </tbody>
     </table>
+    <div class="col-6 text-right  d-grid gap-2 d-md-flex justify-content-xxl-end">
+            <a asp-controller="FamilyPlan" asp-action="CreateFamilyReg" class="btn btn-info">Back</a>
+        </div>
 
 }
 else

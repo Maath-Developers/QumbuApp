@@ -11,7 +11,7 @@
         <div class="col-6">
             <h2 class="text-primary">List of Appointments</h2>
         </div>
-        <div class="col-6 text-right">
+        <div class="col-6 text-right  d-grid gap-2 d-md-flex justify-content-md-end">
             <a asp-controller="FamilyPlan" asp-action="CreateAppointment" class="btn btn-primary">Create New</a>
         </div>
     </div>
@@ -36,9 +36,9 @@
                     <th>
                         Time
                     </th>
-                    <th>
+                    @*<th>
                        Note
-                    </th>
+                    </th*@@*>*@
                 </tr>
             </thead>
 
@@ -51,8 +51,14 @@
                         <td width="30%">@app.LastName</td>
                         <td width="30%">@app.Date</td>
                         <td width="30%">@app.Time</td>
-                        <td width="30%">@app.Notes</td>
+                        <td>
+                            <div class="w-100 btn-group" role="group">
+
+                                <a asp-controller="FamalyPlan" asp-action="DeleteAppointment" asp-route-ID="@app.AppointmentId" class="btn btn-danger ">Cancel</a>
+                            </div>
+                        </td>
                     </tr>
+
                 }
             </tbody>
         </table>

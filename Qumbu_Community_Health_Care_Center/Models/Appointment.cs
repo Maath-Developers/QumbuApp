@@ -12,6 +12,6 @@ namespace Qumbu_Community_Health_Care_Center.Models
 		public DateTime Date { get; set; }
 
 		public TimeSpan? Time { get; set; }
-		public string? Notes { get; set; }
+		//public string? Notes { get; set; }
 	}
 }

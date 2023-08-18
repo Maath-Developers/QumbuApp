@@ -5,13 +5,13 @@
 }
 
 <form method="post" asp-action="CreateAppointment">
-	<div class="border p-3">
+	<div class="border border-4 border-info p-3">
 		<div asp-validation-summary="ModelOnly" class="text-danger"></div>
-		<div class="form-group row">
-			<h2 class="text-black-50 pe-lg-5 t" >Make your Appointment</h2>
+		<div class="form-group row ">
+			<h2 class="text-black-50 pe-lg-5 text-md-center " >Make your Appointment</h2>
 		</div>
 		<br />
-		<div class="form-group row">
+		<div class="form-group row ">
 			<div class="col-8 offset-2 row">
 				<div class="col">
 					<input type="submit" class="btn btn-info w-50" value="Book Now" />
@@ -21,7 +21,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="row justify- ">
+		<div class="row  ">
 			<div class="col-12 ">
 				<div class="form-group align-content-center align-items-center">
 					<div class="col-4 ">
@@ -44,7 +44,7 @@
 						<input asp-for="Time" class="form-control" />
 						<span asp-validation-for="Time" class="text-danger"></span>
 					</div>
-					<@*div class="col-4">
+					@*div class="col-4">
 						<label asp-for="Notes"></label>
 						<input asp-for="Notes" class="form-control" />
 						<span asp-validation-for="Notes" class="text-danger"></span>

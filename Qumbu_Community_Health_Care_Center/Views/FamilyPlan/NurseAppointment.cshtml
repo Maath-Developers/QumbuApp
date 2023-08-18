@@ -7,19 +7,17 @@
 
 <div class="container p-3">
     <div class="row pt-4">
-        <div class="col-6">
-            <h2 class="text-primary">Appointments</h2>
+        <div class="mt-2 p-2 bg-info text-black rounded">
+            <h2 class="text-center">list </h2>
         </div>
-        <div class="col-6 text-right">
-            <a asp-controller="FamilyPlan" asp-action="CreateAppointment" class="btn btn-primary">Back</a>
-        </div>
+      
     </div>
     <br />
 
     @if (Model.Count() > 0)
     {
 
-        <table class="table table-bordered table-striped" style="width:100%">
+        <table class="table  table-active table-bordered table-striped" style="width:100%">
             <thead>
                 <tr>
 
@@ -35,9 +33,9 @@
                     <th>
                         Time
                     </th>
-                    <th>
+                   @* <th>
                         Status
-                    </th>
+                    </th>*@
                 </tr>
             </thead>
 
@@ -52,14 +50,23 @@
                         <td width="30%">@app.Time</td>
                         <td>
                             <div class="w-100 btn-group" role="group">
-                                <a asp-controller="FamalyPlan" asp-action="updateAppointment" asp-route-ID="@app.AppointmentId" class="btn btn-info-300 mx-1">Update</a>
-                                <a asp-controller="FamalyPlan" asp-action="DeleteAppointment" asp-route-ID="@app.AppointmentId" class="btn btn-info-300 mx-1">Delete</a>
+                                <a asp-controller="FamalyPlan" asp-action="updateAppointment" asp-route-ID="@app.AppointmentId" class="btn btn-info ">Accept</a>
+                             
+                            </div>
+                        </td>
+                        <td>
+                            <div class="w-100 btn-group" role="group">
+                                
+                                <a asp-controller="FamalyPlan" asp-action="DeleteAppointment" asp-route-ID="@app.AppointmentId" class="btn btn-danger ">Cancel</a>
                             </div>
                         </td>
                     </tr>
                 }
             </tbody>
         </table>
+        <div class="col-6 text-right d-grid gap-2 d-md-flex justify-content-md-end">
+            <a asp-controller="FamilyPlan" asp-action="CreateAppointment" class="btn btn-info">Back</a>
+        </div>
 
     }
     else
