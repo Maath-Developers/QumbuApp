@@ -2,7 +2,8 @@
 
 
 @{
-    Layout = "/Views/Shared/_Landing2.cshtml";
+    //ViewData["Title"] = "Index";
+    Layout = "/Views/Shared/_PreNatalCareLayout.cshtml";
 }
 
 <div class="container p-3">
@@ -10,15 +11,15 @@
         <div class="col-6">
             <h2 class="text-primary">Health Records</h2>
         </div>
-        <div class="col-6 text-right">
+        <div class="col-6 text-end">
             <a asp-controller="PrenatalCare" asp-action="CreateRecord" class="btn btn-primary">Add Health Record</a>
         </div>
     </div>
-    <br />
+    <br /><br />
 
     @if (Model.Count() > 0)
     {
-        <table class="table table-bordered table-striped" style="width:100%">
+        <table class="table table-bordered table-striped" style="width:90%">
             <thead>
                 <tr>
                     <th>
@@ -53,10 +54,11 @@
                         <td width="20%">@healthRecord.BloodPressureDiastolic</td>
                         <td width="10%">@healthRecord.Symptoms</td>
                         <td width="10%">
-                        <div class="w-100 btn-group" role="group">
+                            <div class="w-100 btn-group" role="group">
                                 <a asp-controller="PrenatalCare" asp-action="UpdateRecord" asp-route-ID="@healthRecord.Id" class="btn btn-primary mx-1"><i class="bi bi-pencil-square"></i>Edit</a>
-@*                   <a asp-controller="Expense" asp-action="Delete" asp-route-ID="@healthRecord.Id" class="btn btn-danger mx-1">Delete</a>
-*@                        </div>
+                                @*                   <a asp-controller="Expense" asp-action="Delete" asp-route-ID="@healthRecord.Id" class="btn btn-danger mx-1">Delete</a>
+                        *@
+                            </div>
                         </td>
 
                     </tr>
