@@ -41,7 +41,7 @@
         {
             <div class="row">
                 <div class="col-4">
-                    <div class="container mt-4">
+                    <div class="container mt-3">
                         <div class="card" style="width: 27rem;">
                             <div class="card-body">
                                 <div class="p_info_img">
@@ -67,14 +67,14 @@
                     </div>
                 </div>
                 <div class="col-4 ">
-                    <div class="container mt-4">
+                    <div class="container mt-3">
                         <div class="card" style="width: 27rem;">
                             <div class="card-body">
                                 <div class="p_info_img">
                                     <img src="~/_Images/Vaccs/Appointment.png.png" class="img-thumbnail" alt="#" />
                                 </div>
                                 <button>
-                                    <h5><a class="nav-link text-dark" asp-area="" asp-controller="Vacc" asp-action="Patient">APPOINTMENTS</a></h5>
+                                    <h5><a class="nav-link text-dark" asp-area="" asp-controller="Vaccs" asp-action="IndexAppo">APPOINTMENTS</a></h5>
                                     @* <h5 class="card-title">MY RECORDS</h5>*@
                                 </button>
                                 @*<h5 class="card-title">APPOINTMENTS </h5>*@
@@ -88,14 +88,16 @@
             </div>
            <div class="row">
                     <div class="col-4 ">
-                        <div class="container mt-4">
+                        <div class="container mt-3">
                             <div class="card" style="width: 27rem;">
                                 <div class="card-body">
                                     <div class="p_info_img">
                                         <img src="~/_Images/Vaccs/feedback.png.png" class="img-thumbnail" alt="#" />
                                     </div>
-
-                                    <h5 class="card-title">FEEDBACK </h5>
+                                    <button>
+                                        <h5><a class="nav-link text-dark" asp-area="" asp-controller="Vaccs" asp-action="IndexFee">FEEDBACK</a></h5>
+                                    </button>
+                                    @*<h5 class="card-title">FEEDBACK </h5>*@
                                     <div class="d-flex align-items-center">
                                         <span class="bi bi-file-earmark-person fs-1 me-3"></span>
                                     </div>
@@ -104,13 +106,16 @@
                         </div>
                     </div>
                     <div class="col-4">
-                        <div class="container mt-4">
+                        <div class="container mt-3">
                             <div class="card" style="width: 27rem;">
                                 <div class="card-body">
                                     <div class="p_info_img">
                                         <img src="~/_Images//Vaccs/PReport.png" class="img-thumbnail" alt="#" />
                                     </div>
-                                    <h5 class="card-title">REPORTS </h5>
+                                    <button>
+                                        <h5><a class="nav-link text-dark" asp-area="" asp-controller="Vaccs" asp-action="Patient">REPORTS</a></h5>
+                                    </button>
+                                   @* <h5 class="card-title">REPORTS </h5>*@
                                     <div class="d-flex align-items-center">
                                         <span class="bi bi-file-earmark-person fs-1 me-3"></span>
                                     </div>

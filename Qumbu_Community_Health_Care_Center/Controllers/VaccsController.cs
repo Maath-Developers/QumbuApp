@@ -53,6 +53,63 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         {
             return View();
         }
+        public IActionResult IndexRecord() 
+        { 
+            return View();
+        }
+        public IActionResult IndexReport()
+        {
+            return View();
+        }
+        //public IActionResult IndexAppointment()
+        //{
+        //    IEnumerable<VaccsAppointment> objList = dbContext.VaccinationAppointment;
+        //    return View(objList);
+
+        //}
+        //public IActionResult Create()
+        //{
+        //    return View();
+        //}
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public IActionResult Create(VaccsAppointment Appo)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        dbContext.VaccinationAppointment.Add(Appo);
+        //        dbContext.SaveChanges();
+        //        return RedirectToAction("IndexAppointment");
+        //    }
+        //    return View(Appo);
+
+        //}
+        //public IActionResult Update(int? ID)
+        //{
+        //    if (ID == null || ID == 0)
+        //    {
+        //        return NotFound();
+        //    }
+        //    var obj = dbContext.VaccinationAppointment.Find(ID);
+
+        //    if (ID == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    return View(obj);
+        //}
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public IActionResult Update(VaccsAppointment appo)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        dbContext.VaccinationAppointment.Update(appo);
+        //        dbContext.SaveChanges();
+        //        return RedirectToAction("IndexAppointment");
+        //    }
+        //    return View(appo);
+        //}
 
 
         //This method adds data to the database using the ApplicationDBContext and Saves the data and redirects the user to the Index page
