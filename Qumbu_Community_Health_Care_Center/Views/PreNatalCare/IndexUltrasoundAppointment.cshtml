@@ -1,0 +1,101 @@
+﻿@model IEnumerable<Qumbu_Community_Health_Care_Center.Models.UltrasoundAppointment>
+
+@{
+    ViewData["Title"] = "View all Utrasound Appointment - File based Image Storage";
+    Layout = "/Views/Shared/_PreNatalCareLayout.cshtml";
+}
+<div class="row pt-4">
+    <div class="col-6">
+        <h2 class="text-primary">Ultrasound and Images</h2>
+    </div>
+    
+</div>
+@*<div class="row" mb-4>
+    <br/><br/>
+    <h1>Ultrasound and Images</h1>
+</div>*@
+   @*<hr/>*@
+<br/>
+<br/>
+<p>
+    <a asp-action="CreateUltrasoundAppointment">Create New</a>
+</p>
+<table class="table">
+    <thead class="table-dark">
+        <tr>
+            @*<th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.UserId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AppointmentDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GestationalAgeWeeks)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FetalHeartRate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Observations)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GenderDetermined)
+            </th>
+           @* <th>
+                @Html.DisplayNameFor(model => model.Comments)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.UltrasoundImagePath)
+            </th>
+            @*<th>
+            @Html.DisplayNameFor(model => model.FileName)
+            </th>*@
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                @*<td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AppointmentDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GestationalAgeWeeks)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FetalHeartRate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Observations)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GenderDetermined)
+                </td>
+                @*<td>
+                    @Html.DisplayFor(modelItem => item.Comments)
+                </td>*@
+                <td>
+                    <img src="@Url.Content("~/UploadedImages/" + item.FileName)" height="120px" width="120px" />
+                </td>
+                @*<td>
+            @Html.DisplayFor(modelItem => item.FileName)
+            </td>*@
+                @*<td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>*@
+            </tr>
+        }
+    </tbody>
+</table>
