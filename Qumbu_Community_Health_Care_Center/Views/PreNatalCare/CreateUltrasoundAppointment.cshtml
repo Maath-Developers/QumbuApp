@@ -1,0 +1,65 @@
+﻿@model Qumbu_Community_Health_Care_Center.Models.UltrasoundAppointment
+
+@{
+    //ViewData["Title"] = "UltrasoundAppointment";
+    Layout = "/Views/Shared/_PreNatalCareLayout.cshtml";
+}
+
+<div class="row pt-4">
+    <div class="col-6">
+        <h2 class="text-primary">Ultrasound and Images</h2>
+    </div>
+    
+</div>
+<br/>
+<br/>
+@*<hr />*@
+<div class="row">
+    <div class="col-md-8">
+        <form asp-action="CreateUltrasoundAppointment" enctype="multipart/form-data" method="post">
+            <div class="form-group">
+                <label asp-for="UserId" class="control-label"></label>
+                <input asp-action="UserId" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="AppointmentDate" class="control-label"></label>
+                <input type="date" asp-action="AppointmentDate" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="GestationalAgeWeeks" class="control-label"></label>
+                <input type="week" asp-action="GestationalAgeWeeks" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="FetalHeartRate" class="control-label"></label>
+                <input type="number" asp-action="FetalHeartRate" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Observations" class="control-label"></label>
+                <input asp-action="Observations" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="GenderDetermined" class="control-label"></label>
+                <input asp-action="GenderDetermined" class="form-control" />
+            </div>
+            @*<div class="form-group">
+                <label asp-for="Comments" class="control-label"></label>
+                <input asp-action="Comments" class="form-control" />
+            </div>*@
+            <div class="form-group">
+                <label asp-for="ImageFile" class="control-label"></label>
+                <input type="file" asp-action="ImageFile" class="form-control" />
+            </div>
+           @* <div class="form-group">
+                <label asp-for="FileName" class="control-label"></label>
+                <input asp-action="FileName" class="form-control" />
+            </div>*@
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+                <a asp-controller="PrenatalCare" asp-action="IndexUltrasoundAppointment" class="btn btn-danger" style="width:150px">Back to List</a>
+            </div>
+        </form>
+
+    </div>
+
+</div>
+

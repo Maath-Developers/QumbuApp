@@ -137,34 +137,36 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             dbContext.SaveChanges();
             return RedirectToAction("Index");
         }
-        //public IActionResult IndexUltrasoundAppointment()
-        //{
-        //    IEnumerable<UltrasoundAppointment> objList = dbContext.Ultrasounds;
-        //    return View();
-        //}
-        //public IActionResult CreateUltrasoundAppointment(UltrasoundAppointment ultrasound)
-        //{
-        //    string uniqueFileName = null;
-        //    if (ultrasound.ImageFile != null)
-        //    {
-        //        string ImageUploadedFolder = Path.Combine
-        //            (webHostEnvironment.WebRootPath, "UploadedImages");
-        //        uniqueFileName = Guid.NewGuid().ToString() + " " + ultrasound.ImageFile.FileName;
+        public IActionResult IndexUltrasoundAppointment()
+        {
+            IEnumerable<UltrasoundAppointment> objList = dbContext.ultrasounds;
+            return View(objList);
+        }
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        public IActionResult CreateUltrasoundAppointment(UltrasoundAppointment ultrasound)
+        {
+            string uniqueFileName = null;
+            if (ultrasound.ImageFile != null)
+            {
+                string ImageUploadedFolder = Path.Combine
+                    (webHostEnvironment.WebRootPath, "UploadedImages");
+                uniqueFileName = Guid.NewGuid().ToString() + " " + ultrasound.ImageFile.FileName;
 
-        //        string filepath = Path.Combine(ImageUploadedFolder, uniqueFileName);
+                string filepath = Path.Combine(ImageUploadedFolder, uniqueFileName);
 
-        //        using (var fileStream = new FileStream(filepath, FileMode.Create))
-        //        {
-        //            ultrasound.ImageFile.CopyTo(fileStream);
-        //        }
-        //        ultrasound.UltrasoundImagePath = "~/wwwroot/UploadedImages";
-        //        ultrasound.FileName = uniqueFileName;
+                using (var fileStream = new FileStream(filepath, FileMode.Create))
+                {
+                    ultrasound.ImageFile.CopyTo(fileStream);
+                }
+                ultrasound.UltrasoundImagePath = "~/wwwroot/UploadedImages";
+                ultrasound.FileName = uniqueFileName;
 
-        //        dbContext.Ultrasounds.Add(ultrasound);
-        //        dbContext.SaveChanges();
-        //        return RedirectToAction("IndexUltrasoundAppointment");
-        //    }
-        //    return View();
-        //}
+                dbContext.ultrasounds.Add(ultrasound);
+                dbContext.SaveChanges();
+                return RedirectToAction("IndexUltrasoundAppointment","PrenatalCare");
+            }
+            return View();
+        }
     }
 }
