@@ -1,9 +1,14 @@
 ﻿@{
     Layout = "_Walk-in-Layout";
 }
-<!DOCTYPE html>
+
+@if (User.IsInRole("Nurse"))
+{
+    <!DOCTYPE html>
 <html>
 <head>
+        <h1>DASHBOARD</h1>
+
     <title>Consultation Page</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
@@ -46,3 +51,67 @@
 
 </body>
 </html>
+}
+@if (User.IsInRole("Doctor"))
+{
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <h1>CONSULTATION</h1>
+        <title>Consultation Page</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <style>
+            .heading {
+                font-size: 24px;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="heading">Consultation Notes</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="complaints">Complaints:</label>
+                            <textarea class="form-control" id="complaints" rows="4"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="healthAdvice">Health Advice:</label>
+                            <textarea class="form-control" id="healthAdvice" rows="4"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="treatmentFeedback">Treatment Feedback:</label>
+                            <textarea class="form-control" id="treatmentFeedback" rows="4"></textarea>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-md-6">
+                    <h2 class="heading">Doctor Notes</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="prescribedTreatment">Prescribed Treatment:</label>
+                            <div class="input-group">
+                                <textarea class="form-control" id="prescribedTreatment" rows="4"></textarea>
+                                <div class="input-group-append">
+                                    <button type="button" class="btn btn-outline-primary">Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="text-right mt-4">
+                        <button type="button" class="btn btn-primary btn-lg col-4">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+    </html>
+
+}

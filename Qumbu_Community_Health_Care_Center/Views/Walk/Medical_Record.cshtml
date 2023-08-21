@@ -1,6 +1,7 @@
 ﻿@{
     Layout = "_Walk-in-Layout";
 }
+<h1>MEDICAL RECORD</h1>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,8 +26,11 @@
 
     <div class="container mt-4">
         <h2 class="text-center">Patient Medical Record - Vitals</h2>
+        
 
-        <form class="vitals-form">
+        @if (User.IsInRole("Nurse"))
+        {
+            <form class="vitals-form">
             <div class="form-group">
                 <label class="vitals-label" for="temperature">Temperature:</label>
                 <input type="text" class="form-control" id="temperature">
@@ -60,6 +64,55 @@
                 <button type="button" class="btn btn-success">Save</button>
             </div>
         </form>
+        }
+        @if (User.IsInRole("Doctor"))
+        {
+            <form class="vitals-form">
+                <p>Doctor is allowed to change every vital</p>
+                <div class="form-group">
+                    <label class="vitals-label" for="temperature">Temperature:</label>
+                    <input type="text" class="form-control" id="temperature">
+                </div>
+                <div class="form-group">
+                    <label class="vitals-label" for="heartRate">Heart Rate:</label>
+                    <input type="text" class="form-control" id="heartRate">
+                </div>
+                <div class="form-group">
+                    <label class="vitals-label" for="bloodPressure">Blood Pressure:</label>
+                    <input type="text" class="form-control" id="bloodPressure">
+                </div>
+                <div class="form-group">
+                    <label class="vitals-label" for="respiratoryRate">Respiratory Rate:</label>
+                    <input type="text" class="form-control" id="respiratoryRate">
+                </div>
+                <div class="form-group">
+                    <label class="vitals-label" for="oxygenSaturation">Oxygen Saturation:</label>
+                    <input type="text" class="form-control" id="oxygenSaturation">
+                </div>
+                <div class="form-group">
+                    <label class="vitals-label" for="bloodSugar">Blood Sugar:</label>
+                    <input type="text" class="form-control" id="bloodSugar">
+                </div>
+                <div class="form-group">
+                    <label class="vitals-label" for="weight">Weight:</label>
+                    <input type="text" class="form-control" id="weight">
+                </div>
+                <div class="form-group">
+                    <label class="vitals-label">Comment on changes(if there's any) </label>
+                    <div class="input-group">
+                        <textarea class="form-control" id="prescribedTreatment" rows="4"></textarea>
+
+                    </div>
+                </div>
+                  
+                <div class="text-right">
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+                
+            </form>
+           
+        }
+
     </div>
 
 </body>
