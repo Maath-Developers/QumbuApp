@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Qumbu_Community_Health_Care_Center.Areas.Identity.Data;
 using Qumbu_Community_Health_Care_Center.Models;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Diagnostics;
 
 namespace Qumbu_Community_Health_Care_Center.Controllers
@@ -145,6 +146,37 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         //[HttpPost]
         //[ValidateAntiForgeryToken]
         public IActionResult CreateUltrasoundAppointment(UltrasoundAppointment ultrasound)
+        {
+            string uniqueFileName = null;
+            if (ultrasound.ImageFile != null)
+            {
+                string ImageUploadedFolder = Path.Combine
+                    (webHostEnvironment.WebRootPath, "UploadedImages");
+                uniqueFileName = Guid.NewGuid().ToString() + " " + ultrasound.ImageFile.FileName;
+
+                string filepath = Path.Combine(ImageUploadedFolder, uniqueFileName);
+
+                using (var fileStream = new FileStream(filepath, FileMode.Create))
+                {
+                    ultrasound.ImageFile.CopyTo(fileStream);
+                }
+                ultrasound.UltrasoundImagePath = "~/wwwroot/UploadedImages";
+                ultrasound.FileName = uniqueFileName;
+
+                dbContext.ultrasounds.Add(ultrasound);
+                dbContext.SaveChanges();
+                return RedirectToAction("IndexUltrasoundAppointment", "PrenatalCare");
+            }
+            return View();
+        }
+        public IActionResult IndexEducation()
+        {
+            IEnumerable<UltrasoundAppointment> objList = dbContext.ultrasounds;
+            return View(objList);
+        }
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        public IActionResult CreateEducation(UltrasoundAppointment ultrasound)
         {
             string uniqueFileName = null;
             if (ultrasound.ImageFile != null)
