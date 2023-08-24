@@ -192,6 +192,49 @@
                     </div>
                 </nav>
             }
+            @if (User.IsInRole("Unit-Manager"))
+            {
+                <nav id="sidebar">
+                    <div class="sidebar_blog_1">
+                        <div class="sidebar-header">
+                            <div class="logo_section">
+                                <a href="index.html"><img class="logo_icon img-responsive" src="images/logo/logo_icon.png" alt="#" /></a>
+                            </div>
+                        </div>
+                        <div class="sidebar_user_info">
+                            <div class="icon_setting"></div>
+                            <div class="user_profle_side">
+                                <div class="user_img"><img class="img-responsive" src="~/_Images/3.png" alt="#" /></div>
+                                <div class="user_info">
+                                    <h6>
+                                        <span class="text-light">
+                                            @UserManager.GetUserAsync(User).Result.FirstName  @UserManager.GetUserAsync(User).Result.LastName
+                                        </span>
+                                    </h6>
+                                    <p><span class="online_animation"></span> Online</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar_blog_2">
+                        <button> <h5><a class="nav-link text-dark" asp-area="" asp-controller="Vaccs" asp-action="Dashboard">Dashboard</a></h5></button>
+                        <ul class="list-unstyled components">
+                            <li><span><a class="nav-link text-light" asp-area="" asp-controller="Vaccs" asp-action="Unit_Manager"><img class="img-responsive fa-4x" src="~/_Images/Vaccs/stock.png" width="40" height="40" alt="#" /> STOCK</a></span></li>
+
+                            @*<li><span><a class="nav-link text-light" asp-area="" asp-controller="Vaccs" asp-action="IndexScree"><img class="img-responsive fa-4x" src="~/_Images/Vaccs/File.png" width="40" height="40" alt="#" />  SCREENING TOOL</a></span></li>
+
+                        <li><span><a class="nav-link text-light" asp-area="" asp-controller="Vaccs" asp-action="IndexAppo"><img class="img-responsive fa-4x" src="~/_Images/Vaccs/Appointment.png.png" width="40" height="40" alt="#" />  APPOINTMENTS</a> </span></li>
+
+                        <li><span><a class="nav-link text-light" asp-area="" asp-controller="Vaccs" asp-action="IndexFee"><img class="img-responsive fa-4x" src="~/_Images/Vaccs/feedback.png.png" width="40" height="40" alt="#" /> FEEDBACK</a></span></li>
+
+                        <li><span><a class="nav-link text-light" asp-area="" asp-controller="Vaccs" asp-action="Patient"><img class="img-responsive fa-4x" src="~/_Images/Vaccs/PReport.png" width="40" height="40" alt="#" /> REPORTS</a></span></li>*@
+
+                        </ul>
+                    </div>
+                </nav>
+
+            }
+
             @* <nav id="sidebar">
             <div class="sidebar_blog_1">
             <div class="sidebar-header">
@@ -355,7 +398,7 @@
                                     </ul>*@
                                     <ul class="user_profile_dd">
                                         <li>
-                                            <a class="dropdown-toggle" data-toggle="dropdown">@*<img class="img-responsive rounded-circle" src="images/layout_img/user_img.jpg" alt="#" />*@<span class="text-light">Patient
+                                            <a class="dropdown-toggle" data-toggle="dropdown">@*<img class="img-responsive rounded-circle" src="images/layout_img/user_img.jpg" alt="#" />*@<span class="text-light">UNIT MANAGER
                                                 @*@UserManager.GetUserAsync(User).Result.FirstName  @UserManager.GetUserAsync(User).Result.LastName*@</span></a>
                                             <div class="dropdown-menu">
                                                 <a class="dropdown-item" href="profile.html">My Profile</a>
