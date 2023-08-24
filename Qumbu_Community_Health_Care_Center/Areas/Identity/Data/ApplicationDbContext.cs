@@ -26,6 +26,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<FeedbackV> VaccinationFeedback { get; set; }
     public DbSet<VaccsAppointment> VaccinationAppointment { get; set; }
     public DbSet<VaccsRecord>Records { get; set; }
+    public DbSet<UltrasoundAppointment> ultrasounds { get; set; }
   
 
 
