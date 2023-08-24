@@ -61,6 +61,10 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         {
             return View();
         }
+        public IActionResult IndexStock()
+        {
+            return View();
+        }
         //public IActionResult IndexAppointment()
         //{
         //    IEnumerable<VaccsAppointment> objList = dbContext.VaccinationAppointment;
