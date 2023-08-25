@@ -2,156 +2,173 @@
     Layout = "_Walk-in-Layout";
 }
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Patient Medical Report</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report</title>
     <style>
-        /* Custom styling for the report */
-        .report-heading {
-            font-size: 28px;
-            font-weight: bold;
-            margin-bottom: 20px;
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
 
-        .section-heading {
-            font-size: 24px;
-            font-weight: bold;
-            margin-top: 40px;
-            margin-bottom: 10px;
+        .form-container {
+            width: 80%;
+            max-width: 600px;
         }
 
-        .column-divider {
-            border-right: 1px solid #ddd;
-            padding-right: 20px;
-            margin-right: 20px;
+        .logo {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
         }
 
-        .done-button {
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
             margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .labels {
+            text-align: left;
+        }
+
+        .labels, .values {
+            flex-grow: 1;
+        }
+
+        .values {
             text-align: right;
+        }
+
+        hr {
+            border: 2px solid black;
+            margin: 20px 0;
+        }
+
+        .footer {
+            margin-top: 20px;
+        }
+
+        .heading {
+            font-weight: bold;
+            text-decoration: underline;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .paragraph {
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        .divider-content {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .divider-labels, .divider-values {
+            flex-grow: 1;
+        }
+
+        .italic {
+            font-style: italic;
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
+    <div class="report-container">
+        <img src="your-logo-image.jpg" alt="Logo" class="logo">
+        <hr>
+        <div class="content">
 
-    <div class="container mt-4">
-        <div class="report-heading">Patient Medical Report</div>
-
-        <hr style="border-top: 1px solid #ddd; margin: 40px 0;">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="section-heading">Patient Details</div>
-                <label>Patient Name:</label> John Doe<br>
-                <label>Gender:</label> Male<br>
-                <label>Date of Birth:</label> January 15, 1980<br>
-                <label>Contact Number:</label> +1 (123) 456-7890<br>
+            <div class="labels">
+                <p>Date</p>
+                <p>Name</p>
+                <p>Sex/Age</p>
+                <p>Ref by</p>
+                <p>SRF ID</p>
+                <p>Sample</p>
             </div>
-            <div class="col-md-1 column-divider"></div>
-            <div class="col-md-3">
-                <div class="section-heading ">Next of Kin</div>
-                <label>Name:</label> Jane Doe<br>
-                <label>Relationship:</label> Spouse<br>
-                <label>Contact Number:</label> +1 (123) 567-8901<br>
 
-            </div>
-            <div class="col-md-1 column-divider"></div>
-
-            <div class="col-md-3">
-                <div class="section-heading">Registration Infor</div>
-                <label>Admin Name:</label> Admin User<br>
-                <label>Gender:</label> Female<br>
-                <label>Contact Number:</label> +1 (123) 987-6543<br>
-                <label>Registration Number:</label> REG12345<br>
-                <label>Registration Date:</label> July 15, 2023<br>
+            <div class="values">
+                <p>Patient ID 112321238</p>
+                <p>SP Coll.</p>
+                <p>SP Rec.</p>
+                <p>Auth Dt</p>
+                <p>Print Dt</p>
+                <p>Mobile No</p>
             </div>
         </div>
-        <hr style="border-top: 1px solid #ddd; margin: 40px 0;">
-
-
-        <div class="section-heading">Consultation</div>
-        <div class="row">
-            <div class="col-md-4">
-                <label class="text-decoration-underline">SYMPTOMS</label>
-                <ul>
-                    <li>Fever</li>
-                    <li>Cough</li>
-                    <li>Headache</li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <label class="text-decoration-underline">PROCEDURES</label>
-                <ul>
-                    <li>Physical Examination</li>
-                    <li>Blood Pressure Check</li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <label class="text-decoration-underline">TREATMENT</label>
-                <ul>
-                    <li>Rest</li>
-                    <li>Hydration</li>
-                    <li>Over-the-counter Medications</li>
-                </ul>
-            </div>
-        </div>
-        <hr style="border-top: 1px solid #ddd; margin: 40px 0;">
-
-
-        <div class="section-heading">Prescription</div>
-        <div class="row">
-            <div class="col-md-4">
-                <label class="text-decoration-underline">TREATMENT SIDE EFFECTS</label>
-                <ul>
-                    <li>Drowsiness</li>
-                    <li>Dry Mouth</li>
-                    <li>Nausea</li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <label class="text-decoration-underline">SUGGESTED TREATMENT</label>
-                <p>Increased Hydration and OTC Pain Relief</p>
-            </div>
-            <div class="col-md-4">
-                <label>COMPLAINTS ABOUT PREVIOUS TREATMENT</label>
-                <ul>
-                    <li>Relief from Fever</li>
-                    <li>Reduced Coughing</li>
-                    <li>Improved Headache</li>
-                </ul>
-            </div>
-        </div>
-        <hr style="border-top: 1px solid #ddd; margin: 40px 0;">
-
-        <div class="section-heading">Doctor List</div>
-        <div class="row">
-            <div class="col-md-4">
-                <label>Doctor Name:</label> Dr. Jane Smith<br>
-                <label>Gender:</label> Female<br>
-                <label>Contact Number:</label> +1 (234) 567-8901<br>
-                <label>Office Number:</label> Ext. 123<br>
-            </div>
-            <div class="col-md-4">
-                <label>Doctor Name:</label> Dr. Jane Smith<br>
-                <label>Gender:</label> Female<br>
-                <label>Contact Number:</label> +1 (234) 567-8901<br>
-                <label>Office Number:</label> Ext. 123<br>
-            </div>
-            <div class="col-md-4">
-                <label>Doctor Name:</label> Dr. Jane Smith<br>
-                <label>Gender:</label> Female<br>
-                <label>Contact Number:</label> +1 (234) 567-8901<br>
-                <label>Office Number:</label> Ext. 123<br>
-            </div>
-        </div>
-
-        <div class="done-button">
-            <button class="btn btn-outline-success">Done</button>
-        </div>
+        <hr>
     </div>
-
+    <div class="form-container">
+        <div class="align-content-center">
+            <br>
+            <h3 class="heading">USG (ANC) FEATAL WELL BEING</h3>
+            <form>
+                <div class="align-content-md-between">
+                    <p class="paragraph">Single live intrauterine pregnancy with normal and regular cardiac activity is imaged.</p>
+                    <div class="divider-content">
+                        <div class="divider-labels">
+                            <p>Presentation:</p>
+                            <p>Fetal movement:</p>
+                            <p>Liquor:</p>
+                            <p>Placenta:</p>
+                            <p>B.P.D:</p>
+                            <p>H.C:</p>
+                            <p>A.C:</p>
+                            <p>F.L:</p>
+                            <p>Composite:</p>
+                            <p>Foetal weight:</p>
+                            <p>H.R:</p>
+                            <p>USEDD:</p>
+                        </div>
+                        <div class="divider-values">
+                            <p>Cephalic (at the time of scan)</p>
+                            <p>Present</p>
+                            <p><strong>More (AFI-16-17 cm)</strong></p>
+                            <p>Posterior, not low-lying, Grade - || maturity.</p>
+                            <p>88 mm (35 wks 05 days)</p>
+                            <p>310 mm (36 wks 00 days)</p>
+                            <p>68 mm (35 wks 01 days)</p>
+                            <p>35 wks 03 days</p>
+                            <p>2735 gms +/- 410 gms</p>
+                            <p>141 bpm</p>
+                            <p>08/07/2023</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="paragraph">Double loop of cord is noted around the fetal neck.</p>
+                <p class="italic">Impression</p>
+                <p class="paragraph">Single live intrauterine foetus with fetal growth corresponding to 35 wks 03 days +/- 02 wks gestational age with excess liquor.</p>
+            </form>
+        </div>
+        
+    </div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
 
 
 
