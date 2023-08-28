@@ -183,6 +183,10 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             IEnumerable<Referral> Referrals = Context.Referral;
             return View(Referrals);
         }
+        public ActionResult Reports()
+        {
+            return View();
+        }
     }
 }
 
