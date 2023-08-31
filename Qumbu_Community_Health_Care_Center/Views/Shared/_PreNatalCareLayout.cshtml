@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+@using Qumbu_Community_Health_Care_Center.Areas.Identity.Data
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <!-- basic -->
@@ -76,15 +82,14 @@
                 <div class="sidebar_blog_1">
                     <div class="sidebar-header">
                         <div class="logo_section">
-                            @*                            <a href="index.html"><img class="logo_icon img-responsive" src="~/images/images/logo/logo_icon.png" alt="#" /></a>
-                            *@
+@*                          <a href="index.html"><img class="logo_icon img-responsive" src="~/_Images/1.png" alt="#" /></a>
+*@                            
                         </div>
                     </div>
                     <div class="sidebar_user_info">
                         <div class="icon_setting"></div>
                         <div class="user_profle_side">
-@*                            <div class="user_img"><img class="img-responsive" src="~/images/images/layout_img/user_img.jpg" alt="#" /></div>
-*@                            <div class="user_info">
+                            <span class="align-middle"><img class="img-responsive" width="230" src="~/_Images/1.png" alt="#" /></span>                            <div class="user_info">
                                 @*<h6>John David</h6>*@
                                 @*<p><span class="online_animation"></span> Online</p>*@
                             </div>
@@ -149,7 +154,7 @@
                         {
                             <li class="sidebar-item">
 
-                                <a asp-controller="PrenatalCare" asp-action="PatientDashboard" class="sidebar-link">
+                                <a asp-controller="PrenatalCare" asp-action="Patient" class="sidebar-link">
                                     <i class="align-middle" data-feather="calendar"></i><i class="bi bi-house-door"></i> <span class="align-middle">Dashboard</span>
 
                                 </a>
@@ -199,7 +204,7 @@
                         {
                             <li class="sidebar-item">
 
-                                <a asp-controller="PrenatalCare" asp-action="NurseDashboard" class="sidebar-link">
+                                <a asp-controller="PrenatalCare" asp-action="Nurse" class="sidebar-link">
                                     <i class="align-middle" data-feather="calendar"></i><i class="bi bi-house-door"></i> <span class="align-middle">Dashboard</span>
 
                                 </a>
@@ -219,13 +224,13 @@
 
                                 </a>
                             </li>
-                            <li class="sidebar-item">
+                            @*<li class="sidebar-item">
 
                                 <a asp-controller="PrenatalCare" asp-action="IndexUEducation" class="sidebar-link">
                                     <i class="align-middle" data-feather="calendar"></i><i class="bi bi-info-circle"></i> <span class="align-middle">Fetal Tracking</span>
 
                                 </a>
-                            </li>
+                            </li>*@
 
 @*                            <li><a href="charts.html"><i class="bi bi-clipboard2-check"></i> <span>Appointments</span></a></li>
 *@
@@ -255,6 +260,9 @@
             <div class="topbar">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <div class="full">
+                        <div class="order-last nav-item">
+                           
+                        </div>
                         <button type="button" id="sidebarCollapse" class="sidebar_toggle"><i class="bi bi-list"></i></button>
                         @* <div class="logo_section">
                             <a href="index.html"><img class="img-responsive" src="~/images/images/logo/logo.png" alt="#" /></a>
@@ -268,7 +276,10 @@
                                 </ul>*@
                                 <ul class="user_profile_dd">
                                     <li>
-                                        <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="~/images/images/layout_img/user_img.jpg" alt="#" /><span class="name_user">John David</span></a>
+                                        <div class="order-last nav-item">
+                                         
+                                        </div>
+                                        <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="~/images/Profile-Photo.png" alt="#" /><span class="text-dark">@UserManager.GetUserAsync(User).Result.FirstName  @UserManager.GetUserAsync(User).Result.LastName</span></a>
                                          <div class="dropdown-menu">
                                             <a class="dropdown-item" href="profile.html">My Profile</a>
                                             <a class="dropdown-item" href="settings.html">Settings</a>
@@ -284,10 +295,6 @@
             </div>
             <!-- end topbar -->
             <!-- dashboard inner -->
-            @if (User.IsInRole("Nurse"))
-            {
-
-            }
 
         </div>
     </div>
