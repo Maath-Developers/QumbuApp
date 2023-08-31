@@ -7,11 +7,9 @@
 <div class="container p-3">
     <div class="row pt-4">
         <div class="col-6">
-            <h2 class="text-primary">List of Appointments</h2>
+            <h2 class="text-primary"></h2>
         </div>
-        <div class="col-6 text-right  d-grid gap-2 d-md-flex justify-content-md-end">
-            <a asp-controller="FamilyPlan" asp-action="CreateFamilyReg" class="btn btn-primary">Create New</a>
-        </div>
+       
     </div>
     <br />
 
@@ -54,6 +52,9 @@
                 }
             </tbody>
         </table>
+        <div class="col-6 text-right  d-grid gap-2 d-md-flex justify-content-md-end">
+            <a asp-controller="FamilyPlan" asp-action="CreateFamilyReg" class="btn btn-outline-info">Back</a>
+        </div>
 
     }
     else
