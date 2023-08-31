@@ -9,9 +9,9 @@
 		<div class="form-group row">
 			<h2 class="text-black-50 pl-3">If you are new, please register</h2>
 		</div>
-        <div class="container mt-4">
+        <div class="container mt-8">
             <div class="card">
-                <div class="card-header bg-secondary">
+                <div class="card-header bg-secondary-emphasis">
                     <h5 class="card-title">Peronal Details</h5>
                 </div>
                 <div class="card-body">
@@ -38,19 +38,11 @@
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label for="validityPeriod">Gender</label>
-                                <div class="input-group">
-                                    <input type="text" class="form-control" id="validityPeriod" placeholder="Select Gender"
-                                           readonly>
-                                    <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
-                                                aria-haspopup="true" aria-expanded="false"></button>
-                                        <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="#">Male</a>
-                                            <a class="dropdown-item" href="#">Female</a>
-                                           
-                                        </div>
-                                    </div>
-                                </div>
+                                <select id="GenderDropdown" asp-for="Gender" class="form-control" id="validationName" required>
+                                    <option value="Select" class="bg-opacity-50">Select</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
                             </div>
                         </div>
                         <div class="col-md-3">
@@ -68,28 +60,32 @@
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label for="validityPeriod">Marital Status</label>
-                                <div class="input-group">
-                                    <input type="text" class="form-control" id="validityPeriod" placeholder="Select"
-                                           readonly>
-                                    <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
-                                                aria-haspopup="true" aria-expanded="false"></button>
-                                        <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="#">Single</a>
-                                            <a class="dropdown-item" href="#">Married</a>
-                                            <a class="dropdown-item" href="#">Devorced</a>
-                                            <a class="dropdown-item" href="#">Widowed/widower</a>
-                                            <a class="dropdown-item" href="#">Other</a>
-                                           
-                                        </div>
-                                    </div>
-                                </div>
+                                <select id="GenderDropdown" asp-for="Status" class="form-control" id="validationName" required>
+                                    <option value="Select" class="bg-opacity-50">Select</option>
+                                    <option value="Single">Single</option>
+                                    <option value="Married">Married</option>
+                                    <option value="Devorced">Devorced</option>
+                                    <option value="Widow">Widow</option>
+                                    <option value="Other">Other</option>
+                                </select>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="validityPeriod">Province</label>
-                                <div class="input-group">
+                                <select id="GenderDropdown" asp-for="Province" class="form-control" id="validationName" required>
+                                    <option value="Select" class="bg-opacity-50">Select</option>
+                                    <option value="Province">Eastern Cape</option>
+                                    <option value="Province">Mpumalanga</option>
+                                    <option value="Province">Gauteng</option>
+                                    <option value="Province">Free State</option>
+                                    <option value="Province">North West</option>
+                                    <option value="Province">Kwazulu-Natal</option>
+                                    <option value="Province">Western Cape</option>
+                                    <option value="Province">Northen Cape</option>
+                                    <option value="Province">Limpopo</option>
+                                </select>
+                                @*<div class="input-group">
                                     <input type="text" class="form-control" id="validityPeriod" placeholder="Select Province"
                                            readonly>
                                     <div class="input-group-append">
@@ -108,13 +104,21 @@
                                             
                                         </div>
                                     </div>
-                                </div>
+                                </div>*@
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="validityPeriod">Race</label>
-                                <div class="input-group">
+                                <select id="GenderDropdown" asp-for="Race" class="form-control" id="validationName" required>
+                                    <option value="Select" class="bg-opacity-50">Select</option>
+                                    <option value="Race">Black</option>
+                                    <option value="Race">White</option>
+                                    <option value="Race">Indian</option>
+                                    <option value="Race">Colored</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                @*<div class="input-group">
                                     <input type="text" class="form-control" id="validityPeriod" placeholder="Select Race"
                                            readonly>
                                     <div class="input-group-append">
@@ -130,7 +134,7 @@
                                            
                                         </div>
                                     </div>
-                                </div>
+                                </d*@
                             </div>
                         </div>
                     </div>
@@ -141,7 +145,7 @@
         </div>
         <div class="container mt-4">
             <div class="card">
-                <div class="card-header  bg-secondary">
+                <div class="card-header  bg-secondary-emphasis">
                     <h5 class="card-title">Next of Kin</h5>
                 </div>
                 <div class="card-body">
@@ -172,56 +176,39 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="validityPeriod">Province</label>
-                                <div class="input-group">
-                                    <input type="text" class="form-control" id="validityPeriod" placeholder="Select"
-                                           readonly>
-                                    <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
-                                                aria-haspopup="true" aria-expanded="false"></button>
-                                        <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="#">Eastern Cape</a>
-                                            <a class="dropdown-item" href="#">Mpumalanga</a>
-                                            <a class="dropdown-item" href="#">Gauteng</a>
-                                            <a class="dropdown-item" href="#">Free State</a>
-                                            <a class="dropdown-item" href="#">North West</a>
-                                            <a class="dropdown-item" href="#">Kwazulu-Natal</a>
-                                            <a class="dropdown-item" href="#">Western Cape</a>
-                                            <a class="dropdown-item" href="#">Northern Cape</a>
-                                            <a class="dropdown-item" href="#">Limpopo</a>
-                                          
-                                        </div>
-                                    </div>
-                                </div>
+                                <select id="GenderDropdown" asp-for="Province" class="form-control" id="validationName" required>
+                                    <option value="Select" class="bg-opacity-50">Select</option>
+                                    <option value="Province">Eastern Cape</option>
+                                    <option value="Province">Mpumalanga</option>
+                                    <option value="Province">Gauteng</option>
+                                    <option value="Province">Free State</option>
+                                    <option value="Province">North West</option>
+                                    <option value="Province">Kwazulu-Natal</option>
+                                    <option value="Province">Western Cape</option>
+                                    <option value="Province">Northen Cape</option>
+                                    <option value="Province">Limpopo</option>
+                                </select>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="validityPeriod">Relationship</label>
-                            <div class="input-group">
-                                <input type="text" class="form-control" id="validityPeriod" placeholder="Select relation"
-                                       readonly>
-                                <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
-                                            aria-haspopup="true" aria-expanded="false"></button>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">Mother</a>
-                                        <a class="dropdown-item" href="#">Father</a>
-                                        <a class="dropdown-item" href="#">Brother</a>
-                                        <a class="dropdown-item" href="#">Gaurdian</a>
-                                        <a class="dropdown-item" href="#">Sister</a>
-                                        <a class="dropdown-item" href="#">Other</a>
-                                       
-                                    </div>
-                                </div>
-                            </div>
+                            <select id="GenderDropdown" asp-for="Race" class="form-control" id="validationName" required>
+                                <option value="Select" class="bg-opacity-50">Select</option>
+                                <option value="Race">Mother</option>
+                                <option value="Race">Father</option>
+                                <option value="Race">Guardian</option>
+                                <option value="Race">Brother</option>
+                                <option value="Other">Other</option>
+                            </select>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container mt-4">
+   @* <div class="container mt-4">
         <div class="card">
             <div class="card-header bg-secondary">
                 <h5 class="card-title">Health Information</h5>
@@ -354,9 +341,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>*@
+    <br />
 				<div class="form-group row">
-					<div class="col-8 offset-2 row">
+					<div class="col-4 offset-2 row">
 						<div class="col">
 							<input type="submit" class="btn btn-info w-75" value="Submit" />
 						</div>
