@@ -11,13 +11,13 @@
 		</div>
         <div class="container mt-4">
             <div class="card">
-                <div class="card-header bg-secondary">
-                    <h5 class="card-title">Peronal Details</h5>
+                <div class="card-header bg-secondary-emphasis">
+                    <h5 class="card-title">About the Patient</h5>
                 </div>
                 <div class="card-body">
                     <div class="row">
 
-                        <div class="col-md-3">
+                        @*<div class="col-md-3">
                             <div class="form-group">
                                 <label for="memberName">Full Names</label>
                                 <input type="text" class="form-control" id="memberName" placeholder="Enter your names">
@@ -53,30 +53,59 @@
                                 <label for="dateOfBirth">D.O.B</label>
                                 <input type="date" class="form-control" id="dateOfBirth">
                             </div>
-                        </div>
+                        </div>*@
                         <div class="col-md-8">
                             <div class="form-group">
-                                <label for="address">Address:</label>
-                                <textarea class="form-control" id="address" rows="4" placeholder="Enter Address"></textarea>
+                                <label for="address">1.Background of the case:</label>
+                                <textarea class="form-control" id="address" rows="4" placeholder=""></textarea>
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        <div>
+                            <p>2.Counselling Plan:</p>
+                        </div>
+                        @*<p>2.Counselling Plan:</p>*@
+                        @*<div class="col-md-8">
                             <div class="form-group">
-                                <label for="validityPeriod">Marital Status</label>
+                                <label for="address">a.Counselling Approach(es):</label>
+                                <textarea class="form-control" id="address" rows="4" placeholder="Enter Address"></textarea>
+                            </div>
+                        </div>*@
+                        <div class="col-md-3">
+
+                            <div class="form-group">
+                                <label for="validityPeriod">a.Counselling Approach(es):</label>
                                 <div class="input-group">
                                     <select id="GenderDropdown" asp-for="Status" class="form-control" id="validationName" required>
                                         <option value="Select" class="bg-opacity-50">Select</option>
-                                        <option value="Single">Single</option>
-                                        <option value="Married">Married</option> 
-                                        <option value="Devorced">Devorced</option>
-                                        <option value="Widow">Widow</option>
-                                        <option value="Other">Other</option>
+                                        <option value="Single">Behavior Therapy</option>
+                                        <option value="Married">Cognitive Therapy</option> 
+                                        <option value="Devorced">Educational Counselling</option>
+                                        <option value="Widow">Holistic Therapy</option>
+                                        <option value="Other">Mental Health Counselling</option>
                                     </select>
                                   
                                 </div>
                             </div>
                         </div>
-                            <div class="col-md-4">
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label for="address">b.Counselling Goals:</label>
+                                <textarea class="form-control" id="address" rows="4" placeholder=""></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <label for="address">3.Comments:</label>
+                                <textarea class="form-control" id="address" rows="4" placeholder=""></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <label for="address">3.Recommendations:</label>
+                                <textarea class="form-control" id="address" rows="4" placeholder=""></textarea>
+                            </div>
+                        </div>
+                         @*   <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="validityPeriod">Province</label>
                                     <div class="input-group">
@@ -263,10 +292,11 @@
                 </div>
             </div>
         </div>
+    </div>*@
     </div>
 	<br />
 		<div class="form-group row">
-			<div class="col-8 offset-2 row">
+			<div class="col-6 offset-2 row">
 				<div class="col">
 					<input type="submit" class="btn btn-info w-75 text" value="Submit" />
 				</div>

@@ -53,12 +53,18 @@
                         Name
                     </th>
                     <th>
-                        Relationship
-                    </th> 
-                    <th>
                         Cell
                     </th>
                     <th>
+                        Address
+                    </th> 
+                    <th>
+                        Province
+                    </th> 
+                    <th>
+                        Relationship
+                    </th>
+                    @*<th>
                         Source
                     </th>
                     <th>
@@ -78,7 +84,7 @@
                     </th> 
                     <th>
                         CurrentStressors
-                    </th> 
+                    </th> *@
                     <th>
                         Edit
                     </th>
@@ -95,15 +101,15 @@
                         <td width="30%">@pa.Cell</td>
                         <td width="30%">@pa.Email</td>
                         <td width="30%">@pa.Name</td>
+                        <td width="30%">@pa.Cell</td>
+                        <td width="30%">@pa.Address</td> 
+                        <td width="30%">@pa.Province</td>
                         <td width="30%">@pa.Relationship</td>
-                        <td width="30%">@pa.Cell</td> 
-                        <td width="30%">@pa.Source</td>
-                        <td width="30%">@pa.Experience</td>
-                        <td width="30%">@pa.Health</td>
+                        @*<td width="30%">@pa.Health</td>
                         <td width="30%">@pa.Medication</td>
                         <td width="30%">@pa.History</td>
                         <td width="30%">@pa.Communication</td>
-                        <td width="30%">@pa.CurrentStressors</td>
+                        <td width="30%">@pa.CurrentStressors</t*@d>
                         <td>
                             <div class="w-100 btn-group" role="group">
                                 <a asp-controller="Counseller" asp-action="Update" asp-route-ID="@pa.PatientRegId"  class="btn btn-blue-300 mx-1">Updade</a>
