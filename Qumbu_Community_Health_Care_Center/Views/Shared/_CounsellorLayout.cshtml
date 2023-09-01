@@ -71,6 +71,7 @@
                        
                         @if (User.IsInRole("Counsellor"))
                         {
+                            <li><a asp-controller="Home" asp-action="Landing2" class="sidebar-link"> <span>Departments</span></a></li>
                             <li class="active">
                                 <a href="#dashboard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="align middle" data-feather="clipboard"></i><img class="img-responsive" width="40" height="40" src="~/_Images/appointment_3281901.png" alt="#" /> <span class="align">Manage Appointments</span></a>
                                 <ul class="collapse list-unstyled" id="dashboard">
@@ -144,7 +145,7 @@
                         }
                         @if (User.IsInRole("Patient"))
                         {
-                          
+                            <li><a asp-controller="Home" asp-action="Landing2" class="sidebar-link"> <span>Departments</span></a></li>
                                 <li class="active">
                                 <a href="#dashboard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-dashboard yellow_color"></i><img class="img-responsive" width="40" height="40" src="~/_Images/booking (2).png" alt="#" /> <span>Appointments</span></a>
                                     <ul class="collapse list-unstyled" id="dashboard">
@@ -258,7 +259,12 @@
                                                         <a class="dropdown-item" href="profile.html">My Profile</a>
                                                         <a class="dropdown-item" href="settings.html">Settings</a>
                                                         <a class="dropdown-item" href="help.html">Help</a>
-                                                        <a class="dropdown-item" href="#"><span>Log Out</span> <i class="fa fa-sign-out"></i></a>
+                                            
+                                                <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                                                    <button id="logout" type="submit" class="btn btn-secondary">Logout</button>
+                                                </form>
+                                           
+
                                                     </div>
                                            
                                             }
