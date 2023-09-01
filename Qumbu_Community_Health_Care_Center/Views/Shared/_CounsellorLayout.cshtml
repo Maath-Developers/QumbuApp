@@ -94,7 +94,7 @@
                                             <span>Add Record</span>
                                         </a>
                                     </li>
-                                    <li><a asp-controller="Counseller" asp-action="UpdateRe" class="sidebar-link"> <span>Update Record</span></a></li>
+                                    <li><a asp-controller="Counseller" asp-action="PatientC" class="sidebar-link"> <span>Update Record</span></a></li>
                                     <li>
                                     <a asp-controller="Counseller" asp-action="Record" class="sidebar-link">
                                         <span>View</span>
@@ -148,17 +148,17 @@
                                 <li class="active">
                                 <a href="#dashboard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-dashboard yellow_color"></i><img class="img-responsive" width="40" height="40" src="~/_Images/booking (2).png" alt="#" /> <span>Appointments</span></a>
                                     <ul class="collapse list-unstyled" id="dashboard">
-                                        <li>
+                                        @*<li>
                                             <a asp-controller="Counseller" asp-action="Create" class="sidebar-link">
                                               <span>Booking</span>
                                             </a>
-                                        </li>
+                                        </li>*@
                                         <li>
                                             <a asp-controller="Counseller" asp-action="Booking" class="sidebar-link">
                                             <span>View</span></a>
                                         </li>
                                         <li>
-                                        <a asp-controller="Counseller" asp-action="Delete" class="sidebar-link"> <span>Cancel</span></a>
+                                        <a asp-controller="Counseller" asp-action="Booking" class="sidebar-link"> <span>Cancel</span></a>
                                         </li>
                                     </ul>
                                 </li>

@@ -9,48 +9,32 @@
         <div class="form-group row">
             <h2 class="text-black-50 pl-3">Add Referred Patients</h2>
         </div>
-        <div class="container mt-4">
+        <div class="container mt-8">
             <div class="card">
-                <div class="card-header bg-secondary">
+                <div class="card-header bg-secondary-emphasis">
                     <h5 class="card-title">Referred Patients</h5>
                 </div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label for="validityPeriod">PatientName</label>
-                                <div class="input-group">
-                                    <input type="text" class="form-control" id="validityPeriod" placeholder="Select"
-                                           readonly>
-                                    <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
-                                                aria-haspopup="true" aria-expanded="false"></button>
-                                        <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="#">Male</a>
-                                            <a class="dropdown-item" href="#">Female</a>
-                                        </div>
-                                    </div>
-                                </div>
+                                <label for="validityPeriod">Patient Name</label>
+                                <select id="GenderDropdown" asp-for="PatientName" class="form-control" id="validationName" required>
+                                    <option value="Select" class="bg-opacity-50">Select</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label for="validityPeriod">Departments</label>
-                                <div class="input-group">
-                                    <input type="text" class="form-control" id="validityPeriod" placeholder="Select"
-                                           readonly>
-                                    <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
-                                                aria-haspopup="true" aria-expanded="false"></button>
-                                        <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="#">Vaccination</a>
-                                            <a class="dropdown-item" href="#">Family Plan</a>
-                                            <a class="dropdown-item" href="#">Pre-Natal</a>
-                                            
-                                            <a class="dropdown-item" href="#">Other</a>
-                                        </div>
-                                    </div>
-                                </div>
+                                <select id="GenderDropdown" asp-for="Departments" class="form-control" id="validationName" required>
+                                    <option value="Select" class="bg-opacity-50">Select</option>
+                                    <option value="Vac">Vaccination</option>
+                                    <option value="Pre">Pre-Natal</option> 
+                                    <option value="Fam">Family Plan</option>
+                                </select>
                             </div>
                         </div>
                         <div class="col-md-8">
@@ -73,8 +57,9 @@
                 </div>
             </div>
         </div>
+        <br />
         <div class="form-group row">
-            <div class="col-8 offset-2 row">
+            <div class="col-6 offset-2 row">
                 <div class="col">
                     <input type="submit" class="btn btn-info w-75" value="Submit" />
                 </div>
