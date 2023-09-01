@@ -1,164 +1,61 @@
-﻿@{
-    Layout = "_Walk-in-Layout";
-}
+﻿
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Report</title>
+    <title>Logo at Top Left</title>
     <style>
+        /* Custom CSS for logo positioning */
         body {
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        .form-container {
-            width: 80%;
-            max-width: 600px;
         }
 
         .logo {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
+            position: absolute;
+            top: 20px; /* Adjust the top position as needed */
+            left: 20px; /* Adjust the left position as needed */
+            width: 500px; /* Adjust the width as needed */
+            z-index: 1; /* Ensure the logo is above other content if needed */
         }
 
+        /* Optional: Some styles for the rest of your layout */
         .content {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-top: 20px;
-            font-weight: bold;
-        }
-
-        .labels {
-            text-align: left;
-        }
-
-        .labels, .values {
-            flex-grow: 1;
-        }
-
-        .values {
-            text-align: right;
-        }
-
-        hr {
-            border: 2px solid black;
-            margin: 20px 0;
-        }
-
-        .footer {
-            margin-top: 20px;
-        }
-
-        .heading {
-            font-weight: bold;
-            text-decoration: underline;
-            text-align: left;
-            margin-top: 20px;
-        }
-
-        .paragraph {
-            text-align: left;
-            margin-top: 10px;
-        }
-
-        .divider-content {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 10px;
-        }
-
-        .divider-labels, .divider-values {
-            flex-grow: 1;
-        }
-
-        .italic {
-            font-style: italic;
-            text-decoration: underline;
+            padding: 20px;
+            margin-top: 100px; /* Add some space below the logo */
         }
     </style>
 </head>
 <body>
-    <div class="report-container">
-        <img src="your-logo-image.jpg" alt="Logo" class="logo">
-        <hr>
-        <div class="content">
-
-            <div class="labels">
-                <p>Date</p>
-                <p>Name</p>
-                <p>Sex/Age</p>
-                <p>Ref by</p>
-                <p>SRF ID</p>
-                <p>Sample</p>
+    <div class="col-md-7">
+        <div class="row">
+            <div class="logo_section">
+                <img src="~/_Images/1.png" alt="Logo" class="logo">
             </div>
-
-            <div class="values">
-                <p>Patient ID 112321238</p>
-                <p>SP Coll.</p>
-                <p>SP Rec.</p>
-                <p>Auth Dt</p>
-                <p>Print Dt</p>
-                <p>Mobile No</p>
-            </div>
-        </div>
-        <hr>
-    </div>
-    <div class="form-container">
-        <div class="align-content-center">
-            <br>
-            <h3 class="heading">USG (ANC) FEATAL WELL BEING</h3>
-            <form>
-                <div class="align-content-md-between">
-                    <p class="paragraph">Single live intrauterine pregnancy with normal and regular cardiac activity is imaged.</p>
-                    <div class="divider-content">
-                        <div class="divider-labels">
-                            <p>Presentation:</p>
-                            <p>Fetal movement:</p>
-                            <p>Liquor:</p>
-                            <p>Placenta:</p>
-                            <p>B.P.D:</p>
-                            <p>H.C:</p>
-                            <p>A.C:</p>
-                            <p>F.L:</p>
-                            <p>Composite:</p>
-                            <p>Foetal weight:</p>
-                            <p>H.R:</p>
-                            <p>USEDD:</p>
-                        </div>
-                        <div class="divider-values">
-                            <p>Cephalic (at the time of scan)</p>
-                            <p>Present</p>
-                            <p><strong>More (AFI-16-17 cm)</strong></p>
-                            <p>Posterior, not low-lying, Grade - || maturity.</p>
-                            <p>88 mm (35 wks 05 days)</p>
-                            <p>310 mm (36 wks 00 days)</p>
-                            <p>68 mm (35 wks 01 days)</p>
-                            <p>35 wks 03 days</p>
-                            <p>2735 gms +/- 410 gms</p>
-                            <p>141 bpm</p>
-                            <p>08/07/2023</p>
-                        </div>
-                    </div>
+            <div class="col-md-8 mb-md-0 mb-3">
+                <div class="top-wrap d-flex">
+                    <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-location-arrow"></span></div>
+                    <div class="text"><span>Address</span><span>29 Xaba Street, Qumbu, 5180</span></div>
                 </div>
-                
-                <p class="paragraph">Double loop of cord is noted around the fetal neck.</p>
-                <p class="italic">Impression</p>
-                <p class="paragraph">Single live intrauterine foetus with fetal growth corresponding to 35 wks 03 days +/- 02 wks gestational age with excess liquor.</p>
-            </form>
+            </div>
+            <div class="col">
+                <div class="top-wrap d-flex">
+                    <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-phone"></span></div>
+                    <div class="text"><span>Call us</span><span>(+27) 40 985 4521</span></div>
+                </div>
+            </div>
         </div>
-        
+    </div>
+    <img src="~/_Images/1.png" alt="Logo" class="logo">
+    <div class="content">
+        <!-- Your page content goes here -->
+        <h1>Welcome to Our Website</h1>
+        <p>This is the main content of your page.</p>
     </div>
 </body>
 </html>
+
 
 
 
