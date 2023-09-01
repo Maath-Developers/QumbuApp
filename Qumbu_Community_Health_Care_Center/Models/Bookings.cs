@@ -11,7 +11,7 @@ namespace Qumbu_Community_Health_Care_Center.Models
         public int BookingId { get; set; }
         public string? Names { get; set; }
         public DateTime Date { get; set; }
-        
+        public string? Departments { get; set; }
         public TimeSpan? Time { get; set; }
         public string? Contact { get; set; }
     }
