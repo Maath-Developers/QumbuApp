@@ -1,60 +1,42 @@
-﻿
+﻿@{
+    Layout = "_Walk-in-Layout";
+}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logo at Top Left</title>
+    <title>Horizontal Container Alignment</title>
     <style>
-        /* Custom CSS for logo positioning */
-        body {
-            margin: 0;
-            padding: 0;
+        /* Custom CSS for container alignment */
+        .container {
+            display: flex;
+            justify-content: center; /* Horizontally center the containers */
+            align-items: center; /* Vertically center the containers (optional) */
+            height: 100vh; /* Adjust the height as needed */
         }
 
-        .logo {
-            position: absolute;
-            top: 20px; /* Adjust the top position as needed */
-            left: 20px; /* Adjust the left position as needed */
-            width: 500px; /* Adjust the width as needed */
-            z-index: 1; /* Ensure the logo is above other content if needed */
-        }
-
-        /* Optional: Some styles for the rest of your layout */
-        .content {
+        /* Optional: Style for the container elements */
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: #e0e0e0;
+            text-align: center;
             padding: 20px;
-            margin-top: 100px; /* Add some space below the logo */
+            margin: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="col-md-7">
-        <div class="row">
-            <div class="logo_section">
-                <img src="~/_Images/1.png" alt="Logo" class="logo">
-            </div>
-            <div class="col-md-8 mb-md-0 mb-3">
-                <div class="top-wrap d-flex">
-                    <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-location-arrow"></span></div>
-                    <div class="text"><span>Address</span><span>29 Xaba Street, Qumbu, 5180</span></div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="top-wrap d-flex">
-                    <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-phone"></span></div>
-                    <div class="text"><span>Call us</span><span>(+27) 40 985 4521</span></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <img src="~/_Images/1.png" alt="Logo" class="logo">
-    <div class="content">
-        <!-- Your page content goes here -->
-        <h1>Welcome to Our Website</h1>
-        <p>This is the main content of your page.</p>
+    <div class="container">
+        <div class="box">Container 1</div>
+        <div class="box">Container 2</div>
+        <div class="box">Container 3</div>
+        <div class="box">Container 4</div>
     </div>
 </body>
 </html>
+
 
 
 
