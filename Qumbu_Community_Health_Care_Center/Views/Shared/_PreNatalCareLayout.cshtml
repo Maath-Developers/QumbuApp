@@ -82,8 +82,8 @@
                 <div class="sidebar_blog_1">
                     <div class="sidebar-header">
                         <div class="logo_section">
-@*                          <a href="index.html"><img class="logo_icon img-responsive" src="~/_Images/1.png" alt="#" /></a>
-*@                            
+                            @*                          <a href="index.html"><img class="logo_icon img-responsive" src="~/_Images/1.png" alt="#" /></a>
+                            *@
                         </div>
                     </div>
                     <div class="sidebar_user_info">
@@ -152,10 +152,19 @@
                         </li>*@
                         @if (User.IsInRole("Patient"))
                         {
+                            @*                            <li class="nav-item active"><a asp-controller="Home" asp-action="Index" class="nav-link">Home</a></li>
+                        *@
+                            <li class="sidebar-item">
+
+                                <a asp-controller="Home" asp-action="Index" class="sidebar-link">
+                                    <i class="align-middle" data-feather="calendar"></i><i class="bi bi-house-door"></i> <span class="align-middle">Home</span>
+
+                                </a>
+                            </li>
                             <li class="sidebar-item">
 
                                 <a asp-controller="PrenatalCare" asp-action="Patient" class="sidebar-link">
-                                    <i class="align-middle" data-feather="calendar"></i><i class="bi bi-house-door"></i> <span class="align-middle">Dashboard</span>
+                                    <i class="align-middle" data-feather="calendar"></i><i class="bi bi-speedometer2"></i> <span class="align-middle">Dashboard</span>
 
                                 </a>
                             </li>
@@ -193,19 +202,26 @@
                             </li>
 
                             <li><a href="price.html"><i class="bi bi-file-medical"></i> <span>Medical History</span></a></li>
-@*                            <li><a href="price.html"><i class="bi bi-activity"></i> <span></span>Fetal Tracking</a></li>
-*@
+                            @*                            <li><a href="price.html"><i class="bi bi-activity"></i> <span></span>Fetal Tracking</a></li>
+                        *@
                             @*<a href="contact.html">
                         <i class="fa fa-paper-plane red_color"></i> <span>Fetal Tracking</span>
                         </a>*@
-                            <li><a href="settings.html"><i class="bi bi-box-arrow-right"></i>  <span>Log out</span></a></li>
-                        }
+                            @*                            <li><a href="settings.html"><i class="bi bi-box-arrow-right"></i>  <span>Log out</span></a></li>
+                        *@                        }
                         @if (User.IsInRole("Nurse"))
                         {
                             <li class="sidebar-item">
 
-                                <a asp-controller="PrenatalCare" asp-action="Nurse" class="sidebar-link">
-                                    <i class="align-middle" data-feather="calendar"></i><i class="bi bi-house-door"></i> <span class="align-middle">Dashboard</span>
+                                <a asp-controller="Home" asp-action="Index" class="sidebar-link">
+                                    <i class="align-middle" data-feather="calendar"></i><i class="bi bi-house-door"></i> <span class="align-middle">Home</span>
+
+                                </a>
+                            </li>
+                            <li class="sidebar-item">
+
+                                <a asp-controller="PrenatalCare" asp-action="Patient" class="sidebar-link">
+                                    <i class="align-middle" data-feather="calendar"></i><i class="bi bi-speedometer2"></i> <span class="align-middle">Dashboard</span>
 
                                 </a>
                             </li>
@@ -226,14 +242,14 @@
                             </li>
                             @*<li class="sidebar-item">
 
-                                <a asp-controller="PrenatalCare" asp-action="IndexUEducation" class="sidebar-link">
-                                    <i class="align-middle" data-feather="calendar"></i><i class="bi bi-info-circle"></i> <span class="align-middle">Fetal Tracking</span>
+                        <a asp-controller="PrenatalCare" asp-action="IndexUEducation" class="sidebar-link">
+                        <i class="align-middle" data-feather="calendar"></i><i class="bi bi-info-circle"></i> <span class="align-middle">Fetal Tracking</span>
 
-                                </a>
-                            </li>*@
+                        </a>
+                        </li>*@
 
-@*                            <li><a href="charts.html"><i class="bi bi-clipboard2-check"></i> <span>Appointments</span></a></li>
-*@
+                            @*                            <li><a href="charts.html"><i class="bi bi-clipboard2-check"></i> <span>Appointments</span></a></li>
+                        *@
                             <li><a href="map.html"><i class="bi bi-person-add"></i> <span>Patients</span></a></li>
                             <li><a href="price.html"><i class="bi bi-file-earmark-text"></i> <span>Medication </span></a></li>
                             <li><a href="price.html"><i class="bi bi-clipboard2-check"></i> <span></span>Reports</a></li>
@@ -241,8 +257,8 @@
                             @*<a href="contact.html">
                         <i class="fa fa-paper-plane red_color"></i> <span>Fetal Tracking</span>
                         </a>*@
-                            <li><a href="settings.html"><i class="bi bi-box-arrow-right"></i>  <span>Log out</span></a></li>
-                        }
+                            @*                            <li><a href="settings.html"><i class="bi bi-box-arrow-right"></i>  <span>Log out</span></a></li>
+                        *@                        }
                     </ul>
 
 
@@ -261,12 +277,13 @@
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <div class="full">
                         <div class="order-last nav-item">
-                           
                         </div>
                         <button type="button" id="sidebarCollapse" class="sidebar_toggle"><i class="bi bi-list"></i></button>
-                        @* <div class="logo_section">
-                            <a href="index.html"><img class="img-responsive" src="~/images/images/logo/logo.png" alt="#" /></a>
-                        </div>*@
+                        <div class="logo_section">
+                            @*                            <a href="index.html"><img class="img-responsive" src="~/images/images/logo/logo.png" alt="#" /></a>
+                            *@
+                        </div>
+
                         <div class="right_topbar">
                             <div class="icon_info">
                                 @*<ul>
@@ -277,14 +294,16 @@
                                 <ul class="user_profile_dd">
                                     <li>
                                         <div class="order-last nav-item">
-                                         
                                         </div>
                                         <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="~/images/Profile-Photo.png" alt="#" /><span class="text-dark">@UserManager.GetUserAsync(User).Result.FirstName  @UserManager.GetUserAsync(User).Result.LastName</span></a>
-                                         <div class="dropdown-menu">
+                                        <div class="dropdown-menu">
                                             <a class="dropdown-item" href="profile.html">My Profile</a>
                                             <a class="dropdown-item" href="settings.html">Settings</a>
                                             <a class="dropdown-item" href="help.html">Help</a>
-                                            <a class="dropdown-item" href="#"><span>Log Out</span> <i class="fa fa-sign-out"></i></a>
+                                            @*                                            <a class="dropdown-item" href="#"><span>Log Out</span> <i class="fa fa-sign-out"></i></a>
+                                            *@                                            <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                                                <button id="logout" type="submit" class="btn btn-secondary">Log Out</button>
+                                            </form>
                                         </div>
                                     </li>
                                 </ul>
