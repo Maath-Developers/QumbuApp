@@ -1,4 +1,4 @@
-﻿\@using Microsoft.AspNetCore.Identity
+﻿@using Microsoft.AspNetCore.Identity
 @using Qumbu_Community_Health_Care_Center.Areas.Identity.Data
 
 @inject SignInManager<ApplicationUser> SignInManager
@@ -8,488 +8,307 @@
 }
 <link rel="stylesheet" href="~/css/StyleSheet/Landing2StyleSheet.css">
 
+<style>
+    #dash-con {
+        background: rgba( 0, 42, 255, 0.75 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 0px );
+        -webkit-backdrop-filter: blur( 0px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+    }
 
-
-<div class="container">
-    <div class="row">
-        
-        @if (User.IsInRole("Nurse"))
-        {
-            <!-- Card 1 -->
-            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Vaccination</h5>
-                        <p class="card-text">Content of card 1 goes here.</p>
-                        <button>
-                            <a class="nav-link text-dark" asp-controller="Walk" asp-action="Nurse">More info...</a>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Family_Plan</h5>
-                        <p class="card-text">Content of card 2 goes here.</p>
-                        <button>
-                            <a class="nav-link text-dark" asp-controller="FamilyPlan" asp-action="Nurse">More info...</a>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 3 -->
-            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Walk In Patient</h5>
-                        <p class="card-text">Only for patients without bookings and have no access to online booking</p>
-                        <button>
-                            <a class="nav-link text-dark" asp-controller="Walk" asp-action="Nurse_Dashboard">More info...</a>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 4 -->
-            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Pre-Natal_Care</h5>
-                        <p class="card-text">Content of card 4 goes here.</p>
-                        <button>
-                            <a class="nav-link text-dark" asp-controller="PreNatalCare" asp-action="Nurse">More info...</a>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 5 -->
-            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Counselling</h5>
-                        <p class="card-text">We welcome you to our 'talk therapy'.</p>
-                        <button>
-                            <a class="nav-link text-dark" asp-controller="Counseller" asp-action="NoAccess">More info...</a>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 6 -->
-            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Appointments</h5>
-                        @*<a href="index.html"><img class="img-responsive" height="268" src="~/images/images/logo/booking.png" ] alt="#" /></a>*@
-                        <button>
-                            <a class="nav-link text-dark" asp-controller="Counseller" asp-action="Create">Book here...</a>
-                        </button>
-                    </div>
-                </div>
-            </div>
+        #dash-con:hover {
+            background: rgba( 0, 42, 255, 1 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 20px );
+            -webkit-backdrop-filter: blur( 20px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
         }
-        @if (User.IsInRole("Patient"))
-        {
-            <!-- Card 1 -->
-            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Vaccination</h5>
-                        <div class="p_info_img">
-                      
-                            <img src="~/_Images/Vaccs/vaccination.png" class="img-responsive" alt="#" />
-                        </div>
-                        <button>
-                            <a class="nav-link text-dark" asp-controller="Vaccs" asp-action="Patient">More info...</a>
-                        </button>
-                    </div>
-                </div>
-            </div>
+</style>
 
-            <!-- Card 2 -->
-            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Family_Plan</h5>
-                        <p class="card-text">Content of card 2 goes here.</p>
-                        <button>
-                            <a class="nav-link text-dark" asp-controller="FamilyPlan" asp-action="Patient">More info...</a>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 3 -->
-            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">WALK-IN PATIENT</h5>
-                        <p class="card-text">Only for patients without bookings and have no access to online booking</p>
-                        <button>
-                            <a class="nav-link text-dark" asp-controller="Walk" asp-action="Patient">More info...</a>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Pre-Natal_Care</h5>
-                        <p class="card-text">Content of card 4 goes here.</p>
-                        <button>
-                            <a class="nav-link text-dark" asp-controller="PreNatalCare" asp-action="Patient">More info...</a>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 5 -->
-            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Counselling</h5>
-                        <p class="card-text">We welcome you to our 'talk therapy'.</p>
-                        <button>
-                            <a class="nav-link text-dark" asp-controller="Counseller" asp-action="Patient">More info...</a>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Appointments</h5>
-                        @*<a href="index.html"><img class="img-responsive" height="268" src="~/images/images/logo/booking.png" ] alt="#" /></a>*@
-                        <button>
-                            <a class="nav-link text-dark" asp-controller="Counseller" asp-action="Create">Book here...</a>
-                        </button>
-                    </div>
-                </div>
-            </div>
+<h1>Welcome to Qumbu <bold> Communities Health Care</bold></h1>
+@if (User.IsInRole("Admin"))
+{
+    Layout = "_AdminLayout";
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .diagonal-container {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
         }
-        @if (User.IsInRole("Admin"))
-        {
-            Layout = "_AdminLayout";
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-            <style>
-                .diagonal-container {
-                    display: flex;
-                    flex-direction: row-reverse;
-                    justify-content: flex-end;
-                }
 
-                .diagonal-card {
-                    transform: translateY(-50%) rotate(-45deg);
-                    position: relative;
-                    top: 10%;
-                    margin: 30px;
-                }
-            </style>
+        .diagonal-card {
+            transform: translateY(-50%) rotate(-45deg);
+            position: relative;
+            top: 10%;
+            margin: 30px;
+        }
+    </style>
 
-            <div class="row diagonal-container">
-                <div class="col-md-3 diagonal-card">
-                    <div class="card text-center bg-primary p-3">
-                        <h5 class="card-title text-center mb-4">Appointment</h5>
-                        <img src="~/images/appointment.jpg" alt="apointment image" class="img-fluid">
-                        <div class="d-flex justify-content-end">
-                            <button class="btn btn-success" id="button1">Book</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 diagonal-card">
-                    <div class="card text-center bg-secondary p-3">
-                        <h5 class="card-title text-center mb-4">Dr Availability</h5>
-                        <img src="~/images/dr avail.png" alt="Dr Availability image" class="img-fluid">
-                        <div class="d-flex justify-content-end">
-                            <button class="btn btn-success" id="button2">Check</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 diagonal-card">
-                    <div class="card text-center bg-primary p-3">
-                        <h5 class="card-title text-center mb-4">Patient Registration</h5>
-                        <img src="~/images/patient-registration-17674809.jpg" alt="Registration image" class="img-fluid">
-                        <div class="d-flex justify-content-end">
-                            <button class="btn btn-success" id="button3">Register</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 diagonal-card">
-                    <div class="card text-center bg-secondary p-3">
-                        <h5 class="card-title text-center mb-4">Attendance Report</h5>
-                        <img src="~/images/att_rep.png" alt="Report image" class="img-fluid">
-                        <div class="d-flex justify-content-end">
-                            <button class="btn btn-success" id="button5">Genenerate</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 diagonal-card">
-                    <div class="card text-center bg-primary p-3">
-                        <h5 class="card-title text-center mb-4">Manage Queue</h5>
-                        <img src="~/images/queue card.jpg" alt="Queue image" class="img-fluid">
-                        <div class="d-flex justify-content-end">
-                            <button class="btn btn-success" id="button4">Manage</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 diagonal-card">
-                    <div class="card text-center bg-secondary p-3">
-                        <h5 class="card-title text-center mb-4">Create File</h5>
-                        <img src="~/images/medical-781422.jpg" alt="File image" class="img-fluid">
-                        <div class="d-flex justify-content-end">
-                            <button class="btn btn-success">Create</button>
-                        </div>
-                    </div>
+    <div class="row diagonal-container">
+        <div class="col-md-3 diagonal-card">
+            <div class="card text-center bg-primary p-3">
+                <h5 class="card-title text-center mb-4">Appointment</h5>
+                <img src="~/images/appointment.jpg" alt="apointment image" class="img-fluid">
+                <div class="d-flex justify-content-end">
+                    <button class="btn btn-success" id="button1">Book</button>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Appointments</h5>
-                        @*<a href="index.html"><img class="img-responsive" height="268" src="~/images/images/logo/booking.png" ] alt="#" /></a>*@
-                        <button>
-                            <a class="nav-link text-dark" asp-controller="Counseller" asp-action="Create">Book here...</a>
-                        </button>
-                    </div>
+        </div>
+        <div class="col-md-3 diagonal-card">
+            <div class="card text-center bg-secondary p-3">
+                <h5 class="card-title text-center mb-4">Dr Availability</h5>
+                <img src="~/images/dr avail.png" alt="Dr Availability image" class="img-fluid">
+                <div class="d-flex justify-content-end">
+                    <button class="btn btn-success" id="button2">Check</button>
                 </div>
             </div>
+        </div>
+        <div class="col-md-3 diagonal-card">
+            <div class="card text-center bg-primary p-3">
+                <h5 class="card-title text-center mb-4">Patient Registration</h5>
+                <img src="~/images/patient-registration-17674809.jpg" alt="Registration image" class="img-fluid">
+                <div class="d-flex justify-content-end">
+                    <button class="btn btn-success" id="button3">Register</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 diagonal-card">
+            <div class="card text-center bg-secondary p-3">
+                <h5 class="card-title text-center mb-4">Attendance Report</h5>
+                <img src="~/images/att_rep.png" alt="Report image" class="img-fluid">
+                <div class="d-flex justify-content-end">
+                    <button class="btn btn-success" id="button5">Genenerate</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 diagonal-card">
+            <div class="card text-center bg-primary p-3">
+                <h5 class="card-title text-center mb-4">Manage Queue</h5>
+                <img src="~/images/queue card.jpg" alt="Queue image" class="img-fluid">
+                <div class="d-flex justify-content-end">
+                    <button class="btn btn-success" id="button4">Manage</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 diagonal-card">
+            <div class="card text-center bg-secondary p-3">
+                <h5 class="card-title text-center mb-4">Create File</h5>
+                <img src="~/images/medical-781422.jpg" alt="File image" class="img-fluid">
+                <div class="d-flex justify-content-end">
+                    <button class="btn btn-success">Create</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Appointments</h5>
+                @*<a href="index.html"><img class="img-responsive" height="268" src="~/images/images/logo/booking.png" ] alt="#" /></a>*@
+                <button>
+                    <a class="nav-link text-dark" asp-controller="Counseller" asp-action="Create">Book here...</a>
+                </button>
+            </div>
+        </div>
+    </div>
+}
+else if (User.IsInRole("Nurse"))
+{
+    <div class="container-fluid pt-4 px-4">
+        <div class="row g-4">
+     
+                <div class=" col-sm-6 col-xl-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <a asp-action="Nurse_Dashboard" asp-controller="Walk">
+                        <div id="dash-con" class="dash-con rounded d-flex align-items-center justify-content-between p-4">
+                           @*  <img src="~/Image/App.png" style="width: 79px" /> *@
+                            <div class="ms-3">
+                                <h4 class="mb-2">Walk-In<span class="badge bg-primary rounded-pill text-white"></span></h4>
+
+                            </div>
+                        </div>
+                    </a>
+                </div>
+      
+
            
+                <div class=" col-sm-6 col-xl-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                     <a asp-action="Nurse" asp-controller="FamilyPlan">
+                    <div id="dash-con" class="dash-con rounded d-flex align-items-center justify-content-between p-4">
+                     @*    <img src="~/Image/App.png" style="width: 79px" /> *@
+                        <div class="ms-3">
+                            <h4 class="mb-2">Family Plan<span class="badge bg-primary rounded-pill text-white"></span></h4>
 
-        }
-        @if (User.IsInRole("Doctor"))
-        {
-            <!-- Card 1 -->
-            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Vaccination</h5>
-                        <p class="card-text">Content of card 1 goes here.</p>
-                        <button>
-                            <a class="nav-link text-dark" asp-controller="Vaccs" asp-action="IndexAppo">More info...</a>
-                        </button>
+                        </div>
                     </div>
+                </a>
                 </div>
-            </div>
+       
 
-            <!-- Card 2 -->
-            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Family_Plan</h5>
-                        <p class="card-text">Content of card 2 goes here.</p>
-                        <button>
-                            <a class="nav-link text-dark" asp-controller="FamilyPlan" asp-action="NoAccess">More info...</a>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 3 -->
-            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Walk In Patient</h5>
-                        <p class="card-text">Only for patients without bookings and have no access to online booking</p>
-                        <button>
-                            <a class="nav-link text-dark" asp-controller="Walk" asp-action="Doctor_Dash">More info...</a>
-                        </button>
-                    </div>
-                </div>
-            </div>
+          
+                <div class=" col-sm-6 col-xl-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      <a asp-action="NurseDashboard" asp-controller="PreNatalCare">
+                    <div id="dash-con" class="dash-con rounded d-flex align-items-center justify-content-between p-4">
+                        @* <img src="~/Image/App.png" style="width: 79px" /> *@
+                        <div class="ms-3">
+                            <h4 class="mb-2">Pre-Natal Care<span class="badge bg-primary rounded-pill text-white"></span></h4>
 
-            <!-- Card 4 -->
-            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Pre-Natal_Care</h5>
-                        <p class="card-text">Content of card 4 goes here.</p>
-                        <button>
-                            <a class="nav-link text-dark" asp-controller="PreNatalCare" asp-action="NoAccess">More info...</a>
-                        </button>
+                        </div>
+                    </div>
+                </a>
+                </div>
+          
+
+        </div>
+    </div>
+}
+else if (User.IsInRole("Patient"))
+{
+    <div class="container-fluid pt-4 px-4">
+        <div class="row g-4">
+                
+                <div class=" col-sm-6 col-xl-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <a asp-action="Patient" asp-controller="FamilyPlan">
+                        <div id="dash-con" class="dash-con rounded d-flex align-items-center justify-content-between p-4">
+                            @* <img src="~/Image/App.png" style="width: 79px" /> *@
+                            <div class="ms-3">
+                                <h4 class="mb-2">Family Planning<span class="badge bg-primary rounded-pill text-white"></span></h4>
+
+                            </div>
+                        </div>
+                    </a>
+                </div>
+               
+            
+               
+                <div class=" col-sm-6 col-xl-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <a asp-action="Patient" asp-controller="Counseller">
+                        <div id="dash-con" class="dash-con rounded d-flex align-items-center justify-content-between p-4">
+                            @*  <img src="~/Image/App.png" style="width: 79px" /> *@
+                            <div class="ms-3">
+                                <h4 class="mb-2">Counselling<span class="badge bg-primary rounded-pill text-white"></span></h4>
+
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+            
+
+        
+               
+            <div class=" col-sm-6 col-xl-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <a asp-action="Patient" asp-controller="Vaccs">
+                <div id="dash-con" class="dash-con rounded d-flex align-items-center justify-content-between p-4">
+                    @*  <img src="~/Image/App.png" style="width: 79px" /> *@
+                    <div class="ms-3">
+                        <h4 class="mb-2">Vaccination<span class="badge bg-primary rounded-pill text-white"></span></h4>
+
                     </div>
                 </div>
+                </a>
             </div>
-            <!-- Card 5 -->
-            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Counselling</h5>
-                        <p class="card-text">We welcome you to our 'talk therapy'.</p>
-                        <button>
-                            <a class="nav-link text-dark" asp-controller="Counseller" asp-action="NoAccess">More info...</a>
-                        </button>
+               
+            <div class=" col-sm-6 col-xl-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <a asp-action="Patient" asp-controller="PreNatalCare">
+                    <div id="dash-con" class="dash-con rounded d-flex align-items-center justify-content-between p-4">
+                        @*   <img src="~/Image/App.png" style="width: 79px" /> *@
+                        <div class="ms-3">
+                            <h4 class="mb-2">Pre-Natal Care<span class="badge bg-primary rounded-pill text-white"></span></h4>
+
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Appointments</h5>
-                        @*<a href="index.html"><img class="img-responsive" height="268" src="~/images/images/logo/booking.png" ] alt="#" /></a>*@
-                        <button>
-                            <a class="nav-link text-dark" asp-controller="Counseller" asp-action="Create">Book here...</a>
-                        </button>
-                    </div>
-                </div>
+                </a>
             </div>
             
-        }
-        @if (User.IsInRole("Unit-Manager"))
-        {
-            <!-- Card 1 -->
-            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Vaccination</h5>
-                        <p class="card-text">Content of card 1 goes here.</p>
-                        <button>
-                            <a class="nav-link text-dark" asp-controller="Vaccs" asp-action="Unit_Manager">More info...</a>
-                        </button>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Card 2 -->
-            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Family_Plan</h5>
-                        <p class="card-text">Content of card 2 goes here.</p>
-                        <button>
-                            <a class="nav-link text-dark" asp-controller="Family_Plan" asp-action="NoAccess">More info...</a>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 3 -->
-            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">WALK-IN PATIENT</h5>
-                        <p class="card-text">Only for patients without bookings and have no access to online booking</p>
-                        <button>
-                            <a class="nav-link text-dark" asp-controller="Walk" asp-action="NoAccess">More info...</a>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Pre-Natal_Care</h5>
-                        <p class="card-text">Content of card 4 goes here.</p>
-                        <button>
-                            <a class="nav-link text-dark" asp-controller="Pre-Natal_Care" asp-action="NoAccess">More info...</a>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 5 -->
-            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Counselling</h5>
-                        <p class="card-text">We welcome you to our 'talk therapy'.</p>
-                        <button>
-                            <a class="nav-link text-dark" asp-controller="Counselling" asp-action="NoAccess">More info...</a>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Appointments</h5>
-                       @* <a href="index.html"><img class="img-responsive" height="268" src="~/images/images/logo/booking.png" ] alt="#" /></*@a>
-                        <button>
-                            <a class="nav-link text-dark" asp-controller="Counseller" asp-action="Create">Book here...</a>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        }
-        @if (User.IsInRole("Counsellor"))
-        {
-            <!-- Card 1 -->
-            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Vaccination</h5>
-                        <p class="card-text">Content of card 1 goes here.</p>
-                        <button>
-                            <a class="nav-link text-dark" asp-controller="Vaccination" asp-action="NoAccess">More info...</a>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Family_Plan</h5>
-                        <p class="card-text">Content of card 2 goes here.</p>
-                        <button>
-                            <a class="nav-link text-dark" asp-controller="Family_Plan" asp-action="NoAccess">More info...</a>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 3 -->
-            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">WALK-IN PATIENT</h5>
-                        <p class="card-text">Only for patients without bookings and have no access to online booking</p>
-                        <button>
-                            <a class="nav-link text-dark" asp-controller="Walk" asp-action="NoAccess">More info...</a>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Pre-Natal_Care</h5>
-                        <p class="card-text">Content of card 4 goes here.</p>
-                        <button>
-                            <a class="nav-link text-dark" asp-controller="Pre-Natal_Care" asp-action="NoAccess">More info...</a>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 5 -->
-            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Counselling</h5>
-                        <p class="card-text">We welcome you to our 'talk therapy'.</p>
-                        <button>
-                            <a class="nav-link text-dark" asp-controller="Counseller" asp-action="Counsellor">More info...</a>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Appointments</h5>
-                        @*<a href="index.html"><img class="img-responsive" height="268" src="~/images/images/logo/booking.png" ] alt="#" /></a>*@
-                        <button>
-                            <a class="nav-link text-dark" asp-controller="Counseller" asp-action="Create">Book here...</a>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-        }
-
+        </div>
     </div>
-</div>
+}
+else if (User.IsInRole("Doctor"))
+{
+    <div class="container-fluid pt-4 px-4">
+        <div class="row g-4">
+           
+                <div class=" col-sm-6 col-xl-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                     <a asp-action="Doctor_Dash" asp-controller="walk">
+                        <div id="dash-con" class="dash-con rounded d-flex align-items-center justify-content-between p-4">
+                       @*  <img src="~/Image/App.png" style="width: 79px" /> *@
+                        <div class="ms-3">
+                            <h4 class="mb-2">Walk-In<span class="badge bg-primary rounded-pill text-white"></span></h4>
+
+                        </div>
+                        </div>
+                    </a>
+                </div>
+            
+
+           
+              <div class=" col-sm-6 col-xl-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <a asp-action="IndexAppo" asp-controller="Vaccs">
+                    <div id="dash-con" class="dash-con rounded d-flex align-items-center justify-content-between p-4">
+                      @*   <img src="~/Image/App.png" style="width: 79px" /> *@
+                        <div class="ms-3">
+                            <h4 class="mb-2">Vaccination<span class="badge bg-primary rounded-pill text-white"></span></h4>
+
+                        </div>
+                    </div>
+                </a>
+              </div>
+            
+
+
+        </div>
+    </div>
+}
+else if (User.IsInRole("Counsellor"))
+{
+    <div class="container-fluid pt-4 px-4">
+        <div class="row g-4">
+            
+                <div class=" col-sm-6 col-xl-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <a asp-action="Counsellor" asp-controller="Counseller">
+                        <div id="dash-con" class="dash-con rounded d-flex align-items-center justify-content-between p-4">
+                            @* <img src="~/Image/App.png" style="width: 79px" /> *@
+                            <div class="ms-3">
+                                <h4 class="mb-2">Counselling<span class="badge bg-primary rounded-pill text-white"></span></h4>
+
+                            </div>
+                        </div>
+                    </a>
+                </div>
+           
+
+        </div>
+    </div>
+}
+else if (User.IsInRole("Unit-Manager"))
+{
+    <div class="container-fluid pt-4 px-4">
+        <div class="row g-4">
+           
+                <div class=" col-sm-6 col-xl-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                     <a asp-action="Unit_Manager" asp-controller="Vaccs">
+                        <div id="dash-con" class="dash-con rounded d-flex align-items-center justify-content-between p-4">
+                            @* <img src="~/Image/App.png" style="width: 79px" /> *@
+                            <div class="ms-3">
+                                <h4 class="mb-2">Vaccination<span class="badge bg-primary rounded-pill text-white"></span></h4>
+
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            
+
+        </div>
+    </div>
+}
+
+
+
 
 

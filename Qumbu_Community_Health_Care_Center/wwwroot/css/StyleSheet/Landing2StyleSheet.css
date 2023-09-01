@@ -1,4 +1,4 @@
-﻿body {
+﻿/*body {
     background-color: darkcyan;
 }
 
@@ -11,10 +11,9 @@
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     padding: 10px;
     text-align: center;
-    margin-right: 10px; /* Add margin between div containers */
+    margin-right: 10px; 
 }
 
-    /* Remove right margin from the last .col-2 element */
     .col-2:last-child {
         margin-right: 0;
-    }
+    }*/
