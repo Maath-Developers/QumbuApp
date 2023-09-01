@@ -33,6 +33,9 @@
                     </th>
                     <th>
                         Contact
+                    </th> 
+                    <th>
+                        Departments
                     </th>
                     <th>
                         Cancel
@@ -48,12 +51,15 @@
                         <td width="30%">@app.Date</td>
                         <td width="30%">@app.Time</td> 
                         <td width="30%">@app.Contact</td>
+                            <td width="30%">@app.Departments</td>
                         <td>
                             <div class="w-100 btn-group" role="group">
                                 <a asp-controller="Counseller" asp-action="Delete" asp-route-ID="@app.BookingId" class="btn btn-danger mx-1">Delete</a>
                             </div>
                         </td>
                     </tr>
+                        
+                    
                 }
             </tbody>
         </table>
