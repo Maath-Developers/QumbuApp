@@ -39,7 +39,7 @@
 				<div class="col-md-7">
 					<div class="row">
 						<div class="logo_section">
-							<a href="index.html"><img class="img-responsive" src="~/_Images/1.png" alt="#" /></a>
+							<a href="index.html"><img class="img-responsive" src="~/_Images/1.png" alt="#"  style="width=150px"/></a>
 						</div>
 						<div class="col-md-8 mb-md-0 mb-3">
 							<div class="top-wrap d-flex">
@@ -71,17 +71,18 @@
 			</div>
 			<div class="collapse navbar-collapse" id="ftco-nav">
 				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active"><a asp-controller="Home" asp-action="Index" class="nav-link">Home</a></li>
-					<li class="nav-item"><a asp-controller="Home" asp-action="Index" class="nav-link">About us</a></li>
-					<li class="nav-item "><a asp-controller="Home" asp-action="Index" class="nav-link">Team</a></li>
-					<li class="nav-item"><a asp-controller="Home" asp-action="Index" class="nav-link">Services</a></li>
+					<li class="nav-item active"><a asp-controller="Home" asp-action="Index" class="nav-link">Home |</a></li>
+					<li class="nav-item"><a asp-controller="Home" asp-action="Index" class="nav-link">About us |</a></li>
+					<li class="nav-item "><a asp-controller="Home" asp-action="Index" class="nav-link">Team |</a></li>
+					<li class="nav-item"><a asp-controller="Home" asp-action="Index" class="nav-link">Services |</a></li>
 					@if (SignInManager.IsSignedIn(User))
 					{
-						<li class="nav-item"><a asp-controller="Home" asp-action="Landing2" class="nav-link">Dashboard</a></li>
+						<li class="nav-item"><a asp-controller="Home" asp-action="Landing2" class="nav-link">Departments |</a></li>
+						<li class="nav-item"><a asp-controller="Counseller" asp-action="Create" class="nav-link">Book Appointment</a></li>
 
 					}
-					<li class="nav-item"><a asp-controller="Home" asp-action="WorkShop" class="nav-link">Work_Shop</a></li>
-					
+@* 					<li class="nav-item"><a asp-controller="Home" asp-action="WorkShop" class="nav-link">Work_Shop</a></li>
+ *@					
 				</ul>
 			</div>
 		</div>
