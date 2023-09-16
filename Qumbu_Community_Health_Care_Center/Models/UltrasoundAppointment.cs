@@ -11,20 +11,21 @@ namespace Qumbu_Community_Health_Care_Center.Models
         [Required]
         [DisplayName("Full Name")]
         public string UserId { get; set; }
-        //[Required]
+        [Required]
         [DisplayName("Appointment Date")]
         public DateTime AppointmentDate { get; set; }
-        //[Required]
+        [Required]
         [DisplayName("Gestational Age Weeks")]
         public int GestationalAgeWeeks { get; set; }
-        //[Required]
+        [Required]
         [DisplayName("Fetal Heart Rate")]
         public string FetalHeartRate { get; set; }
         public string Observations { get; set; }
         [DisplayName("Gender Determined")]
         public bool GenderDetermined { get; set; }
+        [Required]
         public string Comments { get; set; }
-        //[Required]
+        [Required]
         [DisplayName("Fetal Image")]
         public string UltrasoundImagePath { get; set; }
         public string FileName { get; set; }

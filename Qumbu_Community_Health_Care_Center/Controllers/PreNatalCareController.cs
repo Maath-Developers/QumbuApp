@@ -140,8 +140,8 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         }
         public IActionResult IndexUltrasoundAppointment()
         {
-            IEnumerable<UltrasoundAppointment> objList = dbContext.ultrasounds;
-            return View(objList);
+            //IEnumerable<UltrasoundAppointment> objList = dbContext.ultrasounds;
+            return View(dbContext.ultrasounds.ToList());
         }
         //[HttpPost]
         //[ValidateAntiForgeryToken]
@@ -152,7 +152,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             {
                 string ImageUploadedFolder = Path.Combine
                     (webHostEnvironment.WebRootPath, "UploadedImages");
-                uniqueFileName = Guid.NewGuid().ToString() + " " + ultrasound.ImageFile.FileName;
+                uniqueFileName = Guid.NewGuid().ToString() + "_" + ultrasound.ImageFile.FileName;
 
                 string filepath = Path.Combine(ImageUploadedFolder, uniqueFileName);
 

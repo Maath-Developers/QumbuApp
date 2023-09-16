@@ -1,7 +1,7 @@
 ﻿@model Qumbu_Community_Health_Care_Center.Models.UltrasoundAppointment
 
 @{
-    //ViewData["Title"] = "UltrasoundAppointment";
+    ViewData["Title"] = "Create";
     Layout = "/Views/Shared/_PreNatalCareLayout.cshtml";
 }
 
@@ -19,35 +19,35 @@
         <form asp-action="CreateUltrasoundAppointment" enctype="multipart/form-data" method="post">
             <div class="form-group">
                 <label asp-for="UserId" class="control-label"></label>
-                <input asp-action="UserId" class="form-control" />
+                <input asp-for="UserId" class="form-control" />
             </div>
             <div class="form-group">
                 <label asp-for="AppointmentDate" class="control-label"></label>
-                <input type="date" asp-action="AppointmentDate" class="form-control" />
+                <input asp-for="AppointmentDate" class="form-control" />
             </div>
             <div class="form-group">
                 <label asp-for="GestationalAgeWeeks" class="control-label"></label>
-                <input type="week" asp-action="GestationalAgeWeeks" class="form-control" />
+                <input type="week" asp-for="GestationalAgeWeeks" class="form-control" />
             </div>
             <div class="form-group">
                 <label asp-for="FetalHeartRate" class="control-label"></label>
-                <input type="number" asp-action="FetalHeartRate" class="form-control" />
+                <input type="number" asp-for="FetalHeartRate" class="form-control" />
             </div>
             <div class="form-group">
                 <label asp-for="Observations" class="control-label"></label>
-                <input asp-action="Observations" class="form-control" />
+                <input asp-for="Observations" class="form-control" />
             </div>
             <div class="form-group">
                 <label asp-for="GenderDetermined" class="control-label"></label>
-                <input asp-action="GenderDetermined" class="form-control" />
+                <input type="text" asp-for="GenderDetermined" class="form-control" />
             </div>
-            @*<div class="form-group">
+            <div class="form-group">
                 <label asp-for="Comments" class="control-label"></label>
-                <input asp-action="Comments" class="form-control" />
-            </div>*@
+                <input asp-for="Comments" class="form-control" />
+            </div>
             <div class="form-group">
                 <label asp-for="ImageFile" class="control-label"></label>
-                <input type="file" asp-action="ImageFile" class="form-control" />
+                <input type="file" asp-for="ImageFile" class="form-control" />
             </div>
            @* <div class="form-group">
                 <label asp-for="FileName" class="control-label"></label>

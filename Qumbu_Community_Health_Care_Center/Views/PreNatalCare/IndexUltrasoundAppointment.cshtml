@@ -23,9 +23,9 @@
 <table class="table">
     <thead class="table-dark">
         <tr>
-            @*<th>
+            <th>
                 @Html.DisplayNameFor(model => model.Id)
-            </th>*@
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.UserId)
             </th>
@@ -44,9 +44,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.GenderDetermined)
             </th>
-           @* <th>
+            <th>
                 @Html.DisplayNameFor(model => model.Comments)
-            </th>*@
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.UltrasoundImagePath)
             </th>
@@ -60,9 +60,9 @@
         @foreach (var item in Model)
         {
             <tr>
-                @*<td>
+                <td>
                     @Html.DisplayFor(modelItem => item.Id)
-                </td>*@
+                </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.UserId)
                 </td>
@@ -81,9 +81,9 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.GenderDetermined)
                 </td>
-                @*<td>
+                <td>
                     @Html.DisplayFor(modelItem => item.Comments)
-                </td>*@
+                </td>
                 <td>
                     <img src="@Url.Content("~/UploadedImages/" + item.FileName)" height="120px" width="120px" />
                 </td>
