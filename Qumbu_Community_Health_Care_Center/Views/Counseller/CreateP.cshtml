@@ -1,0 +1,102 @@
+﻿@model Qumbu_Community_Health_Care_Center.Models.Profiling
+@*@{
+	Layout = "_CounsellorLayout";
+}*@
+<span class="border border-4">
+	<form method="post" asp-action="CreateP">
+		<div class="border p-3">
+			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+			<br />
+			<div class="form-group row">
+				<h2 class="text-black-50 pl-3">Add New Patient</h2>
+			</div>
+            <div class="container mt-8">
+                <div class="card">
+                    <div class="card-header bg-secondary-emphasis">
+                        <h5 class="card-title">Peronal Details</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="memberName">ID Number</label>
+                                    <input type="text" class="form-control" id="memberName" placeholder=" ">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="memberName">Email Address</label>
+                                    <input type="text" class="form-control" id="memberName" placeholder=" ">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="memberName">Cell</label>
+                                    <input type="text" class="form-control" id="memberName" placeholder=" ">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="memberName">First Name</label>
+                                    <input type="text" class="form-control" id="memberName" placeholder=" ">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="memberName">Last Name</label>
+                                    <input type="text" class="form-control" id="memberName" placeholder=" ">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="validityPeriod">Gender</label>
+                                    <select id="GenderDropdown" asp-for="Gender" class="form-control" id="validationName" required>
+                                        <option value="Select" class="bg-opacity-50">Select</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="dateOfBirth">Date</label>
+                                    <input type="date" class="form-control" id="dateOfBirth">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="dateOfBirth">D.O.B</label>
+                                    <input type="date" class="form-control" id="dateOfBirth">
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <label for="address">Address:</label>
+                                    <textarea class="form-control" id="address" rows="4" placeholder="Enter Address"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="validityPeriod">Gender</label>
+                                    <select id="GenderDropdown" asp-for="Gender" class="form-control" id="validationName" required>
+                                        <option value="Select" class="bg-opacity-50">Select</option>
+                                        <option value="Male">Regular</option>
+                                        <option value="Female">New</option>
+                                        <option value="Female">Visitor</option>
+                                    </select>
+                                </div>
+                            </div>
+                          
+                          
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+           
+        </div>
+	</form>
+</span>
+

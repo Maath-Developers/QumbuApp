@@ -187,6 +187,25 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         {
             return View();
         }
+        public IActionResult Profile()
+        {
+            IEnumerable<Profiling> profilings = Context.Profiling;
+            return View(profilings);
+        }
+        public IActionResult CreateP() 
+        { 
+            return View();
+        }
+        public IActionResult CreateP(Profiling pro) 
+        {
+            if (ModelState.IsValid)
+            {
+                Context.Profiling.Add(pro);
+                Context.SaveChanges();
+                return RedirectToAction("Profiling");
+            }
+            return View(pro);
+        }
     }
 }
 

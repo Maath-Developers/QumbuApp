@@ -67,52 +67,50 @@
                     </div>
                 </div>
                 <div class="sidebar_blog_2">
-                    <h4>General</h4>
+                    <h4>MENU</h4>
                     <ul class="list-unstyled components">
                        
                         @if (User.IsInRole("Counsellor"))
                         {
-                            <li><a asp-controller="Home" asp-action="Landing2" class="sidebar-link"> <span>Departments</span></a></li>
+                            <li><a asp-controller="Home" asp-action="Landing2" class="sidebar-link"><i class="bi bi-house-door"></i> <span>Dashboard</span></a></li>
+                            <li><a asp-controller="Counseller" asp-action="Profile" class="sidebar-link"><i class="bi bi-person"></i> <span>Profiling</span></a></li>
                             <li class="active">
-                                <a href="#dashboard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="bi bi-clipboard2-data"></i> <span class="align">Manage Appointments</span></a>
+                               @* <a href="#dashboard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="bi bi-clipboard2-data"></i> <span class="align">Profiling</span></a>*@
                                 <ul class="collapse list-unstyled" id="dashboard">
                                     <li>
-                                        <a asp-controller="Counseller" asp-action="Booking" class="sidebar-link">
+                                       @* <a asp-controller="Counseller" asp-action="Booking" class="sidebar-link">
                                             <span>View</span>
-                                        </a>
+                                        </a>*@
                                     </li>
                                     <li>
-                                        <a asp-controller="Counseller" asp-action="Booking" class="sidebar-link"> <span>Cancel</span></a>
+                                       @* <a asp-controller="Counseller" asp-action="Booking" class="sidebar-link"> <span>Cancel</span></a>*@
                                     </li>
                                 </ul>
                             </li>
 
                             @*<li><a href="widgets.html"><i class="fa fa-clock-o orange_color"></i> <span>Widgets</span></a></li>*@
                             <li>
-                                <a href="#element" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="bi bi-folder2"></i> <span>Manage Files</span></a>
+                                <a href="#element" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="bi bi-people-fill"></i> <span>Counselling</span></a>
                                 <ul class="collapse list-unstyled" id="element">
                                     <li>
                                         <a asp-controller="Counseller" asp-action="CreateRe" class="sidebar-link">
-                                            <span>Add Record</span>
+                                            <span>Individual Counselling</span>
                                         </a>
                                     </li>
-                                    <li><a asp-controller="Counseller" asp-action="PatientC" class="sidebar-link"> <span>Update Record</span></a></li>
+                                    <li><a asp-controller="Counseller" asp-action="PatientC" class="sidebar-link"> <span>Group Counselling</span></a></li>
                                     <li>
-                                    <a asp-controller="Counseller" asp-action="Record" class="sidebar-link">
+                                   @* <a asp-controller="Counseller" asp-action="Record" class="sidebar-link">
                                         <span>View</span>
-                                    </a>
+                                    </a>*@
                                     </li>
                                     @*<li><a href="invoice.html">> <span>Invoice</span></a></li>*@
                                 </ul>
                             </li>
-                            @*<li><a href="tables.html"><i class="fa fa-table purple_color2"></i> <span>Tables</span></a></li>*@
-                            <li>
-                                <a href="#apps" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="bi bi-person-plus"></i> <span>Manage Referrals</span></a>
-                                <ul class="collapse list-unstyled" id="apps">
-                                    <li><a asp-controller="Counseller" asp-action="Referral" class="sidebar-link"> <span>View</span></a></li>
-                                    <li><a asp-controller="Counseller" asp-action="CreateF" class="sidebar-link"> <span>Referr</span></a></li>
-                                    @* <li><a href="media_gallery.html">> <span>Media Gallery</span></a></li>*@
-                                </ul>
+                           @* <li><a href="tables.html"><i class="fa fa-table purple_color2"></i> <span>Tables</span></a></li>*@
+                            <li class="sidebar-item">
+                                <a asp-controller="Counseller" asp-action="Booking" class="sidebar-link">
+                                    <i class="align-middle"></i><i class="bi bi-laptop"></i> <span class="align-middle">Log Visits</span>
+                                </a>
                             </li>
                             @*<li><a asp-controller=""></i> <span>Pricing Tables</span></a></li>*@  
                             <li>
@@ -121,14 +119,10 @@
                             </a>*@
                             </li>
                             <li class="active">
-                                @* <a href="#additional_page" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-clone yellow_color"></i> <span>Counselling</span></a>*@
+                                <a href="#additional_page" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-clone yellow_color"></i><i class="bi bi-person-vcard-fill"></i> <span>Referrals</span></a>
                                 <ul class="collapse list-unstyled" id="additional_page">
-                                    <li>
-                                        @* <a href="profile.html">> <span>Profile</span></a>*@
-                                    </li>
-                                    <li>
-                                        @* <a href="project.html">> <span>Projects</span></a>*@`
-                                    </li>
+                                    <li><a asp-controller="Counseller" asp-action="CreateF" class="sidebar-link"> <span>Add</span></a></li>
+                                    <li><a asp-controller="Counseller" asp-action="Referral" class="sidebar-link"> <span>View</span></a></li>
                                     <li>
                                         @*<a href="login.html">> <span>Login</span></a>*@
                                     </li>
@@ -139,7 +133,7 @@
                             </li>
                             <li class="sidebar-item">
 							<a asp-controller="Counseller" asp-action="Reports" class="sidebar-link">
-                                    <i class="align-middle"></i><i class="bi bi-envelope-paper"></i> <span class="align-middle">Report</span>
+                                    <i class="align-middle"></i><i class="bi bi-envelope-paper"></i> <span class="align-middle">Reports</span>
 							</a>
 						</li>
 
