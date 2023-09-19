@@ -176,9 +176,33 @@ namespace Qumbu_Community_Health_Care_Center.Areas.Identity.Pages.Account
                         pageHandler: null,
                         values: new { area = "Identity", userId = userId, code = code, returnUrl = returnUrl },
                         protocol: Request.Scheme);
+                    string applicationName = "Qumbu_Community_Health_Care_Center";
+                    string username = user.FirstName + " " + user.LastName;
+                    string supportEmail = "monkimajor@gmail.com";
 
                     await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
-                        $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                        $"<html><head><style>body{{font-family:Arial,sans-serif;}}" +
+                        $"h1{{color:#336699;}}" +
+                        $".cta-button{{background-color:#336699;color:@fff;" +
+                        $"padding:10px 20px;" +
+                        $"text-decoration:none;border-radius:5px;}}" +
+                        $".cta-button:hover{{background-color:#265580;}}" +
+                        $".footer{{margin-top:20px;font-size:12px;color:#888;}}" +
+                        $"</style>" +
+                        $"</head>" +
+                        $"<body>" +
+                        $"" +
+                        $"<h1>welcome to {applicationName}!</h1>" +
+                        $"<p> Thank for registering with {applicationName}.before you can start using your account ,Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>." +
+                        $"if you did not register for account with {applicationName} ,please ignore this email.maybe someone entered your email by mistake" +
+                        $"" +
+                        $"if you have any question ,contact our team at {supportEmail}</p>" +
+                        $"<dic class='footer'>" +
+                        $"<p>Thank you</p>" +
+                        $"</div>" +
+                        $"</body>" +
+                        $"</html>");
+                    //$"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
 
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
                     {
