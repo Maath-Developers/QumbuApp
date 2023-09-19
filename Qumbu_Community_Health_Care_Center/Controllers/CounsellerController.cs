@@ -196,13 +196,15 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         { 
             return View();
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult CreateP(Profiling pro) 
         {
             if (ModelState.IsValid)
             {
                 Context.Profiling.Add(pro);
                 Context.SaveChanges();
-                return RedirectToAction("Profiling");
+                return RedirectToAction("Profile");
             }
             return View(pro);
         }

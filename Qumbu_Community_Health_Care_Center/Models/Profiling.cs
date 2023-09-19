@@ -1,9 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore.Scaffolding.Metadata;
+using System.ComponentModel.DataAnnotations;
 
 namespace Qumbu_Community_Health_Care_Center.Models
 {
     public class Profiling
     {
+        [Key]
         public int ProfileID { get; set; }
         public string? ID { get; set; }
         public string? email { get; set; }
