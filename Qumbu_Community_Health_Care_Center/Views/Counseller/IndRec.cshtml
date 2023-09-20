@@ -39,10 +39,10 @@
                         LastName
                     </th>
                     <th>
-                        Date
+                        Counselling Type
                     </th>
                     <th>
-                        Status
+                       Date
                     </th>
                     <th>
                         Action
@@ -57,8 +57,8 @@
                         <td width="20%">@pro.ID</td>
                         <td width="20%">@pro.FirstName</td>
                         <td width="20%">@pro.LastName</td>
+                        <td width="20%">@pro.CounsellingType</td>
                         <td width="20%">@pro.Date</td>
-                        <td width="20%">@pro.Status</td>
                         <td>
                             <div class="w-50 btn-group" role="group">
                                 <a asp-controller="Counseller" asp-action="Delete" asp-route-ID="@pro.ProfileID" class="btn btn-primary mx-1">View</a>
@@ -78,6 +78,7 @@
     }
 
 </div>
+
 
 
 

@@ -3,7 +3,7 @@
     Layout = "_CounsellorLayout";
 }
 <span class="border border-4">
-    <form method="post" asp-action="CreateRe">
+    <form method="post" asp-action="CreateConf">
         <div class="border p-3">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <br />
@@ -63,19 +63,20 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <br />
-            <div class="form-group row">
-                <div class="col-4 offset-2 row">
-                    <div class="col">
-                        <a asp-action="CreateConf" class="btn btn-info w-75">Save</a>
-                    </div>
-                    <div class="col">
-                        <a asp-action="Profile" class="btn btn-info w-75">Cancel</a>
+                <br />
+                <div class="form-group row">
+                    <div class="col-4 offset-2 row">
+                        <div class="col">
+                            <a asp-action="IndRec" class="btn btn-info w-75">Confirm</a>
+                        </div>
+                        <div class="col">
+                            <a asp-action="CreateRe" class="btn btn-info w-75">Cancel</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </form>
 </span>
+
 

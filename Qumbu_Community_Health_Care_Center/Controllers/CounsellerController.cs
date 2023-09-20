@@ -208,6 +208,27 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             }
             return View(pro);
         }
+        public IActionResult CreateConf()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult CreateConf(Profiling pro)
+        {
+            if (ModelState.IsValid)
+            {
+                Context.Profiling.Add(pro);
+                Context.SaveChanges();
+                return RedirectToAction("Profile");
+            }
+            return View(pro);
+        }
+        public IActionResult IndRec()
+        {
+            IEnumerable<Profiling> profilings = Context.Profiling;
+            return View(profilings);
+        }
     }
 }
 

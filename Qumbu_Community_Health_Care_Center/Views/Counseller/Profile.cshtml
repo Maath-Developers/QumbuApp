@@ -33,12 +33,6 @@
                             ID
                         </th>
                         <th>
-                            email
-                        </th>
-                        <th>
-                            Cell
-                        </th>
-                        <th>
                             FirstName
                         </th>
                         <th>
@@ -48,14 +42,7 @@
                             Date
                         </th>
                         <th>
-                            Gender
-                        </th>
-                        <th>
-                            DOB
-                        </th><th>
                             Status
-                        </th><th>
-                            Address
                         </th>
                         <th>
                             Action
@@ -68,15 +55,10 @@
                     {
                         <tr>
                             <td width="20%">@pro.ID</td>
-                            <td width="20%">@pro.email</td>
-                            <td width="20%">@pro.Cell</td>
                             <td width="20%">@pro.FirstName</td>
                             <td width="20%">@pro.LastName</td> 
                             <td width="20%">@pro.Date</td> 
-                            <td width="20%">@pro.Gender</td> 
-                            <td width="20%">@pro.DOB</td> 
                             <td width="20%">@pro.Status</td>
-                            <td width="20%">@pro.Address</td>
                             <td>
                                 <div class="w-50 btn-group" role="group">
                                     <a asp-controller="Counseller" asp-action="Delete" asp-route-ID="@pro.ProfileID" class="btn btn-primary mx-1">View</a>
