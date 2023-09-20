@@ -2,7 +2,7 @@
 @{
     Layout = "_CounsellorLayout";
 }
-<span class="border border-4">
+
     <form method="post" asp-action="CreateRe">
         <div class="border p-3">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -30,8 +30,8 @@
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label for="validityPeriod">(a) Counselling Approaches</label>
-                                        <select id="GenderDropdown" asp-for="Gender" class="form-control" id="validationName" required>
+                                        <label for="validityPeriod">(a) Counselling Approach(es)</label>
+                                        <select id="GenderDropdown" asp-for="CounsellingApproach" class="form-control" id="validationName" required>
                                             <option value="Select" class="bg-opacity-50">Select</option>
                                             <option value="be">Behavior Counselling</option>
                                             <option value="co">Cognitive Counselling</option>
@@ -77,5 +77,5 @@
             </div>
         </div>
     </form>
-</span>
+
 

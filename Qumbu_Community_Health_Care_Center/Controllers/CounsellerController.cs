@@ -185,7 +185,8 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         }
         public ActionResult Reports()
         {
-            return View();
+            IEnumerable<Profiling> profilings = Context.Profiling;
+            return View(profilings);
         }
         public IActionResult Profile()
         {
@@ -224,11 +225,50 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             }
             return View(pro);
         }
+        public IActionResult CreateG()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult CreateG(Profiling pro)
+        {
+            if (ModelState.IsValid)
+            {
+                Context.Profiling.Add(pro);
+                Context.SaveChanges();
+                return RedirectToAction("Profile");
+            }
+            return View(pro);
+        }
+        public IActionResult CreatePat()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult CreatePat(Profiling pro)
+        {
+            if (ModelState.IsValid)
+            {
+                Context.Profiling.Add(pro);
+                Context.SaveChanges();
+                return RedirectToAction("Profile");
+            }
+            return View(pro);
+        }
         public IActionResult IndRec()
         {
             IEnumerable<Profiling> profilings = Context.Profiling;
             return View(profilings);
         }
+        public IActionResult VistRec()
+        {
+            IEnumerable<Profiling> profilings = Context.Profiling;
+            return View(profilings);
+        }
+
+
     }
 }
 

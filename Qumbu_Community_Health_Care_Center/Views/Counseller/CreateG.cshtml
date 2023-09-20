@@ -1,5 +1,125 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model Qumbu_Community_Health_Care_Center.Models.Profiling
 @{
+    Layout = "_CounsellorLayout";
 }
+<nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+        <span class="navbar-text">
+            Navbar text with an inline element
+        </span>
+    </div>
+</nav>
+    <form method="post" asp-action="CreateG">
+        
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <br />
+            
+            <div class="container mt-8">
+                <div class="card">
+                   @* <div class="card-header bg-secondary-emphasis">
+                        <h5 class="card-title">Group Counselling</h5>
+                    </div>*@
+                    <br />
+                    <div class="col">
+                        <a asp-action="CreateRe" class="btn btn-info w-60">Add Patient(s)</a>
+                    </div>
+                    <br />
+                    <div class="card-body">
+                        <div class="row">
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="memberName">ID Number</label>
+                                    <input type="text" class="form-control" id="memberName" placeholder=" ">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="memberName">First Name</label>
+                                    <input type="text" class="form-control" id="memberName" placeholder=" ">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="memberName">Last Name</label>
+                                    <input type="text" class="form-control" id="memberName" placeholder=" ">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="memberName">Group Name</label>
+                                    <input type="text" class="form-control" id="memberName" placeholder=" ">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="col">
+                                    <a asp-action="Delete" class="btn btn-info w-75">Remove</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <label for="address">I.Background Of The Case:</label>
+                                    <textarea class="form-control" id="bg" rows="6" placeholder=" "></textarea>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="memberName">II. Counselling Plan: </label>
+                                        @*<input type="text" class="form-control" id="memberName" placeholder=" ">*@
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="validityPeriod">(a) Counselling Approach(es)</label>
+                                        <select id="GenderDropdown" asp-for="Gender" class="form-control" id="validationName" required>
+                                            <option value="Select" class="bg-opacity-50">Select</option>
+                                            <option value="be">Behavior Counselling</option>
+                                            <option value="co">Cognitive Counselling</option>
+                                            <option value="edu">Educational Counselling</option>
+                                            <option value="hol">Holistic Counselling</option>
+                                            <option value="men">Mental Health Counselling</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label for="address">(b)Counselling Goals:</label>
+                                        <textarea class="form-control" id="gol" rows="6" placeholder=" "></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label for="address">III.Comments:</label>
+                                        <textarea class="form-control" id="com" rows="6" placeholder=" "></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label for="address">IV.Recommendations:</label>
+                                        <textarea class="form-control" id="com" rows="6" placeholder=" "></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="form-group row">
+                    <div class="col-4 offset-2 row">
+                        <div class="col">
+                            <a asp-action="IndRec" class="btn btn-info w-75">Confirm</a>
+                        </div>
+                        <div class="col">
+                            <a asp-action="CreateRe" class="btn btn-info w-75">Cancel</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+    </form>
+
+
+
