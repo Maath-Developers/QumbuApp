@@ -10,22 +10,35 @@ namespace Qumbu_Community_Health_Care_Center.Models
 
         [Required]
         [DisplayName("When was the last time you enganged in sexual intercourse?")]
-        public string? Description { get; set; }
+        public string? intercourse { get; set; }
 
         [Required]
         [DisplayName("When was the last time you had your periods?")]
 
-        public string? Descriptions { get; set; }
+        public string? period { get; set; }
 
         [Required]
         [DisplayName("Do you have a child?")]
 
-        public string? expectection { get; set; }
+        public string? child { get; set; }
 
         [Required]
         [DisplayName("Have experince any morning sickness?")]
 
         public string? experience { get; set; }
+
+        [Required]
+        [DisplayName("do you have allergies?")]
+        public string? allaegies { get; set; }
+
+        [Required]
+        [DisplayName("are you taking any medication?")]
+        public string? medication { get; set; }
+
+        [Required]
+        [DisplayName("Have you ever used any contraceptives?")]
+        public string? contraceptives { get; set; }
+
 
         [Required]
         [DisplayName("Choose any birth Control of your choice")]

@@ -17,22 +17,22 @@
 				<div class="col-12 ">
 					<div class="form-group">
 						<div class="col-4 ">
-							<label asp-for="Description"></label>
-							<input asp-for="Description" class="form-control" />
-							<span asp-validation-for="Description" class="text-danger"></span>
+							<label asp-for="intercourse"></label>
+							<input asp-for="intercourse" class="form-control" />
+							<span asp-validation-for="intercourse" class="text-danger"></span>
 						</div>
 						<div class="col-4">
-							<label asp-for="Descriptions"></label>
-							<input asp-for="Descriptions" class="form-control" />
-							<span asp-validation-for="Descriptions" class="text-danger"></span>
+							<label asp-for="period"></label>
+							<input asp-for="period" class="form-control" />
+							<span asp-validation-for="period" class="text-danger"></span>
 						</div>
 						<div class="col-4">
-							<label asp-for="expectection"></label>
-							<select id="Dropdown" asp-for="expectection" class="form-control" itemid="validationtype" required>
+							<label asp-for="child"></label>
+							<select id="Dropdown" asp-for="child" class="form-control" itemid="validationtype" required>
 								<option value="Yes">Yes</option>
 								<option value="No">No</option>
 							</select>
-							<span asp-validation-for="expectection" class="text-danger"></span>
+							<span asp-validation-for="child" class="text-danger"></span>
 						</div>
 						<div class="col-4">
 							<label asp-for=" experience"></label>
@@ -41,6 +41,30 @@
 								<option value="No">No</option>
 							</select>
 							<span asp-validation-for=" experience" class="text-danger"></span>
+						</div>
+						<div class="col-4">
+							<label asp-for=" allaegies"></label>
+							<select id="Dropdown" asp-for="allaegies" class="form-control" itemid="validationtype" required>
+								<option value="Yes">Yes</option>
+								<option value="No">No</option>
+							</select>
+							<span asp-validation-for="allaegies" class="text-danger"></span>
+						</div>
+						<div class="col-4">
+							<label asp-for="medication"></label>
+							<select id="Dropdown" asp-for="medication" class="form-control" itemid="validationtype" required>
+								<option value="Yes">Yes</option>
+								<option value="No">No</option>
+							</select>
+							<span asp-validation-for="medication" class="text-danger"></span>
+						</div>
+						<div class="col-4">
+							<label asp-for="contraceptives"></label>
+							<select id="Dropdown" asp-for="contraceptives" class="form-control" itemid="validationtype" required>
+								<option value="Yes">Yes</option>
+								<option value="No">No</option>
+							</select>
+							<span asp-validation-for="contraceptives" class="text-danger"></span>
 						</div>
 						<div class="col-4">
 							<label asp-for="type"></label>
