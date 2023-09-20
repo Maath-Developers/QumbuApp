@@ -3,60 +3,62 @@
     ViewData["Title"] = "CreateFeedback";
     Layout = "~/Views/Shared/_FamilyPlanLayout.cshtml";
 }
-
-<form method="post" asp-action="CreateFeedback">
-	<div class="border border-4 border-info p-3">
-		<div asp-validation-summary="ModelOnly" class="text-danger"></div>
-		<div class="form-group row">
-			<h2 class="text-black-50 pl-3 text-center" >Let's hear your thoughts!!! <a href="index.html"><img class="img-responsive" width="100" height="100" src="~/_Images/feedback.png" alt="#" /></a></h2>
-		</div>
-		<br />
-		<div class="row">
-			<div class="col-12">
-				<div class="form-group t">
-					<div class="col-4">
-						<label asp-for="Name"></label>
-						<input asp-for="Name" class="form-control" />
-						<span asp-validation-for="Name" class="text-danger"></span>
-					</div>
-					<div class="col-4">
-						<label asp-for="Surname"></label>
-						<input asp-for="Surname" class="form-control" />
-						<span asp-validation-for="Surname" class="text-danger"></span>
-					</div>
-					<div class="col-4">
-						<label asp-for="experience"></label>
-						<select id="Dropdown" asp-for="experience" class="form-control" itemid="validationtype" required>
-							<option value="Yes">Yes</option>
-							<option value="No">No</option>
-						</select>
-
-						<span asp-validation-for="experience" class="text-danger"></span>
-					</div>
-					
-					<div class="col-4">
-						<label asp-for="Description"></label>
-						<textarea class="form-control" rows="5" id="Description" name="Description"></textarea>
-						<span asp-validation-for="Description" class="text-danger"></span>
-					</div>
-				</div>
-				<br />
-				<br />
-				<div class="form-group row">
-					<div class="col-8 offset-2 row">
-						<div class="col">
-							<input type="submit" class="btn btn-outline-info w-25" value="feedback" />
-						</div>
-						<div class="col">
-							<a asp-action="ViewFeedback" class="btn btn-outline-info w-25">View</a>
-						</div>
-					</div>
-				</div>
-				
+<div class="row bg-white border border-4 border-info p-3 col-12">
+	<form method="post" asp-action="CreateFeedback">
+		
+			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+			<div class="form-group row">
+				<h2 class="text-black-50 pl-3 text-center">Let's hear your thoughts!!! <a href="index.html"><img class="img-responsive" width="100" height="100" src="~/_Images/feedback.png" alt="#" /></a></h2>
 			</div>
-		</div>
-	</div>
-</form>
+			<br />
+			<div class="row">
+				<div class="col-12">
+					<div class="form-group t">
+						<div class="col-4">
+							<label asp-for="Name"></label>
+							<input asp-for="Name" class="form-control" />
+							<span asp-validation-for="Name" class="text-danger"></span>
+						</div>
+						<div class="col-4">
+							<label asp-for="Surname"></label>
+							<input asp-for="Surname" class="form-control" />
+							<span asp-validation-for="Surname" class="text-danger"></span>
+						</div>
+						<div class="col-4">
+							<label asp-for="experience"></label>
+							<select id="Dropdown" asp-for="experience" class="form-control" itemid="validationtype" required>
+								<option value="Yes">Yes</option>
+								<option value="No">No</option>
+							</select>
+
+							<span asp-validation-for="experience" class="text-danger"></span>
+						</div>
+
+						<div class="col-4">
+							<label asp-for="Description"></label>
+							<textarea class="form-control" rows="5" id="Description" name="Description"></textarea>
+							<span asp-validation-for="Description" class="text-danger"></span>
+						</div>
+					</div>
+					<br />
+					<br />
+					<div class="form-group row">
+						<div class="col-8 offset-2 row">
+							<div class="col">
+								<input type="submit" class="btn btn-outline-info w-25" value="feedback" />
+							</div>
+							<div class="col">
+								<a asp-action="ViewFeedback" class="btn btn-outline-info w-25">View</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		
+	</form>
+</div>
+
 
 <Style>
 body {
