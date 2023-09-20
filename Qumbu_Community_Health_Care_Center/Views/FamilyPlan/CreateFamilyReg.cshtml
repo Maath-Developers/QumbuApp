@@ -3,85 +3,98 @@
 	ViewData["Title"] = "CreateFamilyReg";
 	Layout = "~/Views/Shared/_FamilyPlanLayout.cshtml";
 }
-<form method="post" asp-action="CreateFamilyReg">
-	<div class="border border-3 border-info p-3">
-		<div asp-validation-summary="ModelOnly" class="text-danger"></div>
-		
-		<div class="card m-4 align-content-center">
-			<div class="form-group row">
-				<h2 class="text-black-50 pe-lg-5 text-center">Let's have a chat!! <a href="index.html"><img class="img-responsive" width="100" height="100" src="~/_Images/FamilyReg.png" alt="#" /></a></h2>
-			</div>
-		
-			<div class="row ">
 
-				<div class="col-12 ">
-					<div class="form-group">
-						<div class="col-4 ">
-							<label asp-for="intercourse"></label>
-							<input asp-for="intercourse" class="form-control" />
-							<span asp-validation-for="intercourse" class="text-danger"></span>
-						</div>
-						<div class="col-4">
-							<label asp-for="period"></label>
-							<input asp-for="period" class="form-control" />
-							<span asp-validation-for="period" class="text-danger"></span>
-						</div>
-						<div class="col-4">
-							<label asp-for="child"></label>
-							<select id="Dropdown" asp-for="child" class="form-control" itemid="validationtype" required>
-								<option value="Yes">Yes</option>
-								<option value="No">No</option>
-							</select>
-							<span asp-validation-for="child" class="text-danger"></span>
-						</div>
-						<div class="col-4">
-							<label asp-for=" experience"></label>
-							<select id="Dropdown" asp-for="experience" class="form-control" itemid="validationtype" required>
-								<option value="Yes">Yes</option>
-								<option value="No">No</option>
-							</select>
-							<span asp-validation-for=" experience" class="text-danger"></span>
-						</div>
-						<div class="col-4">
-							<label asp-for=" allaegies"></label>
-							<select id="Dropdown" asp-for="allaegies" class="form-control" itemid="validationtype" required>
-								<option value="Yes">Yes</option>
-								<option value="No">No</option>
-							</select>
-							<span asp-validation-for="allaegies" class="text-danger"></span>
-						</div>
-						<div class="col-4">
-							<label asp-for="medication"></label>
-							<select id="Dropdown" asp-for="medication" class="form-control" itemid="validationtype" required>
-								<option value="Yes">Yes</option>
-								<option value="No">No</option>
-							</select>
-							<span asp-validation-for="medication" class="text-danger"></span>
-						</div>
-						<div class="col-4">
-							<label asp-for="contraceptives"></label>
-							<select id="Dropdown" asp-for="contraceptives" class="form-control" itemid="validationtype" required>
-								<option value="Yes">Yes</option>
-								<option value="No">No</option>
-							</select>
-							<span asp-validation-for="contraceptives" class="text-danger"></span>
-						</div>
-						<div class="col-4">
-							<label asp-for="type"></label>
-							<select id="dropdown" asp-for="type" class="form-control" itemid="validationtype" required>
-								<option value="Pills">Pills</option>
-								<option value="Injection">Injection</option>
-								<option value="Loop">Loop</option>
-								<option value="Implant">Implant</option>
-								<option value="Condoms">Condoms</option>
-								<option value="Vigina Ring">Vigina Ring</option>
-							</select>
-							<span asp-validation-for="type" class="text-danger"></span>
-						</div>
-					</div>
-					<br />
-					<br />
-					<div class="form-group row">
+<div class="row bg-white border border-4 border-info p-3 col-12">
+	<div class="form-group row">
+		<h2 class="text-black-50 pe-lg-5 text-center">Let's have a chat!! <a href="index.html"><img class="img-responsive" width="100" height="100" src="~/_Images/FamilyReg.png" alt="#" /></a></h2>
+	</div>
+	<br />
+	<br />
+	<form method="post" asp-action="CreateFamilyReg">
+
+		<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+		<br />
+		<br />
+			<div class="row">
+			  <div class="form-group col-4 ">
+				<label asp-for="intercourse"></label>
+				<select id="Dropdown" asp-for="intercourse" class="form-control" itemid="validationtype" required>
+					<option value="Days">2/3 days back</option>
+					<option value="1 week">A Week</option>
+					<option value="2 weeks">2 Weeks back</option>
+					<option value="Month">Been Month</option>
+
+				</select>
+				<span asp-validation-for="child" class="text-danger"></span>
+			 </div>
+			  <div class="form-group col-3">
+				<label asp-for="period"></label>
+				<input asp-for="period" class="form-control" />
+				<span asp-validation-for="period" class="text-danger"></span>
+			 </div>
+			</div>
+			<div class="row">
+			  <div class="form-group col-4">
+				<label asp-for="child"></label>
+				<select id="Dropdown" asp-for="child" class="form-control" itemid="validationtype" required>
+					<option value="Yes">Yes</option>
+					<option value="No">No</option>
+				</select>
+				<span asp-validation-for="child" class="text-danger"></span>
+			</div>
+			  <div class="form-group col-3">
+				<label asp-for=" experience"></label>
+				<select id="Dropdown" asp-for="experience" class="form-control" itemid="validationtype" required>
+					<option value="Yes">Yes</option>
+					<option value="No">No</option>
+				</select>
+				<span asp-validation-for=" experience" class="text-danger"></span>
+			</div>
+			</div>
+			<div class="row">
+			  <div class="form-group col-4">
+				<label asp-for=" allaegies"></label>
+				<select id="Dropdown" asp-for="allaegies" class="form-control" itemid="validationtype" required>
+					<option value="Yes">Yes</option>
+					<option value="No">No</option>
+				</select>
+				<span asp-validation-for="allaegies" class="text-danger"></span>
+			</div>
+			  <div class="form-group col-3">
+				<label asp-for="medication"></label>
+				<select id="Dropdown" asp-for="medication" class="form-control" itemid="validationtype" required>
+					<option value="Yes">Yes</option>
+					<option value="No">No</option>
+				</select>
+				<span asp-validation-for="medication" class="text-danger"></span>
+			</div>
+			</div>
+			<div class="row">
+
+			  <div class="form-group col-4">
+				<label asp-for="contraceptives"></label>
+				<select id="Dropdown" asp-for="contraceptives" class="form-control" itemid="validationtype" required>
+					<option value="Yes">Yes</option>
+					<option value="No">No</option>
+				</select>
+				<span asp-validation-for="contraceptives" class="text-danger"></span>
+			</div>
+			  <div class="form-group col-3">
+				<label asp-for="type"></label>
+				<select id="dropdown" asp-for="type" class="form-control" itemid="validationtype" required>
+					<option value="Pills">Pills</option>
+					<option value="Injection">Injection</option>
+					<option value="Loop">Loop</option>
+					<option value="Implant">Implant</option>
+					<option value="Condoms">Condoms</option>
+					<option value="Vigina Ring">Vigina Ring</option>
+				</select>
+				<span asp-validation-for="type" class="text-danger"></span>
+			</div>
+			</div>
+			<br />
+			<br />
+			<div class="form-group row">
 						<div class="col-8 offset-2 row">
 							<div class="col">
 								<input type="submit" class="btn btn-outline-info w-25" value="Submit" />
@@ -91,11 +104,12 @@
 							</div>
 						</div>
 					</div>
-					<br />
-					<br />
-				</div>
-			</div>
-		</div>
-	</div>
-</form>
+			<br />
+			<br />
+			
+		
+
+	</form>
+</div>
+
 
