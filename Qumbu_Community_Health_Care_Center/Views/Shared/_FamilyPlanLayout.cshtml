@@ -44,17 +44,18 @@
 								<i class="align-middle" data-feather="list"></i> <span class="align-middle">Dashboard</span>
 							</a>
 						</li>
+						<li class="sidebar-item">
+							<a asp-controller="FamilyPlan" asp-action="CreateAppointment" class="sidebar-link">
+								<i class="align-middle" data-feather="calendar"></i> <span class="align-middle">Back</span>
+							</a>
+						</li>
 
 						<li class="sidebar-item">
 							<a asp-controller="FamilyPlan" asp-action="VievContraceptives" class="sidebar-link">
 								<i class="align-middle" data-feather="thermometer"></i> <span class="align-middle">Contraceptives</span>
 							</a>
 						</li>
-						@*<li class="sidebar-item">
-							<a asp-controller="FamilyPlan" asp-action="CreateAppointment" class="sidebar-link">
-								<i class="align-middle" data-feather="calendar"></i> <span class="align-middle">Appointment</span>
-							</a>
-						</li>*@
+						
 
 						<li class="sidebar-item">
 							<a asp-controller="FamilyPlan" asp-action="CreateFamilyReg" class="sidebar-link">
@@ -70,6 +71,11 @@
 						<li class="sidebar-item">
 							<a asp-controller="FamilyPlan" asp-action="ViewReports" class="sidebar-link">
 								<i class="align-middle" data-feather="file"></i> <span class="align-middle">Report</span>
+							</a>
+						</li>
+						<li class="sidebar-item">
+							<a asp-controller="Home" asp-action="Landing2" class="sidebar-link">
+								<i class="align-middle" data-feather="calendar"></i> <span class="align-middle">Back</span>
 							</a>
 						</li>
 						
@@ -402,6 +408,11 @@
 						<li class="sidebar-item">
 							<a asp-controller="FamilyPlan" asp-action="NurseAppointment" class="sidebar-link">
 								<i class="align-middle" data-feather="folder"></i> <span class="align-middle">Manage Bookings</span>
+							</a>
+						</li>
+						<li class="sidebar-item">
+							<a asp-controller="FamilyPlan" asp-action="CreateFamilyReg" class="sidebar-link">
+								<i class="align-middle" data-feather="folder"></i> <span class="align-middle">Screening</span>
 							</a>
 						</li>
 

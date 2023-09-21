@@ -14,45 +14,76 @@
             <a href="index.html"><img class="img-responsive" width="250" height="140" src="~/_Images/Fnurse.png" alt="#" /></a>
 
         </h1>
-        @* <p class="align-text-bottom"><span>YOU WANNA KNOW MORE ABOUT BIRTH CONTROLS? CLICK ON CONTRACEPTIVE!!</span></p><span class="auto-type"></span>*@
-
+        
     </div>
+    <style>
+        #dash-con {
+            background: rgba(59, 198, 169, 0.8);
+            box-shadow: 0 8px 32px 0 rgba(21, 88, 119, 0.87);
+            backdrop-filter: blur( 0px );
+            -webkit-backdrop-filter: blur( 0px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+        }
 
-
-
-    <head>
-        <style>
-            .image-container {
-                display: flex;
-                justify-content: space-between;
+            #dash-con:hover {
+                background: rgba(60, 165, 61, 0.8);
+                box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+                backdrop-filter: blur( 20px );
+                -webkit-backdrop-filter: blur( 20px );
+                border-radius: 10px;
+                border: 1px solid rgba( 255, 255, 255, 0.18 );
             }
+    </style>
 
-            .image {
-                width: 50%;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="image-container">
-            <a href="index.html"><img class="img-responsive" width="500" height="400" src="~/_Images/logo/FDashaboard.jpg" alt="#" /></a>
 
-            <a href="index.html"><img class="img-responsive" width="500" height="420" src="~/_Images/logo/FDashboard1.png" alt="#" /></a>
 
+    <div class="container-fluid pt-4 px-4">
+
+        <div class="row g-4">
+            <div class=" col-sm-6 col-xl-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <div id="dash-con" class="dash-con rounded d-flex align-items-center justify-content-between p-4">
+                    <img src="~/_Images/ContraceptiveDash.png" style="width: 79px" />
+                    <a asp-controller="FamilyPlan" asp-action="VievContraceptives">
+                        <h4 class="mb-2">Bookings<span class="badge bg-primary rounded-pill text-white"></span></h4>
+
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="col-sm-6 col-xl-3" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                <div id="dash-con" class="dash-con rounded d-flex align-items-center justify-content-between p-4">
+                    <img src="~/Image/File.png" style="width: 65px" />
+                    <a asp-controller="FamilyPlan" asp-action="CreateFamilyReg">
+                        <h4 class="mb-2">Screening<span class="badge bg-primary rounded-pill text-white"></span></h4>
+
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="col-sm-6 col-xl-3" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                <div id="dash-con" class=" dash-con rounded d-flex align-items-center justify-content-between p-4">
+                    <img src="~/Image/Alerts.png" style="width: 95px" />
+                    <a asp-controller="FamilyPlan" asp-action="CreateFeedback">
+                        <h4 class="mb-2">Manage File<span class="badge bg-primary rounded-pill text-white"></span></h4>
+
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xl-3" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                <div id="dash-con" class="dash-con rounded d-flex align-items-center justify-content-between p-4">
+                    <img src="~/Image/Message.png" style="width: 65px" />
+                    <div class="ms-3">
+                        <h4 class="mb-2">Refferals</h4>
+
+                    </div>
+                </div>
+            </div>
         </div>
-    </body>
-
-
-    <script>
-        var typed = new typed(".auto-type", {
-            strings: ["YOU WANNA KNOW MORE ABOUT BIRTH CONTROLS?....", " CLICK ON CONTRACEPTIVE!!"]
-                        typesSpeed: 30
-                        backSpeed: 130
-                        loop = true
-        })
-    </script>
-    <script>
-        $('.carousel').carousel()
-    </script>
+    </div>
+    
 }
 @if (User.IsInRole("Doctor"))
 {
