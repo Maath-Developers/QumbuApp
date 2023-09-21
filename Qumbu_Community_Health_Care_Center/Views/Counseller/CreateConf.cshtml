@@ -2,14 +2,12 @@
 @{
     Layout = "_CounsellorLayout";
 }
-<span class="border border-4">
+
     <form method="post" asp-action="CreateConf">
-        <div class="border p-3">
+        
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <br />
-            <div class="form-group row">
-                <h2 class="text-black-50 pl-3">Add New Patient</h2>
-            </div>
+            
             <div class="container mt-8">
                 <div class="card">
                     <div class="card-header bg-secondary-emphasis">
@@ -22,13 +20,13 @@
                                     <label for="address">I.Background Of The Case:</label>
                                     <textarea class="form-control" id="bg" rows="6" placeholder=" "></textarea>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-8">
                                     <div class="form-group">
                                         <label for="memberName">II. Counselling Plan: </label>
                                         @*<input type="text" class="form-control" id="memberName" placeholder=" ">*@
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-8">
                                     <div class="form-group">
                                         <label for="validityPeriod">(a) Counselling Approaches</label>
                                         <select id="GenderDropdown" asp-for="Gender" class="form-control" id="validationName" required>
@@ -62,21 +60,19 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <br />
-                <div class="form-group row">
-                    <div class="col-4 offset-2 row">
-                        <div class="col">
-                            <a asp-action="IndRec" class="btn btn-info w-75">Confirm</a>
-                        </div>
-                        <div class="col">
-                            <a asp-action="CreateRe" class="btn btn-info w-75">Cancel</a>
+                    <div class="form-group row">
+                        <div class="col-4 offset-2 row">
+                            <div class="col">
+                                <a asp-action="IndRec" class="btn btn-info w-75">Confirm</a>
+                            </div>
+                            <div class="col">
+                                <a asp-action="CreateRe" class="btn btn-info w-75">Cancel</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        
     </form>
-</span>
 
 

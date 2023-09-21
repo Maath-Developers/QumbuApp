@@ -2,56 +2,53 @@
 @{
 	Layout = "_CounsellorLayout";
 }
-<span class="border border-4">
+
 	<form method="post" asp-action="CreateP">
-		<div class="border p-3">
+		
 			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 			<br />
-			<div class="form-group row">
-				<h2 class="text-black-50 pl-3">Add New Patient</h2>
-			</div>
             <div class="container mt-8">
                 <div class="card">
                     <div class="card-header bg-secondary-emphasis">
-                        <h5 class="card-title">Peronal Details</h5>
+                        <h5 class="card-title">Patient Details</h5>
                     </div>
                     <div class="card-body">
                         <div class="row">
 
                             <div class="col-md-3">
                                 <div class="form-group">
-                                    <label for="memberName">ID Number</label>
-                                    <input type="text" class="form-control" id="memberName" placeholder=" ">
+                                    <label for="ID">ID Number</label>
+                                    <input type="text" class="form-control" id="ID" placeholder=" ">
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group">
-                                    <label for="memberName">Email Address</label>
-                                    <input type="text" class="form-control" id="memberName" placeholder=" ">
+                                    <label for="email">Email Address</label>
+                                    <input type="text" class="form-control" id="email" placeholder=" ">
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group">
-                                    <label for="memberName">Cell</label>
-                                    <input type="text" class="form-control" id="memberName" placeholder=" ">
+                                    <label for="Cell">Cell</label>
+                                    <input type="text" class="form-control" id="Cell" placeholder=" ">
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group">
-                                    <label for="memberName">First Name</label>
-                                    <input type="text" class="form-control" id="memberName" placeholder=" ">
+                                    <label for="FirstName">First Name</label>
+                                    <input type="text" class="form-control" id="FirstName" placeholder=" ">
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group">
-                                    <label for="memberName">Last Name</label>
-                                    <input type="text" class="form-control" id="memberName" placeholder=" ">
+                                    <label for="LastName">Last Name</label>
+                                    <input type="text" class="form-control" id="LastName" placeholder=" ">
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label for="validityPeriod">Gender</label>
-                                    <select id="GenderDropdown" asp-for="Gender" class="form-control" id="validationName" required>
+                                    <select id="GenderDropdown" asp-for="Gender" class="form-control" id="Gender" required>
                                         <option value="Select" class="bg-opacity-50">Select</option>
                                         <option value="Male">Male</option>
                                         <option value="Female">Female</option>
@@ -61,7 +58,7 @@
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label for="dateOfBirth">Date</label>
-                                    <input type="date" class="form-control" id="dateOfBirth">
+                                    <input type="date" class="form-control" id="Date">
                                 </div>
                             </div>
                             <div class="col-md-3">
@@ -72,41 +69,36 @@
                             </div>
                             <div class="col-md-8">
                                 <div class="form-group">
-                                    <label for="address">Address:</label>
-                                    <textarea class="form-control" id="address" rows="4" placeholder="Enter Address"></textarea>
+                                    <label for="Address">Address:</label>
+                                    <textarea class="form-control" id="Address" rows="4" placeholder="Enter Address"></textarea>
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group">
-                                    <label for="validityPeriod">Gender</label>
-                                    <select id="GenderDropdown" asp-for="Gender" class="form-control" id="validationName" required>
+                                    <label for="validityPeriod">Status</label>
+                                    <select id="GenderDropdown" asp-for="Gender" class="form-control" id="Status" required>
                                         <option value="Select" class="bg-opacity-50">Select</option>
-                                        <option value="Male">Regular</option>
-                                        <option value="Female">New</option>
-                                        <option value="Female">Visitor</option>
+                                        <option value="Status">Regular</option>
+                                        <option value="Status">New</option>
+                                        <option value="Status">Visitor</option>
                                     </select>
                                 </div>
                             </div>
-
-                           
                         </div>
-
+                        <div class="form-group row">
+                              <div class="col-4 offset-2 row">
+                                  <div class="col">
+                                      <input type="submit" class="btn btn-info w-75" value="Submit" />
+                                  </div>
+                                  <div class="col">
+                                       <a asp-action="Profile" class="btn btn-info w-75">Cancel</a>
+                                  </div>
+                              </div>
+                        </div>
                     </div>
                 </div>
-
+                
             </div>
-            <br />
-            <div class="form-group row">
-                <div class="col-4 offset-2 row">
-                    <div class="col">
-                        <input type="submit" class="btn btn-info w-75" value="Submit" />
-                    </div>
-                    <div class="col">
-                        <a asp-action="Profile" class="btn btn-info w-75">Cancel</a>
-                    </div>
-                </div>
-            </div>
-        </div>
 	</form>
-</span>
+
 
