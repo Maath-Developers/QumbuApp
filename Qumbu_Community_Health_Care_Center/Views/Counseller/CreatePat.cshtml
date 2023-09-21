@@ -1,37 +1,33 @@
 ﻿@model Qumbu_Community_Health_Care_Center.Models.Bookings
-@*@{
+@{
 	Layout = "_CounsellorLayout";
-}*@
-<span class="border border-4">
+}
 	<form method="post" asp-action="Create">
-		<div class="border p-3">
+		<div class="border p-5">
 			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 			<br />
 			<div class="form-group row">
-				<h2 class="text-black-50 pl-3">Student Details</h2>
+				<h2 class="text-black-50 pl-3">Patient Details</h2>
 			</div>
 			<div class="row">
-			<div class="card" style="width: 14rem; height: 50px">
-				<img class="img-responsive rounded-circle" src="~/images/Profile-Photo.png" alt="#" />
-				<div class="card-body">
-					
-				</div>
+			<div class="card" style="width: 18rem; height: 250px">
+				<img class="img-responsive rounded-circle" width="150" height="150" src="~/images/Profile-Photo.png" alt="#" />
 			</div>
-			<div class="card" style="width: 14rem; height: 50px">
+			<div class="card" style="width: 18rem; height: 250px">
 				<div class="col-md-3">
 					<div class="form-group">
 						<label for="memberName">Counselling Remarks:</label>
 						@*<input type="text" class="form-control" id="memberName" placeholder=" ">*@
 					</div>
-					<br />
+					
 					<div class="form-group row">
 						<div class="col-4 offset-2 row">
 							<div class="col">
-								<a asp-action="Record" class="btn btn-danger w-60">View History</a>
+								<a asp-action="Record" class="btn btn-info w-60">View History</a>
 							</div>
 							<br />
 							<div class="col">
-								<a asp-action="CreateP" class="btn btn-danger w-60">Start Counselling</a>
+								<a asp-action="CreateP" class="btn btn-info w-60">Start Counselling</a>
 							</div>
 						</div>
 					</div>
@@ -67,16 +63,9 @@
 							<input asp-for="Contact" class="form-control" />
 							<span asp-validation-for="Contact" class="text-danger"></span>
 						</div>*@
-						<br />
-						<br />
-						<br />
-						<br />
-						<br />
-						<br />
-						<br />
 						<div class="col-md-3">
 							<div class="form-group">
-								<label for="validityPeriod">Purpose</label>
+								<label for="validityPeriod">Purpose:</label>
 								<select id="GenderDropdown" asp-for="Departments" class="form-control" id="validationName" required>
 									<option value="Select" class="bg-opacity-50">Select</option>
 									<option value="Vac">Excuse Letter</option>
@@ -89,7 +78,16 @@
 					</div>
 				</div>
 			</div>
+			<div class="form-group row">
+				<div class="col-4 offset-2 row">
+					<div class="col">
+						<input type="submit" class="btn btn-info w-75" value="Submit" />
+					</div>
+					<div class="col">
+						<a asp-action="Profile" class="btn btn-info w-75">Cancel</a>
+					</div>
+				</div>
+			</div>
 		</div>
 	</form>
-</span>
 

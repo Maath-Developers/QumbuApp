@@ -125,15 +125,15 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
 
         public IActionResult Delete(int? ID)
         {
-            var obj = Context.Bookings.Find(ID);
+            var obj = Context.Profiling.Find(ID);
             if (obj == null)
             {
                 return NotFound();
             }
 
-            Context.Bookings.Remove(obj);
+            Context.Profiling.Remove(obj);
             Context.SaveChanges();
-            return RedirectToAction("Booking");
+            return RedirectToAction("Profile");
         }
         public IActionResult UpdateRe(int? ID)
         {
@@ -141,7 +141,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             {
                 return NotFound();
             }
-            var obj = Context.PatientReg.Find(ID);
+            var obj = Context.Profiling.Find(ID);
             if (obj == null)
             {
                 return NotFound();

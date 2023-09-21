@@ -18,7 +18,7 @@
             @* <a asp-controller="Counseller" asp-action="Create" class="btn btn-primary">Create New Appointment</a>*@
         </div>
         <div class="col-6 text-left">
-            <a asp-controller="Counseller" asp-action="CreateP" class="btn btn-primary">Start Counselling</a>
+            <a asp-controller="Counseller" asp-action="CreateP" class="btn btn-info">Start Counselling</a>
         </div>
     </div>
     <br />
@@ -61,7 +61,7 @@
                         <td width="20%">@pro.Status</td>
                         <td>
                             <div class="w-50 btn-group" role="group">
-                                <a asp-controller="Counseller" asp-action="Delete" asp-route-ID="@pro.ProfileID" class="btn btn-primary mx-1">View</a>
+                                <a asp-controller="Counseller" asp-action="Delete" asp-route-ID="@pro.ProfileID" class="btn btn-info mx-1">View</a>
                             </div>
                         </td>
                     </tr>
