@@ -2,13 +2,16 @@
 @{
 	Layout = "_CounsellorLayout";
 }
+<div class="mt-2 p-2 bg-primary text-center text-white rounded">
+
+
+</div>
+<div class="mt-2 p-2 bg-primary text-center text-white-50 rounded">
+	<h2>Patient Details</h2>
+</div>
 	<form method="post" asp-action="Create">
 		<div class="border p-5">
 			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
-			<br />
-			<div class="form-group row">
-				<h2 class="text-black-50 pl-3">Patient Details</h2>
-			</div>
 			<div class="row">
 			<div class="card" style="width: 18rem; height: 250px">
 				<img class="img-responsive rounded-circle" width="150" height="150" src="~/images/Profile-Photo.png" alt="#" />
@@ -43,33 +46,13 @@
 			<div class="row">
 				<div class="col-12">
 					<div class="form-group">
-						@*<div class="col-4">
-							<label asp-for="Names"></label>
-							<input asp-for="Names" class="form-control" />
-							<span asp-validation-for="Names" class="text-danger"></span>
-						</div>
-						<div class="col-4">
-							<label asp-for="Date"></label>
-							<input asp-for="Date" class="form-control" />
-							<span asp-validation-for="Date" class="text-danger"></span>
-						</div>
-						<div class="col-4">
-							<label asp-for="Time"></label>
-							<input asp-for="Time" class="form-control" />
-							<span asp-validation-for="Time" class="text-danger"></span>
-						</div>
-						<div class="col-4">
-							<label asp-for="Contact"></label>
-							<input asp-for="Contact" class="form-control" />
-							<span asp-validation-for="Contact" class="text-danger"></span>
-						</div>*@
 						<div class="col-md-3">
 							<div class="form-group">
 								<label for="validityPeriod">Purpose:</label>
 								<select id="GenderDropdown" asp-for="Departments" class="form-control" id="validationName" required>
 									<option value="Select" class="bg-opacity-50">Select</option>
-									<option value="Vac">Excuse Letter</option>
-									<option value="Pre"></option>
+									<option value="e">Excuse Letter</option>
+									<option value="c">Clearance</option>
 									<option value="Fam"></option>
 									<option value="Coun"></option>
 								</select>

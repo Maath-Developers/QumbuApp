@@ -2,14 +2,21 @@
 @{
     Layout = "_CounsellorLayout";
 }
+<div class="mt-2 p-2 bg-primary text-center text-white rounded">
+
+
+</div>
+<div class="mt-2 p-2 bg-primary text-center text-white-50 rounded">
+    <h2>Patients Profile</h2>
+</div>
     <div class="container p-3">
         <div class="row pt-4">
             <div class="col-6">
                 <h2 class="text-primary">Patients Profile</h2>
             </div>
-            <div class="col-10 text-right">
+           @* <div class="col-10 text-right">
                 <a asp-controller="Counseller" asp-action="CreateP" style="width:100%"></a>
-            </div>
+            </div>*@
             <div class="col-6 text-right">
                 <div class="search-container">
                     <input type="text" id="search-input" placeholder="Search...">
@@ -20,6 +27,10 @@
                 </div>
                @* <a asp-controller="Counseller" asp-action="Create" class="btn btn-primary">Create New Appointment</a>*@
             </div>
+            <br />
+        <div class="col-10 text-right">
+            <a asp-controller="Counseller" asp-action="CreateP" style="width:100%"></a>
+        </div>
             <div class="col-6 text-left">
                 <a asp-controller="Counseller" asp-action="CreateP" class="btn btn-info">Add Patient</a>
             </div>

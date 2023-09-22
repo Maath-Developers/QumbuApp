@@ -3,12 +3,14 @@
 @{
     Layout = "_CounsellorLayout";
 }
+<div class="mt-2 p-2 bg-primary text-center text-white rounded">
+</div>
+<div class="mt-2 p-2 bg-primary text-center text-white-50 rounded">
+    <h2>Refered Patients</h2>
+</div>
 <form method="post" asp-action="CreateF">
     <div class="border p-3">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-        <div class="form-group row">
-            <h2 class="text-black-50 pl-3">Add Referred Patients</h2>
-        </div>
         <div class="container mt-8">
             <div class="card">
                 <div class="card-header bg-secondary-emphasis">

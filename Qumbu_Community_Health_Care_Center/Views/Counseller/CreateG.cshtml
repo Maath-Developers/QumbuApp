@@ -2,18 +2,17 @@
 @{
     Layout = "_CounsellorLayout";
 }
-<
+<div class="mt-2 p-2 bg-primary text-center text-white rounded">
+
+
+</div>
+<div class="mt-2 p-2 bg-primary text-center text-white-50 rounded">
+    <h2>Group Counselling</h2>
+</div>
     <form method="post" asp-action="CreateG">
-        
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <br />
-            
             <div class="container mt-8">
                 <div class="card">
-                    <div class="card-header bg-secondary-emphasis">
-                        <h5 class="card-title">Group Counselling</h5>
-                    </div>
-                    <br />
                     <div class="col">
                         <a asp-action="CreateRe" class="btn btn-info w-60">Add Patient(s)</a>
                     </div>
@@ -23,28 +22,30 @@
 
                             <div class="col-md-3">
                                 <div class="form-group">
-                                    <label for="memberName">ID Number</label>
-                                    <input type="text" class="form-control" id="memberName" placeholder=" ">
+                                    <label for="Group">GroupName</label>
+                                    <input type="text" class="form-control" id="GroupName" placeholder=" ">
+                                     <span asp-validation-for="GroupName" class="text-danger"></span>
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group">
-                                    <label for="memberName">First Name</label>
-                                    <input type="text" class="form-control" id="memberName" placeholder=" ">
+                                    <label for="CounsellingApproach">Counselling Approach</label>
+                                    <input type="text" class="form-control" id="CounsellingApproach" placeholder=" ">
+                                    <span asp-validation-for="CounsellingApproach" class="text-danger"></span>
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group">
-                                    <label for="memberName">Last Name</label>
-                                    <input type="text" class="form-control" id="memberName" placeholder=" ">
+                                    <label for="Date">Date</label>
+                                    <input type="text" class="form-control" id="Date" placeholder=" ">
                                 </div>
                             </div>
-                            <div class="col-md-3">
+                           @* <div class="col-md-3">
                                 <div class="form-group">
                                     <label for="memberName">Group Name</label>
                                     <input type="text" class="form-control" id="memberName" placeholder=" ">
                                 </div>
-                            </div>
+                            </div>*@
                             <div class="col-md-3">
                                 <div class="col">
                                     <a asp-action="Delete" class="btn btn-info w-75">Remove</a>
@@ -80,20 +81,23 @@
                                 </div>
                                 <div class="col-md-8">
                                     <div class="form-group">
-                                        <label for="address">(b)Counselling Goals:</label>
-                                        <textarea class="form-control" id="gol" rows="6" placeholder=" "></textarea>
+                                        <label for="Goals">(b)Counselling Goals:</label>
+                                        <textarea class="form-control" id="Goals" rows="6" placeholder=" "></textarea>
+                                        <span asp-validation-for="Goals" class="text-danger"></span>
                                     </div>
                                 </div>
                                 <div class="col-md-8">
                                     <div class="form-group">
                                         <label for="address">III.Comments:</label>
                                         <textarea class="form-control" id="com" rows="6" placeholder=" "></textarea>
+                                        <span asp-validation-for="comments" class="text-danger"></span>
                                     </div>
                                 </div>
                                 <div class="col-md-8">
                                     <div class="form-group">
                                         <label for="address">IV.Recommendations:</label>
                                         <textarea class="form-control" id="com" rows="6" placeholder=" "></textarea>
+                                         <span asp-validation-for="recom" class="text-danger"></span>
                                     </div>
                                 </div>
                             </div>

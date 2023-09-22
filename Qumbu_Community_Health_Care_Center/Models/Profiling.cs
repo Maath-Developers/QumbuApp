@@ -27,5 +27,11 @@ namespace Qumbu_Community_Health_Care_Center.Models
         public string? DOB { get; set; }
         public string? Status { get; set; }
         public string? Address { get; set; }
+        [DisplayName("Counselling Goals")]
+        public string? Goals { get; set; }
+        [DisplayName("Comments")]
+        public string? comments { get; set; }
+        [DisplayName("Recommendations")]
+        public string? recom { get; set; }
     }
 }

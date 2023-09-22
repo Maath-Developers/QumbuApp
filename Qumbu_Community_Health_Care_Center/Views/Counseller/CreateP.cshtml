@@ -2,16 +2,16 @@
 @{
 	Layout = "_CounsellorLayout";
 }
-
-	<form method="post" asp-action="CreateP">
-		
+<div class="mt-2 p-2 bg-primary text-center text-white rounded">
+    
+</div>
+<div class="mt-2 p-2 bg-primary text-center text-white-50 rounded">
+    <h2>Patients Profile</h2>
+</div>
+<form method="post" asp-action="CreateP" class="form-horizontal">
 			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
-			<br />
             <div class="container mt-8">
                 <div class="card">
-                    <div class="card-header bg-secondary-emphasis">
-                        <h5 class="card-title">Patient Details</h5>
-                    </div>
                     <div class="card-body">
                         <div class="row">
 
@@ -19,30 +19,35 @@
                                 <div class="form-group">
                                     <label for="ID">ID Number</label>
                                     <input type="text" class="form-control" id="ID" placeholder=" ">
+                                    <span asp-validation-for="ID" class="text-danger"></span>
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label for="email">Email Address</label>
                                     <input type="text" class="form-control" id="email" placeholder=" ">
+                                    <span asp-validation-for="email" class="text-danger"></span>
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label for="Cell">Cell</label>
                                     <input type="text" class="form-control" id="Cell" placeholder=" ">
+                                    <span asp-validation-for="Cell" class="text-danger"></span>
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label for="FirstName">First Name</label>
                                     <input type="text" class="form-control" id="FirstName" placeholder=" ">
+                                    <span asp-validation-for="FirstName" class="text-danger"></span>
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label for="LastName">Last Name</label>
                                     <input type="text" class="form-control" id="LastName" placeholder=" ">
+                                    <span asp-validation-for="LastName" class="text-danger"></span>
                                 </div>
                             </div>
                             <div class="col-md-3">
@@ -59,18 +64,21 @@
                                 <div class="form-group">
                                     <label for="dateOfBirth">Date</label>
                                     <input type="date" class="form-control" id="Date">
+                                    <span asp-validation-for="Date" class="text-danger"></span>
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label for="dateOfBirth">D.O.B</label>
                                     <input type="date" class="form-control" id="dateOfBirth">
+                                    <span asp-validation-for="DOB" class="text-danger"></span>
                                 </div>
                             </div>
                             <div class="col-md-8">
                                 <div class="form-group">
                                     <label for="Address">Address:</label>
                                     <textarea class="form-control" id="Address" rows="4" placeholder="Enter Address"></textarea>
+                                    <span asp-validation-for="Address" class="text-danger"></span>
                                 </div>
                             </div>
                             <div class="col-md-3">
@@ -97,8 +105,7 @@
                         </div>
                     </div>
                 </div>
-                
             </div>
-	</form>
+</form>
 
 
