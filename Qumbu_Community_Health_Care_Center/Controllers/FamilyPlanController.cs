@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Qumbu_Community_Health_Care_Center.Areas.Identity.Data;
 using Qumbu_Community_Health_Care_Center.Models;
-
+using System.Security.Claims;
 
 namespace Qumbu_Community_Health_Care_Center.Controllers
 {
@@ -12,7 +12,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         {
             dbContext = dbC;
         }
-        
+
         public IActionResult Patient()
         {
             return View();
@@ -29,40 +29,40 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         {
             return View();
         }
-		public IActionResult CreateAppointment()
-		{
+        public IActionResult CreateAppointment()
+        {
 
-			return View();
-		}
+            return View();
+        }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult CreateAppointment(Appointment appointment)
-		{
-            if(ModelState.IsValid)
+        {
+            if (ModelState.IsValid)
             {
                 dbContext.Appointments.Add(appointment);
                 dbContext.SaveChanges();
                 return RedirectToAction("ViewAppointment");
             }
-			return View(appointment);
-		}
+            return View(appointment);
+        }
 
 
         public ActionResult ViewAppointment()
         {
-            IEnumerable<Appointment>oblList=dbContext.Appointments;
+            IEnumerable<Appointment> oblList = dbContext.Appointments;
             return View(oblList);
-        } 
+        }
 
 
 
 
         public ActionResult VievContraceptives()
         {
-            IEnumerable<Appointment>Contraceptives=dbContext.Appointments;
+            IEnumerable<Appointment> Contraceptives = dbContext.Appointments;
             return View(Contraceptives);
         }
-        public ActionResult CreateScreening() 
+        public ActionResult CreateScreening()
         {
             return View();
         }
@@ -73,18 +73,18 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             return View();
         }
 
-		[HttpPost]
-		[ValidateAntiForgeryToken]
-		public IActionResult CreateFeedback(Feedbacks feedback)
-		{
-			if (ModelState.IsValid)
-			{
-				dbContext.Feedbacks.Add(feedback);
-				dbContext.SaveChanges();
-				return RedirectToAction("ViewFeedback");
-			}
-			return View(feedback);
-		}
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult CreateFeedback(Feedbacks feedback)
+        {
+            if (ModelState.IsValid)
+            {
+                dbContext.Feedbacks.Add(feedback);
+                dbContext.SaveChanges();
+                return RedirectToAction("ViewFeedback");
+            }
+            return View(feedback);
+        }
         public ActionResult ViewFeedback()
         {
             IEnumerable<Feedbacks> feedlist = dbContext.Feedbacks;
@@ -96,9 +96,13 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult CreateFamilyReg(FamilyReg familyReg)
+
+        public async Task<IActionResult> CreateFamilyReg([Bind("FamilyRegId,Date,Status,intercourse,period,child, allaegies, medication,contraceptives, type ")] FamilyReg familyReg)
         {
-            if (ModelState.IsValid)
+            var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
+			familyReg.PatientID = user;
+
+			if (ModelState.IsValid)
             {
                 dbContext.FamilyReg.Add(familyReg);
                 dbContext.SaveChanges();
