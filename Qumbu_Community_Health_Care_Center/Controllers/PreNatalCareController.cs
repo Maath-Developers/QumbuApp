@@ -118,6 +118,21 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
 
             return View(obj);
         }
+        [HttpGet]
+        public IActionResult UpdateUltrasound(int? ID)
+        {
+            if (ID == null || ID == 0)
+            {
+                return NotFound();
+            }
+            var obj = dbContext.Ultrasounds.Find(ID);
+            if (obj == null)
+            {
+                return NotFound();
+            }
+
+            return View(obj);
+        }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult UpdateAppointment(Appointment appointment)
@@ -140,8 +155,10 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         }
         public IActionResult IndexUltrasoundAppointment()
         {
-            //IEnumerable<UltrasoundAppointment> objList = dbContext.ultrasounds;
-            return View(dbContext.ultrasounds.ToList());
+            IEnumerable<UltrasoundAppointment> objList = dbContext.Ultrasounds;
+            //return View(dbContext.ultrasounds.ToList());
+            return View(objList);
+
         }
         //[HttpPost]
         //[ValidateAntiForgeryToken]
@@ -163,15 +180,79 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
                 ultrasound.UltrasoundImagePath = "~/wwwroot/UploadedImages";
                 ultrasound.FileName = uniqueFileName;
 
-                dbContext.ultrasounds.Add(ultrasound);
+                dbContext.Ultrasounds.Add(ultrasound);
                 dbContext.SaveChanges();
                 return RedirectToAction("IndexUltrasoundAppointment", "PrenatalCare");
             }
             return View();
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult UpdateUltrasound(UltrasoundAppointment ultrasound)
+        {
+            string uniqueFileName = null;
+            if (ultrasound.ImageFile != null)
+            {
+                string ImageUploadedFolder = Path.Combine
+                    (webHostEnvironment.WebRootPath, "UploadedImages");
+                uniqueFileName = Guid.NewGuid().ToString() + "_" + ultrasound.ImageFile.FileName;
+
+                string filepath = Path.Combine(ImageUploadedFolder, uniqueFileName);
+
+                using (var fileStream = new FileStream(filepath, FileMode.Create))
+                {
+                    ultrasound.ImageFile.CopyTo(fileStream);
+                }
+                ultrasound.UltrasoundImagePath = "~/wwwroot/UploadedImages";
+                ultrasound.FileName = uniqueFileName;
+
+                dbContext.Ultrasounds.Update(ultrasound);
+                dbContext.SaveChanges();
+                return RedirectToAction("IndexUltrasoundAppointment", "PrenatalCare");
+            }
+            return View();
+        }
+        public IActionResult DeleteUltrasound(int? ID)
+        {
+            var obj = dbContext.Ultrasounds.Find(ID);
+            if (obj == null)
+            {
+                return NotFound();
+            }
+
+            dbContext.Ultrasounds.Remove(obj);
+            dbContext.SaveChanges();
+            return RedirectToAction("IndexUltrasoundAppointment", "PrenatalCare");
+        }
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public IActionResult DeleteUltrasound(UltrasoundAppointment ultrasound)
+        //{
+        //    string uniqueFileName = null;
+        //    if (ultrasound.ImageFile != null)
+        //    {
+        //        string ImageUploadedFolder = Path.Combine
+        //            (webHostEnvironment.WebRootPath, "UploadedImages");
+        //        uniqueFileName = Guid.NewGuid().ToString() + "_" + ultrasound.ImageFile.FileName;
+
+        //        string filepath = Path.Combine(ImageUploadedFolder, uniqueFileName);
+
+        //        using (var fileStream = new FileStream(filepath, FileMode.Create))
+        //        {
+        //            ultrasound.ImageFile.CopyTo(fileStream);
+        //        }
+        //        ultrasound.UltrasoundImagePath = "~/wwwroot/UploadedImages";
+        //        ultrasound.FileName = uniqueFileName;
+
+        //        dbContext.Ultrasounds.Remove(ultrasound);
+        //        dbContext.SaveChanges();
+        //        return RedirectToAction("IndexUltrasoundAppointment", "PrenatalCare");
+        //    }
+        //    return View();
+        //}
         public IActionResult IndexEducation()
         {
-            IEnumerable<UltrasoundAppointment> objList = dbContext.ultrasounds;
+            IEnumerable<UltrasoundAppointment> objList = dbContext.Ultrasounds;
             return View(objList);
         }
         //[HttpPost]
@@ -194,7 +275,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
                 ultrasound.UltrasoundImagePath = "~/wwwroot/UploadedImages";
                 ultrasound.FileName = uniqueFileName;
 
-                dbContext.ultrasounds.Add(ultrasound);
+                dbContext.Ultrasounds.Add(ultrasound);
                 dbContext.SaveChanges();
                 return RedirectToAction("IndexUltrasoundAppointment","PrenatalCare");
             }

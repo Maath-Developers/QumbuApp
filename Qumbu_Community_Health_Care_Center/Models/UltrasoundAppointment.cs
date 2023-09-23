@@ -16,13 +16,13 @@ namespace Qumbu_Community_Health_Care_Center.Models
         public DateTime AppointmentDate { get; set; }
         [Required]
         [DisplayName("Gestational Age Weeks")]
-        public int GestationalAgeWeeks { get; set; }
+        public DateTime GestationalAgeWeeks { get; set; }
         [Required]
         [DisplayName("Fetal Heart Rate")]
         public string FetalHeartRate { get; set; }
         public string Observations { get; set; }
         [DisplayName("Gender Determined")]
-        public bool GenderDetermined { get; set; }
+        public string GenderDetermined { get; set; }
         [Required]
         public string Comments { get; set; }
         [Required]
