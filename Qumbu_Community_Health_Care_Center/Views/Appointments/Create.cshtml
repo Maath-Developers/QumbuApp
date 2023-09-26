@@ -1,0 +1,40 @@
+﻿@model Qumbu_Community_Health_Care_Center.Models.Appointment
+
+<h1>Add</h1>
+
+<h4>Appointments</h4>
+<hr />
+<div class="row">
+	<div class="col-md-4">
+		<form method="post" asp-action="Create">
+			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+			<div class="form-group">
+				<label asp-for="Date_Time" class="custom-control-label"></label>
+				<input asp-for="Date_Time" class="form-control" />
+				<span asp-validation-for="Date_Time"class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Purpose" class="custom-control-label"></label>
+				<select id="PurposeDropdown" asp-for="Purpose" class="form-control" id="validationName" required>
+					<option value="Select" class="bg-opacity-50">Select</option>
+					<option value="Vac">Vaccination</option>
+					<option value="Pre">Pre-Natal</option>
+					<option value="Fam">Family Plan</option>
+					<option value="Coun">Counselling</option>
+				</select>
+				<span asp-validation-for="Purpose" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Date_Time" class="custom-control-label"></label>
+				<input asp-for="Date_Time" class="form-control" />
+				<span asp-validation-for="Date_Time" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<input type="submit" value="btn btn-primary" />
+			</div>
+		</form>
+	</div>
+</div>
+<div>
+	<a asp-action="Index">Back</a>
+</div>
