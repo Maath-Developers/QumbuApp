@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Qumbu_Community_Health_Care_Center.Areas.Identity.Data;
 using Qumbu_Community_Health_Care_Center.Models;
 using System.Security.Claims;
@@ -109,8 +110,9 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
                 return RedirectToAction("ViewFamilyReg");
 
             }
-            return View(familyReg);
-        }
+			ViewData["PatientID"] = new SelectList(dbContext.Users, "Id", "Id", familyReg.PatientID);
+			return View(familyReg);
+		}
 
         public IActionResult ViewFamilyReg()
         {
