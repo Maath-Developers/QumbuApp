@@ -5,10 +5,11 @@
 <div class="mt-4 p-4 bg-white text-center text-white-50 rounded">
     <h2>Patients Profile</h2>
 </div>
-<form method="post" asp-action="CreateP" class="form-horizontal">
+<div class="container-fluid">
+     <form method="post" asp-action="CreateP" class="form-horizontal">
 			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="container-fluid">
-                <div class="card">
+            
+                <div class="row">
                     <div class="card-body">
                         <div class="row">
 
@@ -102,7 +103,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-</form>
-
+    </form>
+</div>
 

@@ -1,4 +1,4 @@
-﻿@model Qumbu_Community_Health_Care_Center.Models.Bookings
+﻿@model Qumbu_Community_Health_Care_Center.Models.Profiling
 @{
 	Layout = "_CounsellorLayout";
 }
@@ -26,7 +26,7 @@
 							</div>
 							<br />
 							<div class="col">
-								<a asp-action="CreateP" class="btn btn-info w-60">Start Counselling</a>
+								<a asp-action="CreateRe" class="btn btn-info w-60">Start Counselling</a>
 							</div>
 						</div>
 					</div>
@@ -45,7 +45,7 @@
 						<div class="col-md-3">
 							<div class="form-group">
 								<label for="validityPeriod">Purpose:</label>
-								<select id="GenderDropdown" asp-for="Departments" class="form-control" id="validationName" required>
+								<select id="VisitPurpose" asp-for="VisitPurpose" class="form-control" id="validationName" required>
 									<option value="Select" class="bg-opacity-50">Select</option>
 									<option value="e">Excuse Letter</option>
 									<option value="c">Clearance</option>
