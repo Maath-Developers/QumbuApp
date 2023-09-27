@@ -3,13 +3,97 @@
 @{
     Layout = "Vaccs";
 }
-@*<div style="background-image: url('https://images.unsplash.com/photo-1626351545208-28c9080106ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8dmFjY2luZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60')">*@
-<div class="mx-0 mx-sm-auto" >
+<div class="mx-0 mx-sm-auto">
+    <div class="card w-75">
+        <div class="card-body ">
+<form method="post" asp-action="IndexScree">
+    <div class="border p-3 #FBD603">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>@*validation*@
+        <div class="form-group row">
+            <h2 class="text-black-50 pl-3">SCREENING TOOL</h2>
+        </div>
+        <div class="row">
+            
+             <div class="form-group">
+                 
+                      <div class="col-12">
+
+                                <div class="row">
+                                    <div class="col-md-4">
+                                    <div>
+                                        <label asp-for="Question1"></label>@*These names come from our properties in the model *@
+                                        <input asp-for="Question1" class="form-control box mb-3" type="text" placeholder="Type your name here" />
+                                        <span asp-validation-for="Question1" class="text-danger"></span>
+                                    </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                    <div>
+                                        <label asp-for="Question2"></label>
+                                        <input asp-for="Question2" class="form-control" />
+                                        <span asp-validation-for="Question1" class="text-danger"></span>
+                                    </div>
+                                    </div>
+                                    
+                                </div>
+                       </div>
+                    @* <div class="col-4"> *@
+                       
+                    @* </div> *@
+                   @*  <div class="col-4">
+                       
+                    </div> *@
+                    <div class="col-4">
+                        <label asp-for="Question3"></label>
+                        <input asp-for="Question3" class="form-control" />
+                        <span asp-validation-for="Question3" class="text-danger"></span>
+
+                    </div>
+                    <div class="col-4">
+                        <label asp-for="Question4"></label>
+                        <input asp-for="Question4" class="form-control" />
+                        <span asp-validation-for="Question4" class="text-danger"></span>
+                    </div>
+                    <div class="col-4">
+                        <label asp-for="Question5"></label>
+                        <input asp-for="Question5" class="form-control" />
+                        <span asp-validation-for="Question5" class="text-danger"></span>
+                    </div>
+                    <div class="col-4">
+                        <label asp-for="Question6"></label>
+                        <input asp-for="Question6" class="form-control" />
+                        <span asp-validation-for="Question6" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-8 offset-2 row">
+                            <div class="col">
+                                <input type="submit" class="btn btn-info w-75 bi bi-arrow-left-circle" value="SUBMIT" />
+                            </div>
+                            <div class="col">
+                                <a asp-action="Index" class="btn btn-danger w-75"><i class="bi bi-arrow-left-circle"></i>BACK</a>
+                            </div>
+                        </div>
+                    </div>
+
+               @*  </div> *@
+            </div>
+        </div>
+       
+    </div>
+</form>
+        </div>
+    </div>
+
+</div>
+
+
+@* <div class="mx-0 mx-sm-auto" >
     <div class="card w-75" >
         <div class="card-body bg-primary" >
 <form method="post" asp-action="IndexScree">
     <input asp-for="ID" hidden />
-                <div class="bg-info " @*style="background-image: url('https://www.dreamstime.com/royalty-free-stock-images-disposable-medical-equipment-image23328339');"*@>
+                <div class="bg-info ">
         <div class="form-group row">
             <h2 class="text-opacity-50 center pl-3">SCREENING TOOL</h2>
         </div>
@@ -17,11 +101,9 @@
             <div class="col-12">
                 <div class="form-group">
                     <div class="col-6">
-                        @*<div class="container mb-5">*@
-                           @* <div class="row"> <div class="col-12"> <p class="fw-bold">1. Which of the following sentences is correct</p> <div> <input type="radio" name="box" id="one"> <input type="radio" name="box" id="two"> <input type="radio" name="box" id="three"> <input type="radio" name="box" id="four"> <label for="one" class="box first"> <div class="course"> <span class="circle"></span> <span class="subject"> When its raining ,people's umbrella are all you're going to see from above </span> </div> </label> <label for="two" class="box second"> <div class="course"> <span class="circle"></span> <span class="subject"> When its raining,people's umbrella are all your going to see from above </span> </div> </label> <label for="three" class="box third"> <div class="course"> <span class="circle"></span> <span class="subject"> When its raining,peoples umbrella's are all you're going to see from above </span> </div> </label> <label for="four" class="box forth"> <div class="course"> <span class="circle"></span> <span class="subject"> None of the above </span> </div> </label> </div> </div> <div class="col-12"> <p class="fw-bold mt-5">2. Complete the following sentences:Alice couldn't _______ the humilation any longer and stormed out of the room red as a bed</p> <div> <div class="row"> <div class="col-md-6"> <input type="radio" name="box" id="five"> <label for="five" class="box fifth w-100"> <div class="course"> <span class="circle"></span> <span class="subject">is</span> </div> </label> </div> <div class="col-md-6"> <input type="radio" name="box" id="six"> <label for="six" class="box sixth w-100"> <div class="course"> <span class="circle"></span> <span class="subject"> was </span> </div> </label> </div> <div class="col-md-6"> <input type="radio" name="box" id="seven"> <label for="seven" class="box seveth w-100"> <div class="course"> <span class="circle"></span> <span class="subject"> will </span> </div> </label> </div> <div class="col-md-6"> <input type="radio" name="box" id="eight"> <label for="eight" class="box eighth w-100"> <div class="course"> <span class="circle"></span> <span class="subject"> None of the above </span> </div> </label> </div> </div> </div> </div> <div class="col-12"> <div class="d-flex justify-content-center"> <button class="btn btn-primary px-4 py-2 fw-bold"> continue</button> </div> </div> </div>*@
-                       @* </div>*@
+                       
                          
-                        <h4 class="text-justify"><label asp-for="Question1"></label></h4>@*These names come from our properties in the model *@
+                        <h4 class="text-justify"><label asp-for="Question1"></label></h4>
           
                         <input asp-for="Question1" class="form-control w-50 " />
                     </div>
@@ -41,7 +123,7 @@
                         <div class="form-check form-switch">
                                         <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault"><h4><label class="form-check-label text-justify" for="flexSwitchCheckDefault">NO</label></h4>
                         </div>
-                       @* <input asp-for="Question4" class="form-control" />*@
+                       
 
                     </div>
                     <div class="col-4">
@@ -52,7 +134,6 @@
                         <div row="" class="form-check form-switch">
                             <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault"><h4><label class="form-check-label text-justify" for="flexSwitchCheckDefault">NO</label></h4>
                         </div>
-                        @*<input asp-for="Question5" class="form-control" />*@
                     </div>
                     <div class="col-4">
                         <h4 class="text-justify"><label asp-for="Question6"></label></h4>
@@ -62,15 +143,12 @@
                         <div row="" class="form-check form-switch">
                             <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault"><h4><label class="form-check-label text-justify" for="flexSwitchCheckDefault">NO</label></h4>
                         </div>
-                        @*<input asp-for="Question6" class="form-control" />*@
                     </div>
 
 
                     <div class="form-group row">
                         <div class="col-8 offset-2 row">
-                            @*<div class="col">
-                                <input type="submit" class="btn btn-info w-75" value="SUBMIT" />
-                            </div>*@
+                            
                             <div class="col">
                                 <a asp-action="Dashboard" class="btn btn-success w-40">DONE</a>
                             </div>
@@ -85,5 +163,4 @@
 </form>
         </div>
     </div>
-</div>
-@*</div>*@
+</div> *@
