@@ -22,21 +22,26 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             var applicationDbContext = Context.Appointments.Include(a => a.MainUser);
             return View(await applicationDbContext.ToListAsync());
         }
+        public IActionResult Booking()
+        {
+            IEnumerable<Appointment> appointments = Context.Appointment;
+            return View(appointments);
+        }
         public IActionResult Create()
         {
             return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Appointment appointments)
+        public IActionResult Create(Appointment appointments)
         {
             var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
             appointments.PatientID = user;
-            if(ModelState.IsValid)
-            { 
-                Context.Add(appointments);
-                await Context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+            if (ModelState.IsValid)
+            {
+                Context.Appointment.Add(appointments);
+                Context.SaveChanges();
+                return RedirectToAction("Booking");
             }
             ViewData["PatientID"] = new SelectList(Context.Users, "Id", "Id", appointments.PatientID);
             return View(appointments);

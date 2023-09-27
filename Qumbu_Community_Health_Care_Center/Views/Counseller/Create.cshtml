@@ -1,23 +1,18 @@
 ﻿@model Qumbu_Community_Health_Care_Center.Models.Bookings
-@*@{
-	Layout = "_CounsellorLayout";
-}*@
-<span class="border border-4">
+@{
+	Layout = "Appointments";
+}
+
 	<form method="post" asp-action="Create">
 		<div class="border p-3">
 			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 			<br />
 			<div class="form-group row">
-				<h2 class="text-black-50 pl-3">Add a new appointment</h2>
+				<h2 class="text-black-50 pl-3">Add new appointment</h2>
 			</div>
 			<div class="row">
 				<div class="col-12">
 					<div class="form-group">
-						<div class="col-4">
-							<label asp-for="Names"></label>
-							<input asp-for="Names" class="form-control" />
-							<span asp-validation-for="Names" class="text-danger"></span>
-						</div>
 						<div class="col-4">
 							<label asp-for="Date"></label>
 							<input asp-for="Date" class="form-control" />
@@ -60,4 +55,3 @@
 			</div>
 		</div>
 	</form>
-</span>
