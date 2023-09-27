@@ -54,10 +54,18 @@ namespace Qumbu_Community_Health_Care_Center.Models
 
 
         [Required]
-        [DisplayName("8.Choose any birth Control of your choice")]
-        public int? type { get; set; }
+        [DisplayName("8.Do you use Condom?")]
+        public int? condom{ get; set; }
 
-        public FamilyReg()
+		[Required]
+		[DisplayName("10.Do you Smoke?")]
+		public int? smoke { get; set; }
+
+		[Required]
+		[DisplayName("9.Are they normal,Compared to the past cycle?")]
+		public int? normal { get; set; }
+
+		public FamilyReg()
         {
             Date = DateTime.Now;
             Status = "New";
