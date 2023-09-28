@@ -45,6 +45,12 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         {
             return View();
         }
+        public IActionResult Feedback()
+        {
+            IEnumerable<FeedbackV> objList = dbContext.VaccinationFeedback;
+            return View(objList);
+        }
+
         public IActionResult IndexFee()
         {
             return View();
