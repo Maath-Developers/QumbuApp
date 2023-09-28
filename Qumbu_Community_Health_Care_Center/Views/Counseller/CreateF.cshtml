@@ -7,13 +7,9 @@
     <h2>Refered Patients</h2>
 </div>
 <form method="post" asp-action="CreateF">
-    <div class="border p-3">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-        <div class="container mt-8">
+        <div class="container-fluid">
             <div class="card">
-                <div class="card-header bg-secondary-emphasis">
-                    <h5 class="card-title">Referred Patients</h5>
-                </div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-3">
@@ -21,8 +17,8 @@
                                 <label for="validityPeriod">Patient Name</label>
                                 <select id="GenderDropdown" asp-for="PatientName" class="form-control" id="validationName" required>
                                     <option value="Select" class="bg-opacity-50">Select</option>
-                                    <option value="Male">Male</option>
-                                    <option value="Female">Female</option>
+                                    <option value="Male">Unako</option>
+                                    <option value="Female">Liso</option>
                                 </select>
                             </div>
                         </div>
@@ -45,20 +41,18 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-6 offset-2 row">
-                    <div class="col">
-                        <input type="submit" class="btn btn-info w-75" value="Submit" />
-                    </div>
-                    <div class="col">
-                        <a asp-action="Referral" class="btn btn-danger w-75">Back</a>
+                <div class="form-group row">
+                    <div class="col-6 offset-2 row">
+                        <div class="col">
+                            <input type="submit" class="btn btn-info w-75" value="Submit" />
+                        </div>
+                        <div class="col">
+                            <a asp-action="Referral" class="btn btn-danger w-75">Back</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
 </form>
 
 

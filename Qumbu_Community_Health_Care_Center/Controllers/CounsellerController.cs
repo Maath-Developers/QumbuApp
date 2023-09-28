@@ -109,9 +109,6 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             return View(obj);
 
         }
-
-
-
         //POST-Update updating the current data we have 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -150,9 +147,6 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             return View(obj);
 
         }
-
-
-
         //POST-Update updating the current data we have 
         [HttpPost]
         [ValidateAntiForgeryToken]
