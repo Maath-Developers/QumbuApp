@@ -3,7 +3,7 @@
     Layout = "_CounsellorLayout";
 }
 <div class="mt-4 p-4 bg-white text-center text-white-50 rounded">
-    <h2>List of Appointments</h2>
+    <h2>Counselling Records</h2>
 </div>
 <div class="container-fluid">
     <div class="row pt-4">
@@ -56,7 +56,7 @@
                         <td width="20%">@app.recom</td>
                         <td>
                             <div class="w-50 btn-group" role="group">
-                                @*<a asp-controller="Counseller" asp-action="CreatePat" asp-route-ID="@app.ProfileID" class="btn btn-info mx-1">View</a>*@
+                                <a asp-controller="Counseller" asp-action="CreatePat" asp-route-ID="@app.ProfileID" class="btn btn-info mx-1">View</a>
                             </div>
                         </td>
                     </tr>
@@ -69,7 +69,7 @@
     }
     else
     {
-        <p>No Appointments added yet</p>
+        <p>No counselling history added yet</p>
     }
 
 </div>
