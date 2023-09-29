@@ -33,7 +33,7 @@ namespace Qumbu_Community_Health_Care_Center.Models
         public string? rating5 { get; set; }
         [Required]
         [DisplayName("Leave your comment here")]
-        public string? Comnent { get; set; }
+        public string? Comment { get; set; }
 
 
     }
