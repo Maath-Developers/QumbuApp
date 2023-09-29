@@ -118,8 +118,8 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             Context.SaveChanges();
             return RedirectToAction("PatientC");
         }
-
-
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Delete(int? ID)
         {
             var obj = Context.Profiling.Find(ID);
@@ -131,6 +131,20 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             Context.Profiling.Remove(obj);
             Context.SaveChanges();
             return RedirectToAction("Profile");
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeleteRef(int? ID)
+        {
+            var obj = Context.Profiling.Find(ID);
+            if (obj == null)
+            {
+                return NotFound();
+            }
+
+            Context.Profiling.Remove(obj);
+            Context.SaveChanges();
+            return RedirectToAction("Referral");
         }
         public IActionResult UpdateRe(int? ID)
         {

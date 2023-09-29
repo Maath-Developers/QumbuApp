@@ -4,7 +4,7 @@
     Layout = "_CounsellorLayout";
 }
 <div class="mt-4 p-4 bg-white text-center text-white-50 rounded">
-    <h2>Refered Patients</h2>
+    <h2>Referred Patients</h2>
 </div>
 <form method="post" asp-action="CreateF">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -15,28 +15,28 @@
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label for="validityPeriod">Patient Name</label>
-                                <select id="GenderDropdown" asp-for="PatientName" class="form-control" id="validationName" required>
+                                <select id="PatientName" asp-for="PatientName" class="form-control" id="validationName" required>
                                     <option value="Select" class="bg-opacity-50">Select</option>
-                                    <option value="Male">Unako</option>
-                                    <option value="Female">Liso</option>
+                                    <option value="Unako">Unako</option>
+                                    <option value="Liso">Liso</option>
                                 </select>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label for="validityPeriod">Departments</label>
-                                <select id="GenderDropdown" asp-for="Departments" class="form-control" id="validationName" required>
+                                <select id="Departments" asp-for="Departments" class="form-control" id="validationName" required>
                                     <option value="Select" class="bg-opacity-50">Select</option>
-                                    <option value="Vac">Vaccination</option>
-                                    <option value="Pre">Pre-Natal</option> 
-                                    <option value="Fam">Family Plan</option>
+                                    <option value="Vaccination">Vaccination</option>
+                                    <option value="Pre-Natal">Pre-Natal</option> 
+                                    <option value="Family-Plan">Family Plan</option>
                                 </select>
                             </div>
                         </div>
                         <div class="col-md-8">
                             <div class="form-group">
-                                <label for="address">Remarks</label>
-                                <textarea class="form-control" id="address" rows="4" placeholder="Enter remarks"></textarea>
+                                <label for="Remarks">Remarks</label>
+                                <textarea class="form-control" id="Remarks" rows="4" placeholder="Enter remarks"></textarea>
                             </div>
                         </div>
                     </div>
