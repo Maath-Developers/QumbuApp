@@ -11,6 +11,32 @@
         <div class="card">
             <div class="card-body">
                 <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="validityPeriod">First Name</label>
+                            <select id="GenderDropdown" asp-for="FirstName" class="form-control" id="validationName" required>
+                                <option value="Select" class="bg-opacity-50">Select</option>
+                                <option value="Male">Unako</option>
+                                <option value="Female">Liso</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <input type="submit" class="btn btn-info w-75" value="Remove" />
+                        </div>
+                       @* <div class="col">
+                            <input type="submit" class="btn btn-info w-75" value="Add" />
+                        </div>*@
+                    </div>
+                    @*<div class="col">
+                        <input type="submit" class="btn btn-info w-75" value="Remove" />
+                    </div>*@
+                    <div class="col">
+                        <input type="submit" class="btn btn-info w-70" value="Add" />
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    
                     <div class="col-md-8">
                         <div class="form-group">
                             <label for="address">I.Background Of The Case:</label>
