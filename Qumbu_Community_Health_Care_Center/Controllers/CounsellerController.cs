@@ -256,7 +256,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             IEnumerable<Profiling> profilings = Context.Profiling;
             return View(profilings);
         }
-        public IActionResult VistRec()
+        public IActionResult VisitRec()
         {
             IEnumerable<Profiling> profilings = Context.Profiling;
             return View(profilings);
