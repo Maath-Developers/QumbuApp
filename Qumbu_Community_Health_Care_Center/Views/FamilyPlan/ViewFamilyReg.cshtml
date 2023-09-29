@@ -5,8 +5,19 @@
 }
 @if (TempData["Result"] != null)
 {
-    <div>
-
+    <div id="myModal" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h3 class="modal-title">Screening Result</h3>
+                    <button type="button" id="close" class="close btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div>
+                    <img src="~/_Images/ContraceptiveDash.png" style="width: 79px" />
+                    <h4>@TempData["Result"]</h4>
+                </div>
+            </div>
+        </div>
     </div>
 }
 
@@ -21,7 +32,7 @@
 
     @if (Model.Count() > 0)
     {
-
+         
         <table class="table  table-active table-bordered table-striped" style="width:100%">
             <thead>
                 <tr>

@@ -56,16 +56,14 @@ namespace Qumbu_Community_Health_Care_Center.Models
         [Required]
         [DisplayName("8.Do you use Condom?")]
         public int? condom{ get; set; }
-
-		[Required]
-		[DisplayName("10.Do you Smoke?")]
-		public int? smoke { get; set; }
-
 		[Required]
 		[DisplayName("9.Are they normal,Compared to the past cycle?")]
 		public int? normal { get; set; }
+        [Required]
+        [DisplayName("10.Do you Smoke?")]
+        public int? smoke { get; set; }
 
-		public FamilyReg()
+        public FamilyReg()
         {
             Date = DateTime.Now;
             Status = "New";
