@@ -9,10 +9,10 @@ using System.Security.Claims;
 namespace Qumbu_Community_Health_Care_Center.Controllers
 {
     [Authorize]
-    public class AppointmentsController1 : Controller
+    public class AppointmentsController : Controller
     {
         private readonly ApplicationDbContext Context;
-        public AppointmentsController1(ApplicationDbContext DbContext)
+        public AppointmentsController(ApplicationDbContext DbContext)
         {
             Context = DbContext;
         }
@@ -21,11 +21,6 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         {
             var applicationDbContext = Context.Appointments.Include(a => a.MainUser);
             return View(await applicationDbContext.ToListAsync());
-        }
-        public IActionResult Booking()
-        {
-            IEnumerable<Appointment> appointments = Context.Appointment;
-            return View(appointments);
         }
         public IActionResult Create()
         {
@@ -41,7 +36,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             {
                 Context.Appointment.Add(appointments);
                 Context.SaveChanges();
-                return RedirectToAction("Booking");
+                return RedirectToAction(nameof(Index));
             }
             ViewData["PatientID"] = new SelectList(Context.Users, "Id", "Id", appointments.PatientID);
             return View(appointments);

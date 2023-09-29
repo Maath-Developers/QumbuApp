@@ -74,7 +74,7 @@
                         @if (User.IsInRole("Counsellor"))
                         {
                             <li><a asp-controller="Home" asp-action="Landing2" class="sidebar-link"><i class="bi bi-house-door"></i> <span>Dashboard</span></a></li>
-                            <li><a asp-controller="Counseller" asp-action="Profile" class="sidebar-link"><i class="bi bi-person"></i> <span>Profiling</span></a></li>
+                            <li><a asp-controller="Appointments" asp-action="Index" class="sidebar-link"><i class="bi bi-person"></i> <span>Profiling</span></a></li>
                             <li class="active">
                                @* <a href="#dashboard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="bi bi-clipboard2-data"></i> <span class="align">Profiling</span></a>*@
                                 <ul class="collapse list-unstyled" id="dashboard">
