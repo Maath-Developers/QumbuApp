@@ -19,7 +19,6 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             email = _email;
             Context = DbContext;
         }
-        //[Bind("AppointmentID,Date,Purpose,Status,PatientID,Date_Time")]
         public async Task<IActionResult> Index()
         {
             var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
