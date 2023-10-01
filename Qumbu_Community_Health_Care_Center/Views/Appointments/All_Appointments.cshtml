@@ -1,0 +1,102 @@
+﻿@model IEnumerable<Qumbu_Community_Health_Care_Center.Models.Appointment>
+
+@{
+    ViewData["Title"] = "All_Appointments";
+    Layout = "~/Views/Appointments/Index.cshtml";
+}
+@if(TempData["Success"] != null)
+{
+    <div class="bg-success text-center p-2">
+        <h4 class="text-center">@TempData["Success"]</h4>
+    </div>
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Patient Information
+            </th>
+            <th>
+                Appointment Date
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MainUser)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date_Time)
+            </th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+                <td>
+                    @item.MainUser.FirstName
+                    @item.MainUser.LastName
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date_Time)
+                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Purpose)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date_Time)
+            </td>
+            @if(item.Status == "New")
+                {
+                    <td>
+                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="exampleModal-@item.AppointmentID">Accept</button>
+                        <a asp-action="Details" asp-route-id="@item.AppointmentID">Decline</a>
+                        <a asp-action="Delete" asp-route-id="@item.AppointmentID">Postpone</a>
+                    </td>
+                    <!-- Button trigger modal -->
+                   @* <button type="button" class="btn btn-primary" >
+                        Launch demo modal
+                    </button>*@
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal-@item.AppointmentID" tabindex="-1" aria-labelledby="exampleModal-@item.AppointmentID" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModal-@item.AppointmentID">Modal title</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    asp-action="Edit" asp-route-id="@item.AppointmentID"
+                                    ...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <a asp-action="Accept" asp-route-id="@item.AppointmentID" type="button" class="btn btn-ïnfo">Continue</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                else if(item.Status == "Accepted")
+                {
+                    <td>
+                        
+                        <a asp-action="Details" asp-route-id="@item.AppointmentID">Delete</a> 
+                        <a asp-action="Delete" asp-route-id="@item.AppointmentID">Postpone</a>
+                    </td>
+                }
+                else if(item.Status == "Done")
+                {
+                    <a asp-action="Edit" asp-route-id="@item.AppointmentID">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@item.AppointmentID">View</a>
+                }
+                
+        </tr>
+}
+    </tbody>
+</table>

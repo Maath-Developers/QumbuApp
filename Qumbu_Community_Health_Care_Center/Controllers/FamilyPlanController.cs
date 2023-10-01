@@ -98,13 +98,49 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
 
-        public async Task<IActionResult> CreateFamilyReg([Bind("FamilyRegId,Date,Status,intercourse,period,child, allaegies, medication,contraceptives, type ")] FamilyReg familyReg)
+        public async Task<IActionResult> CreateFamilyReg( FamilyReg familyReg)
         {
             var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
 			familyReg.PatientID = user;
-
+            int totalReg = 0;
 			if (ModelState.IsValid)
             {
+                totalReg += Convert.ToInt32(familyReg.intercourse);
+                totalReg += Convert.ToInt32(familyReg.period);
+                totalReg += Convert.ToInt32(familyReg.child);
+                totalReg += Convert.ToInt32(familyReg.experience);
+                totalReg += Convert.ToInt32(familyReg.allaegies);
+                totalReg += Convert.ToInt32(familyReg.medication);
+                totalReg += Convert.ToInt32(familyReg.contraceptives);
+                totalReg += Convert.ToInt32(familyReg.condom);
+                totalReg += Convert.ToInt32(familyReg.smoke);
+                totalReg += Convert.ToInt32(familyReg.normal);
+                if(totalReg == 30)
+                {
+                   TempData["Result"]= "Pill";
+                }
+                else if( totalReg == 40)
+                {
+                    TempData["Result"] = "1 month";
+                }
+                else if (totalReg == 50)
+                {
+                    TempData["Result"] = "3 months";
+                }
+                else if (totalReg == 60)
+                {
+                    TempData["Result"] = "1 implant";
+                }
+                else if (totalReg == 70)
+                {
+                    TempData["Result"] = "3 loop";
+                }
+                else if (totalReg == 80)
+                {
+                    TempData["Result"] = "Viginal Ring";
+                }
+
+
                 dbContext.FamilyReg.Add(familyReg);
                 dbContext.SaveChanges();
                 return RedirectToAction("ViewFamilyReg");

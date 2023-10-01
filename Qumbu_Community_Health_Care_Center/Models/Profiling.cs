@@ -15,8 +15,10 @@ namespace Qumbu_Community_Health_Care_Center.Models
         public string? FirstName { get; set; }
         [DisplayName("Last Name")]
         public string? LastName { get; set; }
-        public DateTime Date { get; set; }
-        [DisplayName("Visit Purpose")]
+        [Required]
+		[DataType(DataType.DateTime)]
+		public DateTime Date { get; set; } = DateTime.Now;
+		[DisplayName("Visit Purpose")]
         public string? VisitPurpose { get; set; }
         public string? Gender { get; set; }
         [DisplayName("Counselling Type")]

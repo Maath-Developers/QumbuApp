@@ -2,7 +2,7 @@
 @{
     Layout = "_CounsellorLayout";
 }
-<div class="mt-4 p-4 bg-white text-center text-white-50 rounded">
+<div class="mt-2 p-2 bg-white text-center text-white-50 rounded">
     <h2>Group Counselling</h2>
 </div>
 <form method="post" asp-action="CreateConf">
@@ -11,6 +11,28 @@
         <div class="card">
             <div class="card-body">
                 <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="validityPeriod">First Name</label>
+                            <select id="GenderDropdown" asp-for="FirstName" class="form-control" id="validationName" required>
+                                <option value="Select" class="bg-opacity-50">Select</option>
+                                <option value="Male">Unako</option>
+                                <option value="Female">Liso</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <input type="submit" class="btn btn-info w-75" value="Remove" />
+                        </div>
+                      
+                    </div>
+                   
+                    <div class="col">
+                        <input type="submit" class="btn btn-info w-70" value="Add" />
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    
                     <div class="col-md-8">
                         <div class="form-group">
                             <label for="address">I.Background Of The Case:</label>

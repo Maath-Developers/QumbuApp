@@ -8,11 +8,10 @@ namespace Qumbu_Community_Health_Care_Center.Models
 	{
 		[Key]
 		public int AppointmentID { get; set; }
-		public string? FirstName { get; set; }
-		public string? LastName { get; set; }
+		
 		[DataType(DataType.DateTime)]
-		public DateTime Date { get; set; } = DateTime.Now;
-        [Required]
+		public DateTime CreatedAt { get; set; } = DateTime.Now;
+        [Required(AllowEmptyStrings = false, ErrorMessage = "Purpose for the appointment")]
         public string? Purpose { get; set; }
 		public string? Status { get; set; } = "New";
         public string? PatientID { get; set; }
@@ -21,7 +20,6 @@ namespace Qumbu_Community_Health_Care_Center.Models
 		[Required]
 		[Display(Name = "Appointment Day")]
 		[DataType(DataType.DateTime)]
-		public TimeSpan? Time { get; set; }
 		public DateTime Date_Time { get; set; }	
 		//public string? Notes { get; set; }
 	}

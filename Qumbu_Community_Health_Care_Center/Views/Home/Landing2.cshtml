@@ -5,6 +5,7 @@
 @inject UserManager<ApplicationUser> UserManager
 @{
     Layout = "_Landing2";
+  
 }
 <link rel="stylesheet" href="~/css/StyleSheet/Landing2StyleSheet.css">
 
@@ -28,7 +29,7 @@
         }
 </style>
 
-<h1>Welcome to Qumbu <bold> Communities Health Care</bold></h1>
+@*<h1>Welcome to Qumbu <bold> Communities Health Care</bold></h1>*@
 @if (User.IsInRole("Admin"))
 {
     Layout = "_AdminLayout";
@@ -174,8 +175,8 @@ else if (User.IsInRole("Patient"))
                 <div class=" col-sm-6 col-xl-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     <a asp-action="Patient" asp-controller="FamilyPlan">
                         <div id="dash-con" class="dash-con rounded d-flex align-items-center justify-content-between p-4">
-                             <img src="~/_Images/FamPlan.png" width="250" height="168" /> 
-                            <div class="ms-3">
+                        <img src="~/_Images/FamPlan.png" width="200" height="135" />
+                        <div class="ms-3">
                                 <h4 class="mb-2">Family Planning<span class="badge bg-primary rounded-pill text-white"></span></h4>
 
                             </div>
@@ -188,8 +189,8 @@ else if (User.IsInRole("Patient"))
                 <div class=" col-sm-6 col-xl-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         <a asp-action="Patient" asp-controller="Counseller">
                         <div id="dash-con" class="dash-con rounded d-flex align-items-center justify-content-between p-4">
-                              <img src="~/_Images/counselling.jpg" width="250" /> 
-                            <div class="ms-3">
+                        <img src="~/_Images/counselling.jpg" width="200" />
+                        <div class="ms-3">
                                 <h4 class="mb-2">Counselling<span class="badge bg-primary rounded-pill text-white"></span></h4>
 
                             </div>
@@ -204,7 +205,7 @@ else if (User.IsInRole("Patient"))
             <div class=" col-sm-6 col-xl-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <a asp-action="Patient" asp-controller="Vaccs">
                 <div id="dash-con" class="dash-con rounded d-flex align-items-center justify-content-between p-4">
-                      <img src="~/_Images/Vacc.jpg" width="250" /> 
+                        <img src="~/_Images/Vacc.jpg" width="200" />
                     <div class="ms-3">
                         <h4 class="mb-2">Vaccination<span class="badge bg-primary rounded-pill text-white"></span></h4>
 
@@ -216,7 +217,7 @@ else if (User.IsInRole("Patient"))
             <div class=" col-sm-6 col-xl-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     <a asp-action="Patient" asp-controller="PreNatalCare">
                     <div id="dash-con" class="dash-con rounded d-flex align-items-center justify-content-between p-4">
-                           <img src="~/_Images/PreNat.jpg" width="250" height="168" /> 
+                        <img src="~/_Images/PreNat.jpg" width="200" height="135" />
                         <div class="ms-3">
                             <h4 class="mb-2">Pre-Natal Care<span class="badge bg-primary rounded-pill text-white"></span></h4>
 
@@ -273,8 +274,8 @@ else if (User.IsInRole("Counsellor"))
                 <div class=" col-sm-6 col-xl-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     <a asp-action="Counsellor" asp-controller="Counseller">
                         <div id="dash-con" class="dash-con rounded d-flex align-items-center justify-content-between p-4">
-                             <img src="~/_Images/counselling.jpg" width="250" /> 
-                            <div class="ms-3">
+                        <img src="~/_Images/counselling.jpg" width="200" />
+                        <div class="ms-3">
                                 <h4 class="mb-2">Counselling<span class="badge bg-primary rounded-pill text-white"></span></h4>
 
                             </div>
