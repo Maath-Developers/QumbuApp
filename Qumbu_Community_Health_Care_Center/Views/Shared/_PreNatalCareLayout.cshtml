@@ -69,11 +69,6 @@
         }
     </style>
 </head>
-@*<div class="container">
-    <main role="main" class="pb-3">
-        @RenderBody()
-    </main>
-</div>*@
 <body class="dashboard dashboard_1">
     <div class="full_container">
         <div class="inner_container">
@@ -99,57 +94,7 @@
                 <div class="sidebar_blog_2">
                     @* <h4>Dashboard</h4>*@
                     <ul class="list-unstyled components">
-                        @if (User.IsInRole("Admin"))
-                        {
-                            @*<li class="active">
-                        <a href="#dashboard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-dashboard yellow_color"></i> <span>Vaccination</span></a>
-                        <ul class="collapse list-unstyled" id="dashboard">
-                        <li>
-                        <a href="dashboard.html">> <span>Default Dashboard</span></a>
-                        </li>
-                        <li>
-                        <a href="dashboard_2.html">> <span>Dashboard style 2</span></a>
-                        </li>
-                        </ul>
-                        </li>*@
-                        }
-                        @*<li>
-                        <a href="#element" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-diamond purple_color"></i> <span>Family Plan</span></a>
-                        <ul class="collapse list-unstyled" id="element">
-                        <li><a href="general_elements.html">> <span>General Elements</span></a></li>
-                        <li><a href="media_gallery.html">> <span>Media Gallery</span></a></li>
-                        <li><a href="icons.html">> <span>Icons</span></a></li>
-                        <li><a href="invoice.html">> <span>Invoice</span></a></li>
-                        </ul>
-                        </li>*@
-                        @*<li>
-                        <a href="#apps" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-object-group blue2_color"></i> <span>Pre-Natal-Care</span></a>
-                        <ul class="collapse list-unstyled" id="apps">
-                        <li><a href="email.html">> <span>Email</span></a></li>
-                        <li><a href="calendar.html">> <span>Calendar</span></a></li>
-                        <li><a href="media_gallery.html">> <span>Media Gallery</span></a></li>
-                        </ul>
-                        </li>*@
-                        <li>
-
-                        </li>
-                        @*<li class="active">
-                        <a href="#additional_page" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-clone yellow_color"></i> <span>Counselling</span></a>
-                        <ul class="collapse list-unstyled" id="additional_page">
-                        <li>
-                        <a href="profile.html">> <span>Profile</span></a>
-                        </li>
-                        <li>
-                        <a href="project.html">> <span>Projects</span></a>
-                        </li>
-                        <li>
-                        <a href="login.html">> <span>Login</span></a>
-                        </li>
-                        <li>
-                        <a href="404_error.html">> <span>404 Error</span></a>
-                        </li>
-                        </ul>
-                        </li>*@
+                       
                         @if (User.IsInRole("Patient"))
                         {
                             @*                            <li class="nav-item active"><a asp-controller="Home" asp-action="Index" class="nav-link">Home</a></li>
@@ -188,7 +133,7 @@
                             <li class="sidebar-item">
 
                                 <a asp-controller="PrenatalCare" asp-action="IndexEducation" class="sidebar-link">
-                                    <i class="align-middle" data-feather="calendar"></i><i class="bi bi-info-circle"></i> <span class="align-middle">Education and Information</span>
+                                    <i class="align-middle" data-feather="calendar"></i><i class="bi bi-info-circle"></i> <span class="align-middle">Prenatal Education</span>
 
                                 </a>
                             </li>
@@ -302,10 +247,10 @@
                                             <a class="dropdown-item" href="profile.html">My Profile</a>
                                             <a class="dropdown-item" href="settings.html">Settings</a>
                                             <a class="dropdown-item" href="help.html">Help</a>
-                                            @*                                            <a class="dropdown-item" href="#"><span>Log Out</span> <i class="fa fa-sign-out"></i></a>
-                                            *@                                            <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
-                                                <button id="logout" type="submit" class="btn btn-secondary">Log Out</button>
-                                            </form>
+                                           <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                                               <button id="logout" type="submit" class="btn btn-secondary">Log Out</button>
+@*                                                <a asp-controller="Home" asp-action="Index">asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" }) class="dropdown-item" <i class="fa fa-sign-out"></i>Log out</a>
+*@                                          </form>
                                         </div>
                                     </li>
                                 </ul>

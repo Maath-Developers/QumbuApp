@@ -29,6 +29,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<UltrasoundAppointment> Ultrasounds { get; set; }
     public DbSet<Profiling> Profiling { get; set; }
     public DbSet<Appointment> Appointment {  get; set; }
+    public DbSet<PrenatalEducation> prenatalEducation { get; set; }
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);

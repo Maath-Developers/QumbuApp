@@ -31,7 +31,7 @@ namespace Qumbu_Community_Health_Care_Center.Models
         public string FileName { get; set; }
 
         [NotMapped]
-        [DisplayName("Upload File")]
+        [DisplayName("Upload Image")]
         public IFormFile ImageFile { get; set; }
     }
 }

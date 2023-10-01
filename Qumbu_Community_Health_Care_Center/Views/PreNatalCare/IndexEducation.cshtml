@@ -1,78 +1,36 @@
-﻿@{
+﻿@model IEnumerable<Qumbu_Community_Health_Care_Center.Models.PrenatalEducation>
+
+@{
     Layout = "/Views/Shared/_PreNatalCareLayout.cshtml";
 }
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Containers with Bootstrap 5</title>
-    <!-- Bootstrap CSS link -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        /* Custom styling for the containers */
-        .custom-container {
-            border: 1px solid #ccc;
-            padding: 20px;
-            margin: 10px;
-            text-align: center;
+
+
+
+<div class="container">
+        <br />
+        <br />
+    <h3 class="display-4">Prenatal Education</h3>
+    <br />
+    <br />
+    <div class="row">
+        @foreach(var item in Model)
+        {
+            <div class="col-md-4">
+                <div class="custom-container">
+                    <svg class="d-placeholder-img card-img-top" width="100%" height="225" xlmns="http://www.w3.org/2000/svg" preserveAspectRatio=""></svg>
+                    <div class="card-body">
+                        <h3 class="card-title">@item.Title</h3>
+                        <p class="card-text">@item.Description</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <a href="#" class="btn btn-sm btn-outline-secondary">View details</a>
+                            </div>
+                            <small class="text-muted">@item.Author</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         }
-    </style>
-</head>
-<body>
-    <div class="row">
-        <div class="col custom-container">
-            <@*h2>Container 1 (Top)</h2>*@
-            @*<p>This is the first container on top.</p>*@
-            <!-- Insert an image in the first container -->
-            <img src="image1.jpg" alt="Image 1 Description">
-        </div>
     </div>
-    <div class="row">
-        <div class="col-md-5">
-            <div class="custom-container">
-                <img src="~/images/Appointment.png" alt="Image 1">
-                @*<h3>Container 1</h3>*@
-                <div class="d-grid gap-2">
-                    <button class="btn btn-Secondary btn-lg" type="button">Appointment</button>
-                </div>
-
-            </div>
-        </div>
-        <div class="col-md-5">
-            <div class="custom-container">
-                <img src="~/images/Health.png" Image 2">
-                @*<h3>Container 2</h3>*@
-                <div class="d-grid gap-2">
-                    <button class="btn btn-Secondary btn-lg" type="button">Health Monitoring</button>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-5">
-            <div class="custom-container">
-                <img src="~/images/Fetal.png" alt="Image 3">
-                @*<h3>Container 3</h3>*@
-                <div class="d-grid gap-2">
-                    <button class="btn btn-Secondary btn-lg" type="button">Fetal Tracking</button>
-                </div>
-
-            </div>
-        </div>
-        <div class="col-md-5">
-            <div class="custom-container">
-                <img src="~/images/Health_education.png" alt="Image 4">
-                @* <h3>Container 4</h3>*@
-                <div class="d-grid gap-2">
-                    <button class="btn btn-Secondary btn-lg" type="button">Prenatal Care Education</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-    <!-- Bootstrap JS scripts (make sure these are included at the end of the body) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+</div>

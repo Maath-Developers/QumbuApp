@@ -252,32 +252,32 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         //}
         public IActionResult IndexEducation()
         {
-            IEnumerable<UltrasoundAppointment> objList = dbContext.Ultrasounds;
+            IEnumerable<PrenatalEducation> objList = dbContext.prenatalEducation;
             return View(objList);
         }
         //[HttpPost]
         //[ValidateAntiForgeryToken]
-        public IActionResult CreateEducation(UltrasoundAppointment ultrasound)
+        public IActionResult CreateEducation(PrenatalEducation prenatalEducation)
         {
             string uniqueFileName = null;
-            if (ultrasound.ImageFile != null)
+            if (prenatalEducation.CoverImage != null)
             {
                 string ImageUploadedFolder = Path.Combine
                     (webHostEnvironment.WebRootPath, "UploadedImages");
-                uniqueFileName = Guid.NewGuid().ToString() + " " + ultrasound.ImageFile.FileName;
+                uniqueFileName = Guid.NewGuid().ToString() + " " + prenatalEducation.CoverImage.FileName;
 
                 string filepath = Path.Combine(ImageUploadedFolder, uniqueFileName);
 
                 using (var fileStream = new FileStream(filepath, FileMode.Create))
                 {
-                    ultrasound.ImageFile.CopyTo(fileStream);
+                    prenatalEducation.CoverImage.CopyTo(fileStream);
                 }
-                ultrasound.UltrasoundImagePath = "~/wwwroot/UploadedImages";
-                ultrasound.FileName = uniqueFileName;
+                prenatalEducation.CoverImagePath = "~/wwwroot/UploadedImages";
+                prenatalEducation.FileName = uniqueFileName;
 
-                dbContext.Ultrasounds.Add(ultrasound);
+                dbContext.prenatalEducation.Add(prenatalEducation);
                 dbContext.SaveChanges();
-                return RedirectToAction("IndexUltrasoundAppointment","PrenatalCare");
+                return RedirectToAction("IndexEducation", "PrenatalCare");
             }
             return View();
         }
