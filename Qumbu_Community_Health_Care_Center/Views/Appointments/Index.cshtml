@@ -15,53 +15,33 @@
         </div>
     </div>
     <br />
-
-    @if (Model.Count() > 0)
-    {
-
-        <table class="table table-bordered table-striped" style="width:100%">
-            <thead>
+     <table class="table table-bordered table-striped" style="width:100%">
+            <thead class="table-primary">
                 <tr>
                     <th>
-                        CreatedAt
+                        @Html.DisplayNameFor(model => model.Date_Time)
                     </th>
                     <th>
-                        Purpose
+                        @Html.DisplayNameFor(model => model.Purpose)
                     </th>
                     <th>
-                        MainUser
+                        @Html.DisplayNameFor(model => model.Status)
                     </th>
-                    
-
                 </tr>
             </thead>
-
             <tbody>
-                @foreach (var app in Model)
-                {
-                    <tr>
-                        <td width="20%">@app.CreatedAt</td>
-                        <td width="20%">@app.Purpose</td>
-                        <td width="20%">@app.MainUser</td>
-                        @*<td width="20%">@app.Departments</td*@>
-                        @*<td>
-                            <div class="w-50 btn-group" role="group">
-                                <a asp-controller="Counseller" asp-action="CreatePat" asp-route-ID="@app.AppointmentID" class="btn btn-info mx-1">View</a>
-                            </div>
-                        </td>*@
-                    </tr>
-
-
-                }
-            </tbody>
+        @foreach (var app in Model)
+        {
+            
+                <tr>
+                    <td width="20%">@app.Date_Time</td>
+                    <td width="20%">@app.Purpose</td>
+                    <td width="20%">@app.Status</td>
+                        
+                </tr>
+         }
+        </tbody>
         </table>
-
-    }
-    else
-    {
-        <p>No Appointments added yet</p>
-    }
-
 </div>
 
 

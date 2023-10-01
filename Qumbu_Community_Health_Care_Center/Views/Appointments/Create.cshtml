@@ -1,7 +1,14 @@
 ﻿@model Qumbu_Community_Health_Care_Center.Models.Appointment
+@using Qumbu_Community_Health_Care_Center.Models
 @{
     Layout = "_Landing2";
 
+}
+@if ( TempData["Success"] != null)
+{
+    <div class="bg-success text-center w-100 p-3 rounded" id="tempdata" role="alert">
+        <h4 class="text-white">@TempData["Success"]</h4>
+    </div>
 }
 <h4>Add Appointments</h4>
 <hr />
@@ -35,7 +42,38 @@
                 <input type="submit" class="btn btn-primary" value="Book"/>
             </div>
         </form>
+       
     </div>
+ <div class="col-6">
+    <table class="table table-bordered table-striped" style="width:100%">
+            <thead class="table-primary">
+                <tr>
+                    <th>
+                            @Html.DisplayNameFor(model => model.Date_Time)
+                    </th>
+                    <th>
+                            @Html.DisplayNameFor(model => model.Purpose)
+                    </th>
+                    <th>
+                            @Html.DisplayNameFor(model => model.Status)
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                    @foreach (Appointment app in ViewBag.App)
+                    {
+
+                    <tr>
+                        <td width="20%">@app.Date_Time</td>
+                        <td width="20%">@app.Purpose</td>
+                        <td width="20%">@app.Status</td>
+                    </tr>
+                    }
+        </tbody>
+        </table>
+</div>
+
+</div>
 </div>
 <br />
 <div>

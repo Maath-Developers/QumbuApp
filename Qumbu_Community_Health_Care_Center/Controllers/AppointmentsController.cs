@@ -19,11 +19,19 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         //[Bind("AppointmentID,Date,Purpose,Status,PatientID,Date_Time")]
         public async Task<IActionResult> Index()
         {
+            var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var applicationDbContext = Context.Appointments.Include(a => a.MainUser).Where(a => a.PatientID == user);
+            return View(await applicationDbContext.ToListAsync());
+        }
+        public async Task<IActionResult> All_Appointments()
+        {
             var applicationDbContext = Context.Appointments.Include(a => a.MainUser);
             return View(await applicationDbContext.ToListAsync());
         }
         public IActionResult Create()
         {
+			var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
+			ViewBag.App = Context.Appointments.Where(a => a.PatientID == user).ToList();
             return View();
         }
         [HttpPost]
@@ -36,8 +44,10 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             {
                 Context.Appointment.Add(appointments);
                 Context.SaveChanges();
-                return RedirectToAction(nameof(Index));
+                TempData["Success"] = "Succesfully booked";
+                return RedirectToAction("Create");
             }
+            ViewBag.App = Context.Appointments.Where(a => a.PatientID == user).ToList();
             ViewData["PatientID"] = new SelectList(Context.Users, "Id", "Id", appointments.PatientID);
             return View(appointments);
         }
