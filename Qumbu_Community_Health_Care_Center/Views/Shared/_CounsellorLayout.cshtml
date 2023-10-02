@@ -4,6 +4,7 @@
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
 
+
 <!DOCTYPE html>
 
 <html>
@@ -39,7 +40,7 @@
 							</a>
 						</li>
 						<li class="sidebar-item">
-							<a asp-controller="Counseller" asp-action="Landing2" class="sidebar-link">
+							<a asp-controller="Home" asp-action="Landing2" class="sidebar-link">
 								<i class="align-middle" data-feather="list"></i> <span class="align-middle">Dashboard</span>
 							</a>
 						</li>
@@ -78,7 +79,7 @@
 								<i class="align-middle" data-feather="calendar"></i> <span class="align-middle">Reports</span>
 							</a>
 						</li>
-
+						
 					</ul>
 
 				</div>
@@ -393,8 +394,7 @@
 					</a>
 
 					<ul class="sidebar-nav">
-
-
+						
 						<li class="sidebar-item">
 							<a asp-controller="Home" asp-action="Index" class="sidebar-link">
 								<i class="align-middle" data-feather="home"></i> <span class="align-middle">Home</span>
@@ -412,7 +412,7 @@
 						</li>
 
 						<li class="sidebar-item">
-							<a asp-controller="Counseller" asp-action="CreateRec" class="sidebar-link">
+							<a asp-controller="Counseller" asp-action="CreateRe" class="sidebar-link">
 								<i class="align-middle" data-feather="thermometer"></i> <span class="align-middle">Counselling</span>
 							</a>
 						</li>
