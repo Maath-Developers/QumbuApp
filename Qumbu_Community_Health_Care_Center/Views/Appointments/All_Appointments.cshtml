@@ -57,11 +57,7 @@
                         <a asp-action="Details" asp-route-id="@item.AppointmentID">Decline</a>
                         <a asp-action="Delete" asp-route-id="@item.AppointmentID">Postpone</a>
                     </td>
-                    <!-- Button trigger modal -->
-                   @* <button type="button" class="btn btn-primary" >
-                        Launch demo modal
-                    </button>*@
-
+                    
                     <!-- Modal -->
                     <div class="modal fade" id="exampleModal-@item.AppointmentID" tabindex="-1" aria-labelledby="exampleModal-@item.AppointmentID" aria-hidden="true">
                         <div class="modal-dialog">
