@@ -13,17 +13,15 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-8">
-                        <div class="form-group">
-                            <label for="Background">I.Background Of The Case:</label>
-                            <textarea class="form-control" id="Background" rows="6" placeholder=" "></textarea>
+                        <div class="col-10">
+                            <label asp-for="Background"></label>
+                            <textarea class="form-control" rows="6" id="Background" name="Background"></textarea>
+                            <span asp-validation-for="Background" class="text-danger"></span>
                         </div>
-                        <div class="col-mb-8">
-                            <div class="form-group">
-                                <label for="CounsellingPlan">II. Counselling Plan: </label>
-                                @*<input type="text" class="form-control" id="memberName" placeholder=" ">*@
-                            </div>
-                        </div>
-                        <div class="col-md-8">
+                        <div class="col-8">
+                        <label asp-for="CounsellingPlan"></label>
+                    </div>     
+                    <div class="col-md-8">
                             <div class="form-group">
                                 <label for="validityPeriod">(a) Counselling Approaches</label>
                                 <select id="CounsellingApproach" asp-for="CounsellingApproach" class="form-control" id="validationName" required>
@@ -36,25 +34,22 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-mb-8">
-                            <div class="form-group">
-                                <label for="Goals">(b)Counselling Goals:</label>
-                                <textarea class="form-control" id="Goals" rows="6" placeholder=" "></textarea>
-                            </div>
+                        <div class="col-10">
+                        <label asp-for="Goals"></label>
+                        <textarea class="form-control" rows="6" id="Goals" name="Goals"></textarea>
+                        <span asp-validation-for="Goals" class="text-danger"></span>
+                    </div>
+                        <br />
+                        <div class="col-10">
+                            <label asp-for="comments"></label>
+                            <textarea class="form-control" rows="6" id="comments" name="comments"></textarea>
+                            <span asp-validation-for="comments" class="text-danger"></span>
                         </div>
                         <br />
-                        <div class="col-mb-8">
-                            <div class="form-floating">
-                                <label for="comments">III.Comments:</label>
-                                <textarea class="form-control" id="comments" rows="6" placeholder=" "></textarea>
-                            </div>
-                        </div>
-                        <br />
-                        <div class="col-mb-8">
-                            <div class="form-floating">
-                                <label for="recom">IV.Recommendations:</label>
-                                <textarea class="form-control" id="recom" rows="6" placeholder=" "></textarea>
-                            </div>
+                        <div class="col-10">
+                            <label asp-for="recom"></label>
+                            <textarea class="form-control" rows="6" id="recom" name="recom"></textarea>
+                            <span asp-validation-for="recom" class="text-danger"></span>
                         </div>
                     </div>
                 </div>

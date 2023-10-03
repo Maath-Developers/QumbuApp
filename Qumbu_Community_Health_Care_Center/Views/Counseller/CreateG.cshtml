@@ -5,6 +5,7 @@
 <div class="mt-2 p-2 bg-white text-center text-white-50 rounded">
     <h2>Group Counselling</h2>
 </div>
+<br />
 <form method="post" asp-action="CreateConf">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
     <div class="container-fluid">
@@ -20,6 +21,7 @@
                                 <option value="Female">Liso</option>
                             </select>
                         </div>
+                        <br />
                         <div class="col">
                             <input type="submit" class="btn btn-info w-75" value="Remove" />
                         </div>
@@ -32,56 +34,53 @@
                 </div>
                 <br />
                 <div class="row">
-                    
+
                     <div class="col-md-8">
-                        <div class="form-group">
-                            <label for="address">I.Background Of The Case:</label>
-                            <textarea class="form-control" id="bg" rows="6" placeholder=" "></textarea>
+                        <div class="col-10">
+                            <label asp-for="Background"></label>
+                            <textarea class="form-control" rows="6" id="Background" name="Background"></textarea>
+                            <span asp-validation-for="Background" class="text-danger"></span>
                         </div>
-                        <div class="col-md-8">
-                            <div class="form-group">
-                                <label for="memberName">II. Counselling Plan: </label>
-                                @*<input type="text" class="form-control" id="memberName" placeholder=" ">*@
-                            </div>
+                        <div class="col-8">
+                            <label asp-for="CounsellingPlan"></label>
                         </div>
                         <div class="col-md-8">
                             <div class="form-group">
                                 <label for="validityPeriod">(a) Counselling Approaches</label>
                                 <select id="CounsellingApproach" asp-for="CounsellingApproach" class="form-control" id="validationName" required>
                                     <option value="Select" class="bg-opacity-50">Select</option>
-                                    <option value="be">Behavior Counselling</option>
-                                    <option value="co">Cognitive Counselling</option>
-                                    <option value="edu">Educational Counselling</option>
-                                    <option value="hol">Holistic Counselling</option>
-                                    <option value="men">Mental Health Counselling</option>
+                                    <option value="Behavior">Behavior Counselling</option>
+                                    <option value="Cognitive">Cognitive Counselling</option>
+                                    <option value="Educational">Educational Counselling</option>
+                                    <option value="Holistic">Holistic Counselling</option>
+                                    <option value="MentalHealth">Mental Health Counselling</option>
                                 </select>
                             </div>
                         </div>
-                        <div class="col-mb-8">
-                            <div class="form-floating">
-                                <label for="Goals">(b)Counselling Goals:</label>
-                                <textarea class="form-control" id="Goals" rows="6" placeholder=" "></textarea>
-                            </div>
+                        <div class="col-10">
+                            <label asp-for="Goals"></label>
+                            <textarea class="form-control" rows="6" id="Goals" name="Goals"></textarea>
+                            <span asp-validation-for="Goals" class="text-danger"></span>
                         </div>
-                        <div class="col-mb-8">
-                            <div class="form-floating">
-                                <label for="comments">III.Comments:</label>
-                                <textarea class="form-control" id="com" rows="6" placeholder=" "></textarea>
-                            </div>
+                        <br />
+                        <div class="col-10">
+                            <label asp-for="comments"></label>
+                            <textarea class="form-control" rows="6" id="comments" name="comments"></textarea>
+                            <span asp-validation-for="comments" class="text-danger"></span>
                         </div>
-                        <div class="col-mb-8">
-                            <div class="form-floating">
-                                <label for="address">IV.Recommendations:</label>
-                                <textarea class="form-control" id="comments" rows="6" placeholder=" "></textarea>
-                            </div>
+                        <br />
+                        <div class="col-10">
+                            <label asp-for="recom"></label>
+                            <textarea class="form-control" rows="6" id="recom" name="recom"></textarea>
+                            <span asp-validation-for="recom" class="text-danger"></span>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="form-group row">
-                <div class="col-4 offset-2 row">
+                <div class="col-6 offset-2 row">
                     <div class="col">
-                        <a asp-action="IndRec" class="btn btn-info w-75">Confirm</a>
+                        <input type="submit" class="btn btn-info w-75" value="Submit" />
                     </div>
                     <div class="col">
                         <a asp-action="CreateRe" class="btn btn-info w-75">Cancel</a>
@@ -90,7 +89,6 @@
             </div>
         </div>
     </div>
-
 </form>
 
 

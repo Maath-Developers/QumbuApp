@@ -34,55 +34,44 @@
 			</div>
 			</div>
 			<br />
-			<div class="row">
-				<div class="col-12">
-					<div class="form-group">
-						<div class="col-md-3">
-							<div class="form-group">
-								<label for="validityPeriod">Purpose:</label>
-								<select id="VisitPurpose" asp-for="VisitPurpose" class="form-control" id="Purpose" required>
-									<option value="Select" class="bg-opacity-50">Select</option>
-									<option value="Execuse">Excuse Letter</option>
-									<option value="Clearance">Clearance</option>
-								</select>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-12">
-					<div class="form-group">
-						<div class="col-md-3">
-							<div class="form-group">
-								<label for="validityPeriod">First Name:</label>
-								<select id="FirstName" asp-for="FirstName" class="form-control" id="FirstName" required>
-									<option value="Select" class="bg-opacity-50">Select</option>
-									<option value="Unako">Unako</option>
-									<option value="Liso">Liso</option>
-								</select>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-4">
-					<label asp-for="Date"></label>
-					<input asp-for="Date" class="form-control" />
-					<span asp-validation-for="Date" class="text-danger"></span>
-				</div>
-			</div>
-			<br />
-			<div class="form-group row">
-				<div class="col-4 offset-2 row">
-					<div class="col">
-					<a asp-action="VisitRec" class="btn btn-info w-75">Submit</a>
-					</div>
-					<div class="col">
-						<a asp-action="Profile" class="btn btn-info w-75">Cancel</a>
-					</div>
-				</div>
-			</div>
-			@*<a href="path-to-your-file.zip" download="your-file-name.zip">
-				<button>Download</button>
-			</a>*@
-		</div>
-	</form>
-
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="validityPeriod">First Name</label>
+                    <select id="PatientName" asp-for="FirstName" class="form-control" id="validationName" required>
+                        <option value="Select" class="bg-opacity-50">Select</option>
+                        <option value="Unako">Unako</option>
+                        <option value="Liso">Liso</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="validityPeriod">Visit Purpose</label>
+                    <select id="Departments" asp-for="VisitPurpose" class="form-control" id="validationName" required>
+                        <option value="Select" class="bg-opacity-50">Select</option>
+                        <option value="Excuse">Excuse Letter</option>
+                        <option value="Clearance">Clearance Letter</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-3">
+            <label asp-for="Date"></label>
+            <input asp-for="Date" class="form-control" />
+            <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            
+        </div>
+        <br />
+        <div class="form-group row">
+            <div class="col-6 offset-2 row">
+                <div class="col">
+                    <a asp-action="VisitRec" class="btn btn-info w-75">Submit</a>
+                </div>
+                <div class="col">
+                    <a asp-action="CreatePat" class="btn btn-info w-75">Back</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

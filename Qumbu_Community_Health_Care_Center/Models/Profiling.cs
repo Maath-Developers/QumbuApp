@@ -21,21 +21,23 @@ namespace Qumbu_Community_Health_Care_Center.Models
 		[DisplayName("Visit Purpose")]
         public string? VisitPurpose { get; set; }
         public string? Gender { get; set; }
-        [DisplayName("Counselling Type")]
+        [DisplayName("Counselling Type:")]
         public string? CounsellingType { get; set; }
-        [DisplayName("Counselling Approach")]
+        [DisplayName("(a).Counselling Approach:")]
         public string? CounsellingApproach { get; set; }
         public string? GroupName { get; set; }
         public string? DOB { get; set; }
         public string? Status { get; set; }
+        [DisplayName("I.Background of the Case:")]
         public string? Background { get; set; }
+        [DisplayName("II.Counselling Plan:")]
         public string? CounsellingPlan { get; set; }
         public string? Address { get; set; }
-        [DisplayName("Counselling Goals")]
+        [DisplayName("(b).Counselling Goals:")]
         public string? Goals { get; set; }
-        [DisplayName("Comments")]
+        [DisplayName("III.Comments:")]
         public string? comments { get; set; }
-        [DisplayName("Recommendations")]
+        [DisplayName("IV.Recommendations:")]
         public string? recom { get; set; }
     }
 }
