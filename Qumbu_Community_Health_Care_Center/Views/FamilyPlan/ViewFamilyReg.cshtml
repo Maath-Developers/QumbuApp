@@ -81,14 +81,122 @@
                     <tr>
                         <td width="20%">@fed.MainUser.FirstName</td>
                         <td width="20%">@fed.Date</td>
-                        <td width="20%">@fed.intercourse</td>
-                        <td width="20%">@fed.period</td>
-                        <td width="10%">@fed.child</td>
-                        <td width="10%">@fed.experience</td>
-                        <td width="10%">@fed.allaegies</td>
-                        <td width="10%">@fed.medication</td>
-                        <td width="10%">@fed.contraceptives</td>
-                        <td width="30%">@fed.condom</td>
+                        <td>@if(fed.intercourse == 3)
+                            {
+                                <p>2/3 days</p>
+                            }
+                            else if (fed.intercourse == 2)
+                            {
+                                <p> 1 Week</p>
+                            }
+                            else if (fed.intercourse == 1)
+                            {
+                                <p>2 Week</p>
+                            }
+                            else if (fed.intercourse == 4)
+                            {
+                                <p> 4 Week</p>
+                            }
+
+                        </td>
+                        <td>@if(fed.period == 3)
+                            {
+                                <p> This Week</p>
+                            }
+                            else if (fed.period == 3)
+                            {
+                                <p> last Week</p>
+                            }
+                            else if (fed.period == 2)
+                            {
+                                <p>last Month</p>
+                            }
+                            else if (fed.period == 2)
+                            {
+                                <p>Past Month</p>
+                            }
+
+                        </td>
+                        <td>@if (fed.child == 10)
+                            {
+                                <p>Yes</p>
+                            }
+                            else
+                            {
+                                <p>No</p>
+                            }
+                        </td>
+                        <td>@if(fed.experience == 10)
+                            {
+                                <p>Yes</p>
+                            }
+                            else
+                            {
+                                <p>No</p>
+                            }
+
+                        </td>
+                        <td>@if(fed.allaegies == 10)
+                            {
+                                <p>Yes</p>
+                            }
+                            else
+                            {
+                                <p>No</p>
+                            }
+                        </td>
+                        <td>@if(fed.medication == 10)
+                            {
+                                <p>Yes</p>
+                            }
+                            else
+                            {
+                                <p>No</p>
+                            }
+
+                        </td>
+                        <td>@if(fed.contraceptives == 10)
+                            {
+                                <p>Yes</p>
+                            }
+                            else
+                            {
+                                <p>No</p>
+                            }
+
+                        </td>
+                        <td>@if(fed.condom == 10)
+                            {
+                                <p>Yes</p>
+                            }
+                            else
+                            {
+                                <p>No</p>
+                            }
+
+                        </td>
+                        <td>
+                            @if (fed.normal == 10)
+                            {
+                                <p>Yes</p>
+                            }
+                            else
+                            {
+                                <p>No</p>
+                            }
+
+                        </td>
+                        <td>
+                            @if (fed.smoke == 10)
+                            {
+                                <p>Yes</p>
+                            }
+                            else
+                            {
+                                <p>No</p>
+                            }
+
+                        </td>
                     </tr>
                 }
             </tbody>
