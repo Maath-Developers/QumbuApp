@@ -124,7 +124,7 @@
 					</div>
 				</main>
 
-				<footer class="footer">
+				@*<footer class="footer">
 					<div class="container-fluid">
 						<div class="row text-muted">
 							<div class="col-6 text-start">
@@ -150,7 +150,7 @@
 							</div>
 						</div>
 					</div>
-				</footer>
+				</footer>*@
 			</div>
 		</div>
 		<main role="main" class="pb-3">
@@ -741,32 +741,27 @@
 
 						<li class="sidebar-item">
 							<a asp-controller="FamilyPlan" asp-action="NurseAppointment" class="sidebar-link">
-								<i class="align-middle" data-feather="folder"></i> <span class="align-middle">Manage Bookings</span>
+								<i class="align-middle" data-feather="folder"></i> <span class="align-middle">Walk-in</span>
 							</a>
 						</li>
 						<li class="sidebar-item">
-							<a asp-controller="FamilyPlan" asp-action="CreateFamilyReg" class="sidebar-link">
-								<i class="align-middle" data-feather="folder"></i> <span class="align-middle">Screening</span>
+							<a asp-controller="FamilyPlan" asp-action="Nurse" class="sidebar-link">
+								<i class="align-middle" data-feather="folder"></i> <span class="align-middle">Family-Plan</span>
 							</a>
 						</li>
 
 						<li class="sidebar-item">
 							<a asp-controller="FamilyPlan" asp-action="ListFamilyRegNurse" class="sidebar-link">
-								<i class="align-middle" data-feather="file-text"></i> <span class="align-middle">Manage File</span>
+								<i class="align-middle" data-feather="file-text"></i> <span class="align-middle">Pre-natal</span>
 							</a>
 						</li>
 
 						<li class="sidebar-item">
 							<a asp-controller="FamilyPlan" asp-action="ViewFeedback" class="sidebar-link">
-								<i class="align-middle" data-feather="share-2"></i> <span class="align-middle">Referrals</span>
+								<i class="align-middle" data-feather="share-2"></i> <span class="align-middle">Vaccination</span>
 							</a>
 						</li>
-						<li class="sidebar-item">
-							<a asp-controller="FamilyPlan" asp-action="ViewReports" class="sidebar-link">
-								<i class="align-middle" data-feather="file"></i> <span class="align-middle">Report</span>
-							</a>
-						</li>
-
+						
 
 					</ul>
 

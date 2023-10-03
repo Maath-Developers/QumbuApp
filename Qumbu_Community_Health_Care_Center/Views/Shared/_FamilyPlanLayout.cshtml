@@ -44,7 +44,7 @@
 							</a>
 						</li>
 						<li class="sidebar-item">
-							<a asp-controller="FamilyPlan" asp-action="CreateAppointment" class="sidebar-link">
+							<a asp-controller="Appointments" asp-action="Index" class="sidebar-link">
 								<i class="align-middle" data-feather="calendar"></i> <span class="align-middle">Appointment</span>
 							</a>
 						</li>
@@ -401,19 +401,19 @@
 						</li>
 
 						<li class="sidebar-item">
-							<a asp-controller="FamilyPlan" asp-action="NurseAppointment" class="sidebar-link">
+							<a asp-controller="Appointments" asp-action="Index" class="sidebar-link">
 								<i class="align-middle" data-feather="folder"></i> <span class="align-middle">Manage Bookings</span>
 							</a>
 						</li>
-						<li class="sidebar-item">
+						@*<li class="sidebar-item">
 							<a asp-controller="FamilyPlan" asp-action="CreateFamilyReg" class="sidebar-link">
 								<i class="align-middle" data-feather="folder"></i> <span class="align-middle">Screening</span>
 							</a>
-						</li>
+						</li>*@
 
 						<li class="sidebar-item">
 							<a asp-controller="FamilyPlan" asp-action="ListFamilyRegNurse" class="sidebar-link">
-								<i class="align-middle" data-feather="file-text"></i> <span class="align-middle">Manage File</span>
+								<i class="align-middle" data-feather="file-text"></i> <span class="align-middle">Manage Screening</span>
 							</a>
 						</li>
 
@@ -458,7 +458,6 @@
 									<a class="dropdown-item" href="index.html"><i class="align-middle me-1" data-feather="settings"></i> Settings & Privacy</a>
 									<a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
 									<div class="dropdown-divider"></div>
-									@*<a class="dropdown-item" href="#">Log out</a>*@
 									<form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
 										<button id="logout" type="submit" class="btn ">Logout</button>
 									</form>
@@ -473,6 +472,8 @@
 						@RenderBody()
 					</div>
 				</main>
+
+				@*<script src="~/Sidebar/js/app.js"></script>*@
 
 				<footer class="footer">
 					<div class="container-fluid">

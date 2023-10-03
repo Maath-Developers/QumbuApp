@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using Qumbu_Community_Health_Care_Center.Areas.Identity.Data;
 using Qumbu_Community_Health_Care_Center.Models;
 using System.Security.Claims;
@@ -150,11 +151,13 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
 			return View(familyReg);
 		}
 
-        public IActionResult ViewFamilyReg()
+        public async Task <IActionResult> ViewFamilyReg()
         {
-            IEnumerable<FamilyReg> list = dbContext.FamilyReg;
-            return View(list);
-        }
+            var ApplicationDbContext = dbContext.FamilyReg.Include(f => f.MainUser);
+            return View(await ApplicationDbContext.ToListAsync());
+			//IEnumerable<FamilyReg> list = dbContext.FamilyReg;
+			//return View(list);
+		}
         public IActionResult ListFamilyRegNurse()
         {
             IEnumerable<FamilyReg> list = dbContext.FamilyReg;

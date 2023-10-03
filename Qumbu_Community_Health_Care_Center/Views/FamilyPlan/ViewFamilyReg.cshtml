@@ -37,6 +37,12 @@
             <thead>
                 <tr>
                     <th>
+                        Name
+                    </th>
+                    <th>
+                        Date
+                    </th>
+                    <th>
                         1.When was the last time you enganged in sexual intercourse?"
                     </th>
                     <th>
@@ -60,6 +66,12 @@
                     <th>
                         8.Choose any birth Control of your choice
                     </th>
+                    <th>
+                        9.Choose any birth Control of your choice
+                    </th>
+                    <th>
+                        10.Choose any birth Control of your choice
+                    </th>
                 </tr>
             </thead>
 
@@ -67,7 +79,8 @@
                 @foreach (var fed in Model)
                 {
                     <tr>
-
+                        <td width="20%">@fed.MainUser.FirstName</td>
+                        <td width="20%">@fed.Date</td>
                         <td width="20%">@fed.intercourse</td>
                         <td width="20%">@fed.period</td>
                         <td width="10%">@fed.child</td>
