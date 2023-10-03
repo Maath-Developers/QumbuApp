@@ -75,7 +75,7 @@
 						</li>
 
 						<li class="sidebar-item">
-							<a asp-controller="Counseller" asp-action="VisitRec" class="sidebar-link">
+							<a asp-controller="Counseller" asp-action="Reports" class="sidebar-link">
 								<i class="align-middle" data-feather="calendar"></i> <span class="align-middle">Reports</span>
 							</a>
 						</li>
@@ -406,33 +406,43 @@
 							</a>
 						</li>
 						<li class="sidebar-item">
-							<a asp-controller="Appointments" asp-action="Index" class="sidebar-link">
-								<i class="align-middle" data-feather="calendar"></i> <span class="align-middle">Profiling</span>
+							<a asp-controller="Appointments" asp-action="All_Appointments" class="sidebar-link">
+								<i class="align-middle" data-feather="monitor"></i> <span class="align-middle">Profiling</span>
 							</a>
 						</li>
 
 						<li class="sidebar-item">
+							@*<a asp-controller="Counseller" asp-action="CreateRe" class="sidebar-link">*@
+								@*<i class="align-middle" data-feather="thermometer"></i>*@ <span class="align-middle text-white" >Counselling</span>
+							
+						</li>
+						<li class="sidebar-item">
 							<a asp-controller="Counseller" asp-action="CreateRe" class="sidebar-link">
-								<i class="align-middle" data-feather="thermometer"></i> <span class="align-middle">Counselling</span>
+								<i class="align-middle" data-feather="user"></i> <span class="align-middle">Individual Counselling</span>
 							</a>
 						</li>
-
+						<li class="sidebar-item">
+							<a asp-controller="Counseller" asp-action="CreateG" class="sidebar-link">
+								<i class="align-middle" data-feather="users"></i> <span class="align-middle">Group Counselling</span>
+							</a>
+						</li>
+						
 
 						<li class="sidebar-item">
 							<a asp-controller="Counseller" asp-action="CreatePat" class="sidebar-link">
-								<i class="align-middle" data-feather="edit"></i> <span class="align-middle">Visit Logs</span>
+								<i class="align-middle" data-feather="monitor"></i> <span class="align-middle">Visit Logs</span>
 							</a>
 						</li>
 
 						<li class="sidebar-item">
 							<a asp-controller="Counseller" asp-action="CreateF" class="sidebar-link">
-								<i class="align-middle" data-feather="twitch"></i> <span class="align-middle">Referral</span>
+								<i class="align-middle" data-feather="fast-forward"></i> <span class="align-middle">Referral</span>
 							</a>
 						</li>
 
 						<li class="sidebar-item">
-							<a asp-controller="Counseller" asp-action="VisitRec" class="sidebar-link">
-								<i class="align-middle" data-feather="calendar"></i> <span class="align-middle">Reports</span>
+							<a asp-controller="Counseller" asp-action="Reports" class="sidebar-link">
+								<i class="align-middle" data-feather="edit"></i> <span class="align-middle">Reports</span>
 							</a>
 						</li>
 

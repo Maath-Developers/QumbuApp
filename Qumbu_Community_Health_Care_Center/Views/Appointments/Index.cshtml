@@ -18,6 +18,9 @@
      <table class="table table-bordered table-striped" style="width:100%">
             <thead class="table-primary">
                 <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.MainUser)
+                </th>
                     <th>
                         @Html.DisplayNameFor(model => model.Date_Time)
                     </th>
@@ -34,6 +37,10 @@
         {
             
                 <tr>
+                    <td>
+                        @app.MainUser.FirstName
+                        @app.MainUser.LastName
+                    </td>
                     <td width="20%">@app.Date_Time</td>
                     <td width="20%">@app.Purpose</td>
                     <td width="20%">@app.Status</td>

@@ -26,10 +26,10 @@
                         Background
                     </th>
                     <th>
-                        CounsellingPlan
+                        Counselling Plan
                     </th>
                     <th>
-                        CounsellingApproach
+                        Counselling Approach
                     </th>
                     <th>
                         Goals
@@ -38,9 +38,8 @@
                         Comments
                     </th>
                     <th>
-                        recom
+                        Recommendations
                     </th>
-
                 </tr>
             </thead>
 
@@ -54,11 +53,11 @@
                         <td width="20%">@app.Goals</td> 
                         <td width="20%">@app.comments</td> 
                         <td width="20%">@app.recom</td>
-                        <td>
+                       @* <td>
                             <div class="w-50 btn-group" role="group">
                                 <a asp-controller="Counseller" asp-action="CreatePat" asp-route-ID="@app.ProfileID" class="btn btn-info mx-1">View</a>
                             </div>
-                        </td>
+                        </td>*@
                     </tr>
 
 
