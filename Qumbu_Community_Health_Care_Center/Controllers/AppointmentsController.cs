@@ -27,6 +27,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         }
         public async Task<IActionResult> All_Appointments()
         {
+           
             var applicationDbContext = Context.Appointments.Include(a => a.MainUser);
             return View(await applicationDbContext.ToListAsync());
         }

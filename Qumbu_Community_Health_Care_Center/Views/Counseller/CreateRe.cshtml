@@ -28,11 +28,11 @@
                                 <label for="validityPeriod">(a) Counselling Approaches</label>
                                 <select id="CounsellingApproach" asp-for="CounsellingApproach" class="form-control" id="validationName" required>
                                     <option value="Select" class="bg-opacity-50">Select</option>
-                                    <option value="be">Behavior Counselling</option>
-                                    <option value="co">Cognitive Counselling</option>
-                                    <option value="edu">Educational Counselling</option>
-                                    <option value="hol">Holistic Counselling</option>
-                                    <option value="men">Mental Health Counselling</option>
+                                    <option value="Behavior">Behavior Counselling</option>
+                                    <option value="Cognitive">Cognitive Counselling</option>
+                                    <option value="Educational">Educational Counselling</option>
+                                    <option value="Holistic">Holistic Counselling</option>
+                                    <option value="MentalHealth">Mental Health Counselling</option>
                                 </select>
                             </div>
                         </div>
@@ -42,12 +42,14 @@
                                 <textarea class="form-control" id="Goals" rows="6" placeholder=" "></textarea>
                             </div>
                         </div>
+                        <br />
                         <div class="col-mb-8">
                             <div class="form-floating">
                                 <label for="comments">III.Comments:</label>
                                 <textarea class="form-control" id="comments" rows="6" placeholder=" "></textarea>
                             </div>
                         </div>
+                        <br />
                         <div class="col-mb-8">
                             <div class="form-floating">
                                 <label for="recom">IV.Recommendations:</label>
@@ -58,9 +60,9 @@
                 </div>
             </div>
             <div class="form-group row">
-                <div class="col-4 offset-2 row">
+                <div class="col-6 offset-2 row">
                     <div class="col">
-                        <a asp-action="IndRec" class="btn btn-info w-75">Submit</a>
+                        <input type="submit" class="btn btn-info w-75" value="Submit" />
                     </div>
                     <div class="col">
                         <a asp-action="CreateRe" class="btn btn-info w-75">Cancel</a>
@@ -69,7 +71,6 @@
             </div>
         </div>
     </div>
-
 </form>
 
 

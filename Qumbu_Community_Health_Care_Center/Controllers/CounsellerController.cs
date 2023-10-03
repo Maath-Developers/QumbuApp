@@ -84,15 +84,15 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult CreateRe(PatientReg pat)
+        public IActionResult CreateRe(Profiling pro)
         {
             if (ModelState.IsValid)
             {
-                Context.PatientReg.Add(pat);
+                Context.Profiling.Add(pro);
                 Context.SaveChanges();
-                return RedirectToAction("Record");
+                return RedirectToAction("IndRec");
             }
-            return View(pat);
+            return View(pro);
         }
         public IActionResult Update(int? ID)
         {

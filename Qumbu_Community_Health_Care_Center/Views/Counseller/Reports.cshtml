@@ -7,9 +7,9 @@
 </div>
 <div class="container-fluid">
     <div class="row pt-4">
-        <div class="col-6">
+        @*<div class="col-6">
             <h2 class="text-primary">Counselling Records</h2>
-        </div>
+        </div>*@
     </div>
     <br />
 
@@ -20,16 +20,13 @@
             <thead>
                 <tr>
                     <th>
-                        GroupName
+                        Group Name
                     </th>
                     <th>
-                        FirstName
+                        Patient Name
                     </th>
                     <th>
-                        LastName
-                    </th>
-                    <th>
-                        CounsellingType
+                        Counselling Type
                     </th>
                     <th>
                         Date
@@ -45,8 +42,11 @@
                 {
                     <tr>
                         <td width="20%">@pro.GroupName</td>
-                        <td width="20%">@pro.FirstName</td>
-                        <td width="20%">@pro.LastName</td>
+                        <td width="20%">
+                            @pro.FirstName
+                            @pro.LastName
+                        </td>
+                        
                         <td width="20%">@pro.CounsellingType</td>
                         <td width="20%">@pro.Date</td>
                         <td>
@@ -66,7 +66,7 @@
                     <input type="submit" class="btn btn-info w-75" value="Print" />
                 </div>
                 <div class="col">
-                    <a asp-action="Patient" class="btn btn-danger w-75">Back</a>
+                    <a asp-action="Patient" class="btn btn-info w-75">Back</a>
                 </div>
             </div>
         </div>

@@ -31,17 +31,17 @@
             <thead>
                 <tr>
                     <th>
-                        VisitPurpose
+                        Visit Purpose
                     </th>
                     <th>
-                        FirstName
+                        First Name
                     </th>
                     <th>
                         Date
                     </th>
-                    <th>
+                   @* <th>
                         Action
-                    </th>
+                    </th>*@
                 </tr>
             </thead>
 
@@ -50,13 +50,16 @@
                 {
                     <tr>
                         <td width="20%">@pro.VisitPurpose</td>
-                        <td width="20%">@pro.FirstName</td>
+                        <td width="20%">
+                            @pro.FirstName
+                            @pro.LastName
+                        </td>
                         <td width="20%">@pro.Date</td>
-                        <td>
+                       @* <td>
                             <div class="w-50 btn-group" role="group">
                                 <a asp-controller="Counseller" asp-action="Delete" asp-route-ID="@pro.ProfileID" class="btn btn-primary mx-1">View</a>
                             </div>
-                        </td>
+                        </td>*@
                     </tr>
 
 
