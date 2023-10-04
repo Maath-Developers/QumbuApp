@@ -5,7 +5,9 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Qumbu_Community_Health_Care_Center.Areas.Identity.Data;
 using Qumbu_Community_Health_Care_Center.Models;
+using Qumbu_Community_Health_Care_Center.Services;
 using System.Security.Claims;
+using System.Text.Encodings.Web;
 
 namespace Qumbu_Community_Health_Care_Center.Controllers
 {
@@ -13,10 +15,10 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
     public class AppointmentsController : Controller
     {
         private readonly ApplicationDbContext Context;
-        private readonly IEmailSender email;
-        public AppointmentsController(ApplicationDbContext DbContext,IEmailSender _email)
+        private readonly IEmailSender _email;
+        public AppointmentsController(ApplicationDbContext DbContext,IEmailSender email)
         {
-            email = _email;
+            _email = email;
             Context = DbContext;
         }
         public async Task<IActionResult> Index()
@@ -48,40 +50,40 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
                 Context.Appointment.Add(appointments);
                 await Context.SaveChangesAsync();
                 TempData["Success"] = "Succesfully booked";
-    //            try
-    //            {
-    //                string supportEmail = "Qumbu_Community_Health_Care_Center.healthcare@gmail.com";
-    //                var email = User.FindFirstValue(ClaimTypes.Email);
-    //               email./*SendEmailAsync*/(email, "Appointment Created",
-    //                    $"<html><head> <style>.body {{font-family: Arial, sans-serif; }} " +
-    //                    $"h1 {{ color: #00342C; }}" +
-    //                    $".cta-button {{ background-color: #00C2CC; color: white" +
-    //                    $"padding: 10px 20px;" +
-    //                    $"text-decoration: none; border-radius: 5px; }}" +
-    //                    $"footer{{ margin-top: 20px; font-size: 12px; color: #888;}}" +
-    //                    $"cta-button: hover {{background-color: #00C2C; }}" +
-    //                    $"</style>" +
-    //                    $"</head>" +
-    //                    $"</body>" +
-    //                    $"" +
-    //                    $"<h1>Qumbu healthcare Center</h1>" +
-    //                    $"<p></p>" +
-    //                    $"<p> This is a notification email about your appointment</p>" +
-    //                    $"<strong>Appointment Date: {appointments.Date_Time}</p></strong>" +
-    //                    $"<p>Kindly note that your appointment has been succesfully scheduled</P>" +
-
-    //                    $"<p>For any questions or queries, please contact our support team at {supportEmail}.</p>" +
-    //                    $"<div class='footer'>" +
-    //                    $"<p>Thank you.</p>" +
-    //                    $"<p>Qumbu Healthcare Team</p>" +
-    //                    $"</div>" +
-    //                    $"</body>" +
-    //                    $"</html>");
-    //            }
-    //            catch ( Exception ex ) 
-    //            {
-				//	TempData["Success"] = "Succesfully booked but email notification failed.";
-				//}
+                try
+                {
+                    string supportEmail = "Qumbu_Community_Health_Care_Center.healthcare@gmail.com";
+                    var email = User.FindFirstValue(ClaimTypes.Email);
+                    await _email.SendEmailAsync(email, "Confirm your email",
+                        $"<html><head><style>body{{font-family:Arial,sans-serif;}}" +
+                        $"h1{{color:#336699;}}" +
+                        $".cta-button{{background-color:#336699;color:@fff;" +
+                        $"padding:10px 20px;" +
+                        $"text-decoration:none;border-radius:5px;}}" +
+                        $".cta-button:hover{{background-color:#265580;}}" +
+                        $".footer{{margin-top:20px;font-size:12px;color:#888;}}" +
+                        $"</style>" +
+                        $"</head>" +
+                        $"<body>" +
+                        $"" +
+                        $"<h1>Qumbu Healthcare Center!</h1>" +
+                        $"<p></p>" +
+                        $"<p> Thank for booking with us.</P>" +
+                        $"<p>Take note that your appointment has been booked successfully</P>" + 
+                        $"<Strong><p>Appointment Date: {appointments.Date_Time}</P></strong>" +
+                        
+                        $"" +
+                        $"if you have any question ,contact our team at {supportEmail}</p>" +
+                        $"<dic class='footer'>" +
+                        $"<p>Thank you</p>" +
+                        $"</div>" +
+                        $"</body>" +
+                        $"</html>");
+                }
+                catch (Exception ex)
+                {
+                    TempData["Success"] = "Succesfully booked but email notification failed.";
+                }
                 return RedirectToAction("Create");
             }
             ViewBag.App = Context.Appointments.Where(a => a.PatientID == user).ToList();
