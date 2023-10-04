@@ -158,10 +158,10 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
 			//IEnumerable<FamilyReg> list = dbContext.FamilyReg;
 			//return View(list);
 		}
-        public IActionResult ListFamilyRegNurse()
+        public async Task <IActionResult> ListFamilyRegNurse()
         {
-            IEnumerable<FamilyReg> list = dbContext.FamilyReg;
-            return View(list);
+            var ApplicationDbContext = dbContext.FamilyReg.Include(f => f.MainUser);
+            return View(await ApplicationDbContext.ToListAsync());
         }
 
 		public ActionResult NurseAppointment()

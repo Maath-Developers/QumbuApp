@@ -7,7 +7,7 @@
 }
 @if (User.IsInRole("Nurse"))
 {
-    <div class="mt-2 p-3 bg-white text-black rounded">
+   @* <div class="mt-2 p-3 bg-white text-black rounded">
         <h1>
            
             <a href="index.html"><img class="img-responsive" width="500" height="110" src="~/_Images/welcome.png" alt="#" /></a>
@@ -15,10 +15,10 @@
 
         </h1>
         
-    </div>
+    </div>*@
     <style>
         #dash-con {
-            background: rgba(59, 198, 169, 0.8);
+            background: rgba(213, 228, 222);
             box-shadow: 0 8px 32px 0 rgba(21, 88, 119, 0.87);
             backdrop-filter: blur( 0px );
             -webkit-backdrop-filter: blur( 0px );
@@ -43,7 +43,7 @@
         <div class="row g-4">
             <div class=" col-sm-6 col-xl-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <div id="dash-con" class="dash-con rounded d-flex align-items-center justify-content-between p-4">
-                    <img src="~/_Images/ContraceptiveDash.png" style="width: 79px" />
+                    <img src="~/_Images/Fbooking.png" style="width: 79px" />
                     <a asp-controller="Appointments" asp-action="Index">
                         <h4 class="mb-2">View Bookings<span class="badge bg-primary rounded-pill text-white"></span></h4>
 
@@ -54,7 +54,7 @@
 
             <div class="col-sm-6 col-xl-3" data-bs-toggle="modal" data-bs-target="#exampleModal1">
                 <div id="dash-con" class="dash-con rounded d-flex align-items-center justify-content-between p-4">
-                    <img src="~/Image/File.png" style="width: 65px" />
+                    <img src="~/_Images/Fscreen.png" style="width: 85px" />
                     <a asp-controller="FamilyPlan" asp-action="ViewFamilyReg">
                         <h4 class="mb-2"> Manage Screening<span class="badge bg-primary rounded-pill text-white"></span></h4>
 
@@ -65,7 +65,7 @@
 
             <div class="col-sm-6 col-xl-3" data-bs-toggle="modal" data-bs-target="#exampleModal1">
                 <div id="dash-con" class=" dash-con rounded d-flex align-items-center justify-content-between p-4">
-                    <img src="~/Image/Alerts.png" style="width: 95px" />
+                    <img src="~/_Images/Frerral.png" style="width: 70px" />
                     <a asp-controller="FamilyPlan" asp-action="ViewFeedback">
                         <h4 class="mb-2">Referrals<span class="badge bg-primary rounded-pill text-white"></span></h4>
 
@@ -83,6 +83,109 @@
             </div>
         </div>
     </div>
+    <div class="container-fluid pt-4 px-4">
+        <div class="row g-4">
+            <div class="AssessmentTable col-sm-12 col-md-6 col-xl-4">
+                <div class="h-100  rounded p-4">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <h6 class="mb-0">Messages</h6>
+                        <a href="">Show All</a>
+                    </div>
+                    <div class="d-flex align-items-center border-bottom py-3">
+                        <img class="rounded-circle flex-shrink-0" width="40" height="40" src="https://img.icons8.com/color/48/user.png" alt="user" />
+                        <div class="w-100 ms-3">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-0">Dr M</h6>
+                                <small>15 minutes ago</small>
+                            </div>
+                            <span>Please not that am aware of the appointmetns</span>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center border-bottom py-3">
+
+                        <img class="rounded-circle flex-shrink-0" width="40" height="40" src="https://img.icons8.com/color/48/user.png" alt="user" />
+                        <div class="w-100 ms-3">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-0">Mr M</h6>
+                                <small>40 minutes ago</small>
+                            </div>
+                            <span>Hey , i hope you are good. you have been...</span>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center border-bottom py-3">
+                        <img class="rounded-circle flex-shrink-0" width="40" height="40" src="https://img.icons8.com/color/48/user.png" alt="user" />
+                        <div class="w-100 ms-3">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-0">Admin</h6>
+                                <small>3 days ago</small>
+                            </div>
+                            <span>Welcome to E-nompilo...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="AssessmentTable col-sm-12 col-md-6 col-xl-4">
+                <div class="h-100  rounded p-4">
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                        <h6 class="mb-0">To Do List</h6>
+                        <a href="">Show All</a>
+                    </div>
+                    <div class="d-flex mb-2">
+                        <input class="form-control bg-dark border-0" type="text" placeholder="Enter task">
+                        <button type="button" class="btn btn-primary ms-2">Add</button>
+                    </div>
+                    <div class="d-flex align-items-center border-bottom py-2">
+                        <input class="form-check-input m-0" type="checkbox">
+                        <div class="w-100 ms-3">
+                            <div class="d-flex w-100 align-items-center justify-content-between">
+                                <span>Short task goes here...</span>
+                                <button class="btn btn-sm"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center border-bottom py-2">
+                        <input class="form-check-input m-0" type="checkbox">
+                        <div class="w-100 ms-3">
+                            <div class="d-flex w-100 align-items-center justify-content-between">
+                                <span>Call Dr nullar</span>
+                                <button class="btn btn-sm"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center border-bottom py-2">
+                        <input class="form-check-input m-0" type="checkbox" checked>
+                        <div class="w-100 ms-3">
+                            <div class="d-flex w-100 align-items-center justify-content-between">
+                                <span><del>Wake up,make my bed</del></span>
+                                <button class="btn btn-sm text-primary"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center border-bottom py-2">
+                        <input class="form-check-input m-0" type="checkbox">
+                        <div class="w-100 ms-3">
+                            <div class="d-flex w-100 align-items-center justify-content-between">
+                                <span>Take My Medication.....</span>
+                                <button class="btn btn-sm"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center pt-2">
+                        <input class="form-check-input m-0" type="checkbox">
+                        <div class="w-100 ms-3">
+                            <div class="d-flex w-100 align-items-center justify-content-between">
+                                <span>Make Appointment....</span>
+                                <button class="btn btn-sm"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
     
 }
 @if (User.IsInRole("Doctor"))
