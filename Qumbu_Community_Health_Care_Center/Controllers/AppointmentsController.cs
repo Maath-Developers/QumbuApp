@@ -9,6 +9,7 @@ using Qumbu_Community_Health_Care_Center.Services;
 using System.Security.Claims;
 using System.Text.Encodings.Web;
 
+
 namespace Qumbu_Community_Health_Care_Center.Controllers
 {
     [Authorize]
@@ -30,8 +31,8 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         public async Task<IActionResult> All_Appointments()
         {
            
-            var applicationDbContext = Context.Appointments.Include(a => a.MainUser);
-            return View(await applicationDbContext.ToListAsync());
+            var applicationDbContext = Context.Appointments.Include(a => a.MainUser).ToList();
+            return View();
         }
         public IActionResult Create()
         {
@@ -98,16 +99,131 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
                 appointments.Status = "Accepted";
                 Context.Appointments.Update(appointments);
                 Context.SaveChanges();
+                TempData["Success"] = "The appointment has been accepted";
                 var patient = Context.Users.Where(a => a.Id == appointments.PatientID).FirstOrDefault();
-                //try
-                //{
-                //    email.SendEmailAsync(patient.Email, "Appointment Accepted");
-                //}
+                try
+                {
+                    string supportEmail = "Qumbu_Community_Health_Care_Center.healthcare@gmail.com";
+                     _email.SendEmailAsync(patient.Email, "Confirm your email",
+                         $"<html><head><style>body{{font-family:Arial,sans-serif;}}" +
+                         $"h1{{color:#336699;}}" +
+                         $".cta-button{{background-color:#336699;color:@fff;" +
+                         $"padding:10px 20px;" +
+                         $"text-decoration:none;border-radius:5px;}}" +
+                         $".cta-button:hover{{background-color:#265580;}}" +
+                         $".footer{{margin-top:20px;font-size:12px;color:#888;}}" +
+                         $"</style>" +
+                         $"</head>" +
+                         $"<body>" +
+                         $"" +
+                         $"<h1>Qumbu Healthcare Center!</h1>" +
+                         $"<p></p>" +
+                         $"<p> Thank for booking with us.</P>" +
+                         $"<p>Take note that your appointment has been accepted</P>" +
+                         $"<Strong><p>Appointment Date: {appointments.Date_Time}</P></strong>" +
+                         $"<Strong><p>Appointment Purpose: {appointments.Purpose}</P></strong>" +
+                         $"<p>Please be on time, atleast 10 minutes before</P>" +
+
+                         $"" +
+                         $"if you have any question ,contact our team at {supportEmail}</p>" +
+                         $"<dic class='footer'>" +
+                         $"<p>Thank you</p>" +
+                         $"</div>" +
+                         $"</body>" +
+                         $"</html>");
+                }
+                catch
+                {
+
+                }
                 return RedirectToAction("All_Appointments");
             }
             ViewData["PatientID"] = new SelectList(Context.Users, "Id", "Id", appointments.PatientID);
             return View(appointments);
+        }
+        public IActionResult Edit(int?id)
+        {
+            if(id == null || Context.Appointments == null)
+            {
+                return NotFound();
+            }
+            var appointments = Context.Appointments.Find(id);
+            if (appointments == null)
+            {
+                return NotFound();
+            }
+            ViewData["PatientID"] = new SelectList(Context.Users, "Id", "Id", appointments.PatientID);
+            return View(appointments);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(int id,Appointment appointments)
+        {
+            if(id != appointments.AppointmentID)
+            {
+                return NotFound();
+            }
+            else 
+            {
+                try
+                {
+                    var appoint = Context.Appointment.Where(a => a.AppointmentID == id).FirstOrDefault();
+                    appoint.Date_Time = appointments.Date_Time;
+                    Context.Update(appoint);
+                    Context.SaveChanges();
+                    TempData["Success"] = "The appointment has been postponed";
+                    var patient = Context.Users.Where(a => a.Id == appoint.PatientID).FirstOrDefault();
+                    try
+                    {
+                        string supportEmail = "Qumbu_Community_Health_Care_Center.healthcare@gmail.com";
+                        _email.SendEmailAsync(patient.Email, "Confirm your email",
+                            $"<html><head><style>body{{font-family:Arial,sans-serif;}}" +
+                            $"h1{{color:#336699;}}" +
+                            $".cta-button{{background-color:#336699;color:@fff;" +
+                            $"padding:10px 20px;" +
+                            $"text-decoration:none;border-radius:5px;}}" +
+                            $".cta-button:hover{{background-color:#265580;}}" +
+                            $".footer{{margin-top:20px;font-size:12px;color:#888;}}" +
+                            $"</style>" +
+                            $"</head>" +
+                            $"<body>" +
+                            $"" +
+                            $"<h1>Qumbu Healthcare Center!</h1>" +
+                            $"<p></p>" +
+                            $"<p> Thank for booking with us.</P>" +
+                            $"<p>Take note that your appointment has been postpone with the following details</P>" +
+                            $"<Strong><p>Appointment Date: {appointments.Date_Time}</P></strong>" +
+                            $"<Strong><p>Appointment Purpose: {appointments.Purpose}</P></strong>" +
+                            $"<p>Please be on time, atleast 10 minutes before</P>" +
 
+                            $"" +
+                            $"if you have any question ,contact our team at {supportEmail}</p>" +
+                            $"<dic class='footer'>" +
+                            $"<p>Thank you</p>" +
+                            $"</div>" +
+                            $"</body>" +
+                            $"</html>");
+                        return RedirectToAction("All_Appointments");
+                    }
+                    catch
+                    {
+                        return RedirectToAction("Index");
+                    }
+                } 
+                catch(DbUpdateConcurrencyException)
+                {
+                    //if(!AppointmentExists(appointments.AppointmentID))
+                    //{
+                    //    return NotFound();
+                    //}
+                    //else
+                    //{
+                    //    throw;
+                    //}
+                }
+            }
+            ViewData["PatientID"] = new SelectList(Context.Users, "Id", "Id", appointments.PatientID);
+            return View(appointments);
         }
     }
 }
