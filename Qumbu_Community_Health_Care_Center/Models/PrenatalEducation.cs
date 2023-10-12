@@ -1,4 +1,5 @@
 ﻿
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -13,9 +14,11 @@ namespace Qumbu_Community_Health_Care_Center.Models
         public string Category { get; set; }
         public DateTime PublishDate { get; set; }
         public string Author { get; set; }
+        
         public string CoverImagePath { get; set; }
         //public IFormFile ContentPdf { get; set; }
         public string FileName { get; set; }
+        [DisplayName("Cover Image")]
         [NotMapped]
         public IFormFile CoverImage { get; set; }
         

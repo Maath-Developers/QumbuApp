@@ -281,5 +281,19 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             }
             return View();
         }
+        public IActionResult EducationDetails(int? ID)
+        {
+            if(ID == null || ID == 0)
+            {
+                return NotFound();
+            }
+            var obj = dbContext.prenatalEducation.Find(ID);
+            if (obj == null)
+            {
+                return NotFound();
+            }
+
+            return View(obj);
+        }
     }
 }
