@@ -133,6 +133,20 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
 
             return View(obj);
         }
+        //public IActionResult UpdateEducation(int? ID)
+        //{
+        //    if (ID == null || ID == 0)
+        //    {
+        //        return NotFound();
+        //    }
+        //    var obj = dbContext.prenatalEducation.Find(ID);
+        //    if (obj == null)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    return View(obj);
+        //}
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult UpdateAppointment(Appointment appointment)
@@ -224,32 +238,6 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             dbContext.SaveChanges();
             return RedirectToAction("IndexUltrasoundAppointment", "PrenatalCare");
         }
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public IActionResult DeleteUltrasound(UltrasoundAppointment ultrasound)
-        //{
-        //    string uniqueFileName = null;
-        //    if (ultrasound.ImageFile != null)
-        //    {
-        //        string ImageUploadedFolder = Path.Combine
-        //            (webHostEnvironment.WebRootPath, "UploadedImages");
-        //        uniqueFileName = Guid.NewGuid().ToString() + "_" + ultrasound.ImageFile.FileName;
-
-        //        string filepath = Path.Combine(ImageUploadedFolder, uniqueFileName);
-
-        //        using (var fileStream = new FileStream(filepath, FileMode.Create))
-        //        {
-        //            ultrasound.ImageFile.CopyTo(fileStream);
-        //        }
-        //        ultrasound.UltrasoundImagePath = "~/wwwroot/UploadedImages";
-        //        ultrasound.FileName = uniqueFileName;
-
-        //        dbContext.Ultrasounds.Remove(ultrasound);
-        //        dbContext.SaveChanges();
-        //        return RedirectToAction("IndexUltrasoundAppointment", "PrenatalCare");
-        //    }
-        //    return View();
-        //}
         public IActionResult IndexEducation()
         {
             IEnumerable<PrenatalEducation> objList = dbContext.prenatalEducation;
@@ -294,6 +282,58 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             }
 
             return View(obj);
+        }
+        public IActionResult UpdatePrenatalEducation(int? ID)
+        {
+            if (ID == null || ID == 0)
+            {
+                return NotFound();
+            }
+            var obj = dbContext.prenatalEducation.Find(ID);
+            if (obj == null)
+            {
+                return NotFound();
+            }
+
+            return View(obj);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult UpdatePrenatalEducation(PrenatalEducation prenatalEducation)
+        {
+            string uniqueFileName = null;
+            if (prenatalEducation.CoverImage != null)
+            {
+                string ImageUploadedFolder = Path.Combine
+                    (webHostEnvironment.WebRootPath, "UploadedImages");
+                uniqueFileName = Guid.NewGuid().ToString() + " " + prenatalEducation.CoverImage.FileName;
+
+                string filepath = Path.Combine(ImageUploadedFolder, uniqueFileName);
+
+                using (var fileStream = new FileStream(filepath, FileMode.Create))
+                {
+                    prenatalEducation.CoverImage.CopyTo(fileStream);
+                }
+                prenatalEducation.CoverImagePath = "~/wwwroot/UploadedImages";
+                prenatalEducation.FileName = uniqueFileName;
+
+                dbContext.prenatalEducation.Remove(prenatalEducation);
+                dbContext.SaveChanges();
+                return RedirectToAction("IndexEducation", "PrenatalCare");
+            }
+            return View();
+        }
+        public IActionResult DeletePrenatalEducation(int? ID)
+        {
+            var obj = dbContext.prenatalEducation.Find(ID);
+            if (obj == null)
+            {
+                return NotFound();
+            }
+
+            dbContext.prenatalEducation.Remove(obj);
+            dbContext.SaveChanges();
+            return RedirectToAction("IndexEducation", "PrenatalCare");
         }
     }
 }
