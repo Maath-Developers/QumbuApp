@@ -121,7 +121,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
                 totalReg += Convert.ToInt32(familyReg.normal);
                 if(totalReg <= 30)
                 {
-                   TempData["Result"]= "Pill";
+                   TempData["Result"]= "Pills will be ";
                    TempData["_Image"] = "1";
                 }
                 else if( totalReg <= 40)
@@ -204,7 +204,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
                 {
 
                 }
-                return RedirectToAction("All_Appointments");
+                return RedirectToAction("ListFamilyRegNurse");
             }
             ViewData["PatientID"] = new SelectList(dbContext.Users, "Id", "Id", familyReg.PatientID);
             return View(familyReg);

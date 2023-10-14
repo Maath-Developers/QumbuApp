@@ -59,7 +59,7 @@
                     }
                     else if (Convert.ToString(TempData["_Image"]) == "5")
                     {
-                        <img src="~_Images/logo/loop1.jpg" style="width: 200px" />
+                        <img src="~/_Images/logo/loop1.jpg" style="width: 200px" />
                         <h4>@TempData["Result"]</h4>
                     }
                     else if (Convert.ToString(TempData["_Image"]) == "6")
@@ -73,7 +73,7 @@
     </div>
 }
 
-<div class="container p-3">
+<div>
     <div class="row pt-4">
         <div class="col-6">
             <h2 class="text-primary"></h2>
@@ -93,6 +93,9 @@
                     </th>
                     <th>
                         Date
+                    </th>
+                    <th>
+                        Status
                     </th>
                     <th>
                         1.When was the last time you enganged in sexual intercourse?"
@@ -133,6 +136,8 @@
                     <tr>
                         <td width="20%">@fed.MainUser.FirstName</td>
                         <td width="20%">@fed.Date</td>
+                        <td width="20%">@fed.Status</td>
+                    
                         <td>@if(fed.intercourse == 3)
                             {
                                 <p>2/3 days</p>

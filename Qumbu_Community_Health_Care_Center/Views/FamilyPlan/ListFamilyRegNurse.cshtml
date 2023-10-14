@@ -26,6 +26,12 @@
                         Date
                     </th>
                     <th>
+                       Status
+                    </th>
+                    <th>
+                        Birth Control Method
+                    </th>
+                  @*  <th>
                         1.When was the last time you enganged in sexual intercourse?"
                     </th>
                     <th>
@@ -54,7 +60,7 @@
                     </th>
                     <th>
                         10.Choose any birth Control of your choice
-                    </th>
+                    </th>*@
                 </tr>
             </thead>
 
@@ -64,7 +70,14 @@
                     <tr>
                         <td width="20%">@fed.MainUser.FirstName</td>
                         <td width="20%">@fed.Date</td>
-                        <td>
+                        <td width="20%">@fed.Status</td>
+                        <td width="20%">
+                            @if (TempData["Result"] != null)
+                            {
+                                
+                            }
+                        </td>
+                    @*    <td>
                             @if (fed.intercourse == 3)
                             {
                                 <p>2/3 days</p>
@@ -187,6 +200,11 @@
                                 <p>No</p>
                             }
 
+                        </td>*@
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@fed.FamilyRegId">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@fed.FamilyRegId">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@fed.FamilyRegId">Delete</a>
                         </td>
                     </tr>
                 }
