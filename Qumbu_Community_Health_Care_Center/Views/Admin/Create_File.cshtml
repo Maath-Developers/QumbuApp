@@ -1,4 +1,6 @@
-﻿@{
+﻿@model Qumbu_Community_Health_Care_Center.Models.PatientReg
+@using Qumbu_Community_Health_Care_Center.Models
+@{
     Layout = "_Landing2";
 }
 <head>
@@ -17,41 +19,31 @@
 <body>
     <!-- Section 1-->
     <div class="container mt-4">
-
-        <h3>CREATE FILE</h3>
         <div class="card">
-            <div class="card-header">
-                <h4>Patient Card</h4>
-            </div>
-            <div class="card-header bg-secondary opacity-25">
-                <h5 class="card-header">Personal Details</h5>
+            <div class="card-header ">
+                <h5>Personal Details</h5>
             </div>
             <div class="card-body">
                 <div class="row">
 
                     <div class="col-md-3">
                         <div class="form-group">
-                            <label for="memberName">Identity Number</label>
-                            <input type="text" class="form-control" id="memberName" placeholder="Enter Patient Identy Number">
+                            <label for="memberName">Identity Number:</label>
+                            <input type="text" class="form-control" id="memberName" placeholder="Enter Patient Identity Number">
                         </div>
                     </div>
                     <div class="col-md-3">
+
                         <div class="form-group">
-                            <label for="validityPeriod">Gender</label>
-                            <div class="input-group">
-                                <input type="text" class="form-control" id="validityPeriod" placeholder="Select Gender"
-                                       readonly>
-                                <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
-                                            aria-haspopup="true" aria-expanded="false"></button>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">Male</a>
-                                        <a class="dropdown-item" href="#">Female</a>
-                                        <!-- Add more options as needed -->
-                                    </div>
-                                </div>
-                            </div>
+                            <label asp-for="Gender">Gender:</label>
+                            <select id="PurposeDropdown" asp-for="Gender" class="form-control" id="validationName" required>
+                                <option value="Select" class="bg-opacity-50">Click to Select gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                            <span asp-validation-for="Gender" class="text-danger"></span>
                         </div>
+                       
                     </div>
                     <div class="col-md-3">
                         <div class="form-group">
@@ -61,7 +53,7 @@
                     </div>
                     <div class="col-md-3">
                         <div class="form-group">
-                            <label for="validityPeriod">Personal Details</label>
+                            <label for="validityPeriod">Marital Status:</label>
                             <div class="input-group">
                                 <input type="text" class="form-control" id="validityPeriod" placeholder="Select Marital Status"
                                        readonly>
@@ -90,7 +82,7 @@
     <!-- Section 2-->
     <div class="container mt-4">
         <div class="card">
-            <div class="card-header  bg-secondary">
+            <div class="card-header  ">
                 <h5 >Home Address</h5>
             </div>
             <div class="card-body">
@@ -162,7 +154,7 @@
     <!-- Section 3-->
     <div class="container mt-4">
         <div class="card">
-            <div class="card-header  bg-secondary">
+            <div class="card-header  ">
                 <h5 >Next of Kin</h5>
             </div>
             <div class="card-body">
