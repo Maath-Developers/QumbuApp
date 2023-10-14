@@ -261,7 +261,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             {
                 Context.Profiling.Add(pro);
                 Context.SaveChanges();
-                return RedirectToAction("Profile");
+                return RedirectToAction("VisitRec");
             }
             return View(pro);
         }

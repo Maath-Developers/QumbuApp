@@ -40,6 +40,23 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapRazorPages();
 
+//creating Default Roles
+using (var scope = app.Services.CreateScope())
+{
+    var roleManager =
+
+    scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+
+    var roles = new[] { "Admin", "Nurse", "Doctor", "Counsellor", "Pathology", "Patient", "Unit-Manager" };
+
+    foreach (var role in roles)
+    {
+        if (!await roleManager.RoleExistsAsync(role))
+
+            await roleManager.CreateAsync(new IdentityRole(role));
+    }
+
+}
 using (var scope = app.Services.CreateScope())
 {
     var userManager =

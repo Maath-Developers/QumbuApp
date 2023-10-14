@@ -38,38 +38,6 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
         // Add your customizations after calling base.OnModelCreating(builder);
 
         builder.ApplyConfiguration(new ApplicationUserEntityConfiguration());
-
-        builder.Entity<IdentityRole>().HasData(
-         new IdentityRole
-        {
-            Name = "Patient",
-            NormalizedName = "PATIENT"
-        },
-         new IdentityRole
-        {
-            Name = "Admin",
-            NormalizedName = "ADMIN"
-        },
-         new IdentityRole
-        {
-            Name = "Nurse",
-            NormalizedName = "NURSE"
-        },
-         new IdentityRole
-        {
-            Name = "Doctor",
-            NormalizedName = "DOCTOR"
-         },
-         new IdentityRole
-        {
-            Name = "Unit-Manager",
-            NormalizedName = "UNIT-MANAGER"
-         },
-          new IdentityRole
-		{
-			Name = "Counsellor",
-			NormalizedName = "COUNSELLOR"
-          });
 	}
     public class ApplicationUserEntityConfiguration : IEntityTypeConfiguration<ApplicationUser>
     {
