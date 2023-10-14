@@ -32,7 +32,13 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         {
            
             var applicationDbContext = Context.Appointments.Include(a => a.MainUser).ToList();
-            return View();
+            return View(applicationDbContext);
+        }
+        public async Task<IActionResult> Counselling()
+        {
+
+            var applicationDbContext = Context.Appointments.Include(a => a.MainUser).Where(a => a.Purpose == "Counselling").ToList();
+            return View(applicationDbContext);
         }
         public IActionResult Create()
         {

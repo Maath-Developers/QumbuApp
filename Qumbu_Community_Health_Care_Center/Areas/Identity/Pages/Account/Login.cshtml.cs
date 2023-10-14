@@ -21,12 +21,14 @@ namespace Qumbu_Community_Health_Care_Center.Areas.Identity.Pages.Account
     public class LoginModel : PageModel
     {
         private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly UserManager<ApplicationUser> _userManager;
         private readonly ILogger<LoginModel> _logger;
 
-        public LoginModel(SignInManager<ApplicationUser> signInManager, ILogger<LoginModel> logger)
+        public LoginModel(SignInManager<ApplicationUser> signInManager, ILogger<LoginModel> logger, UserManager<ApplicationUser> userManager)
         {
             _signInManager = signInManager;
             _logger = logger;
+            _userManager = userManager;
         }
 
         /// <summary>
@@ -116,8 +118,17 @@ namespace Qumbu_Community_Health_Care_Center.Areas.Identity.Pages.Account
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
-                    return RedirectToAction("Landing2", "Home");
-
+                    var user = await _userManager.FindByEmailAsync(Input.Email);
+                    var Role = await _userManager.GetRolesAsync(user);
+                    _logger.LogInformation("User logged in.");
+                    if (Role.Contains("Counsellor"))
+                    {
+                        return RedirectToAction("Counsellor", "Counseller");
+                    }
+                    else
+                    {
+                        return RedirectToAction("Landing2", "Home");
+                    }
                 }
                 if (result.RequiresTwoFactor)
                 {
