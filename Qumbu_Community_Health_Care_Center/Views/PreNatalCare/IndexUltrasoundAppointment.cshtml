@@ -81,13 +81,13 @@
                     @Html.DisplayFor(modelItem => item.Comments)
                 </td>
                 <td>
-                    <img src="@Url.Content("~/UploadedImages/" + item.FileName)" height="120px" width="120px" />
+                    <img src="@Url.Content("~/UploadedFiles/FetalImage/" + item.FileName)" height="120px" width="120px" />
                 </td>
                 @*<td>
             @Html.DisplayFor(modelItem => item.FileName)
             </td>*@
                 <td>
-                    <div class="w-20 btn-group" role="group">
+                    <div class="w-15 btn-group text-end" role="group">
                         <a asp-controller="PrenatalCare" asp-action="UpdateUltrasound" asp-route-ID="@item.Id" class="btn btn-primary mx-1"><i class="bi bi-pencil-square"></i>Edit</a>
                         <a asp-controller="PrenatalCare" asp-action="DeleteUltrasound" asp-route-ID="@item.Id" class="btn btn-danger mx-1"><i class="bi bi-trash3"></i>Delete</a>
                     </div>

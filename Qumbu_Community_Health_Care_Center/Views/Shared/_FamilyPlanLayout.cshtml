@@ -17,8 +17,27 @@
 	<link rel="canonical" href="https://demo-basic.adminkit.io/" />
 
 
+
 	<link href="~/Sidebar/css/app.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"] - Qumbu_Community_Health_Care_Center</title>
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+	@*for icon*@
+	<link rel="icon" href="~/_Images/favicon.ico" type="image/png" />
+	<link rel="stylesheet" href="~/css/css/animate.css">
+
+	<link rel="stylesheet" href="~/css/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="~/css/css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="~/css/magnific-popup.css">
+
+	<link rel="stylesheet" href="~/css/css/bootstrap-datepicker.css">
+	<link rel="stylesheet" href="~/css/css/jquery.timepicker.css">
+
+	<link rel="stylesheet" href="~/css/css/flaticon.css">
+	<link rel="stylesheet" href="~/css/css/style.css">
 </head>
 @if (User.IsInRole("Patient"))
 {
@@ -152,7 +171,9 @@
 			@RenderBody()
 		</main>
 
-		<script src="~/Sidebar/js/app.js"></script>
+        <script src="~/Sidebar/js/app.js"></script>
+        
+		<script src="~/js/site.js"></script>
 
 		<script>
 			document.addEventListener("DOMContentLoaded", function () {
@@ -401,7 +422,7 @@
 						</li>
 
 						<li class="sidebar-item">
-							<a asp-controller="Appointments" asp-action="Index" class="sidebar-link">
+							<a asp-controller="Appointments" asp-action="Family" class="sidebar-link">
 								<i class="align-middle" data-feather="folder"></i> <span class="align-middle">Manage Bookings</span>
 							</a>
 						</li>
@@ -508,7 +529,8 @@
 			@RenderBody()
 		</main>
 
-		<script src="~/Sidebar/js/app.js"></script>
+        <script src="~/Sidebar/js/app.js"></script>
+        <script src="~/js/site.js"></script>
 
 		<script>
 			document.addEventListener("DOMContentLoaded", function () {

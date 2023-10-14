@@ -7,20 +7,29 @@ namespace Qumbu_Community_Health_Care_Center.Models
     {
         [Key]
         public int PatientRegId { get; set; }
+        public int kinCell { get; set; }
         [Required]
         [DisplayName("FullNames")]
-        public string? Names { get; set; } 
-        [Required]
-        [DisplayName("Next of Kins Names")]
         public string? Name { get; set; }
+        [Required]
+        [DisplayName("Identity Number")]
+        public string? IDno { get; set; }
+        [Required]
+        [DisplayName("Next of Kin Name")]
+        public string? kinName { get; set; }
+        [Required]
+        [DisplayName("Next of Kin Surname")]
+        public string? kinSurname { get; set; }
         [Required]
         [DisplayName("D.O.B")]
         public string? DOB { get; set; }
         public string? Address { get; set; }
+        public string? kinAddress { get; set; }
         public string? Cell { get; set; }
         public string ?Email { get; set; }
         public string? Gender { get; set; }
         public string? Province { get; set; }
+        public string? kinProvince { get; set; }
         public string? Race { get; set; }
         [Required]
         [DisplayName("Marital Status")]

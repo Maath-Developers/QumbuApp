@@ -11,7 +11,8 @@ namespace Qumbu_Community_Health_Care_Center.Models
 		[Required]
 		public string? Name { get; set; }
 		[Required]
-		public string? Surname { get; set; }
+		[DisplayName("Type of contraceptives you used ?")]
+		public string? Type { get; set; }
 		[Required]
 		[DisplayName("experience any effects ?")]
 		public string? experience { get; set; }

@@ -24,7 +24,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\UploadedImages\" />
+    <Folder Include="wwwroot\UploadedFiles\FetalImage\" />
+    <Folder Include="wwwroot\UploadedFiles\Pdf\" />
   </ItemGroup>
 
 </Project>
