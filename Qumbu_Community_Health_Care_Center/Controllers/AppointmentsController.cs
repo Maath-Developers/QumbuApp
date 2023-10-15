@@ -34,6 +34,14 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             var applicationDbContext = Context.Appointments.Include(a => a.MainUser).ToList();
             return View(applicationDbContext);
         }
+        public async Task<IActionResult> Report()
+        {
+			var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
+			ViewBag.Date = DateTime.Now.ToString("dd/mm/yyyy");
+			ViewBag.Time = DateTime.Now.ToString("HH:MM");
+            var applicationDbContext = Context.Appointments.Include(a => a.MainUser).Where(a => a.Purpose == "Counselling").ToList();
+            return View(applicationDbContext);
+        }
         public async Task<IActionResult> Counselling()
         {
 
