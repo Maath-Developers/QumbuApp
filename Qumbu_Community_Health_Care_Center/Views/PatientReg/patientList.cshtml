@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Qumbu_Community_Health_Care_Center.Models.PatientReg>
+@{
+    Layout = "_Landing2";
+}
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">List of Patients</h2>
+        </div>
+        <div class="col-6 text-right">
+            <a asp-controller="Admin" asp-action="Patient_Reg" class="btn btn-info">Add a new patient</a>
+        </div>
+    </div>
+    <br />
+
+    @if (Model.Count() > 0)
+    {
+
+        <table class="table table-bordered table-striped" style="width:100%">
+            <thead>
+                <tr>
+                    <th>
+                        No.
+                    </th>
+                    <th>
+                        Tittle
+                    </th>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        ID Number
+                    </th>
+                    <th>
+                        Cell number
+                    </th>
+                    <th>
+                        Occupation
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var record in Model)
+                {
+                    <tr>
+                        <td width="5%">@record.PatientRegId</td>
+                        <td width="5%">@record.Tittle</td>
+                        <td width="15%">@record.Name</td>
+                        <td width="10%">@record.IDno</td>
+                        <td width="10%">@record.Cell</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    }
+    else
+    {
+        <p>No Patients created yet</p>
+    }
+
+</div>
+
+

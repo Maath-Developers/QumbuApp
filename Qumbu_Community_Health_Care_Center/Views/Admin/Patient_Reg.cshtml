@@ -1,5 +1,5 @@
 ﻿@{
-    Layout = "_AdminLayout";
+    Layout = "_Landing2";
 }
 
 <!DOCTYPE html>
@@ -154,7 +154,10 @@
 
                 <div class="form-row">
                     <div class="col-md-6 offset-md-3">
-                        <button type="submit" class="btn btn-success long-btn float-right">Register</button>
+                    <button type="submit" class="btn btn-info long-btn float-right">Register</button>
+                    </div>
+                    <div class="col">
+                    <a asp-controller="PatientReg" asp-action="PatientList" class="btn btn-danger w-75">Back to List</a>
                     </div>
                 </div>
           </form>
