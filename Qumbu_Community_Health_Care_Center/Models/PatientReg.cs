@@ -9,8 +9,11 @@ namespace Qumbu_Community_Health_Care_Center.Models
         public int PatientRegId { get; set; }
         public int kinCell { get; set; }
         [Required]
-        [DisplayName("FullNames")]
+        [DisplayName("Name")]
         public string? Name { get; set; }
+        [Required]
+        [DisplayName("Surname")]
+        public string? Surname { get; set; }
         [Required]
         [DisplayName("Identity Number")]
         public string? IDno { get; set; }
@@ -27,6 +30,7 @@ namespace Qumbu_Community_Health_Care_Center.Models
         [DisplayName("Tittle")]
         public string? Tittle { get; set; }
         public string? Address { get; set; }
+        public string? Occupation { get; set; }
         public string? kinAddress { get; set; }
         public string? Cell { get; set; }
         public string ?Email { get; set; }
@@ -87,5 +91,8 @@ namespace Qumbu_Community_Health_Care_Center.Models
         [Required]
         [DisplayName("Signature & Date: ")]
         public string? Sign { get; set; }
+        public string? Religion { get; set; }
+        public string? regDate { get; set; }
+        public string? Language { get; set; }
     }
 }

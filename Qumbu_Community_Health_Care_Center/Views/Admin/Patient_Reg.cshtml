@@ -1,11 +1,12 @@
-﻿@{
+﻿@model Qumbu_Community_Health_Care_Center.Models.PatientReg
+@{
     Layout = "_Landing2";
 }
 
 <!DOCTYPE html>
 <html>
     <head>
-      <h2>Patient Registration</h2>
+      <h3>Patient Registration</h3>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     </head>
     <body>
@@ -16,108 +17,125 @@
                 <div class="form-row">
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label for="title">Title:</label>
-                            <select class="form-control" id="title" name="title">
+                            <label asp-for="Tittle">Title:</label>
+                            <select id="PurposeDropdown" asp-for="Tittle" class="form-control" id="validationName" required>
                                 <option value="mr">Mr.</option>
                                 <option value="mrs">Mrs.</option>
                                 <option value="miss">Miss</option>
                                 <option value="ms">Ms.</option>
                             </select>
+                            <span asp-validation-for="Gender" class="text-danger"></span>
+
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label for="firstName">First Name:</label>
-                            <input type="text" class="form-control" id="firstName" name="firstName" required>
+                            <label asp-for="Name">First Name:</label>
+                            <input type="text" class="form-control" asp-for="Name" placeholder="Enter Name" required>
+                            <span asp-validation-for="Name" class="text-danger"></span>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label for="lastName">Last Name:</label>
-                            <input type="text" class="form-control" id="lastName" name="lastName" required>
+                            <label asp-for="Surname">Last Name:</label>
+                            <input type="text" class="form-control" asp-for="Name" placeholder="Enter Surname" required>
+                            <span asp-validation-for="Surname" class="text-danger"></span>
                         </div>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label for="gender">Gender:</label>
-                            <select class="form-control" id="gender" name="gender">
+                            <label asp-for="Gender">Gender:</label>
+                            <select class="form-control" asp-for="Gender" id="PurposeDropdown" required>
                                 <option value="male">Male</option>
                                 <option value="female">Female</option>
                                 <option value="other">Other</option>
                             </select>
+                        <span asp-validation-for="Gender" class="text-danger"></span>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label for="idNo">ID No:</label>
-                            <input type="text" class="form-control" id="idNo" name="idNo" required>
+                            <label asp-for="IDno">ID No:</label>
+                            <input type="text" class="form-control" id="idNo" asp-for="IDno" required>
+                            <span asp-validation-for="IDno" class="text-danger"></span>
+
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label for="dob">Date of Birth:</label>
-                            <input type="date" class="form-control" id="dob" name="dob" required>
+                            <label asp-for="DOB">Date of Birth:</label>
+                            <input type="date" class="form-control" id="dob" asp-for="DOB" required>
+                            <span asp-validation-for="DOB" class="text-danger"></span>
+
                         </div>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label for="cell">Cell:</label>
-                            <input type="tel" class="form-control" id="cell" name="cell" required>
+                            <label asp-for="Cell">Cell:</label>
+                            <input type="tel" class="form-control" id="cell" asp-for="Cell" required>
+                            <span asp-validation-for="DOB" class="text-danger"></span>
+
                         </div>
                     </div>
                     <div class="col-md-8">
                         <div class="form-group">
-                            <label for="address">Address:</label>
-                            <input type="text" class="form-control" id="address" name="address" required>
+                            <label asp-for="Address">Address:</label>
+                            <input type="text" class="form-control" id="address" asp-for="Address" >
                         </div>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label for="occupation">Occupation:</label>
-                            <input type="text" class="form-control" id="occupation" name="occupation">
+                            <label asp-for="Occupation">Occupation:</label>
+                            <input type="text" class="form-control" id="occupation" asp-for="Occupation">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label for="religion">Religion:</label>
-                            <input type="text" class="form-control" id="religion" name="religion">
+                            <label asp-for="Religion">Religion:</label>
+                            <input type="text" class="form-control" id="religion" asp-for="Religion">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label for="language">Language:</label>
-                            <input type="text" class="form-control" id="language" name="language">
+                            <label asp-for="Language">Language:</label>
+                            <input type="text" class="form-control" id="language" asp-for="Language">
                         </div>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label for="maritalStatus">Marital Status:</label>
-                            <select class="form-control" id="maritalStatus" name="maritalStatus">
+                            <label asp-for="Status">Marital Status:</label>
+                            <select class="form-control" id="maritalStatus" asp-for="Status" required>
                                 <option value="single">Single</option>
                                 <option value="married">Married</option>
                                 <option value="divorced">Divorced</option>
                                 <option value="widowed">Widowed</option>
                             </select>
+                            <span asp-validation-for="Status" class="text-danger"></span>
+
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label for="regNo">Registration Number:</label>
-                            <input type="text" class="form-control" id="regNo" name="regNo" required>
+                            <label asp-for="PatientRegId">Registration Number:</label>
+                            <input type="text" class="form-control" id="regNo" asp-for="PatientRegId" required>
+                            <span asp-validation-for="Occupation" class="text-danger"></span>
+
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label for="regDate">Registration Date:</label>
-                            <input type="date" class="form-control" id="regDate" name="regDate" required>
+                            <label asp-for="regDate">Registration Date:</label>
+                            <input type="date" class="form-control" id="regDate" asp-for="regDate" required>
+                            <span asp-validation-for="regDate" class="text-danger"></span>
+
                         </div>
                     </div>
                 </div>
@@ -126,28 +144,36 @@
                 <div class="form-row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="kinName">Name:</label>
-                            <input type="text" class="form-control" id="kinName" name="kinName" required>
+                            <label asp-for="kinName">Name:</label>
+                            <input type="text" class="form-control" id="kinName" asp-for="kinName" required>
+                            <span asp-validation-for="kinName" class="text-danger"></span>
+
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="kinAddress">Address:</label>
-                            <input type="text" class="form-control" id="kinAddress" name="kinAddress" required>
+                            <label asp-for="kinAddress">Address:</label>
+                            <input type="text" class="form-control" id="kinAddress" asp-for="kinAddress" required>
+                            <span asp-validation-for="kinAddress" class="text-danger"></span>
+
                         </div>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="kinCell">Cell:</label>
-                            <input type="tel" class="form-control" id="kinCell" name="kinCell" required>
+                            <label asp-for="kinCell">Cell:</label>
+                            <input type="tel" class="form-control" id="kinCell" asp-for="kinCell" required>
+                            <span asp-validation-for="kinCell" class="text-danger"></span>
+
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="kinRelationship">Relationship:</label>
-                            <input type="text" class="form-control" id="kinRelationship" name="kinRelationship" required>
+                            <label asp-for="Relationship">Relationship:</label>
+                            <input type="text" class="form-control" id="kinRelationship" asp-for="Relationship" required>
+                            <span asp-validation-for="Relationship" class="text-danger"></span>
+
                         </div>
                     </div>
                 </div>
