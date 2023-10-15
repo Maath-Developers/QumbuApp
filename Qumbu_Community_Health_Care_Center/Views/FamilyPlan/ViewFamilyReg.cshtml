@@ -3,6 +3,29 @@
     ViewData["Title"] = "ViewFamilyReg";
     Layout = "~/Views/Shared/_FamilyPlanLayout.cshtml";
 }
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
 @if (TempData["Result"] != null)
 {
     <div id="myModal" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
@@ -11,10 +34,39 @@
                 <div class="modal-header text-center">
                     <h3 class="modal-title">Screening Result</h3>
                     <button type="button" id="close" class="close btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
                 </div>
-                <div>
-                    <img src="~/_Images/ContraceptiveDash.png" style="width: 79px" />
-                    <h4>@TempData["Result"]</h4>
+                <div class="modal-body">
+                    @if (Convert.ToString(TempData["_Image"]) == "1")
+                    {
+                        <img src="~/_Images/pill_.jpg" style="width: 200px" />
+                        <h4>@TempData["Result"]</h4>
+                    }
+                    else if (Convert.ToString(TempData["_Image"]) == "2")
+                    {
+                        <img src="~/_Images/Injection.jpg" style="width: 200px" />
+                        <h4>@TempData["Result"]</h4>
+                    }
+                    else if (Convert.ToString(TempData["_Image"]) == "3")
+                    {
+                        <img src="~/_Images/logo/Injection 2.jpg" style="width: 200px" />
+                        <h4>@TempData["Result"]</h4>
+                    }
+                    else if (Convert.ToString(TempData["_Image"]) == "4")
+                    {
+                        <img src="~/_Ima_Images/logo/implant1" style="width: 200px" />
+                        <h4>@TempData["Result"]</h4>
+                    }
+                    else if (Convert.ToString(TempData["_Image"]) == "5")
+                    {
+                        <img src="~_Images/logo/loop1.jpg" style="width: 200px" />
+                        <h4>@TempData["Result"]</h4>
+                    }
+                    else if (Convert.ToString(TempData["_Image"]) == "6")
+                    {
+                        <img src="~/_Images/Viganal ring.jpg" style="width: 200px" />
+                        <h4>@TempData["Result"]</h4>
+                    }
                 </div>
             </div>
         </div>
@@ -198,12 +250,11 @@
 
                         </td>
                     </tr>
-                    <div class="col-6 text-right  d-grid gap-2 d-md-flex justify-content-md-end">
-                        <a asp-controller="FamilyPlan" asp-action="updateAppointment" class="btn btn-outline-info">Update</a>
-                    </div>
+                   
                 }
             </tbody>
         </table>
+        <script src="~/js/site.js"></script>
         <div class="col-6 text-right  d-grid gap-2 d-md-flex justify-content-md-end">
             <a asp-controller="FamilyPlan" asp-action="CreateFamilyReg" class="btn btn-outline-info">Back</a>
         </div>

@@ -3,16 +3,23 @@
 	ViewData["Title"] = "CreateFamilyReg";
 	Layout = "~/Views/Shared/_FamilyPlanLayout.cshtml";
 }
-<div class="bg-info p-3 mb-2">
+@*<div class="bg-info p-3 mb-2">
 	<h4 class="text-white text-center ">
 		Scren
 	</h4>
-</div>
+</div>*@
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
 <div class="container-fluid bg-white">
-	 
+	
 		<form method="post" asp-action="CreateFamilyReg">
 			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+		   
 			<div class="row p-3">
+			  <h4 class="text-white text-center ">
+				Scren
+			</h4>
 			  <div class="col-6">
 				<div class="form-group">
 					<label asp-for="intercourse"></label>
