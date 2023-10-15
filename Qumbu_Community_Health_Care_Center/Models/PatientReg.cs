@@ -7,7 +7,7 @@ namespace Qumbu_Community_Health_Care_Center.Models
     {
         [Key]
         public int PatientRegId { get; set; }
-        public int kinCell { get; set; }
+        public int? kinCell { get; set; }
         [Required]
         [DisplayName("Name")]
         public string? Name { get; set; }
@@ -33,7 +33,7 @@ namespace Qumbu_Community_Health_Care_Center.Models
         public string? Occupation { get; set; }
         public string? kinAddress { get; set; }
         public string? Cell { get; set; }
-        public string ?Email { get; set; }
+        public string? Email { get; set; }
         public string? Gender { get; set; }
         public string? Province { get; set; }
         public string? kinProvince { get; set; }
