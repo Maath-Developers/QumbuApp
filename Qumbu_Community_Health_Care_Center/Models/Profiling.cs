@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Scaffolding.Metadata;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Qumbu_Community_Health_Care_Center.Models
 {
@@ -12,6 +13,8 @@ namespace Qumbu_Community_Health_Care_Center.Models
         public string? email { get; set; }
         public string? Cell { get; set; }
         [DisplayName("First Name")]
+        public string? AppointmentID { get; set; }
+        [ForeignKey("AppointmentID")]
         public string? FirstName { get; set; }
         [DisplayName("Last Name")]
         public string? LastName { get; set; }

@@ -16,7 +16,9 @@
 	<link rel="icon" href="~/_Images/favicon.ico" type="image/png" />
 
 	<link rel="canonical" href="https://demo-basic.adminkit.io/" />
-
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/dataTables.bootstrap4.min.css" />
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.bootstrap4.min.css" />
 
 	<link href="~/Sidebar/css/app.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -430,10 +432,6 @@
 								<i class="align-middle" data-feather="users"></i> <span class="align-middle">Group Counselling</span>
 							</a>
 						</li>
-						
-
-						
-
 						<li class="sidebar-item">
 							<a asp-controller="Counseller" asp-action="CreateF" class="sidebar-link">
 								<i class="align-middle" data-feather="fast-forward"></i> <span class="align-middle">Referral</span>
@@ -441,7 +439,7 @@
 						</li>
 
 						<li class="sidebar-item">
-							<a asp-controller="Counseller" asp-action="Reports" class="sidebar-link">
+							<a asp-controller="Appointments" asp-action="Report" class="sidebar-link">
 								<i class="align-middle" data-feather="edit"></i> <span class="align-middle">Reports</span>
 							</a>
 						</li>
@@ -750,5 +748,23 @@
 	</body>
 }
 </html>
-
+<script type="text/javascript" src="jquery.dataTables.js"></script>
+<script type="text/javascript" src="dataTables.antiThe.js"></script>
+<script type="text/javascript">
+	var table = new DataTable('#myTable', {
+		columnDefs: [
+			{
+				target: 0,
+				type: 'anti-the',
+			},
+		],
+	});
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.4/js/dataTables.bootstrap4.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.bootstrap4.min.js"></script>
 
