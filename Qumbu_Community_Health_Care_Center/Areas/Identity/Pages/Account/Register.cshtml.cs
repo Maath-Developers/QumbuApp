@@ -156,7 +156,7 @@ namespace Qumbu_Community_Health_Care_Center.Areas.Identity.Pages.Account
                 //user.Address = Input.Address;
                 //user.City = "Not set";
                 //user.Role = "Not set";
-                user.PhoneNumber = Input.MobileNumber;
+                //user.PhoneNumber = Input.MobileNumber;
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
