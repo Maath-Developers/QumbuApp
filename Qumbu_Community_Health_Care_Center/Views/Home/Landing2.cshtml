@@ -4,7 +4,7 @@
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
 @{
-    Layout = "_Landing2";
+    Layout = "_Walk-in-Layout";
   
 }
 <link rel="stylesheet" href="~/css/StyleSheet/Landing2StyleSheet.css">
@@ -31,7 +31,7 @@
 
 @if (User.IsInRole("Admin"))
 {
-    Layout = "_Landing2";
+    Layout = "_Walk-in-Layout";
   
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
