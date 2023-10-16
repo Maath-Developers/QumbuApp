@@ -159,56 +159,56 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
 			ViewData["PatientID"] = new SelectList(dbContext.Users, "Id", "Id", familyReg.PatientID);
 			return View(familyReg);
 		}
-        public IActionResult AcceptReg(int? ID)
-        {
-            var familyReg = dbContext.FamilyReg.Find(ID);
-            if (familyReg != null)
-            {
-                familyReg.Status = "Accepted";
-                dbContext.FamilyReg.Update(familyReg);
-                dbContext.SaveChanges();
-                TempData["Success"] = "The appointment has been accepted";
-                var patient = dbContext.Users.Where(a => a.Id == familyReg.PatientID).FirstOrDefault();
-                try
-                {
-                    string supportEmail = "Qumbu_Community_Health_Care_Center.healthcare@gmail.com";
-                    _email.SendEmailAsync(patient.Email, "Confirm your email",
-                        $"<html><head><style>body{{font-family:Arial,sans-serif;}}" +
-                        $"h1{{color:#336699;}}" +
-                        $".cta-button{{background-color:#336699;color:@fff;" +
-                        $"padding:10px 20px;" +
-                        $"text-decoration:none;border-radius:5px;}}" +
-                        $".cta-button:hover{{background-color:#265580;}}" +
-                        $".footer{{margin-top:20px;font-size:12px;color:#888;}}" +
-                        $"</style>" +
-                        $"</head>" +
-                        $"<body>" +
-                        $"" +
-                        $"<h1>Qumbu Healthcare Center!</h1>" +
-                        $"<p></p>" +
-                        $"<p> Thank for booking with us.</P>" +
-                        $"<p>Take note that your appointment has been accepted</P>" +
-                        $"<Strong><p>Appointment Date: {familyReg.Date}</P></strong>" +
-                        $"<Strong><p>Appointment Purpose: {familyReg.Status}</P></strong>" +
-                        $"<p>Please be on time, atleast 10 minutes before</P>" +
+        //public async Task<IActionResult> AcceptReg(int? ID)
+        //{
+        //    var familyReg = dbContext.FamilyReg.Find(ID);
+        //    if (familyReg != null)
+        //    {
+        //        familyReg.Status = "Accepted";
+        //        dbContext.FamilyReg.Update(familyReg);
+        //        await dbContext.SaveChangesAsync();
+        //        TempData["Info"] = "The screening has been accepted";
+        //        var patient = dbContext.Users.Where(a => a.Id == familyReg.PatientID).FirstOrDefault();
+        //        try
+        //        {
+        //            string supportEmail = "Qumbu_Community_Health_Care_Center.healthcare@gmail.com";
+        //             await _email.SendEmailAsync(patient.Email, "Confirm your email",
+        //                $"<html><head><style>body{{font-family:Arial,sans-serif;}}" +
+        //                $"h1{{color:#336699;}}" +
+        //                $".cta-button{{background-color:#336699;color:@fff;" +
+        //                $"padding:10px 20px;" +
+        //                $"text-decoration:none;border-radius:5px;}}" +
+        //                $".cta-button:hover{{background-color:#265580;}}" +
+        //                $".footer{{margin-top:20px;font-size:12px;color:#888;}}" +
+        //                $"</style>" +
+        //                $"</head>" +
+        //                $"<body>" +
+        //                $"" +
+        //                $"<h1>Qumbu Healthcare Center!</h1>" +
+        //                $"<p></p>" +
+        //                $"<p> Thank for booking with us.</P>" +
+        //                $"<p>Take note that your appointment has been accepted</P>" +
+        //                $"<Strong><p>Appointment Date: {familyReg.Date}</P></strong>" +
+        //                $"<Strong><p>Appointment Purpose: {familyReg.Status}</P></strong>" +
+        //                $"<p>Please be on time, atleast 10 minutes before</P>" +
 
-                        $"" +
-                        $"if you have any question ,contact our team at {supportEmail}</p>" +
-                        $"<dic class='footer'>" +
-                        $"<p>Thank you</p>" +
-                        $"</div>" +
-                        $"</body>" +
-                        $"</html>");
-                }
-                catch
-                {
+        //                $"" +
+        //                $"if you have any question ,contact our team at {supportEmail}</p>" +
+        //                $"<dic class='footer'>" +
+        //                $"<p>Thank you</p>" +
+        //                $"</div>" +
+        //                $"</body>" +
+        //                $"</html>");
+        //        }
+        //        catch
+        //        {
 
-                }
-                return RedirectToAction("ListFamilyRegNurse");
-            }
-            ViewData["PatientID"] = new SelectList(dbContext.Users, "Id", "Id", familyReg.PatientID);
-            return View(familyReg);
-        }
+        //        }
+        //        return RedirectToAction("ViewFamilyReg");
+        //    }
+        //    ViewData["PatientID"] = new SelectList(dbContext.Users, "Id", "Id", familyReg.PatientID);
+        //    return View(familyReg);
+        //}
 
         public async Task <IActionResult> ViewFamilyReg()
         {
@@ -228,45 +228,49 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
 			IEnumerable<Appointment> oblList = dbContext.Appointments;
 			return View(oblList);
 		}
-		//public IActionResult updateAppointment(int? ID)
-		//{
-		//	if (ID == null || ID == 0)
-		//	{
-		//		return NotFound();
-
-		//	}
-		//	var list = dbContext.Appointments.Find(ID);
-		//	if (list == null)
-		//	{
-		//		return NotFound();
-		//	}
-		//	return View(list);
-		//}
-		//[HttpPost]
-		//[ValidateAntiForgeryToken]
-		//public IActionResult updateAppointment(Appointment appointment)
-		//{
-		//	dbContext.Appointments.Update(appointment);
-		//	dbContext.SaveChanges();
-		//	return RedirectToAction("ViewAppointment");
-		//}
-
-		//public IActionResult DeleteAppointment(int? ID)
-		//{
-		//	var list = dbContext.Appointments.Find(ID);
-		//	if (list == null)
-		//	{
-		//		return NotFound();
-		//	}
-		//	dbContext.Appointments.Remove(list);
-		//	dbContext.SaveChanges();
-		//	return RedirectToAction("ViewAppointment");
-
-		//}
-        public ActionResult ViewReports()
+        public IActionResult updateFamilyReg(int? ID)
         {
-            return View();
+            if (ID == null || ID == 0)
+            {
+                return NotFound();
+
+            }
+            var list = dbContext.FamilyReg.Find(ID);
+            if (list == null)
+            {
+                return NotFound();
+            }
+            return View(list);
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult updateFamilyReg(FamilyReg familyReg)
+        {
+            var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            familyReg.PatientID = user;
+            dbContext.FamilyReg.Update(familyReg);
+            dbContext.SaveChanges();
+            return RedirectToAction("ListFamilyRegNurse");
+        }
+
+        //public IActionResult DeleteAppointment(int? ID)
+        //{
+        //    var list = dbContext.Appointments.Find(ID);
+        //    if (list == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    dbContext.Appointments.Remove(list);
+        //    dbContext.SaveChanges();
+        //    return RedirectToAction("ListFamilyRegNurse");
+
+        //}
+        public async Task<IActionResult> ViewReports()
+        {
+            var ApplicationDbContext = dbContext.FamilyReg.Include(f => f.MainUser);
+            return View(await ApplicationDbContext.ToListAsync());
+        }
+
 
     }
 }

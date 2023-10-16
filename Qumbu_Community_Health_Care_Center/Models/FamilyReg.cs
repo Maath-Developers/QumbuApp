@@ -67,7 +67,7 @@ namespace Qumbu_Community_Health_Care_Center.Models
         public FamilyReg()
         {
             Date = DateTime.Now;
-            Status = "New";
+           
         }
     }
    
