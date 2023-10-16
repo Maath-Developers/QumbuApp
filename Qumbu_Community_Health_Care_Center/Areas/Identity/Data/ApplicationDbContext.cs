@@ -47,5 +47,6 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
             builder.Property(u => u.LastName).HasMaxLength(255);
         }
     }
+    public DbSet<Qumbu_Community_Health_Care_Center.Models.UserVM>? UserVM { get; set; }
 
 }
