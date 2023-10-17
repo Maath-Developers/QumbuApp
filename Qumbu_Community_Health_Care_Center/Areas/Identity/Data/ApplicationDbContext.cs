@@ -30,6 +30,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<Profiling> Profiling { get; set; }
     public DbSet<Appointment> Appointment {  get; set; }
     public DbSet<PrenatalEducation> prenatalEducation { get; set; }
+    public DbSet<Menstruation> Menstruations { get; set; }
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
@@ -47,5 +48,6 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
             builder.Property(u => u.LastName).HasMaxLength(255);
         }
     }
+    public DbSet<Qumbu_Community_Health_Care_Center.Models.UserVM>? UserVM { get; set; }
 
 }

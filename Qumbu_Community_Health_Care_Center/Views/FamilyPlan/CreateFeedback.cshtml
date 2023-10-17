@@ -20,13 +20,22 @@
 							<span asp-validation-for="Name" class="text-danger"></span>
 						</div>
 						<div class="col-4">
-							<label asp-for="Surname"></label>
-							<input asp-for="Surname" class="form-control" />
-							<span asp-validation-for="Surname" class="text-danger"></span>
+							<label asp-for="Type"></label>
+						    <select id="Dropdown" asp-for="Type" class="form-control" itemid="validationtype" required>
+							<option value="Yes">Select</option>
+							<option value="Pills">Pills</option>
+							<option value="1 Month Injection">1 Month Injection</option>
+							<option value="2 Month Injection">2 Month Injection</option>
+							<option value="Loop">Loop</option>
+							<option value="Implant">Implant</option>
+							<option value="Vignal Ring">Vignal Ring</option>
+						</select>
+							<span asp-validation-for="Type" class="text-danger"></span>
 						</div>
 						<div class="col-4">
 							<label asp-for="experience"></label>
 							<select id="Dropdown" asp-for="experience" class="form-control" itemid="validationtype" required>
+							    <option value="Yes">Select</option>
 								<option value="Yes">Yes</option>
 								<option value="No">No</option>
 							</select>
@@ -36,7 +45,7 @@
 
 						<div class="col-4">
 							<label asp-for="Description"></label>
-							<textarea class="form-control" rows="5" id="Description" name="Description"></textarea>
+							<textarea class="form-control" rows="6" id="Description" name="Description"></textarea>
 							<span asp-validation-for="Description" class="text-danger"></span>
 						</div>
 					</div>

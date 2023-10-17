@@ -3,14 +3,12 @@
 @{
     Layout = "_CounsellorLayout";
 }
-<div class="mt-2 p-2 bg-white text-center text-white-50 rounded">
-    <h2>Referred Patients</h2>
+<div id="Header" class="bg-info">
+    <h2 class="m-1 pt-4 text-center text-white">Referr Patient(s)</h2>
 </div>
-<br />
-<form method="post" asp-action="CreateF">
+<div class="container-fluid bg-white">
+    <form method="post" asp-action="CreateF">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-        <div class="container-fluid">
-            <div class="card">
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-3">
@@ -46,18 +44,19 @@
                     </div>
                     </div>
                 </div>
+                <br />
                 <div class="form-group row">
                     <div class="col-6 offset-2 row">
                         <div class="col">
-                            <input type="submit" class="btn btn-info w-75" value="Submit" />
+                            <input type="submit" class="btn btn-outline-info w-50" value="Submit" />
                         </div>
                         <div class="col">
-                            <a asp-action="Referral" class="btn btn-danger w-75">Back</a>
+                            <a asp-action="Referral" class="btn btn-outline-danger w-50">Back</a>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-</form>
-
+                <br />
+                <br />
+    </form>
+</div>
 

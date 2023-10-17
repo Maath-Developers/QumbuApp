@@ -2,22 +2,10 @@
 @{
     Layout = "_CounsellorLayout";
 }
-<div class="mt-2 p-2 bg-white text-center text-white-50 rounded">
-    <h2>Visit Logs</h2>
+<div id="Header" class="bg-primary">
+    <h2 class="m-1 pt-4 text-center text-white">Visit Logs</h2>
 </div>
-<div class="container-fluid">
-    <div class="row pt-4">
-
-        <div class="col-6 text-right">
-            <div class="search-container">
-                <input type="text" id="search-input" placeholder="Search...">
-                <button id="search-button">Search</button>
-            </div>
-            <div id="search-results">
-                <!-- Display search results here -->
-            </div>
-        </div>
-    </div>
+<div class="container-fluid bg-white">
     <br />
     <div class="col-6 text-left">
         <a asp-controller="Counseller" asp-action="CreatePat" class="btn btn-info">Start Counselling</a>
@@ -27,7 +15,7 @@
     @if (Model.Count() > 0)
     {
 
-        <table class="table table-bordered table-striped" style="width:100%">
+        <table id="myTable" table class="table table-bordered table-striped" style="width:100%">
             <thead>
                 <tr>
                     <th>

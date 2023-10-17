@@ -18,7 +18,8 @@ namespace Qumbu_Community_Health_Care_Center.Models
         public string? PatientID { get; set; }
         [ForeignKey("PatientID")]
         public virtual ApplicationUser? MainUser { get; set;}
-        public string? Status { get; set; }
+        public string? Status { get; set; } = "New";
+       
 
         //Question
         [Required]
@@ -62,11 +63,11 @@ namespace Qumbu_Community_Health_Care_Center.Models
         [Required]
         [DisplayName("10.Do you Smoke?")]
         public int? smoke { get; set; }
-
+       
         public FamilyReg()
         {
             Date = DateTime.Now;
-            Status = "New";
+           
         }
     }
    
