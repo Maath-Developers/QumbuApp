@@ -31,7 +31,10 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<Appointment> Appointment {  get; set; }
     public DbSet<PrenatalEducation> prenatalEducation { get; set; }
     public DbSet<Menstruation> Menstruations { get; set; }
-    protected override void OnModelCreating(ModelBuilder builder)
+	public DbSet<VaccinationEducation> VaccineEducation { get; set; }
+	public DbSet<Vaccine_MadicalRecord> vaccinerecord { get; set; }
+	
+	protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
         // Customize the ASP.NET Identity model and override the defaults if needed.
