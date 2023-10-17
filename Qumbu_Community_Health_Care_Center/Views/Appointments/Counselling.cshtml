@@ -4,8 +4,8 @@
     Layout = "~/Views/Shared/_CounsellorLayout.cshtml";
 }
 
-<div id="Header" class="bg-primary">
-    <h2 class="m-2 text-center text-white">Patient Profiling</h2>
+<div id="Header" class="bg-info">
+    <h2 class="m-1 p-4 text-center text-white">Patient Profiling</h2>
 </div>
 
 <table id="myTable" class="table">
@@ -53,7 +53,7 @@
                     @if(item.Status == "New")
                     {
                            <div class="col">
-                                <a asp-action="CreatePat" class="btn btn-info w-75">View</a>
+                                <a asp-action="CreatePat" class="btn btn-outline-info w-75">View</a>
                            </div>
                     }
                     

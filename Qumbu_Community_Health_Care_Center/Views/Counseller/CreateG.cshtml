@@ -3,13 +3,11 @@
     Layout = "_CounsellorLayout";
 }
 <div id="Header" class="bg-primary">
-    <h2 class="m-2 text-center text-white">Group Counselling</h2>
-</div>>
-<br />
-<form method="post" asp-action="CreateConf">
+    <h2 class="m-1 pt-4 text-center text-white">Group Counselling</h2>
+</div>
+<div class="container-fluid bg-white">
+    <form method="post" asp-action="CreateG">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-    <div class="container-fluid">
-        <div class="card">
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-3">
@@ -87,8 +85,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</form>
+    </form>
+</div>
 
 
