@@ -2,7 +2,7 @@
 
 @{
     ViewData["Title"] = "View all Utrasound Appointment - File based Image Storage";
-    Layout = "/Views/Shared/_PreNatalCareLayout.cshtml";
+    Layout = "/Views/Shared/_LayoutPrenatal.cshtml";
 }
 <div class="row pt-4">
     <div class="container">
@@ -22,9 +22,6 @@
             @*<th>
                 @Html.DisplayNameFor(model => model.Id)
             </th>*@
-            <th>
-                @Html.DisplayNameFor(model => model.UserId)
-            </th>
             <th>
                 @Html.DisplayNameFor(model => model.AppointmentDate)
             </th>
@@ -60,15 +57,12 @@
                     @Html.DisplayFor(modelItem => item.Id)
                 </td>*@
                 <td>
-                    @Html.DisplayFor(modelItem => item.UserId)
-                </td>
-                <td>
                     @Html.DisplayFor(modelItem => item.AppointmentDate)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.GestationalAgeWeeks)
                 </td>
-                <td>
+                <td width="10%">
                     @Html.DisplayFor(modelItem => item.FetalHeartRate)
                 </td>
                 <td>
@@ -81,7 +75,7 @@
                     @Html.DisplayFor(modelItem => item.Comments)
                 </td>
                 <td>
-                    <img src="@Url.Content("~/UploadedFiles/FetalImage/" + item.FileName)" height="120px" width="120px" />
+                    <img src="@item.UltrasoundImagePath" height="120px" width="120px" />
                 </td>
                 @*<td>
             @Html.DisplayFor(modelItem => item.FileName)
