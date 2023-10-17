@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Qumbu_Community_Health_Care_Center.Areas.Identity.Data;
-using Qumbu_Community_Health_Care_Center.Migrations;
 using Qumbu_Community_Health_Care_Center.Models;
 using Qumbu_Community_Health_Care_Center.Services;
 using System.Security.Claims;
@@ -36,7 +35,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
 		[ValidateAntiForgeryToken]
 		public async Task<IActionResult> Add_New_User(UserVM user)
 		{
-			if (!ModelState.IsValid)
+			if (ModelState.IsValid)
 			{
 				var ourUser = new ApplicationUser()
 				{

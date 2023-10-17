@@ -16,5 +16,7 @@ namespace Qumbu_Community_Health_Care_Center.Models
 		public string? MobileNumber { get; set; }
 		[Required]
 		public string? Role { get; set; }
-	}
+        [Required]
+        public string? Tittle { get; set; }
+    }
 }
