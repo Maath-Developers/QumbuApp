@@ -3,13 +3,11 @@
     Layout = "_CounsellorLayout";
 }
 <div id="Header" class="bg-primary">
-    <h2 class="m-2 text-center text-white">Individual Counselling</h2>
+    <h2 class="m-1 pt-4 text-center text-white">Individual Counselling</h2>
 </div>
-<br />
-<form method="post" asp-action="CreateRe">
+<div class="container-fluid bg-white">
+    <form method="post" asp-action="CreateRe">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-    <div class="container-fluid">
-        <div class="card">
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-8">
@@ -64,8 +62,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</form>
+    </form>
+</div>
 
 
