@@ -10,34 +10,26 @@
     Layout = "~/Views/Shared/_CounsellorLayout.cshtml";
 }
 
-<div id="MainDiv" class="border p-4">
+<div id="MainDiv">
     <div id="Header" class="bg-info">
-        <h2 class="m-1 p-4 text-center text-white">Combined Records</h2>
+        <h2 class="m-1 pt-4 text-center text-white">Counselling Records</h2>
     </div>
-    <button id="btnPrint" class="btn btn-info">View Report</button>
-<div class="row">
-    <div class="col-8">
-        <h4>Report Information</h4>
-        <img src="~/_Images/2.png" style="width:200px" />
-        <p class="mt-3">Date of Report: @ViewBag.Date</p>
-        <p class="mt-3">Time of Report: @ViewBag.Time</p>
-    </div>
-    <div id="Information" class="col-4 justify-content-md-end">
-        <h4>Counsellor Information</h4>
-        <p>First Name: @UserManager.GetUserAsync(User).Result.FirstName</p> 
-        <p>Last Name: @UserManager.GetUserAsync(User).Result.LastName</p>
-        <p>Email Address: @UserManager.GetUserAsync(User).Result.Email</p>
-    </div>
-   
 </div>
-<div class="container-fluid">
-    <div class="row pt-4">
-        @*<div class="col-6">
-            <h2 class="text-primary">Counselling Records</h2>
-        </div>*@
-    </div>
-    <br />
-
+<div class="container-fluid border p-4">
+    <button id="btnPrint" class="btn btn-info">View Report</button>
+    <div class="row">
+        <div class="col-8">
+            @*<h4>Report Information</h4>*@
+            <img src="~/_Images/2.png" style="width:200px" />
+            <p class="mt-3">Date of Report: @ViewBag.Date</p>
+            <p class="mt-3">Time of Report: @ViewBag.Time</p>
+        </div>
+        <div id="Information" class="col-4 justify-content-md-end">
+            <h4>Counsellor Information</h4>
+            <p>First Name: @UserManager.GetUserAsync(User).Result.FirstName</p>
+            <p>Last Name: @UserManager.GetUserAsync(User).Result.LastName</p>
+            <p>Email Address: @UserManager.GetUserAsync(User).Result.Email</p>
+        </div>
         <table id="myTable" table class="table table-bordered table-striped" style="width:100%">
             <thead>
                 <tr>
