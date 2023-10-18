@@ -27,7 +27,11 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
 		{
 			return View();
 		}
-		public IActionResult Unit_Manager()
+        public IActionResult Nurse()
+        {
+            return View();
+        }
+        public IActionResult Unit_Manager()
 		{
 			return View();
 		}
@@ -78,13 +82,87 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
 			return View(Scree);
 
 		}
+        public IActionResult UpdateScreening(int? ScreeningID)
+        {
+            if (ScreeningID == null || ScreeningID == 0)
+            {
+                return NotFound();
+            }
+            var obj = dbContext.Srcreening.Find(ScreeningID);
 
-		public IActionResult Feedback()
+            if (ScreeningID == null)
+            {
+                return NotFound();
+            }
+            return View(obj);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult UpdateScreening(ScreeningTool Scree)
+        {
+            if (ModelState.IsValid)
+            {
+                dbContext.Srcreening.Update(Scree);
+                dbContext.SaveChanges();
+                return RedirectToAction("IndexScree");
+            }
+            return View(Scree);
+        }
+        public IActionResult Delete(int? ScreeningID)
+        {
+            var obj = dbContext.Srcreening.Find(ScreeningID);
+
+            if (obj == null)
+            {
+                return NotFound();
+            }
+            dbContext.Srcreening.Remove(obj);
+            dbContext.SaveChanges();
+            return RedirectToAction("IndexScree");
+        }
+        public IActionResult IndexFeedback()
         {
             IEnumerable<FeedbackV> objList = dbContext.VaccinationFeedback;
             return View(objList);
         }
-		public IActionResult IndexEducation()
+        public IActionResult VaccineFeedback()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult VaccineFeedback(FeedbackV Fee)
+        {
+            if (ModelState.IsValid)
+            {
+                dbContext.VaccinationFeedback.Add(Fee);
+                dbContext.SaveChanges();
+                return RedirectToAction("IndexFeedback");
+            }
+            return View(Fee);
+
+        }
+
+
+
+        //public IActionResult IndexFee()
+        //{
+        //    IEnumerable<FeedbackV> objList = dbContext.VaccinationFeedback;
+        //    return View(objList);
+        //}
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public IActionResult Feedback(FeedbackV Fee)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        dbContext.VaccinationFeedback.Add(Fee);
+        //        dbContext.SaveChanges();
+        //        return RedirectToAction("IndexFee");
+        //    }
+        //    return View(Fee);
+        //}
+        public IActionResult IndexEducation()
 		{
 			IEnumerable<VaccinationEducation> objList = dbContext.VaccineEducation;
 			return View(objList);
@@ -106,11 +184,6 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
 			return View(Edu);
 
 		}
-
-		public IActionResult IndexFee()
-        {
-            return View();
-        }
         public IActionResult IndexAppo()
         {
             return View();

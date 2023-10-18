@@ -17,7 +17,6 @@ namespace Qumbu_Community_Health_Care_Center.Models
         public string? PatientID { get; set; }
         [ForeignKey("PatientID")]
 
-        public ApplicationUser? PatientUser { get; set; }
         public virtual ApplicationUser? mainUser { get; set; }
         [Required(AllowEmptyStrings = false, ErrorMessage = "Please enter your ID number")]
         [Display(Name = "ID Number")]
@@ -48,7 +47,7 @@ namespace Qumbu_Community_Health_Care_Center.Models
         //next of kin information
         [RegularExpression("^[a-zA-Z]*$", ErrorMessage = "Please enter enter letters only")]
         [PersonalData]
-        [Display(Name = "Full Name")]
+        [Display(Name = "Full Name(s)")]
         [MaxLength(80)]
         [MinLength(3)]
         [AllowNull]
