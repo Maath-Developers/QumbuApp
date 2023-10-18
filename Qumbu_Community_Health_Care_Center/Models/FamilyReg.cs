@@ -18,7 +18,7 @@ namespace Qumbu_Community_Health_Care_Center.Models
         public string? PatientID { get; set; }
         [ForeignKey("PatientID")]
         public virtual ApplicationUser? MainUser { get; set;}
-        public string? Status { get; set; }
+        public string? Status { get; set; } = "New";
        
 
         //Question

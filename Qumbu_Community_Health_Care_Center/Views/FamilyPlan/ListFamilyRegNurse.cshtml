@@ -27,7 +27,7 @@
                         Date
                     </th>
                     <th>
-                       Status
+                        @Html.DisplayNameFor(model => model.Status)
                     </th>
                     <th>
                         Birth Control Method
@@ -46,19 +46,51 @@
                     <tr>
                         <td width="20%">@fed.MainUser.FirstName @fed.MainUser.LastName</td>
                         <td width="20%">@fed.Date</td>
-                        <td width="20%">@fed.Status</td>
+                        <td>
+                            @Html.DisplayFor(modelItem => fed.Status)
+                        </td>
+
                         <td width="20%">
                             @if (TempData["Result"] != null)
                             {
                                 
                             }
                         </td>
-                        <td>
-                            <div class="w-100 btn-group" role="group">
-                                <a asp-controller="FamilyPlan" asp-action="updateFamilyReg" asp-route-ID="@fed.FamilyRegId" class="btn btn-info 300 mx-1"></a>
+                        @if (fed.Status == "New")
+                        {
+                            <td>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> Accept</button>
+                                <a asp-action="Details" asp-route-id="@fed.FamilyRegId">Decline</a>
+                                <a asp-action="Delete" asp-route-id="@fed.FamilyRegId">Postpone</a>
+                            </td>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Launch demo modal
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            ...
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </td>
-                        
+                        }
+
+
+
+
 
                     </tr>
                 }

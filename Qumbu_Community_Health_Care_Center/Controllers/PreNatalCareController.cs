@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Qumbu_Community_Health_Care_Center.Areas.Identity.Data;
 using Qumbu_Community_Health_Care_Center.Models;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -160,47 +161,37 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         }
         public IActionResult CreateUltrasoundAppointment(UltrasoundAppointment ultrasound)
         {
-            string uniqueFileName = null;
-            if (ultrasound.ImageFile != null)
-            {
-                string ImageUploadedFolder = Path.Combine
-                    (webHostEnvironment.WebRootPath, "UploadedFiles/FetalImage");
-                uniqueFileName = Guid.NewGuid().ToString() + "_" + ultrasound.ImageFile.FileName;
-
-                string filepath = Path.Combine(ImageUploadedFolder, uniqueFileName);
-
-                using (var fileStream = new FileStream(filepath, FileMode.Create))
+            //if (ModelState.IsValid)
+            //{
+                if (ultrasound.ImageFile != null)
                 {
-                    ultrasound.ImageFile.CopyTo(fileStream);
-                }
-                ultrasound.UltrasoundImagePath = "~/wwwroot/UploadedFiles/FetalImage";
-                ultrasound.FileName = uniqueFileName;
+                    string folder = "UploadedFiles/FetalImage/";
+                    folder += Guid.NewGuid().ToString() + ultrasound.ImageFile.FileName;
+                    ultrasound.UltrasoundImagePath = "/" + folder;
+                    string serverFolder = Path.Combine(webHostEnvironment.WebRootPath, folder);
+                    ultrasound.ImageFile.CopyTo(new FileStream(serverFolder, FileMode.Create));
 
-                dbContext.Ultrasounds.Add(ultrasound);
-                dbContext.SaveChanges();
-                return RedirectToAction("IndexUltrasoundAppointment", "PrenatalCare");
-            }
+                    dbContext.Ultrasounds.Add(ultrasound);
+                    dbContext.SaveChanges();
+                    return RedirectToAction("IndexUltrasoundAppointment", "PrenatalCare");
+                }
+            //}
+            
+            
             return View();
+            
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult UpdateUltrasound(UltrasoundAppointment ultrasound)
         {
-            string uniqueFileName = null;
             if (ultrasound.ImageFile != null)
             {
-                string ImageUploadedFolder = Path.Combine
-                    (webHostEnvironment.WebRootPath, "UploadedFiles/FetalImage");
-                uniqueFileName = Guid.NewGuid().ToString() + "_" + ultrasound.ImageFile.FileName;
-
-                string filepath = Path.Combine(ImageUploadedFolder, uniqueFileName);
-
-                using (var fileStream = new FileStream(filepath, FileMode.Create))
-                {
-                    ultrasound.ImageFile.CopyTo(fileStream);
-                }
-                ultrasound.UltrasoundImagePath = "~/wwwroot/UploadedFiles/FetalImage";
-                ultrasound.FileName = uniqueFileName;
+                string folder = "UploadedFiles/FetalImage/";
+                folder += Guid.NewGuid().ToString() + ultrasound.ImageFile.FileName;
+                ultrasound.UltrasoundImagePath = "/" + folder;
+                string serverFolder = Path.Combine(webHostEnvironment.WebRootPath, folder);
+                ultrasound.ImageFile.CopyTo(new FileStream(serverFolder, FileMode.Create));
 
                 dbContext.Ultrasounds.Update(ultrasound);
                 dbContext.SaveChanges();
@@ -219,6 +210,13 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             dbContext.Ultrasounds.Remove(obj);
             dbContext.SaveChanges();
             return RedirectToAction("IndexUltrasoundAppointment", "PrenatalCare");
+
+            //var Ultrasound = await dbContext.Ultrasounds.FindAsync(ID);
+            //var folder = Path.Combine(webHostEnvironment.WebRootPath, "UploadedFiles/FetalImage/", Ultrasound.UltrasoundImagePath);
+            //if (System.IO.File.Exists(folder))
+            //    dbContext.Ultrasounds.Remove(Ultrasound);
+            //await dbContext.SaveChangesAsync();
+            //return RedirectToAction("IndexUltrasoundAppointment", "PrenatalCare");
         }
         public IActionResult IndexEducation()
         {
@@ -227,44 +225,27 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         }
         public IActionResult CreateEducation(PrenatalEducation prenatalEducation)
         {
-           
             if (prenatalEducation.CoverImage != null)
             {
-                string uniqueFileName = null;
-                string ImageUploadedFolder = Path.Combine
-                    (webHostEnvironment.WebRootPath, "UploadedFiles/CoverImage");
-                uniqueFileName = Guid.NewGuid().ToString() + " " + prenatalEducation.CoverImage.FileName;
-
-                string filepath = Path.Combine(ImageUploadedFolder, uniqueFileName);
-
-                using (var fileStream = new FileStream(filepath, FileMode.Create))
-                {
-                    prenatalEducation.CoverImage.CopyTo(fileStream);
-                }
-                prenatalEducation.ImageUrl = "~/wwwroot/UploadedFiles/CoverImage";
-                prenatalEducation.ImageName = uniqueFileName;
-                   
-        }
-        if (prenatalEducation.ContentPdf != null)
-        {
-            string uniqueFileName = null;
-            string ImageUploadedFolder = Path.Combine
-                (webHostEnvironment.WebRootPath, "UploadedFiles/Pdf");
-            uniqueFileName = Guid.NewGuid().ToString() + " " + prenatalEducation.ContentPdf.FileName;
-
-            string filepath = Path.Combine(ImageUploadedFolder, uniqueFileName);
-
-            using (var fileStream = new FileStream(filepath, FileMode.Create))
+                string folder = "UploadedFiles/FetalImage/";
+                folder += Guid.NewGuid().ToString() + prenatalEducation.ContentPdf.FileName;
+                prenatalEducation.ImageUrl = "/" + folder;
+                string serverFolder = Path.Combine(webHostEnvironment.WebRootPath, folder);
+                prenatalEducation.CoverImage.CopyTo(new FileStream(serverFolder, FileMode.Create));
+            } 
+            if (prenatalEducation.ContentPdf != null)
             {
-                prenatalEducation.ContentPdf.CopyTo(fileStream);
-            }
-            prenatalEducation.PdfUrl = "~/wwwroot/UploadedFiles/Pdf";
-            prenatalEducation.PdfName = uniqueFileName;
+                string folder = "UploadedFiles/Pdf/";
+                folder += Guid.NewGuid().ToString() + prenatalEducation.ContentPdf.FileName;
+                prenatalEducation.PdfUrl = "/" + folder;
+                string serverFolder = Path.Combine(webHostEnvironment.WebRootPath, folder);
+                prenatalEducation.ContentPdf.CopyTo(new FileStream(serverFolder, FileMode.Create));
 
-            dbContext.prenatalEducation.Add(prenatalEducation);
-            dbContext.SaveChanges();
-            return RedirectToAction("IndexEducation", "PrenatalCare");
-        }
+                dbContext.prenatalEducation.Add(prenatalEducation);
+                dbContext.SaveChanges();
+                return RedirectToAction("IndexEducation", "PrenatalCare");
+            }
+           
             return View();
         }
         public IActionResult EducationDetails(int? ID)
@@ -299,43 +280,28 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult UpdatePrenatalEducation(PrenatalEducation prenatalEducation)
         {
+
             if (prenatalEducation.CoverImage != null)
             {
-                string uniqueFileName = null;
-                string ImageUploadedFolder = Path.Combine
-                    (webHostEnvironment.WebRootPath, "UploadedFiles/CoverImage");
-                uniqueFileName = Guid.NewGuid().ToString() + " " + prenatalEducation.CoverImage.FileName;
-
-                string filepath = Path.Combine(ImageUploadedFolder, uniqueFileName);
-
-                using (var fileStream = new FileStream(filepath, FileMode.Create))
-                {
-                    prenatalEducation.CoverImage.CopyTo(fileStream);
-                }
-                prenatalEducation.ImageUrl = "~/wwwroot/UploadedFiles/CoverImage";
-                prenatalEducation.ImageName = uniqueFileName;
-
+                string folder = "UploadedFiles/FetalImage/";
+                folder += Guid.NewGuid().ToString() + prenatalEducation.ContentPdf.FileName;
+                prenatalEducation.ImageUrl = "/" + folder;
+                string serverFolder = Path.Combine(webHostEnvironment.WebRootPath, folder);
+                prenatalEducation.CoverImage.CopyTo(new FileStream(serverFolder, FileMode.Create));
             }
             if (prenatalEducation.ContentPdf != null)
             {
-                string uniqueFileName = null;
-                string ImageUploadedFolder = Path.Combine
-                    (webHostEnvironment.WebRootPath, "UploadedFiles/Pdf");
-                uniqueFileName = Guid.NewGuid().ToString() + " " + prenatalEducation.ContentPdf.FileName;
-
-                string filepath = Path.Combine(ImageUploadedFolder, uniqueFileName);
-
-                using (var fileStream = new FileStream(filepath, FileMode.Create))
-                {
-                    prenatalEducation.ContentPdf.CopyTo(fileStream);
-                }
-                prenatalEducation.PdfUrl = "~/wwwroot/UploadedFiles/Pdf";
-                prenatalEducation.PdfName = uniqueFileName;
+                string folder = "UploadedFiles/Pdf/";
+                folder += Guid.NewGuid().ToString() + prenatalEducation.ContentPdf.FileName;
+                prenatalEducation.PdfUrl = "/" + folder;
+                string serverFolder = Path.Combine(webHostEnvironment.WebRootPath, folder);
+                prenatalEducation.ContentPdf.CopyTo(new FileStream(serverFolder, FileMode.Create));
 
                 dbContext.prenatalEducation.Update(prenatalEducation);
                 dbContext.SaveChanges();
                 return RedirectToAction("IndexEducation", "PrenatalCare");
             }
+
             return View();
         }
         public IActionResult DeletePrenatalEducation(int? ID)

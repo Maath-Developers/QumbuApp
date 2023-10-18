@@ -167,9 +167,18 @@ namespace Qumbu_Community_Health_Care_Center.Migrations
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
 
+                    b.Property<string>("Address")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("City")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DateOfBirth")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Email")
                         .HasMaxLength(256)
@@ -179,10 +188,15 @@ namespace Qumbu_Community_Health_Care_Center.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("FirstName")
+                        .IsRequired()
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
+                    b.Property<string>("Gender")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("LastName")
+                        .IsRequired()
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
@@ -192,8 +206,8 @@ namespace Qumbu_Community_Health_Care_Center.Migrations
                     b.Property<DateTimeOffset?>("LockoutEnd")
                         .HasColumnType("datetimeoffset");
 
-                    b.Property<string>("MobileNumber")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("MobileNumber")
+                        .HasColumnType("int");
 
                     b.Property<string>("NormalizedEmail")
                         .HasMaxLength(256)
@@ -212,10 +226,10 @@ namespace Qumbu_Community_Health_Care_Center.Migrations
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
 
-                    b.Property<string>("SecurityStamp")
+                    b.Property<string>("Role")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Tittle")
+                    b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("TwoFactorEnabled")
@@ -383,7 +397,7 @@ namespace Qumbu_Community_Health_Care_Center.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Type")
+                    b.Property<string>("Surname")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -586,13 +600,6 @@ namespace Qumbu_Community_Health_Care_Center.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("IDno")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Language")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Medication")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -605,7 +612,8 @@ namespace Qumbu_Community_Health_Care_Center.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Occupation")
+                    b.Property<string>("Names")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Province")
@@ -620,9 +628,6 @@ namespace Qumbu_Community_Health_Care_Center.Migrations
 
                     b.Property<string>("Relationship")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Religion")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Safety")
@@ -645,36 +650,8 @@ namespace Qumbu_Community_Health_Care_Center.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Surname")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Symptoms")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Tittle")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("kinAddress")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("kinCell")
-                        .HasColumnType("int");
-
-                    b.Property<string>("kinName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("kinProvince")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("kinSurname")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("regDate")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("PatientRegId");
@@ -684,11 +661,11 @@ namespace Qumbu_Community_Health_Care_Center.Migrations
 
             modelBuilder.Entity("Qumbu_Community_Health_Care_Center.Models.PrenatalEducation", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("PrenatalEducationID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PrenatalEducationID"), 1L, 1);
 
                     b.Property<string>("Author")
                         .IsRequired()
@@ -702,15 +679,7 @@ namespace Qumbu_Community_Health_Care_Center.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ImageName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("ImageUrl")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PdfName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -725,9 +694,35 @@ namespace Qumbu_Community_Health_Care_Center.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.HasKey("PrenatalEducationID");
 
                     b.ToTable("prenatalEducation");
+                });
+
+            modelBuilder.Entity("Qumbu_Community_Health_Care_Center.Models.PrenatalGallery", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("PrenatalEducationID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Url")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PrenatalEducationID");
+
+                    b.ToTable("PrenatalGallery");
                 });
 
             modelBuilder.Entity("Qumbu_Community_Health_Care_Center.Models.Profiling", b =>
@@ -739,9 +734,6 @@ namespace Qumbu_Community_Health_Care_Center.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProfileID"), 1L, 1);
 
                     b.Property<string>("Address")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("AppointmentID")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Background")
@@ -880,10 +872,6 @@ namespace Qumbu_Community_Health_Care_Center.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("FileName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("GenderDetermined")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -906,43 +894,6 @@ namespace Qumbu_Community_Health_Care_Center.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Ultrasounds");
-                });
-
-            modelBuilder.Entity("Qumbu_Community_Health_Care_Center.Models.UserVM", b =>
-                {
-                    b.Property<int>("UserID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserID"), 1L, 1);
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FirstName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("MobileNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Role")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Tittle")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("UserID");
-
-                    b.ToTable("UserVM");
                 });
 
             modelBuilder.Entity("Qumbu_Community_Health_Care_Center.Models.VaccsAppointment", b =>
@@ -1072,6 +1023,22 @@ namespace Qumbu_Community_Health_Care_Center.Migrations
                         .HasForeignKey("UserId");
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Qumbu_Community_Health_Care_Center.Models.PrenatalGallery", b =>
+                {
+                    b.HasOne("Qumbu_Community_Health_Care_Center.Models.PrenatalEducation", "PrenatalEducation")
+                        .WithMany("PrenatalGallery")
+                        .HasForeignKey("PrenatalEducationID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("PrenatalEducation");
+                });
+
+            modelBuilder.Entity("Qumbu_Community_Health_Care_Center.Models.PrenatalEducation", b =>
+                {
+                    b.Navigation("PrenatalGallery");
                 });
 #pragma warning restore 612, 618
         }

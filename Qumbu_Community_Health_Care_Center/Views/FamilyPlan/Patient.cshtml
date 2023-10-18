@@ -1,4 +1,6 @@
-﻿@{
+﻿@model Qumbu_Community_Health_Care_Center.Models.Appointment
+@using Qumbu_Community_Health_Care_Center.Models
+@{
     Layout = "_FamilyPlanLayout";
 }
 @if (User.IsInRole("Admin"))
@@ -82,17 +84,44 @@
                     </a>
                 </div>
             </div>
-           @* <div class="col-sm-6 col-xl-3" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+            <div class="col-sm-6 col-xl-3" data-bs-toggle="modal" data-bs-target="#exampleModal1">
                 <div id="dash-con" class="dash-con rounded d-flex align-items-center justify-content-between p-4">
-                    <img src="~/Image/Message.png" style="width: 65px" />
+                    <img src="~/_Images/menstrualCycle.png" style="width: 65px" />
                     <div class="ms-3">
-                        <h4 class="mb-2">Messages</h4>
+                        <h5 class="mb-2">Track Menstrual Cycle</h5>
 
                     </div>
                 </div>
-            </div>*@
+            </div>
         </div>
     </div>
+@*    <div class="col-6">
+        <table class="table table-bordered table-striped" style="width:100%">
+            <thead class="table-primary">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Date_Time)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Purpose)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Status)
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Appointment app in ViewBag.App)
+                {
+                    <tr>
+                        <td width="20%">@app.Date_Time</td>
+                        <td width="20%">@app.Purpose</td>
+                        <td width="20%">@app.Status</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>*@
 
 
 

@@ -26,6 +26,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\UploadedFiles\FetalImage\" />
+    <Folder Include="wwwroot\UploadedFiles\Gallery\" />
     <Folder Include="wwwroot\UploadedFiles\Pdf\" />
   </ItemGroup>
 

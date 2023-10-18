@@ -1,33 +1,30 @@
 ﻿@model Qumbu_Community_Health_Care_Center.Models.UltrasoundAppointment
 
 @{
-    ViewData["Title"] = "Create";
-    Layout = "/Views/Shared/_PreNatalCareLayout.cshtml";
+    //ViewData["Title"] = "Create";
+    Layout = "/Views/Shared/_LayoutPrenatal.cshtml";
 }
-<form asp-action="UpdateUltrasound" enctype="multipart/form-data" method="post">
-    <div class="border p-4 mt-4">
-        <div class="row pb-2">
-            <h1 class="display-4" >Edit Fetal Monitoring</h1>
-            <hr />
-        </div>
+
+
+<div class="container">
+    <br />
+    <br />
+    <h1 class="display-4">Update Fetal Monitoring</h1>
+    <br />
+    <br />
+    <form asp-action="UpdateUltrasound" enctype="multipart/form-data" method="post">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-        <br /> <br />
-        <div class="mb-3">
-            <label asp-for="UserId" class="control-label"></label>
-            <input asp-for="UserId" class="form-control" />
-            <span asp-validation-for="UserId" class="text-danger"></span>
 
-        </div>
         <div class="mb-3">
             <label asp-for="AppointmentDate" class="control-label"></label>
-            <input type="date" asp-for="AppointmentDate" class="form-control" />
+            <input asp-for="AppointmentDate" class="form-control" />
             <span asp-validation-for="AppointmentDate" class="text-danger"></span>
 
         </div>
         <div class="mb-3">
             <label asp-for="GestationalAgeWeeks" class="control-label"></label>
-            <input type="week" asp-for="GestationalAgeWeeks" class="form-control" />
+            <input asp-for="GestationalAgeWeeks" class="form-control" />
             <span asp-validation-for="GestationalAgeWeeks" class="text-danger"></span>
 
         </div>
@@ -45,13 +42,18 @@
         </div>
         <div class="mb-3">
             <label asp-for="GenderDetermined" class="control-label"></label>
-            <input type="text" asp-for="GenderDetermined" class="form-control" />
+            <select asp-for="GenderDetermined" class="form-control">
+                <option value="">Please select gender</option>
+                <option>Female</option>
+                <option>Male</option>
+            </select>
             <span asp-validation-for="GenderDetermined" class="text-danger"></span>
 
         </div>
         <div class="mb-3">
             <label asp-for="Comments" class="control-label"></label>
-            <input asp-for="Comments" class="form-control" />
+            <textarea asp-for="Comments" class="form-control"></textarea>
+            <span asp-validation-for="GenderDetermined" class="text-danger"></span>
         </div>
         <div class="mb-3">
             <label asp-for="ImageFile" class="control-label"></label>
@@ -67,7 +69,12 @@
             <input type="submit" value="Update" class="btn btn-primary" />
             <a asp-controller="PrenatalCare" asp-action="IndexUltrasoundAppointment" class="btn btn-danger" style="width:150px">Back to List</a>
         </div>
-    </div>
 
-</form>
+    </form>
+</div>
+
+
+
+
+
 

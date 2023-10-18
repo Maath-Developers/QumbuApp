@@ -267,8 +267,10 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         //}
         public async Task<IActionResult> ViewReports()
         {
-            var ApplicationDbContext = dbContext.FamilyReg.Include(f => f.MainUser);
-            return View(await ApplicationDbContext.ToListAsync());
+            ViewBag.Date = DateTime.Now.ToString("dd/mm/yyyy");
+            ViewBag.Time = DateTime.Now.ToString("HH:MM");
+            var applicationDbContext = dbContext.FamilyReg.Include(a => a.MainUser).ToList();
+            return View(applicationDbContext);
         }
 
 
