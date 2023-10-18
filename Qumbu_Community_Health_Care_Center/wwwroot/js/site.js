@@ -2,7 +2,13 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
-
+document.addEventListener("scroll", () => {
+    if (window.scrollY > 10) {
+        document.querySelector("header").style.background = "rgba(0, 0, 0, 0.7)";
+    } else {
+        document.querySelector("header").style.background = "transparent"
+    }
+})
 //Tempdata
 setTimeout(function () {
     var tempdat = document.getElementById('tempdata');

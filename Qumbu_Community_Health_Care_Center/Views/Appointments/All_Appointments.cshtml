@@ -4,58 +4,96 @@
     ViewData["Title"] = "All_Appointments";
     Layout = "~/Views/Shared/_Walk-in-Layout.cshtml";
 }
+<div class="mt-2 p-2 bg-white text-center text-white-50 rounded">
+    <h2>List of Appointments</h2>
+</div>
+<div class="container-fluid">
+    <div class="row pt-4">
+        <div class="col-6 text-right">
+            <a asp-controller="Appointments" asp-action="Create" class="btn btn-info">New Appointment</a>
+        </div>
+    </div>
+    <br />
+    <table class="table table-bordered table-striped" style="width:100%">
+        <thead class="table-primary">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.MainUser)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CreatedAt)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Purpose)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Status)
+                </th>
 
-<h1>All_Appointments</h1>
+                <th>
+                    @Html.DisplayNameFor(model => model.Date_Time)
+                </th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.CreatedAt)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Purpose)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Status)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MainUser)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Date_Time)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model)
-{
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.CreatedAt)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Purpose)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Status)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MainUser.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Date_Time)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.AppointmentID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.AppointmentID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.AppointmentID">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+                    <td>
+                        @item.MainUser.FirstName
+                        @item.MainUser.LastName
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CreatedAt)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Purpose)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Status)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Date_Time)
+                    </td>
+                    @if (item.Status == "New")
+                    {
+                        <td>
+                            @*                     <button type="submit" class="btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal-@item.AppointmentID">Accept</button> |
+                    *@                    <a asp-action="Details" asp-route-id="@item.AppointmentID">Decline</a>
+                        </td>
+
+                        @* <!-- Modal -->
+                <div class="modal fade" id="exampleModal-@item.AppointmentID" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                ...
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Proceed</button>
+                </div>
+                </div>
+                </div>
+                </div>
+                *@
+                    }
+                    else
+                    {
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.AppointmentID">InActtive</a>
+                        </td>
+                    }
+
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

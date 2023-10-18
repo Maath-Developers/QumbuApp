@@ -73,9 +73,9 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
                 TempData["Success"] = "Succesfully booked";
                 try
                 {
-                    string supportEmail = "Qumbu_Community_Health_Care_Center.healthcare@gmail.com";
+                    string supportEmail = "Qumbuhealthcare@gmail.com";
                     var email = User.FindFirstValue(ClaimTypes.Email);
-                    await _email.SendEmailAsync(email, "Confirm your email",
+                    await _email.SendEmailAsync(email, "For appointment",
                         $"<html><head><style>body{{font-family:Arial,sans-serif;}}" +
                         $"h1{{color:#336699;}}" +
                         $".cta-button{{background-color:#336699;color:@fff;" +
@@ -123,7 +123,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
                 var patient = Context.Users.Where(a => a.Id == appointments.PatientID).FirstOrDefault();
                 try
                 {
-                    string supportEmail = "Qumbu_Community_Health_Care_Center.healthcare@gmail.com";
+                    string supportEmail = "Qumbuhealthcare@gmail.com";
                      _email.SendEmailAsync(patient.Email, "Confirm your email",
                          $"<html><head><style>body{{font-family:Arial,sans-serif;}}" +
                          $"h1{{color:#336699;}}" +
@@ -195,7 +195,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
                     var patient = Context.Users.Where(a => a.Id == appoint.PatientID).FirstOrDefault();
                     try
                     {
-                        string supportEmail = "Qumbu_Community_Health_Care_Center.healthcare@gmail.com";
+                        string supportEmail = "Qumbuhealthcare@gmail.com";
                         _email.SendEmailAsync(patient.Email, "Confirm your email",
                             $"<html><head><style>body{{font-family:Arial,sans-serif;}}" +
                             $"h1{{color:#336699;}}" +

@@ -5,7 +5,12 @@
     ViewData["Title"] = "Add_New_User";
     Layout = "~/Views/Shared/_Walk-in-Layout.cshtml";
 }
-
+@if (TempData["Email"] != null)
+{
+    <div class="bg bg-warning text-center w-100 p-3 rounded" id="tempdata" role="alert">
+        <h4 class="text-white">@TempData["Email"]</h4>
+    </div>
+}
 <hr />
 <div class="row">
     <div class="col-md-4">

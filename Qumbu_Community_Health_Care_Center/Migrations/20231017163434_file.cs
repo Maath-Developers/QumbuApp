@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Qumbu_Community_Health_Care_Center.Migrations
 {
-    public partial class update : Migration
+    public partial class file : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
