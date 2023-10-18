@@ -111,20 +111,20 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             ViewData["PatientID"] = new SelectList(Context.Users, "Id", "Id", appointments.PatientID);
             return View(appointments);
         }
-        public IActionResult Accept(int? id)
+        public async Task<IActionResult> Accept(int? id)
         {
             var appointments = Context.Appointments.Find(id);
             if (appointments != null)
             {
                 appointments.Status = "Accepted";
                 Context.Appointments.Update(appointments);
-                Context.SaveChanges();
+                await Context.SaveChangesAsync();
                 TempData["Success"] = "The appointment has been accepted";
                 var patient = Context.Users.Where(a => a.Id == appointments.PatientID).FirstOrDefault();
                 try
                 {
                     string supportEmail = "Qumbuhealthcare@gmail.com";
-                     _email.SendEmailAsync(patient.Email, "Confirm your email",
+                     await _email.SendEmailAsync(patient.Email, "Appointment Accepted",
                          $"<html><head><style>body{{font-family:Arial,sans-serif;}}" +
                          $"h1{{color:#336699;}}" +
                          $".cta-button{{background-color:#336699;color:@fff;" +
@@ -142,7 +142,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
                          $"<p>Take note that your appointment has been accepted</P>" +
                          $"<Strong><p>Appointment Date: {appointments.Date_Time}</P></strong>" +
                          $"<Strong><p>Appointment Purpose: {appointments.Purpose}</P></strong>" +
-                         $"<p>Please be on time, atleast 10 minutes before</P>" +
+                         $"<p>Please be on time, atleast 15 minutes before</P>" +
 
                          $"" +
                          $"if you have any question ,contact our team at {supportEmail}</p>" +

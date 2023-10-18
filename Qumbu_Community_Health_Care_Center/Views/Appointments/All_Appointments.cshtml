@@ -5,9 +5,16 @@
     ViewData["Title"] = "All_Appointments";
     Layout = "~/Views/Shared/_Walk-in-Layout.cshtml";
 }
+
 <div class="mt-2 p-2 bg-white text-center text-white-50 rounded">
     <h2>List of Appointments</h2>
 </div>
+@if(TempData["Success"] != null)
+{
+    <div class="bg bg-success text-center p-2">
+        <h5 class="text-center">@TempData["Success"]</h5>
+    </div>
+}
 <div class="container-fluid">
     <div class="row pt-4">
         <div class="col-6 text-right">
@@ -58,43 +65,40 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.Date_Time)
                     </td>
-                    @if (item.Status == "New")
+                    @if(item.Status == "New")
                     {
                         <td>
-                            @*                     <button type="submit" class="btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal-@item.AppointmentID">Accept</button> |
-                    *@                    <a asp-action="Details" asp-route-id="@item.AppointmentID">Decline</a>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal-@item.AppointmentID">
+                                Accept
+                            </button>|
+                            <a asp-action="Details" asp-route-id="@item.AppointmentID">Decline</a>|
+                            <a asp-action="Delete" asp-route-id="@item.AppointmentID">Postpone</a>
                         </td>
-
-                        @* <!-- Modal -->
-                <div class="modal fade" id="exampleModal-@item.AppointmentID" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                <div class="modal-content">
-                <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                ...
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Proceed</button>
-                </div>
-                </div>
-                </div>
-                </div>
-                *@
+                       <div class="modal fade" id="exampleModal-@item.AppointmentID" tabindex="-1" aria-labelledby="exampleModalLabel-@item.AppointmentID" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel-@item.AppointmentID">Confirm acceptance</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        asp-action="Details" asp-route-id="@item.AppointmentID"
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <a asp-action="Accept" asp-route-id="@item.AppointmentID" button type="button" class="btn btn-primary">Proceed</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     }
-                    else
-                    {
-                        <td>
-                            <a asp-action="Edit" asp-route-id="@item.AppointmentID">InActtive</a>
-                        </td>
-                    }
-
+                    
                 </tr>
+                
             }
+            
         </tbody>
+        
     </table>
 
 </div>
