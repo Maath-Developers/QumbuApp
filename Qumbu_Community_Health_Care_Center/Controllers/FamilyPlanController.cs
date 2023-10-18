@@ -272,7 +272,30 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             var applicationDbContext = dbContext.FamilyReg.Include(a => a.MainUser).ToList();
             return View(applicationDbContext);
         }
+		public IActionResult CreateMenstruation()
+		{
+			return View();
+		}
+		[HttpPost]
+		[ValidateAntiForgeryToken]
+		public IActionResult CreateMenstruation(Menstruation menstruation)
+		{
+			if (ModelState.IsValid)
+			{
+				dbContext.Menstruations.Add(menstruation);
+				dbContext.SaveChanges();
+				return RedirectToAction("ViewMenstruaction");
+			}
+			return View(menstruation);
+		}
+		public IActionResult ViewMenstruaction()
+		{
+			IEnumerable<Menstruation> list = dbContext.Menstruations;
+			return View(list);
+		}
 
 
-    }
+
+
+	}
 }

@@ -1,0 +1,73 @@
+﻿@model IEnumerable<Qumbu_Community_Health_Care_Center.Models.Menstruation>
+@{
+    ViewData["Title"] = "ViewMenstruaction";
+    Layout = "~/Views/Shared/_FamilyPlanLayout.cshtml";
+}
+
+<div class="container p-3 bg-blue-200 p-2 text-dark bg-opacity-50">
+    <img src="~/css/images.jpg" class="rounded float-end">
+    <div class=" row pt-4">
+        <div class=" col-10">
+            <h2 class="text-primary"> Track List</h2>
+        </div>
+        <div class=" col-10 text-right">
+            <a asp-controller="Family" asp-action="CreateMentruction" style="width:100%"></a>
+        </div>
+    </div>
+
+    <br />
+    <a asp-action="CreateMentruction" class="btn btn-success"> Track </a>
+    @if (Model.Count() > 0)
+    {
+        <table class=" table table-bordered table-striped table-success">
+            <thead>
+                <tr>
+                    <th>CurrentDate</th>
+
+                    <th>LastPeriodDate</th>
+                    <th>Result</th>
+
+
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var Men in Model)
+                {
+
+                    <tr>
+                        <td>@Men.Date</td>
+
+                        <td>@Men.EndDate</td>
+
+                        <td>
+                            @if (Men.difference >= 25)
+                            {
+                                <p>Please take pregnancy test</p>
+                            }
+                            else
+                            {
+                                <p> you can use birth control of your self</p>
+                            }
+
+
+                        </td>
+
+
+                    </tr>
+
+
+
+                }
+
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>NO track has been done</p>
+    }
+
+
+</div>
+
