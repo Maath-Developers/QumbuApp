@@ -52,5 +52,6 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
         }
     }
     public DbSet<Qumbu_Community_Health_Care_Center.Models.UserVM>? UserVM { get; set; }
+    public DbSet<Qumbu_Community_Health_Care_Center.Models.Medical_File>? Medical_File { get; set; }
 
 }

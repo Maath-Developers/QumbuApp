@@ -5,27 +5,30 @@
 }
 
 <div class="container p-3 bg-blue-200 p-2 text-dark bg-opacity-50">
-    <img src="~/css/images.jpg" class="rounded float-end">
+    
     <div class=" row pt-4">
         <div class=" col-10">
             <h2 class="text-primary"> Track List</h2>
         </div>
-        <div class=" col-10 text-right">
-            <a asp-controller="Family" asp-action="CreateMentruction" style="width:100%"></a>
-        </div>
+        
     </div>
 
     <br />
-    <a asp-action="CreateMentruction" class="btn btn-success"> Track </a>
+    <a asp-action="CreateMenstruation" class="btn btn-info"> Back to </a>
+    <br />
+    <br />
     @if (Model.Count() > 0)
     {
-        <table class=" table table-bordered table-striped table-success">
+        <table class=" table table-bordered table-striped ">
             <thead>
+                <br />
                 <tr>
                     <th>CurrentDate</th>
 
                     <th>LastPeriodDate</th>
                     <th>Result</th>
+                    <th></th>
+
 
 
 
@@ -47,10 +50,17 @@
                             }
                             else
                             {
-                                <p> you can use birth control of your self</p>
+                                <p>Please screen for birth control</p>
                             }
 
 
+                        </td>
+                        <td>
+                            <div class="w-100 btn-group" role="group">
+                                <a asp-controller="FamilyPlan" asp-action="UpdateMenstruation" asp-route-ID="@Men.MenstruationId" class="btn btn-outline-info mx-1">Update</a>
+                                <a asp-controller="FamilyPlan" asp-action="DeleteMenstruation" asp-route-ID="@Men.MenstruationId" class="btn btn-outline-info mx-1">Delete</a>
+                               
+                            </div>
                         </td>
 
 
