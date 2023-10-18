@@ -33,6 +33,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<Menstruation> Menstruations { get; set; }
 	public DbSet<VaccinationEducation> VaccineEducation { get; set; }
 	public DbSet<Vaccine_MadicalRecord> vaccinerecord { get; set; }
+    public DbSet<Notification> Notification { get; set; }
 	
 	protected override void OnModelCreating(ModelBuilder builder)
     {
