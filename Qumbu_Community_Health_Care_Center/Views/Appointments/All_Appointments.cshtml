@@ -1,23 +1,24 @@
 ﻿
 @model IEnumerable<Qumbu_Community_Health_Care_Center.Models.Appointment>
 
+
 @{
     ViewData["Title"] = "All_Appointments";
     Layout = "~/Views/Shared/_Walk-in-Layout.cshtml";
 }
 
-<div class="mt-2 p-2 bg-white text-center text-white-50 rounded">
+<div class=" bg-white text-center text-white-50 rounded">
     <h2>List of Appointments</h2>
 </div>
 @if(TempData["Success"] != null)
 {
-    <div class="bg bg-success text-center p-2">
+    <div class="bg bg-success text-center ">
         <h5 class="text-center">@TempData["Success"]</h5>
     </div>
 }
 <div class="container-fluid">
-    <div class="row pt-4">
-        <div class="col-6 text-right">
+    <div class="row">
+        <div class="text-end">
             <a asp-controller="Appointments" asp-action="Create" class="btn btn-info">New Appointment</a>
         </div>
     </div>
@@ -71,8 +72,14 @@
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal-@item.AppointmentID">
                                 Accept
                             </button>|
-                            <a asp-action="Details" asp-route-id="@item.AppointmentID">Decline</a>|
-                            <a asp-action="Delete" asp-route-id="@item.AppointmentID">Postpone</a>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal-@item.AppointmentID">
+                                Decline
+                            </button>|
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal-@item.AppointmentID">
+                                Pending
+                            </button>
+                          @*   <a asp-action="Details" asp-route-id="@item.AppointmentID">Decline</a>|
+                            <a asp-action="Delete" asp-route-id="@item.AppointmentID">Postpone</a> *@
                         </td>
                        <div class="modal fade" id="exampleModal-@item.AppointmentID" tabindex="-1" aria-labelledby="exampleModalLabel-@item.AppointmentID" aria-hidden="true">
                             <div class="modal-dialog">
@@ -82,7 +89,7 @@
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        asp-action="Details" asp-route-id="@item.AppointmentID"
+                                        <p>Please click proceed to approve the appointment.</p>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -92,7 +99,14 @@
                             </div>
                         </div>
                     }
-                    
+                    else
+                    {
+                        <td class="text-black justify-content-center">
+                            <label>Completed</label>
+                        </td>
+                        
+                    }
+
                 </tr>
                 
             }
