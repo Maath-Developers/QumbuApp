@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Qumbu_Community_Health_Care_Center.Areas.Identity.Data;
 using Qumbu_Community_Health_Care_Center.Models;
 using System.IO;
+using System.Security.Claims;
 
 
 namespace Qumbu_Community_Health_Care_Center.Controllers
@@ -245,12 +246,19 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             {
                 Context.Profiling.Add(pro);
                 Context.SaveChanges();
-                return RedirectToAction("Profile");
+                return RedirectToAction("GoupRec");
             }
             return View(pro);
         }
         public IActionResult CreatePat()
         {
+            var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            ViewBag.App = Context.Appointments.Where(a => a.PatientID == user).ToList();
+            ViewBag.Patient = (from U in Context.Users
+                               join UR in Context.UserRoles on U.Id equals UR.UserId
+                               join R in Context.Roles on UR.RoleId equals R.Id
+                               where R.Name == "Patient"
+                               select U).ToList();
             return View();
         }
         [HttpPost]
@@ -266,6 +274,11 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             return View(pro);
         }
         public IActionResult IndRec()
+        {
+            IEnumerable<Profiling> profilings = Context.Profiling;
+            return View(profilings);
+        }
+        public IActionResult GroupRec()
         {
             IEnumerable<Profiling> profilings = Context.Profiling;
             return View(profilings);
