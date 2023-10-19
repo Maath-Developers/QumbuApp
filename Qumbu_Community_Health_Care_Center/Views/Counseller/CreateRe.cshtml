@@ -5,7 +5,7 @@
 <div id="Header" class="bg-info">
     <h2 class="m-1 pt-4 text-center text-white">Individual Counselling</h2>
 </div>
-<div class="container-fluid bg-white border p-4">
+<div class="container-fluid bg-white">
     <form method="post" asp-action="CreateRe">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="card-body">
@@ -58,7 +58,7 @@
                         <input type="submit" class="btn btn-info w-75" value="Submit" />
                     </div>
                     <div class="col">
-                    <a asp-controller="Counseller" asp-action="IndRec" class="btn btn-info w-75">View</a>
+                        <a asp-action="CreateRe" class="btn btn-info w-75">Cancel</a>
                     </div>
                 </div>
             </div>
