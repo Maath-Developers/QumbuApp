@@ -193,6 +193,10 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             IEnumerable<Vaccine_MadicalRecord> objList = dbContext.vaccinerecord;
             return View(objList);
         }
+        public IActionResult Record()
+        {
+            return View();
+        }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Record(Vaccine_MadicalRecord reco)
@@ -203,7 +207,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             {
                 dbContext.vaccinerecord.Add(reco);
                 dbContext.SaveChanges();
-                return RedirectToAction("IndexEducation");
+                return RedirectToAction("IndexRecord");
             }
             //ViewData["NurseID"] = new SelectList(dbContext.Users, "Id", "Id", reco.NurseID);
             //return View(reco);
