@@ -19,7 +19,7 @@
             <div class="col-md-12">
                 <form asp-action="CreateEducation" enctype="multipart/form-data" method="post">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                    <div class="form-group">
+                    @*<div class="form-group">
                         <label asp-for="PatientID" class="control-label">Choose Patient</label>
                         <select asp-for="PatientID" class="form-control">
                             @foreach (ApplicationUser item in ViewBag.Patients)
@@ -27,7 +27,7 @@
                                 <option value="@item.Id">@item.FirstName @item.LastName</option>
                             }
                         </select>
-                    </div>
+                    </div>*@
                     <div class="form-group">
                         <label asp-for="Title" class="control-label"></label>
                         <input asp-for="Title" class="form-control" />

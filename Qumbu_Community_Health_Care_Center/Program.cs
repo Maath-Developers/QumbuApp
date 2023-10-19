@@ -157,7 +157,7 @@ using (var scope = app.Services.CreateScope())
     scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
     string firstName = "Asanda";
     string lastName = "Monki";
-    string email = "monkiasanda@gmail.com";
+    string email = "asandamonki2@gmail.com";
     string password = "Asanda@123";
     bool confirmEmail = true;
     if (await userManager.FindByEmailAsync(email) == null)
