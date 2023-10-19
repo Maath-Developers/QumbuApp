@@ -34,10 +34,11 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         {
             return View();
         }
-        public async Task<IActionResult> IndexRecord()
+        public  IActionResult IndexRecord()
         {
-            var ApplicationDbContext = dbContext.HealthRecords.Include(f => f.MainUser);
-            return View(await ApplicationDbContext.ToListAsync());
+            IEnumerable<HealthRecord> objList = dbContext.HealthRecords.Include(a => a.MainUser);
+            //return View(dbContext.ultrasounds.ToList());
+            return View(objList);
         }
         public IActionResult IndexAppointment()
         {
