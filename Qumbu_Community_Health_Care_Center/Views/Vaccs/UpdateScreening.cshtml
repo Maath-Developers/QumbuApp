@@ -8,7 +8,7 @@
         <div class="card-body ">
             <div class="card-header bg-primary">
 
-                <h3 class="card-title text-white mt-2" id="exampleModalLabel"> SELF SCREENING TOOL</h3>
+                <h3 class="card-title text-white mt-2" id="exampleModalLabel">UPDATE SELF SCREENING TOOL</h3>
             </div>
             <form method="post" asp-action="Screen">
                 <div class="border p-3 #FBD603">
@@ -97,11 +97,6 @@
                                             </label>
                                             <span asp-validation-for="Question4" class="text-danger"></span>
                                         </div>
-                                        <div class="col-4">
-                                            <label asp-for="Date"></label>
-                                            <input asp-for="Date" class="form-control" />
-                                            <span asp-validation-for="Date" class="text-danger"></span>
-                                        </div>
                                     </div>
 
                                 </div>
@@ -140,11 +135,11 @@
                                             </label>
                                             <span asp-validation-for="Question6" class="text-danger"></span>
                                         </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <label asp-for="Date"></label>
-                                        <input asp-for="Date" class="form-control" />
-                                        <span asp-validation-for="Date" class="text-danger"></span>
+                                        <div class="col-4">
+                                            <label asp-for="Date"></label>
+                                            <input asp-for="Date" class="form-control" />
+                                            <span asp-validation-for="Date" class="text-danger"></span>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -153,7 +148,7 @@
                             <div class="form-group row">
                                 <div class="col-8 offset-2 row">
                                     <div class="col">
-                                        <input type="submit" class="btn btn-info w-75 bi bi-arrow-left-circle" value="SUBMIT" />
+                                        <input type="submit" class="btn btn-info w-75 bi bi-arrow-left-circle" value="UPDATE" />
                                     </div>
                                     <div class="col">
                                         <a asp-action="IndexScree" class="btn btn-danger w-75"><i class="bi bi-arrow-left-circle"></i>BACK</a>

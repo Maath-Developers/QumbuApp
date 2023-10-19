@@ -51,23 +51,33 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         [HttpGet]
         public IActionResult CreateRecord()
         {
-          
+
             return View();
         }
         [HttpGet]
         public IActionResult CreateAppointment()
         {
-           
+
             return View();
         }
+        //public IActionResult CreateRecord()
+        //{
+        //    ViewBag.Patients = (from U in dbContext.Users
+        //                        join UR in dbContext.UserRoles on U.Id equals UR.UserId
+        //                        join R in dbContext.Roles on UR.RoleId equals R.Id
+        //                        where R.Name == "Patient"
+        //                        select U).ToList();
+        //    return View();
+        //}
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult CreateRecord(HealthRecord record)
         {
             if (ModelState.IsValid)
             {
                 dbContext.HealthRecords.Add(record);
                 dbContext.SaveChanges();
-                return RedirectToAction("IndexRecord"); 
+                return RedirectToAction("IndexRecord");
             }
             return View(record);
         }
@@ -154,15 +164,27 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         }
         public IActionResult IndexUltrasoundAppointment()
         {
-            IEnumerable<UltrasoundAppointment> objList = dbContext.Ultrasounds;
+            IEnumerable<UltrasoundAppointment> objList = dbContext.Ultrasounds.Include(a => a.MainUser);
             //return View(dbContext.ultrasounds.ToList());
             return View(objList);
 
         }
+        public IActionResult CreateUltrasoundAppointment()
+        {
+            ViewBag.Patients = (from U in dbContext.Users
+                                join UR in dbContext.UserRoles on U.Id equals UR.UserId
+                                join R in dbContext.Roles on UR.RoleId equals R.Id
+                                where R.Name == "Patient"
+                                select U).ToList();
+            return View();
+
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult CreateUltrasoundAppointment(UltrasoundAppointment ultrasound)
         {
-            //if (ModelState.IsValid)
-            //{
+            if (ModelState.IsValid)
+            {
                 if (ultrasound.ImageFile != null)
                 {
                     string folder = "UploadedFiles/FetalImage/";
@@ -175,11 +197,9 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
                     dbContext.SaveChanges();
                     return RedirectToAction("IndexUltrasoundAppointment", "PrenatalCare");
                 }
-            //}
-            
-            
+            }
             return View();
-            
+
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -223,34 +243,50 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             IEnumerable<PrenatalEducation> objList = dbContext.prenatalEducation;
             return View(objList);
         }
+        public IActionResult CreateEducation()
+        {
+            ViewBag.Patients = (from U in dbContext.Users
+                                join UR in dbContext.UserRoles on U.Id equals UR.UserId
+                                join R in dbContext.Roles on UR.RoleId equals R.Id
+                                where R.Name == "Patient"
+                                select U).ToList();
+            return View();
+
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult CreateEducation(PrenatalEducation prenatalEducation)
         {
-            if (prenatalEducation.CoverImage != null)
+            if (ModelState.IsValid)
             {
-                string folder = "UploadedFiles/FetalImage/";
-                folder += Guid.NewGuid().ToString() + prenatalEducation.ContentPdf.FileName;
-                prenatalEducation.ImageUrl = "/" + folder;
-                string serverFolder = Path.Combine(webHostEnvironment.WebRootPath, folder);
-                prenatalEducation.CoverImage.CopyTo(new FileStream(serverFolder, FileMode.Create));
-            } 
-            if (prenatalEducation.ContentPdf != null)
-            {
-                string folder = "UploadedFiles/Pdf/";
-                folder += Guid.NewGuid().ToString() + prenatalEducation.ContentPdf.FileName;
-                prenatalEducation.PdfUrl = "/" + folder;
-                string serverFolder = Path.Combine(webHostEnvironment.WebRootPath, folder);
-                prenatalEducation.ContentPdf.CopyTo(new FileStream(serverFolder, FileMode.Create));
+                if (prenatalEducation.CoverImage != null)
+                {
+                    string folder = "UploadedFiles/FetalImage/";
+                    folder += Guid.NewGuid().ToString() + prenatalEducation.ContentPdf.FileName;
+                    prenatalEducation.ImageUrl = "/" + folder;
+                    string serverFolder = Path.Combine(webHostEnvironment.WebRootPath, folder);
+                    prenatalEducation.CoverImage.CopyTo(new FileStream(serverFolder, FileMode.Create));
+                }
+                if (prenatalEducation.ContentPdf != null)
+                {
+                    string folder = "UploadedFiles/Pdf/";
+                    folder += Guid.NewGuid().ToString() + prenatalEducation.ContentPdf.FileName;
+                    prenatalEducation.PdfUrl = "/" + folder;
+                    string serverFolder = Path.Combine(webHostEnvironment.WebRootPath, folder);
+                    prenatalEducation.ContentPdf.CopyTo(new FileStream(serverFolder, FileMode.Create));
 
-                dbContext.prenatalEducation.Add(prenatalEducation);
-                dbContext.SaveChanges();
-                return RedirectToAction("IndexEducation", "PrenatalCare");
+                    dbContext.prenatalEducation.Add(prenatalEducation);
+                    dbContext.SaveChanges();
+                    return RedirectToAction("IndexEducation", "PrenatalCare");
+                }
             }
-           
+             
+
             return View();
         }
         public IActionResult EducationDetails(int? ID)
         {
-            if(ID == null || ID == 0)
+            if (ID == null || ID == 0)
             {
                 return NotFound();
             }

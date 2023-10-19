@@ -38,6 +38,9 @@
                     <th>
                         Question6
                     </th>
+                    <th>
+                        Date
+                    </th>
                 </tr>
             </thead>
 
@@ -45,13 +48,68 @@
                 @foreach (var Scree in Model)
                 {
                     <tr>
-                        <td width="20%">@Scree.Patient</td>
-                        <td width="20%">@Scree.Question1</td>
-                        <td width="20%">@Scree.Question2</td>
-                        <td width="20%">@Scree.Question3</td>
-                        <td width="20%">@Scree.Question4</td>
-                        <td width="20%">@Scree.Question5</td>
-                        <td width="20%">@Scree.Question6</td>
+                        
+                        <td width="20%">
+                            @if (Scree.Question1 == 6)
+                            {
+                                <p>yes</p>
+                            }
+                            else
+                            {
+                                <p>no</p>
+                            }
+                        </td>
+                        <td width="20%">
+                            @if (Scree.Question2 == 6)
+                            {
+                                <p>yes</p>
+                            }
+                            else
+                            {
+                                <p>no</p>
+                            }
+                        </td>
+                        <td width="20%">
+                            @if (Scree.Question3 == 0)
+                            {
+                                <p>yes</p>
+                            }
+                            else
+                            {
+                                <p>no</p>
+                            }
+                        </td>
+                        <td width="20%">
+                            @if (Scree.Question4 == 0)
+                            {
+                                <p>yes</p>
+                            }
+                            else
+                            {
+                                <p>no</p>
+                            }
+                        </td>
+                        <td width="20%">
+                            @if (Scree.Question5 == 0)
+                            {
+                                <p>yes</p>
+                            }
+                            else
+                            {
+                                <p>no</p>
+                            }
+                        </td>
+                        <td width="20%">
+                            @if (Scree.Question6 == 0)
+                            {
+                                <p>yes</p>
+                            }
+                            else
+                            {
+                                <p>no</p>
+                            }
+                        </td>
+                        <td width="20%">@Scree.Date</td>
 
                         <td>
                             <a asp-controller="Vaccs" asp-action="Update" asp-route-ID="@Scree.ScreeningID" class="btn btn-primary"><i class="bi bi-arrow-repeat"></i>Update</a>
