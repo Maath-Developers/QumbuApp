@@ -9,7 +9,7 @@
     Layout = "~/Views/Shared/_FamilyPlanLayout.cshtml";
 }
 
-<div class="mt-2 p-2 bg-primary text-center text-white rounded">
+<div class="mt-2 p-2 bg-info text-center text-white rounded">
     <h6>TRACK-MENSTRUATION</h6>
 
 </div>
@@ -49,27 +49,78 @@
                     <span asp-validation-for="difference" class=" text-danger"></span>
 
                 </div>
-                <div class="row">
-
-
-
-
                 <div class=" form-group row">
                     <div class=" col-8 offset-2 row">
                         <div class=" col">
-                            <input type="submit" class="btn-primary btn-lg  " value="submit" />
+                            <input type="submit" class="btn btn-outline-info  " value="submit" />
                         </div>
                         <div class=" col-1">
-                            <a asp-action="TrackMenstruactioList" class=" btn btn-primary btn-lg ">List</a>
+                            <a asp-action="ViewMenstruaction" class=" btn btn-outline-info ">Update</a>
                         </div>
                     </div>
                 </div>
-
+   
             </div>
 
 
         </form>
     </div>
+    <div class="row">
+        <table class=" table table-bordered table-striped style=" width:60%" ">
+            <thead>
+                <br />
+                <tr>
+                    <th>CurrentDate</th>
+
+                    <th>LastPeriodDate</th>
+                    <th>Result</th>
+                    
+
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Menstruation Men in ViewBag.App)
+                {
+
+                    <tr>
+
+                        <td width="20%">@Men.Date</td>
+
+                        <td width ="20%">@Men.EndDate</td>
+
+                        <td width="20%">
+                            @if (Men.difference >= 25)
+                            {
+                                <p>Please take pregnancy test</p>
+                            }
+                            else
+                            {
+                                <p>Please screen for birth control</p>
+                            }
+
+
+                        </td>
+                    @*     <td width="20%">
+                            <div class="w-100 btn-group" role="group">
+                                <a asp-controller="FamilyPlan" asp-action="UpdateMenstruation" asp-route-ID="@Men.MenstruationId" class="btn btn-outline-info mx-1">Update</a>
+                                <a asp-controller="FamilyPlan" asp-action="DeleteMenstruation" asp-route-ID="@Men.MenstruationId" class="btn btn-outline-info mx-1">Delete</a>
+
+                            </div>
+                        </td> *@
+
+
+                    </tr>
+
+
+
+                }
+
+            </tbody>
+        </table>
+    </div>
+
+   
    
 </div>
 
