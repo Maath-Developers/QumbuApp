@@ -51,9 +51,29 @@
                         </td>
 
                         <td width="20%">
-                            @if (TempData["Result"] != null)
+                            @if (fed.Total<= 30 )
                             {
-                                
+                                <p>Pills</p>
+                            }
+                            else if (fed.Total <= 40)
+                            {
+                                <p> 1 Months Injection</p>
+                            }
+                            else if (fed.Total <= 50)
+                            {
+                                <p>2 Months Injection</p>
+                            }
+                            else if (fed.Total <= 60)
+                            {
+                                <p> implant</p>
+                            }
+                            else if (fed.Total <= 70)
+                            {
+                                <p> 3 years loop</p>
+                            }
+                            else if (fed.Total >= 80)
+                            {
+                                <p> Viginal Ring</p>
                             }
                         </td>
                         @if (fed.Status == "New")

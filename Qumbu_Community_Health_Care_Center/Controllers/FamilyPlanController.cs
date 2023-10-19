@@ -136,12 +136,12 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
                 }
                 else if (totalReg <= 60)
                 {
-                    TempData["Result"] = "1 implant";
+                    TempData["Result"] = "implant";
                     TempData["_Image"] = "4";
                 }
                 else if (totalReg <= 70)
                 {
-                    TempData["Result"] = "3 loop";
+                    TempData["Result"] = "3 years loop";
                     TempData["_Image"] = "5";
                 }
                 else if (totalReg >= 80)
@@ -149,7 +149,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
                     TempData["Result"] = "Viginal Ring";
                     TempData["_Image"] = "6";
                 }
-                //familyReg .Total = totalReg;
+                familyReg .Total = totalReg;
 
                 dbContext.FamilyReg.Add(familyReg);
                 dbContext.SaveChanges();
