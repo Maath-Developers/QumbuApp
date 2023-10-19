@@ -59,29 +59,25 @@
                         @if (fed.Status == "New")
                         {
                             <td>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> Accept</button>
-                                <a asp-action="Details" asp-route-id="@fed.FamilyRegId">Decline</a>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal-@fed.FamilyRegId">
+                                    Accept
+                                </button>|
+                                <a asp-action="Details" asp-route-id="@fed.FamilyRegId">Decline</a>|
                                 <a asp-action="Delete" asp-route-id="@fed.FamilyRegId">Postpone</a>
                             </td>
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                Launch demo modal
-                            </button>
-
-                            <!-- Modal -->
-                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="exampleModal-@fed.FamilyRegId" tabindex="-1" aria-labelledby="exampleModalLabel-@fed.FamilyRegId" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                            <h5 class="modal-title" id="exampleModalLabel-@fed.FamilyRegId">Confirm acceptance</h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                            ...
+                                           Do you want to proccesd?
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                            <a asp-action="AcceptReg" asp-route-id="@fed.FamilyRegId" button type="button" class="btn btn-primary">Proceed</a>
                                         </div>
                                     </div>
                                 </div>

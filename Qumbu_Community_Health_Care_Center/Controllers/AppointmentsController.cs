@@ -54,16 +54,16 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             var applicationDbContext = Context.Appointments.Include(a => a.MainUser).Where(a => a.Purpose == "Family-Planning").ToList();
             return View(applicationDbContext);
         }
-        public async Task<IActionResult> Prenatal()
-        {
-
-            var applicationDbContext = Context.Appointments.Include(a => a.MainUser).Where(a => a.Purpose == "Pre-Natal-Care").ToList();
-            return View(applicationDbContext);
-        }
+        //admin creates appointment based on the patient id
         public IActionResult Create()
         {
 			var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
 			ViewBag.App = Context.Appointments.Where(a => a.PatientID == user).ToList();
+            ViewBag.Patient = (from U in Context.Users
+                                  join UR in Context.UserRoles on U.Id equals UR.UserId
+                                  join R in Context.Roles on UR.RoleId equals R.Id
+                                  where R.Name == "Patient"
+                                  select U).ToList();
             return View();
         }
         [HttpPost]
@@ -79,9 +79,9 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
                 TempData["Success"] = "Succesfully booked";
                 try
                 {
-                    string supportEmail = "Qumbu_Community_Health_Care_Center.healthcare@gmail.com";
+                    string supportEmail = "Qumbuhealthcare@gmail.com";
                     var email = User.FindFirstValue(ClaimTypes.Email);
-                    await _email.SendEmailAsync(email, "Confirm your email",
+                    await _email.SendEmailAsync(email, "For appointment",
                         $"<html><head><style>body{{font-family:Arial,sans-serif;}}" +
                         $"h1{{color:#336699;}}" +
                         $".cta-button{{background-color:#336699;color:@fff;" +
@@ -117,20 +117,74 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             ViewData["PatientID"] = new SelectList(Context.Users, "Id", "Id", appointments.PatientID);
             return View(appointments);
         }
-        public IActionResult Accept(int? id)
+        public IActionResult P_Create()
+        {
+            var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            ViewBag.App = Context.Appointments.Where(a => a.PatientID == user).ToList();
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> P_Create(Appointment appointments)
+        {
+            if (ModelState.IsValid)
+            {
+                Context.Appointment.Add(appointments);
+                await Context.SaveChangesAsync();
+                TempData["Success"] = "Succesfully booked";
+                try
+                {
+                    string supportEmail = "Qumbuhealthcare@gmail.com";
+                    var email = User.FindFirstValue(ClaimTypes.Email);
+                    await _email.SendEmailAsync(email, "For appointment",
+                        $"<html><head><style>body{{font-family:Arial,sans-serif;}}" +
+                        $"h1{{color:#336699;}}" +
+                        $".cta-button{{background-color:#336699;color:@fff;" +
+                        $"padding:10px 20px;" +
+                        $"text-decoration:none;border-radius:5px;}}" +
+                        $".cta-button:hover{{background-color:#265580;}}" +
+                        $".footer{{margin-top:20px;font-size:12px;color:#888;}}" +
+                        $"</style>" +
+                        $"</head>" +
+                        $"<body>" +
+                        $"" +
+                        $"<h1>Qumbu Healthcare Center!</h1>" +
+                        $"<p></p>" +
+                        $"<p> Thank for booking with us.</P>" +
+                        $"<p>Take note that your appointment has been booked successfully</P>" +
+                        $"<Strong><p>Appointment Date: {appointments.Date_Time}</P></strong>" +
+
+                        $"" +
+                        $"if you have any question ,contact our team at {supportEmail}</p>" +
+                        $"<dic class='footer'>" +
+                        $"<p>Thank you</p>" +
+                        $"</div>" +
+                        $"</body>" +
+                        $"</html>");
+                }
+                catch (Exception ex)
+                {
+                    TempData["Success"] = "Succesfully booked but email notification failed.";
+                }
+                return RedirectToAction("P_Create");
+            }
+            ViewData["PatientID"] = new SelectList(Context.Users, "Id", "Id", appointments.PatientID);
+            return View(appointments);
+        }
+        public async Task<IActionResult> Accept(int? id)
         {
             var appointments = Context.Appointments.Find(id);
             if (appointments != null)
             {
                 appointments.Status = "Accepted";
                 Context.Appointments.Update(appointments);
-                Context.SaveChanges();
+                await Context.SaveChangesAsync();
                 TempData["Success"] = "The appointment has been accepted";
                 var patient = Context.Users.Where(a => a.Id == appointments.PatientID).FirstOrDefault();
                 try
                 {
-                    string supportEmail = "Qumbu_Community_Health_Care_Center.healthcare@gmail.com";
-                     _email.SendEmailAsync(patient.Email, "Confirm your email",
+                    string supportEmail = "Qumbuhealthcare@gmail.com";
+                     await _email.SendEmailAsync(patient.Email, "Appointment Accepted",
                          $"<html><head><style>body{{font-family:Arial,sans-serif;}}" +
                          $"h1{{color:#336699;}}" +
                          $".cta-button{{background-color:#336699;color:@fff;" +
@@ -148,7 +202,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
                          $"<p>Take note that your appointment has been accepted</P>" +
                          $"<Strong><p>Appointment Date: {appointments.Date_Time}</P></strong>" +
                          $"<Strong><p>Appointment Purpose: {appointments.Purpose}</P></strong>" +
-                         $"<p>Please be on time, atleast 10 minutes before</P>" +
+                         $"<p>Please be on time, atleast 15 minutes before</P>" +
 
                          $"" +
                          $"if you have any question ,contact our team at {supportEmail}</p>" +
@@ -201,7 +255,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
                     var patient = Context.Users.Where(a => a.Id == appoint.PatientID).FirstOrDefault();
                     try
                     {
-                        string supportEmail = "Qumbu_Community_Health_Care_Center.healthcare@gmail.com";
+                        string supportEmail = "Qumbuhealthcare@gmail.com";
                         _email.SendEmailAsync(patient.Email, "Confirm your email",
                             $"<html><head><style>body{{font-family:Arial,sans-serif;}}" +
                             $"h1{{color:#336699;}}" +

@@ -30,14 +30,16 @@ namespace Qumbu_Community_Health_Care_Center.Areas.Identity.Pages.Account
         private readonly IUserEmailStore<ApplicationUser> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
+        private readonly ApplicationDbContext Context;
 
         public RegisterModel(
             UserManager<ApplicationUser> userManager,
             IUserStore<ApplicationUser> userStore,
             SignInManager<ApplicationUser> signInManager,
             ILogger<RegisterModel> logger,
-            IEmailSender emailSender)
+            IEmailSender emailSender, ApplicationDbContext DbContext)
         {
+            Context = DbContext;
             _userManager = userManager;
             _userStore = userStore;
             _emailStore = GetEmailStore();
@@ -169,7 +171,6 @@ namespace Qumbu_Community_Health_Care_Center.Areas.Identity.Pages.Account
 
                     await _userManager.AddToRoleAsync(user, "Patient");
                     var userId = await _userManager.GetUserIdAsync(user);
-
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
                     var callbackUrl = Url.Page(

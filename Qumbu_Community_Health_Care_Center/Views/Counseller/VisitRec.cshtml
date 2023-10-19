@@ -2,10 +2,10 @@
 @{
     Layout = "_CounsellorLayout";
 }
-<div id="Header" class="bg-primary">
+<div id="Header" class="bg-info">
     <h2 class="m-1 pt-4 text-center text-white">Visit Logs</h2>
 </div>
-<div class="container-fluid bg-white">
+<div class="container-fluid bg-white border p-4">
     <br />
     <div class="col-6 text-left">
         <a asp-controller="Counseller" asp-action="CreatePat" class="btn btn-info">Start Counselling</a>
@@ -43,11 +43,11 @@
                             @v.LastName
                         </td>
                         <td width="20%">@v.Date</td>
-                       @* <td>
+                        <td>
                             <div class="w-50 btn-group" role="group">
-                                <a asp-controller="Counseller" asp-action="Delete" asp-route-ID="@pro.ProfileID" class="btn btn-primary mx-1">View</a>
+                                <a asp-controller="Counseller" asp-action="Delete" asp-route-ID="@v.ProfileID" class="btn btn-danger mx-1">Remove</a>
                             </div>
-                        </td>*@
+                        </td>
                     </tr>
 
 
