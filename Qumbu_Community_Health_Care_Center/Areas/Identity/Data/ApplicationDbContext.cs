@@ -9,8 +9,7 @@ namespace Qumbu_Community_Health_Care_Center.Areas.Identity.Data;
 
 public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
 {
-    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-        : base(options)
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)   : base(options)
     {
        
     }
