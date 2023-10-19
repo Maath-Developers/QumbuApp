@@ -30,14 +30,16 @@ namespace Qumbu_Community_Health_Care_Center.Areas.Identity.Pages.Account
         private readonly IUserEmailStore<ApplicationUser> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
+        private readonly ApplicationDbContext Context;
 
         public RegisterModel(
             UserManager<ApplicationUser> userManager,
             IUserStore<ApplicationUser> userStore,
             SignInManager<ApplicationUser> signInManager,
             ILogger<RegisterModel> logger,
-            IEmailSender emailSender)
+            IEmailSender emailSender, ApplicationDbContext DbContext)
         {
+            Context = DbContext;
             _userManager = userManager;
             _userStore = userStore;
             _emailStore = GetEmailStore();
@@ -75,12 +77,12 @@ namespace Qumbu_Community_Health_Care_Center.Areas.Identity.Pages.Account
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
-            //[Required]
+            [Required]
             [StringLength(255,ErrorMessage ="The first name should have a maximum 255 characters")]
             [Display(Name = "First Name")]
             public string FirstName { get; set; }
 
-            //[Required]
+            [Required]
             [StringLength(255, ErrorMessage = "The last name should have a maximum 255 characters")]
             [Display(Name = "Last Name")]
             public string LastName { get; set; }
@@ -109,7 +111,7 @@ namespace Qumbu_Community_Health_Care_Center.Areas.Identity.Pages.Account
             [Display(Name = "Mobile Number")]
             public string MobileNumber { get; set; }
 
-            //[Required]
+            [Required]
             [EmailAddress]
             [Display(Name = "Email")]
             public string Email { get; set; }
@@ -119,7 +121,7 @@ namespace Qumbu_Community_Health_Care_Center.Areas.Identity.Pages.Account
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
-            //[Required]
+            [Required]
             [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
             [DataType(DataType.Password)]
             [Display(Name = "Password")]
@@ -129,6 +131,7 @@ namespace Qumbu_Community_Health_Care_Center.Areas.Identity.Pages.Account
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
+            [Required]
             [DataType(DataType.Password)]
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
@@ -168,7 +171,21 @@ namespace Qumbu_Community_Health_Care_Center.Areas.Identity.Pages.Account
 
                     await _userManager.AddToRoleAsync(user, "Patient");
                     var userId = await _userManager.GetUserIdAsync(user);
+                    //try 
+                    //{
+                    //    var Notification = new Notification()
+                    //    {
+                    //        Message = "Welcome to Qumbu Healthcare Center",
+                    //        IntendedUser = userId,
+                    //        Purpose = "Welcome",
+                    //    };
+                    //    Context.Notification.Add(Notification);
+                    //    Context.SaveChanges();
+                    //}
+                    //catch(Exception ex)
+                    //{
 
+                    //}
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
                     var callbackUrl = Url.Page(
@@ -176,7 +193,7 @@ namespace Qumbu_Community_Health_Care_Center.Areas.Identity.Pages.Account
                         pageHandler: null,
                         values: new { area = "Identity", userId = userId, code = code, returnUrl = returnUrl },
                         protocol: Request.Scheme);
-                    string applicationName = "Qumbu_Community_Health_Care_Center";
+                    string applicationName = "Qumbu Community Health Care Center";
                     string username = user.FirstName + " " + user.LastName;
                     string supportEmail = "monkimajor@gmail.com";
 
