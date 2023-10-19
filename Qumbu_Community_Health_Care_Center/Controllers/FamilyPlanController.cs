@@ -296,8 +296,15 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         }
 		public IActionResult CreateMenstruation()
 		{
-			return View();
-		}
+            var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            ViewBag.App = dbContext.Menstruations.ToList();
+            ViewBag.Patient = (from U in dbContext.Users
+                               join UR in dbContext.UserRoles on U.Id equals UR.UserId
+                               join R in dbContext.Roles on UR.RoleId equals R.Id
+                               where R.Name == "Patient"
+                               select U).ToList();
+            return View();
+        }
 		[HttpPost]
 		[ValidateAntiForgeryToken]
 		public IActionResult CreateMenstruation(Menstruation menstruation)
