@@ -1,5 +1,5 @@
 ﻿@{
-    Layout = "_LayoutPrenatal";
+    Layout = "/Views/Shared/_LayoutPrenatal.cshtml";
 }
 @if (User.IsInRole("Admin"))
 {
@@ -7,185 +7,84 @@
 }
 @if (User.IsInRole("Nurse"))
 {
-    @* <div class="mt-2 p-3 bg-white text-black rounded">
-        <h1>
-
-            <a href="index.html"><img class="img-responsive" width="500" height="110" src="~/_Images/welcome.png" alt="#" /></a>
-            <a href="index.html"><img class="img-responsive" width="250" height="140" src="~/_Images/Fnurse.png" alt="#" /></a>
-
-        </h1>
-
-    </div>*@
-    <style>
-        #dash-con {
-            background: rgba(213, 228, 222);
-            box-shadow: 0 8px 32px 0 rgba(21, 88, 119, 0.87);
-            backdrop-filter: blur( 0px );
-            -webkit-backdrop-filter: blur( 0px );
-            border-radius: 10px;
-            border: 1px solid rgba( 255, 255, 255, 0.18 );
-        }
-
-            #dash-con:hover {
-                background: rgba(60, 165, 61, 0.8);
-                box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-                backdrop-filter: blur( 20px );
-                -webkit-backdrop-filter: blur( 20px );
-                border-radius: 10px;
-                border: 1px solid rgba( 255, 255, 255, 0.18 );
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Responsive Containers with Bootstrap 5</title>
+        <!-- Bootstrap CSS link -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            /* Custom styling for the containers */
+            .custom-container {
+                border: 1px solid #ccc;
+                padding: 20px;
+                margin: 10px;
+                text-align: center;
             }
-    </style>
-
-
-
-    <div class="container-fluid pt-4 px-4">
-
-        <div class="row g-4">
-            <div class=" col-sm-6 col-xl-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                <div id="dash-con" class="dash-con rounded d-flex align-items-center justify-content-between p-4">
-                    <img src="~/_Images/Fbooking.png" style="width: 79px" />
-                    <a asp-controller="Appointments" asp-action="Family">
-                        <h4 class="mb-2">View Bookings<span class="badge bg-primary rounded-pill text-white"></span></h4>
-
-                    </a>
-                </div>
-            </div>
-
-
-            <div class="col-sm-6 col-xl-3" data-bs-toggle="modal" data-bs-target="#exampleModal1">
-                <div id="dash-con" class="dash-con rounded d-flex align-items-center justify-content-between p-4">
-                    <img src="~/_Images/Fscreen.png" style="width: 85px" />
-                    <a asp-controller="FamilyPlan" asp-action="ListFamilyRegNurse">
-                        <h4 class="mb-2"> Manage Screening<span class="badge bg-primary rounded-pill text-white"></span></h4>
-
-                    </a>
-                </div>
-            </div>
-
-
-            <div class="col-sm-6 col-xl-3" data-bs-toggle="modal" data-bs-target="#exampleModal1">
-                <div id="dash-con" class=" dash-con rounded d-flex align-items-center justify-content-between p-4">
-                    <img src="~/_Images/Frerral.png" style="width: 70px" />
-                    <a asp-controller="FamilyPlan" asp-action="ViewFeedback">
-                        <h4 class="mb-2">Referrals<span class="badge bg-primary rounded-pill text-white"></span></h4>
-
-                    </a>
-                </div>
-            </div>
-            <div class="col-sm-6 col-xl-3" data-bs-toggle="modal" data-bs-target="#exampleModal1">
-                <div id="dash-con" class="dash-con rounded d-flex align-items-center justify-content-between p-4">
-                    <img src="~/Image/Message.png" style="width: 65px" />
-                    <a asp-controller="FamilyPlan" asp-action="ViewReports">
-                        <h4 class="mb-2">Reports<span class="badge bg-primary rounded-pill text-white"></span></h4>
-
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid pt-4 px-4">
-        <div class="row g-4">
-            <div class="AssessmentTable col-sm-12 col-md-6 col-xl-4">
-                <div class="h-100  rounded p-4">
-                    <div class="d-flex align-items-center justify-content-between mb-2">
-                        <h6 class="mb-0">Messages</h6>
-                        <a href="">Show All</a>
-                    </div>
-                    <div class="d-flex align-items-center border-bottom py-3">
-                        <img class="rounded-circle flex-shrink-0" width="40" height="40" src="https://img.icons8.com/color/48/user.png" alt="user" />
-                        <div class="w-100 ms-3">
-                            <div class="d-flex w-100 justify-content-between">
-                                <h6 class="mb-0">Dr M</h6>
-                                <small>15 minutes ago</small>
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="midde_cont">
+                <div class="container-fluid">
+                    <div class="row column_title">
+                        <div class="col-md-12">
+                            <div class="page_title">
+                                <h2>Nurse Dashboard</h2>
                             </div>
-                            <span>Please not that am aware of the appointmetns</span>
                         </div>
                     </div>
-                    <div class="d-flex align-items-center border-bottom py-3">
+                    <!-- footer -->
+                </div>
+                <!-- end dashboard inner -->
+            </div>
 
-                        <img class="rounded-circle flex-shrink-0" width="40" height="40" src="https://img.icons8.com/color/48/user.png" alt="user" />
-                        <div class="w-100 ms-3">
-                            <div class="d-flex w-100 justify-content-between">
-                                <h6 class="mb-0">Mr M</h6>
-                                <small>40 minutes ago</small>
-                            </div>
-                            <span>Hey , i hope you are good. you have been...</span>
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="custom-container">
+                        <img src="~/images/Appointment.png" alt="Image 1">
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-Secondary btn-lg" type="button">Appointments</button>
                         </div>
+
                     </div>
-                    <div class="d-flex align-items-center border-bottom py-3">
-                        <img class="rounded-circle flex-shrink-0" width="40" height="40" src="https://img.icons8.com/color/48/user.png" alt="user" />
-                        <div class="w-100 ms-3">
-                            <div class="d-flex w-100 justify-content-between">
-                                <h6 class="mb-0">Admin</h6>
-                                <small>3 days ago</small>
-                            </div>
-                            <span>Welcome to E-nompilo...</span>
+                </div>
+                <div class="col-md-5">
+                    <div class="custom-container">
+                        <img src="~/images/Health.png" alt="Image 2">
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-Secondary btn-lg" type="button">Health Monitoring</button>
                         </div>
+
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="custom-container">
+                        <img src="~/images/Fetal.png" alt="Image 3">
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-Secondary btn-lg" type="button">Fetal Tracking</button>
+                        </div>
 
-
-            <div class="AssessmentTable col-sm-12 col-md-6 col-xl-4">
-                <div class="h-100  rounded p-4">
-                    <div class="d-flex align-items-center justify-content-between mb-4">
-                        <h6 class="mb-0">To Do List</h6>
-                        <a href="">Show All</a>
                     </div>
-                    <div class="d-flex mb-2">
-                        <input class="form-control bg-dark border-0" type="text" placeholder="Enter task">
-                        <button type="button" class="btn btn-primary ms-2">Add</button>
-                    </div>
-                    <div class="d-flex align-items-center border-bottom py-2">
-                        <input class="form-check-input m-0" type="checkbox">
-                        <div class="w-100 ms-3">
-                            <div class="d-flex w-100 align-items-center justify-content-between">
-                                <span>Short task goes here...</span>
-                                <button class="btn btn-sm"><i class="fa fa-times"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="d-flex align-items-center border-bottom py-2">
-                        <input class="form-check-input m-0" type="checkbox">
-                        <div class="w-100 ms-3">
-                            <div class="d-flex w-100 align-items-center justify-content-between">
-                                <span>Call Dr nullar</span>
-                                <button class="btn btn-sm"><i class="fa fa-times"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="d-flex align-items-center border-bottom py-2">
-                        <input class="form-check-input m-0" type="checkbox" checked>
-                        <div class="w-100 ms-3">
-                            <div class="d-flex w-100 align-items-center justify-content-between">
-                                <span><del>Wake up,make my bed</del></span>
-                                <button class="btn btn-sm text-primary"><i class="fa fa-times"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="d-flex align-items-center border-bottom py-2">
-                        <input class="form-check-input m-0" type="checkbox">
-                        <div class="w-100 ms-3">
-                            <div class="d-flex w-100 align-items-center justify-content-between">
-                                <span>Take My Medication.....</span>
-                                <button class="btn btn-sm"><i class="fa fa-times"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="d-flex align-items-center pt-2">
-                        <input class="form-check-input m-0" type="checkbox">
-                        <div class="w-100 ms-3">
-                            <div class="d-flex w-100 align-items-center justify-content-between">
-                                <span>Make Appointment....</span>
-                                <button class="btn btn-sm"><i class="fa fa-times"></i></button>
-                            </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="custom-container">
+                        <img src="~/images/Prenatal-Care.png" alt="Image 4">
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-Secondary btn-lg" type="button">Prenatal Care Education</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
+        <!-- Bootstrap JS scripts (make sure these are included at the end of the body) -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+    </html>
 
 }
 @if (User.IsInRole("Doctor"))
@@ -194,7 +93,7 @@
 }
 @if (User.IsInRole("Patient"))
 {
-    <h1>Patient</h1>
+    @*<h1>Patient</h1>*@
 }
 @if (User.IsInRole("Unit-Manager"))
 {

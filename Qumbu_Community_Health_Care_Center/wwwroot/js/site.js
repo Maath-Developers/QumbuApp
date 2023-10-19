@@ -3,13 +3,6 @@
 
 // Write your JavaScript code.
 
-document.addEventListener("scroll", () => {
-    if (window.scrollY > 10) {
-        document.querySelector("header").style.background = "rgba(0, 0, 0, 0.7)";
-    } else {
-        document.querySelector("header").style.background = "transparent"
-    }
-})
 //Tempdata
 setTimeout(function () {
     var tempdat = document.getElementById('tempdata');
@@ -23,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Check if the student has registered (replace 'hasRegistered' with your condition)
     var hasRegistered = true; // Replace with your logic to determine if the student has registered
 
-    // If the patient has registered, show the modal
+    // If the student has registered, show the modal
     if (hasRegistered) {
         var modal = new bootstrap.Modal(document.getElementById("myModal"));
         modal.show();

@@ -23,6 +23,6 @@ namespace Qumbu_Community_Health_Care_Center.Models
         [DisplayName("Blood Pressure Diastolic")]
         public int BloodPressureDiastolic { get; set; }
         [Required]
-        public string? Symptoms { get; set; }
+        public string Symptoms { get; set; }
     }
 }

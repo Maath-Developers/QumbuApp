@@ -6,6 +6,7 @@
 
 <!DOCTYPE html>
 
+<html>
 <head>
 	<meta name="viewport" content="width=device-width" />
 	<title>@ViewBag.Title</title>
@@ -37,6 +38,31 @@
 
 	<link rel="stylesheet" href="~/css/css/flaticon.css">
 	<link rel="stylesheet" href="~/css/css/style.css">
+
+	<style>
+		/* Additional custom styles */
+		.custom-container {
+			border: 1px solid #ccc;
+			padding: 20px;
+			margin-bottom: 20px;
+			position: relative;
+		}
+
+			.custom-container img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover; /* Make the image fill the container */
+			}
+
+		/* Custom width and height */
+		.custom-width {
+			width: 50%; /* Adjust as needed */
+		}
+
+		.custom-height {
+			height: 200px; /* Adjust as needed */
+		}
+	</style>
 </head>
 @if (User.IsInRole("Patient"))
 {

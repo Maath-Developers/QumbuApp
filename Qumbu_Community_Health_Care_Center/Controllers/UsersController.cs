@@ -84,7 +84,6 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
 					//_context.Alerts.Add( alert );
 					//await _context.SaveChangesAsync();
 					TempData["Success"] = "User Added successfully";
-					TempData["Email"] = "Please log in to youe emails and confirm email";
 					return RedirectToAction(nameof(Index));
 				}
 			}

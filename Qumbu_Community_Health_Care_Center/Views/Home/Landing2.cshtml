@@ -4,7 +4,7 @@
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
 @{
-    Layout = "_Landing2";
+    Layout = "_Walk-in-Layout";
   
 }
 <link rel="stylesheet" href="~/css/StyleSheet/Landing2StyleSheet.css">
@@ -163,19 +163,6 @@ else if (User.IsInRole("Nurse"))
                     </div>
                 </a>
                 </div>
-
-
-            <div class=" col-sm-6 col-xl-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                <a asp-action="Nurse" asp-controller="Vaccs">
-                    <div id="dash-con" class="dash-con rounded d-flex align-items-center justify-content-between p-4">
-                        <img src="~/_Images/Vacc.jpg" style="width: 79px" />
-                        <div class="ms-3">
-                            <h4 class="mb-2">Vaccination<span class="badge bg-primary rounded-pill text-white"></span></h4>
-
-                        </div>
-                    </div>
-                </a>
-            </div>
           
 
         </div>
@@ -183,26 +170,6 @@ else if (User.IsInRole("Nurse"))
 }
 else if (User.IsInRole("Patient"))
 {
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    
-    code for pop up window
-    <div class="modal fade" id="myModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
-        <div class="modal-dialog modal-xxl">
-            <div class="modal-content">
-                <div class="modal-header text-center">
-                    <h3 class="modal-title">Please create a new file</h3>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-dialog-scrollable">
-                    <div >
-                        <partial name="~/Views/Medical_File/Create_File.cshtml" />
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
     <div class="container-fluid pt-4 px-4">
         <div class="row g-4">
                 
