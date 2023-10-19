@@ -3,12 +3,12 @@
     ViewData["Title"] = "ViewFamilyReg";
     Layout = "~/Views/Shared/_FamilyPlanLayout.cshtml";
 }
-<!-- Button trigger modal -->
+@*
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
     Launch demo modal
 </button>
 
-<!-- Modal -->
+
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -25,7 +25,7 @@
             </div>
         </div>
     </div>
-</div>
+</div>*@
 @if (TempData["Result"] != null)
 {
     <div id="myModal" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
@@ -44,7 +44,7 @@
                     }
                     else if (Convert.ToString(TempData["_Image"]) == "2")
                     {
-                        <img src="~/_Images/Injection.jpg" style="width: 200px" />
+                        <img src="~/_Images/logo/Injection.jpg" style="width: 200px" />
                         <h4>@TempData["Result"]</h4>
                     }
                     else if (Convert.ToString(TempData["_Image"]) == "3")

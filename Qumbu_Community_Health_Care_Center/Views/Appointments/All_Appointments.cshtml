@@ -6,96 +6,99 @@
     Layout = "~/Views/Shared/_Walk-in-Layout.cshtml";
 }
 
-<div id="Header" class="bg-info">
-    <h2 class="m-1 pt-4 text-center text-white">All Patients Appointments</h2>
+<div class="mt-2 p-2 bg-white text-center text-white-50 rounded">
+    <h2>List of Appointments</h2>
 </div>
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-               Patient Information
-            </th>
-            <th>
-                Apppointment Day
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Purpose)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Status)
-            </th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model)
+@if(TempData["Success"] != null)
 {
-        <tr>
-                <td>
-                    @item.MainUser.FirstName 
-                    @item.MainUser.LastName
-                </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Purpose)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Status)
-            </td>
-            
-            <td>
-                @Html.DisplayFor(modelItem => item.Date_Time)
-            </td>
-            @if(item.Status == "New")
-            {
-                 <td>
-                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> Accept</button>
-                <a asp-action="Details" asp-route-id="@item.AppointmentID">Decline</a> 
-                <a asp-action="Delete" asp-route-id="@item.AppointmentID">Postpone</a>
-            </td>
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        Launch demo modal
-                    </button>
+    <div class="bg bg-success text-center p-2">
+        <h5 class="text-center">@TempData["Success"]</h5>
+    </div>
+}
+<div class="container-fluid">
+    <div class="row pt-4">
+        <div class="col-6 text-right">
+            <a asp-controller="Appointments" asp-action="Create" class="btn btn-info">New Appointment</a>
+        </div>
+    </div>
+    <br />
+    <table class="table table-bordered table-striped" style="width:100%">
+        <thead class="table-primary">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.MainUser)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CreatedAt)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Purpose)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Status)
+                </th>
 
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    ...
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
+                <th>
+                    @Html.DisplayNameFor(model => model.Date_Time)
+                </th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+
+                    <td>
+                        @item.MainUser.FirstName
+                        @item.MainUser.LastName
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CreatedAt)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Purpose)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Status)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Date_Time)
+                    </td>
+                    @if(item.Status == "New")
+                    {
+                        <td>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal-@item.AppointmentID">
+                                Accept
+                            </button>|
+                            <a asp-action="Details" asp-route-id="@item.AppointmentID">Decline</a>|
+                            <a asp-action="Delete" asp-route-id="@item.AppointmentID">Postpone</a>
+                        </td>
+                       <div class="modal fade" id="exampleModal-@item.AppointmentID" tabindex="-1" aria-labelledby="exampleModalLabel-@item.AppointmentID" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel-@item.AppointmentID">Confirm acceptance</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Please click proceed to approve the appointment.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <a asp-action="Accept" asp-route-id="@item.AppointmentID" button type="button" class="btn btn-primary">Proceed</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-            } 
-            @if(item.Status == "Accepted")
-            {
-                 <td>
-                <a asp-action="Edit" asp-route-id="@item.AppointmentID">Postpone</a> 
-                <a asp-action="Details" asp-route-id="@item.AppointmentID">Cancel</a> 
-               @* <a asp-action="Delete" asp-route-id="@item.AppointmentID">View</a>*@
-            </td>
+                       </div>
+                    }
+                    
+                </tr>
+                
             }
-            @if(item.Status == "Done")
-            {
-                 <td>
-                <a asp-action="Edit" asp-route-id="@item.AppointmentID">Cancel</a> 
-                <a asp-action="Details" asp-route-id="@item.AppointmentID">View</a> 
-            </td>
-            }
-           
-        </tr>
-}
-    </tbody>
-</table>
+            
+        </tbody>
+        
+    </table>
+
+</div>
