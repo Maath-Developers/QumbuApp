@@ -54,6 +54,12 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             var applicationDbContext = Context.Appointments.Include(a => a.MainUser).Where(a => a.Purpose == "Family-Planning").ToList();
             return View(applicationDbContext);
         }
+        public async Task<IActionResult> Prenatal()
+        {
+
+            var applicationDbContext = Context.Appointments.Include(a => a.MainUser).Where(a => a.Purpose == "Pre-Natal-Care").ToList();
+            return View(applicationDbContext);
+        }
         public IActionResult Create()
         {
 			var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
