@@ -28,23 +28,7 @@
             border: 1px solid rgba( 255, 255, 255, 0.18 );
         }
 </style>
-@*code for pop up window*@
-<div class="modal fade" id="myModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header text-center">
-                <h3 class="modal-title">Please create a new file</h3>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-dialog modal-dialog-scrollable">
-                <div class="modal-body modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                    <partial name="~/Views/Medical_File/Create_File.cshtml" />
-                </div>
-            </div>
-            
-        </div>
-    </div>
-</div>
+
 @if (User.IsInRole("Admin"))
 {
     Layout = "_Walk-in-Layout";
@@ -186,6 +170,26 @@ else if (User.IsInRole("Nurse"))
 }
 else if (User.IsInRole("Patient"))
 {
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    @*code for pop up window*@
+    <div class="modal fade" id="myModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+        <div class="modal-dialog modal-xxl">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h3 class="modal-title">Please create a new file</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-dialog-scrollable">
+                    <div >
+                        <partial name="~/Views/Medical_File/Create_File.cshtml" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
     <div class="container-fluid pt-4 px-4">
         <div class="row g-4">
                 
