@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore.Scaffolding.Metadata;
+using Qumbu_Community_Health_Care_Center.Areas.Identity.Data;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -42,5 +43,9 @@ namespace Qumbu_Community_Health_Care_Center.Models
         public string? comments { get; set; }
         [DisplayName("IV.Recommendations:")]
         public string? recom { get; set; }
+        public String? PatientID { get; set; }
+        [ForeignKey("PatientID")]
+        public virtual ApplicationUser? MainUser { get; set; }
+
     }
 }

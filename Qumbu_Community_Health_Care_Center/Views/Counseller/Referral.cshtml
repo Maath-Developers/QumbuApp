@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Qumbu_Community_Health_Care_Center.Models.Referral>
+﻿@model IEnumerable<Qumbu_Community_Health_Care_Center.Models.Referrals>
 @{
     Layout = "_CounsellorLayout";
 }
@@ -44,7 +44,7 @@
                         <td width="30%">@referrals.Remarks</td>
                         <td>
                             <div class="w-50 btn-group" role="group">
-                                <a asp-controller="Counseller" asp-action="DeleteRef" asp-route-ID="@referrals.ReferralID" class="btn btn-info mx-1">Remove</a>
+                                <a asp-action="DeleteReferrals" asp-route-ID="@referrals.ReferralID" class="btn btn-danger mx-1">Remove</a>
                             </div>
                         </td>
                     </tr>
