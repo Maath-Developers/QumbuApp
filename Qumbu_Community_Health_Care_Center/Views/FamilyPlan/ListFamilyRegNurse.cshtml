@@ -7,9 +7,10 @@
 
 <div class="container p-3">
     <div class="row pt-4">
-        <div class="col-6">
-            <h2 class="text-primary"></h2>
+        <div class="mt-2 p-2 bg-info text-black rounded">
+            <h5 class="text-center">SCREENING RESULTS </h5>
         </div>
+
 
     </div>
     <br />
@@ -51,9 +52,29 @@
                         </td>
 
                         <td width="20%">
-                            @if (TempData["Result"] != null)
+                            @if (fed.Total <= 30)
                             {
-                                
+                                <p>Pills</p>
+                            }
+                            else if (fed.Total <= 40)
+                            {
+                                <p> 1 Months Injection</p>
+                            }
+                            else if (fed.Total <= 50)
+                            {
+                                <p>2 Months Injection</p>
+                            }
+                            else if (fed.Total <= 60)
+                            {
+                                <p> implant</p>
+                            }
+                            else if (fed.Total <= 70)
+                            {
+                                <p> 3 years loop</p>
+                            }
+                            else if (fed.Total >= 80)
+                            {
+                                <p> Viginal Ring</p>
                             }
                         </td>
                         @if (fed.Status == "New")
@@ -73,11 +94,11 @@
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                           Do you want to proccesd?
+                                           Do you want to Accept?
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            <a asp-action="AcceptReg" asp-route-id="@fed.FamilyRegId" button type="button" class="btn btn-primary">Proceed</a>
+                                            <a asp-action="AcceptReg" asp-route-id="@fed.FamilyRegId" button type="button" class="btn btn-primary">Accept</a>
                                         </div>
                                     </div>
                                 </div>
