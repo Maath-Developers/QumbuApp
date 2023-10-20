@@ -35,3 +35,18 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+window.onload = function () {
+    console.log("works");
+}
+
+const btnprint = document.getElementById('PrintBTn');
+btnprint.addEventListener("click", printpage);
+function printpage() {
+    document.getElementById('sidebar').style.visibility = "hidden"
+    document.getElementById('NavbarSide').style.visibility = "hidden";
+    btnprint.style.visibility = "hidden";
+    window.print();
+    document.getElementById('sidebar').style.visibility = "visible"
+    document.getElementById('NavbarSide').style.visibility = "visible";
+    btnprint.style.visibility = "visible";
+}

@@ -1,4 +1,4 @@
-﻿@* @{
+﻿@{
     ViewData["Title"] = "MyFile";
     Layout = "~/Views/Shared/_Walk-in-Layout.cshtml";
 }
@@ -151,10 +151,13 @@
     <div class="container-fluid">
         <div class="row container d-flex justify-content">
             <div class="col-xl-6 col-xl-12">
+                <h3 class="m-b-10 p-b-2 b-b-default f-w-600">Medical File</h3>
                 <div class="text-end">
-                    <button class="btn btn-primary"><i class="bi bi-printer-fill text-white"></i>Generate Report</button>
+                    <button id="PrintBTn" class=" btn btn-primary p-b-2">
+                        <i class="bi bi-printer-fill text-white">File Report</i>
+                    </button>
                 </div>
-                <h3 class="m-b-20 p-b-5 b-b-default f-w-600">Medical File</h3>
+                
                 <div class="card user-card-full">
                     <div class="row m-l-0 m-r-0">
                         <div class="col-sm-6 bg-c-lite-green user-profile">
@@ -286,11 +289,33 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="text-end">
+                            <button class=" btn btn-primary p-b-2">
+                                <i class="text-white">Save All</i>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<script defer>
+    window.onload = function () {
+        console.log("works");
+    }
 
- *@
+    const btnprint = document.getElementById('PrintBTn');
+    btnprint.addEventListener("click", printpage);
+    function printpage() {
+        document.getElementById('sidebar').style.visibility = "hidden"
+        document.getElementById('NavbarSide').style.visibility = "hidden";
+        btnprint.style.visibility = "hidden";
+        window.print();
+        document.getElementById('sidebar').style.visibility = "visible"
+        document.getElementById('NavbarSide').style.visibility = "visible";
+        btnprint.style.visibility = "visible";
+    }
+
+</script>
+
