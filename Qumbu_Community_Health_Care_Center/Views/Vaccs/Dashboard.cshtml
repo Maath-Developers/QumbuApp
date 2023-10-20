@@ -39,93 +39,143 @@
     <div class="col-12">
         @if (User.IsInRole("Patient"))
         {
-            <div class="row">
-                <div class="col-4">
-                    <div class="container mt-3">
-                        <div class="card" style="width: 27rem;">
-                            <div class="card-body">
-                                <div class="p_info_img">
-                                    @* <img src="~/images/images/File.png" alt="#" />*@
-                                    <img src="~/_Images/Vaccs/PFile.png" class="img-responsive" alt="#" />
-                                </div>
-                                <button>
-                                    <h5><a class="nav-link text-dark" asp-area="" asp-controller="Vaccs" asp-action="Patient">MY RECORDS</a></h5>
-                                    @* <h5 class="card-title">MY RECORDS</h5>*@
-                                </button>
+                <style>
+                    #dash-con {
+                        background: rgba(39, 178, 245, 0.8);
+                        box-shadow: 0 8px 32px 0 rgba(21, 88, 119, 0.87);
+                        backdrop-filter: blur( 0px );
+                        -webkit-backdrop-filter: blur( 0px );
+                        border-radius: 10px;
+                        border: 1px solid rgba( 255, 255, 255, 0.18 );
+                    }
 
-                                <div class="d-flex align-items-center">
-                                    <span class="bi bi-file-earmark-person fs-1 me-3"></span>
-                                    @* <div>
-                                <h6 class="card-subtitle mb-2 text-muted">Name: John Doe</h6>
-                                <p class="card-text">Age: 30</p>
-                                <p class="card-text">Gender: Male</p>
-                                <p class="card-text">Condition: Hypertension</p>
-                                </div>*@
-                                </div>
+                        #dash-con:hover {
+                            background: rgba( 0, 42, 255, 1 );
+                            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+                            backdrop-filter: blur( 20px );
+                            -webkit-backdrop-filter: blur( 20px );
+                            border-radius: 10px;
+                            border: 1px solid rgba( 255, 255, 255, 0.18 );
+                        }
+                </style>
+
+
+                <div class="container-fluid pt-4 px-4">
+
+                    <div class="row g-4">
+                        <div class=" col-sm-6 col-xl-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <div id="dash-con" class="dash-con rounded d-flex align-items-center justify-content-between p-4">
+                                <img src="~/_Images/Contr.png" style="width: 85px" />
+                                <a asp-controller="Appointments" asp-action="All_Appointments">
+                                    <h5 class="mb-2">Appointments<span class="badge bg-primary rounded-pill text-white"></span></h5>
+
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-6 col-xl-3" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                            <div id="dash-con" class="dash-con rounded d-flex align-items-center justify-content-between p-4">
+                                <img src="~/_Images/Fscreen.png" style="width: 90px" />
+                                <a asp-controller="Vaccs" asp-action="IndexScree">
+                                    <h5 class="mb-2">Screening<span class="badge bg-primary rounded-pill text-white"></span></h5>
+
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-6 col-xl-3" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                            <div id="dash-con" class=" dash-con rounded d-flex align-items-center justify-content-between p-4">
+                                <img src="~/_Images/FFBACK.png" style="width: 105px" />
+                                <a asp-controller="Vaccs" asp-action="IndexEducation">
+                                    <h5 class="mb-2">Vaccine Information & Education<span class="badge bg-primary rounded-pill text-white"></span></h5>
+
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xl-3" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                            <div id="dash-con" class="dash-con rounded d-flex align-items-center justify-content-between p-4">
+                                <img src="~/_Images/menstrualCycle.png" style="width: 70px" />
+                                <a asp-controller="Vaccs" asp-action="IndexFeedback">
+                                    <h5 class="mb-2">Feedback<span class="badge bg-primary rounded-pill text-white"></span></h5>
+
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-4 ">
-                    <div class="container mt-3">
-                        <div class="card" style="width: 27rem;">
-                            <div class="card-body">
-                                <div class="p_info_img">
-                                    <img src="~/_Images/Vaccs/Appointment.png.png" class="img-thumbnail" alt="#" />
-                                </div>
-                                <button>
-                                    <h5><a class="nav-link text-dark" asp-area="" asp-controller="Vaccs" asp-action="IndexAppo">APPOINTMENTS</a></h5>
-                                    @* <h5 class="card-title">MY RECORDS</h5>*@
-                                </button>
-                                @*<h5 class="card-title">APPOINTMENTS </h5>*@
-                                <div class="d-flex align-items-center">
-                                    <span class="bi bi-file-earmark-person fs-1 me-3"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-           <div class="row">
-                    <div class="col-4 ">
-                        <div class="container mt-3">
-                            <div class="card" style="width: 27rem;">
-                                <div class="card-body">
-                                    <div class="p_info_img">
-                                        <img src="~/_Images/Vaccs/feedback.png.png" class="img-thumbnail" alt="#" />
-                                    </div>
-                                    <button>
-                                        <h5><a class="nav-link text-dark" asp-area="" asp-controller="Vaccs" asp-action="IndexFee">FEEDBACK</a></h5>
-                                    </button>
-                                    @*<h5 class="card-title">FEEDBACK </h5>*@
-                                    <div class="d-flex align-items-center">
-                                        <span class="bi bi-file-earmark-person fs-1 me-3"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="container mt-3">
-                            <div class="card" style="width: 27rem;">
-                                <div class="card-body">
-                                    <div class="p_info_img">
-                                        <img src="~/_Images//Vaccs/PReport.png" class="img-thumbnail" alt="#" />
-                                    </div>
-                                    <button>
-                                        <h5><a class="nav-link text-dark" asp-area="" asp-controller="Vaccs" asp-action="Patient">REPORTS</a></h5>
-                                    </button>
-                                   @* <h5 class="card-title">REPORTS </h5>*@
-                                    <div class="d-flex align-items-center">
-                                        <span class="bi bi-file-earmark-person fs-1 me-3"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                   
-           </div>
            
+        }
+        @if (User.IsInRole("Nurse"))
+        {
+                <style>
+                    #dash-con {
+                        background: rgba(39, 178, 245, 0.8);
+                        box-shadow: 0 8px 32px 0 rgba(21, 88, 119, 0.87);
+                        backdrop-filter: blur( 0px );
+                        -webkit-backdrop-filter: blur( 0px );
+                        border-radius: 10px;
+                        border: 1px solid rgba( 255, 255, 255, 0.18 );
+                    }
+
+                        #dash-con:hover {
+                            background: rgba( 0, 42, 255, 1 );
+                            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+                            backdrop-filter: blur( 20px );
+                            -webkit-backdrop-filter: blur( 20px );
+                            border-radius: 10px;
+                            border: 1px solid rgba( 255, 255, 255, 0.18 );
+                        }
+                </style>
+
+
+                <div class="container-fluid pt-4 px-4">
+
+                    <div class="row g-4">
+                        <div class=" col-sm-6 col-xl-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <div id="dash-con" class="dash-con rounded d-flex align-items-center justify-content-between p-4">
+                                <img src="~/_Images/Contr.png" style="width: 85px" />
+                                <a asp-controller="Vaccs" asp-action="Record">
+                                    <h5 class="mb-2">Patient Records<span class="badge bg-primary rounded-pill text-white"></span></h5>
+
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-6 col-xl-3" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                            <div id="dash-con" class="dash-con rounded d-flex align-items-center justify-content-between p-4">
+                                <img src="~/_Images/Fscreen.png" style="width: 90px" />
+                                <a asp-controller="Vaccs" asp-action="IndexScree">
+                                    <h5 class="mb-2">Screening<span class="badge bg-primary rounded-pill text-white"></span></h5>
+
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-6 col-xl-3" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                            <div id="dash-con" class=" dash-con rounded d-flex align-items-center justify-content-between p-4">
+                                <img src="~/_Images/FFBACK.png" style="width: 105px" />
+                                <a asp-controller="Vaccs" asp-action="IndexEducation">
+                                    <h5 class="mb-2">Vaccine Information & Education<span class="badge bg-primary rounded-pill text-white"></span></h5>
+
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xl-3" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                            <div id="dash-con" class="dash-con rounded d-flex align-items-center justify-content-between p-4">
+                                <img src="~/_Images/menstrualCycle.png" style="width: 70px" />
+                                <a asp-controller="Vaccs" asp-action="IndexFeedback">
+                                    <h5 class="mb-2">Feedback<span class="badge bg-primary rounded-pill text-white"></span></h5>
+
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
         }
         </div>
     </div>

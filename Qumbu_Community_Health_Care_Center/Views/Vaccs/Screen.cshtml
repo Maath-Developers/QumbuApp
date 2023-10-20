@@ -1,4 +1,5 @@
 ﻿@model Qumbu_Community_Health_Care_Center.Models.ScreeningTool
+@using Qumbu_Community_Health_Care_Center.Areas.Identity.Data;
 
 @{
     Layout = "Vaccs";
@@ -23,6 +24,16 @@
                             <div class="col-12">
 
                                 <div class="row">
+                                  @*   <div class="form-group">
+                                        <label asp-for="PatientID" class="control-label">Choose Patient</label>
+                                        <select asp-for="PatientID" class="form-control">
+                                            @foreach (ApplicationUser item in ViewBag.Patients)
+                                            {
+                                                <option value="@item.Id">@item.FirstName @item.LastName</option>
+                                            }
+                                        </select>
+                                    </div> *@
+
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label asp-for="Question1" class="control-label"></label>
@@ -96,13 +107,13 @@
                                                 NO
                                             </label>
                                             <span asp-validation-for="Question4" class="text-danger"></span>
-                                        </div>
+                                       @*  </div>
                                         <div class="col-4">
                                             <label asp-for="Date"></label>
                                             <input asp-for="Date" class="form-control" />
                                             <span asp-validation-for="Date" class="text-danger"></span>
                                         </div>
-                                    </div>
+                                    </div> *@
 
                                 </div>
 
@@ -164,6 +175,8 @@
                         </div>
                     </div>
 
+                </div>
+                </div>
                 </div>
             </form>
         </div>
