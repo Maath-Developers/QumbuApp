@@ -12,7 +12,7 @@ namespace Qumbu_Community_Health_Care_Center.Models
         [Key]
         public int fileId { get; set; }
 
-        [Required]
+      
         [Display(Name = "Patient Name")]
         public string? PatientID { get; set; }
         [ForeignKey("PatientID")]

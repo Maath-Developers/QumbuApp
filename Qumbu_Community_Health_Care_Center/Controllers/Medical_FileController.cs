@@ -34,6 +34,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
 		{
             var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
 			var applicationDbContext = _context.Medical_File.Where(a => a.PatientID ==user).Include(m => m.mainUser);
+			ViewBag.File = _context.Medical_File.Where(a => a.PatientID ==user).Include(m => m.mainUser);
 			return View(await applicationDbContext.ToListAsync());
 		}
 
@@ -86,7 +87,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("fileId,PatientID,IDNumber,DateofBirth,Gender,Status,Address,Province,postalCode,NextfoKin,kinCell,Relationship,BloodType,Allergies,Surgery,extraNotes")] Medical_File medical_File)
+        public async Task<IActionResult> Create(Medical_File medical_File)
         {
             var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
             medical_File.PatientID = user;
@@ -94,10 +95,11 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             {
                 _context.Add(medical_File);
                 await _context.SaveChangesAsync();
+                TempData["File"] = "File Succesfully Created ";
                 return RedirectToAction(nameof(My_Medical_File));
             }
             ViewData["PatientID"] = new SelectList(_context.Users, "Id", "Id", medical_File.PatientID);
-            return RedirectToAction("My_Medical_File");
+            return RedirectToAction("Create");
         }
 
         // GET: Medical_File/Edit/5
