@@ -1,9 +1,18 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Qumbu_Community_Health_Care_Center.Areas.Identity.Data;
+using System.Security.Claims;
 
 namespace Qumbu_Community_Health_Care_Center.Controllers
 {
+    [Authorize]
     public class WalkController : Controller
     {
+        private readonly ApplicationDbContext _context;
+        public WalkController(ApplicationDbContext context)
+        {
+            _context = context;
+        }
         public IActionResult Admin()
         {
             return View();
@@ -55,6 +64,18 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         }
         public IActionResult Patient()
         {
+            var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            try
+            {
+                var File = _context.Medical_File.Where(a => a.PatientID == user).FirstOrDefault();
+                if(File != null ){ 
+                TempData["FileFound"] = "Found" ;
+                }
+
+            }catch(Exception ex)
+            {
+
+            }
             return View();
         }
         public IActionResult NoAccess()
