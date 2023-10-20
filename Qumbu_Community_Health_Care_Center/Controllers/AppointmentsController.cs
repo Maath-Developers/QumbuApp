@@ -28,7 +28,25 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             var applicationDbContext = Context.Appointments.Include(a => a.MainUser).Where(a => a.PatientID == user);
             return View(await applicationDbContext.ToListAsync());
         }
-        public async Task<IActionResult> All_Appointments()
+		public IActionResult Queue(int? Id)
+		{
+			if(Id != null)
+            {
+                ViewBag.Id = Id;
+            }
+			return View();
+		}
+		[HttpPost]
+		[ValidateAntiForgeryToken]
+		public IActionResult Queue(Queue queue)
+		{
+			//if (Id != null)
+			//{
+			//	ViewBag.Id = Id;
+			//}
+			return View();
+		}
+		public async Task<IActionResult> All_Appointments()
         {
            
             var applicationDbContext = Context.Appointments.Include(a => a.MainUser).ToList();
