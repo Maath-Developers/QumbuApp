@@ -149,7 +149,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
                     TempData["Result"] = "Viginal Ring";
                     TempData["_Image"] = "6";
                 }
-                //familyReg .Total = totalReg;
+                familyReg .Total = totalReg;
 
                 dbContext.FamilyReg.Add(familyReg);
                 dbContext.SaveChanges();
@@ -322,9 +322,15 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
 			IEnumerable<Menstruation> list = dbContext.Menstruations;
 			return View(list);
 		}
+        public ActionResult ViewReferrals()
+        {
+            IEnumerable<Feedbacks> feedlist = dbContext.Feedbacks;
+            return View(feedlist);
+        }
 
 
 
 
-	}
+
+    }
 }

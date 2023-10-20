@@ -1,15 +1,16 @@
 ﻿@model IEnumerable<Qumbu_Community_Health_Care_Center.Models.Feedbacks>
 @{
-    ViewData["Title"] = "ViewFeedback";
+    ViewData["Title"] = "ViewReferrals";
     Layout = "~/Views/Shared/_FamilyPlanLayout.cshtml";
 }
+
 <div class="container p-3">
     <div class="row pt-4">
         <div class="mt-2 p-2 bg-info text-black rounded">
             <h2 class="text-center">Feeback List </h2>
         </div>
 
-       
+
     </div>
     <br />
 
@@ -24,7 +25,7 @@
                         Name
                     </th>
                     <th>
-                       Type
+                        Type
                     </th>
                     <th>
                         Side Effects
@@ -49,8 +50,8 @@
             </tbody>
         </table>
         <div class="col-6 text-right  d-grid gap-2 d-md-flex justify-content-md-end">
-            <a asp-controller="FamilyPlan" asp-action="CreateFeedback" class="btn btn-outline-info">Back</a>
-           
+            <a asp-controller="Counseller" asp-action="Referral" class="btn btn-outline-info">Back</a>
+
         </div>
 
     }
@@ -60,3 +61,4 @@
     }
 
 </div>
+
