@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -29,9 +30,15 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             var applicationDbContext = _context.Medical_File.Include(m => m.mainUser);
             return View(await applicationDbContext.ToListAsync());
         }
+		public async Task<IActionResult> My_Medical_File()
+		{
+            var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
+			var applicationDbContext = _context.Medical_File.Where(a => a.PatientID ==user).Include(m => m.mainUser);
+			return View(await applicationDbContext.ToListAsync());
+		}
 
-        // GET: Medical_File/Details/5
-        public async Task<IActionResult> Details(int? id)
+		// GET: Medical_File/Details/5
+		public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Medical_File == null)
             {
@@ -62,6 +69,8 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         }
         public async Task<IActionResult> Create_File([Bind("fileId,PatientID,IDNumber,DateofBirth,Gender,Status,Address,Province,postalCode,NextfoKin,kinCell,Relationship,BloodType,Allergies,Surgery,extraNotes")] Medical_File medical_File)
         {
+            var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            medical_File.PatientID = user;
             if (ModelState.IsValid)
             {
                 _context.Add(medical_File);
@@ -79,14 +88,16 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("fileId,PatientID,IDNumber,DateofBirth,Gender,Status,Address,Province,postalCode,NextfoKin,kinCell,Relationship,BloodType,Allergies,Surgery,extraNotes")] Medical_File medical_File)
         {
+            var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            medical_File.PatientID = user;
             if (ModelState.IsValid)
             {
                 _context.Add(medical_File);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(My_Medical_File));
             }
             ViewData["PatientID"] = new SelectList(_context.Users, "Id", "Id", medical_File.PatientID);
-            return View(medical_File);
+            return RedirectToAction("My_Medical_File");
         }
 
         // GET: Medical_File/Edit/5

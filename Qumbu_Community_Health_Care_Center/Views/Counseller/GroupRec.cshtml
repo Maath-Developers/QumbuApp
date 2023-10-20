@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "GroupRec";
+    Layout = "~/Views/Shared/_CounsellorLayout.cshtml";
+}
+
+<div id="Header" class="bg-info">
+    <h2 class="m-1 pt-4 text-center text-white">Group Counselling Records</h2>
+</div>
+<div class="container-fluid bg-white border p-4">
+    <table id="myTable" table class="table table-bordered table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th>
+                    Group Name
+                </th>
+                <th>
+                    Counselling Approach
+                </th>
+                <th>
+                    Date
+                </th>
+                First Name
+                <th>
+                    Action
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var pro in Model)
+            {
+                <tr>
+
+                    <td width="20%">@pro.GroupName</td>
+                    <td width="20%">@pro.CounsellingApproach</td>
+                    <td width="20%">@pro.Date</td>
+                    <td width="20%">
+                        @pro.MainUser.FirstName
+                        @pro.MainUser.LastName
+                    </td>
+                    <td>
+                        <div class="w-50 btn-group" role="group">
+                            <a asp-controller="Counseller" asp-action="Delete" asp-route-ID="@pro.ProfileID" class="btn btn-info mx-1">View</a>
+                        </div>
+                    </td>
+                </tr>
+
+
+            }
+        </tbody>
+    </table>
+</div>
+
