@@ -1,9 +1,7 @@
 ﻿@model Qumbu_Community_Health_Care_Center.Models.Appointment
 @using Qumbu_Community_Health_Care_Center.Models
-@using Microsoft.AspNetCore.Identity
-@using Qumbu_Community_Health_Care_Center.Areas.Identity.Data
-@inject SignInManager<ApplicationUser> SignInManager
-@inject UserManager<ApplicationUser> UserManager
+@{
+    Layout = "_Landing2";
 
 <div class="container-fluid">
     @if (User.IsInRole("Admin"))

@@ -1,135 +1,98 @@
-﻿@model IEnumerable<Qumbu_Community_Health_Care_Center.Models.ScreeningTool>
+﻿@model Qumbu_Community_Health_Care_Center.Models.ScreeningTool
 
-<div class="container p-3">
-    <div class="row pt-4">
-        <div class="col-6">
-            <h2 class="text-primary">List of your screenings</h2>
+@{
+    Layout = "Vaccs";
+}
+<div class="mx-0 mx-sm-auto">
+    <div class="card w-75">
+        <div class="card-body ">
+            <div class="card-header bg-primary">
+
+                <h3 class="card-title text-white mt-2" id="exampleModalLabel"> SELF SCREENING TOOL</h3>
+            </div>
+<form method="post" asp-action="IndexScree">
+    <div class="border p-3 #FBD603">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>@*validation*@
+       @*  <div class="form-group row">
+            <h2 class="text-black-50 pl-3">SCREENING TOOL</h2>
+        </div> *@
+        <div class="row">
+            
+             <div class="form-group">
+                 
+                      <div class="col-12">
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                    <div>
+                                        <label asp-for="Question1"></label>@*These names come from our properties in the model *@
+                                        <input asp-for="Question1" class="form-control box mb-3" type="text" placeholder="Type your name here" />
+                                        <span asp-validation-for="Question1" class="text-danger"></span>
+                                    </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                    <div>
+                                        <label asp-for="Question2"></label>
+                                        <input asp-for="Question2" class="form-control" />
+                                        <span asp-validation-for="Question1" class="text-danger"></span>
+                                    </div>
+                                    </div>
+                                    
+                                </div>
+                      </div>
+                      <div class="col-12">
+                          <div class="row">
+                                    <div class="col-6">
+                                        <label asp-for="Question3"></label>
+                                        <input asp-for="Question3" class="form-control" />
+                                        <span asp-validation-for="Question3" class="text-danger"></span>
+
+                                    </div>
+                                    <div class="col-6">
+                                        <label asp-for="Question4"></label>
+                                        <input asp-for="Question4" class="form-control" />
+                                        <span asp-validation-for="Question4" class="text-danger"></span>
+                                    </div>
+
+                          </div>
+
+                      </div>
+                      <div class="col-12">
+                          <div class="row">
+                                    <div class="col-6">
+                                        <label asp-for="Question5"></label>
+                                        <input asp-for="Question5" class="form-control" />
+                                        <span asp-validation-for="Question5" class="text-danger"></span>
+                                    </div>
+                                    <div class="col-6">
+                                        <label asp-for="Question6"></label>
+                                        <input asp-for="Question6" class="form-control" />
+                                        <span asp-validation-for="Question6" class="text-danger"></span>
+                                    </div>
+                          </div>
+
+                      </div>
+                   
+                    <div class="form-group row">
+                        <div class="col-8 offset-2 row">
+                            <div class="col">
+                                <input type="submit" class="btn btn-info w-75 bi bi-arrow-left-circle" value="SUBMIT" />
+                            </div>
+                            <div class="col">
+                                <a asp-action="Index" class="btn btn-danger w-75"><i class="bi bi-arrow-left-circle"></i>BACK</a>
+                            </div>
+                        </div>
+                    </div>
+
+               @*  </div> *@
+            </div>
         </div>
-        <div class="col-6 text-end">
-            <a asp-controller="Vaccs" asp-action="Screen" class="btn btn-primary"><i class="bi bi-plus-circle"></i> SCREEN YOURSELF</a>
+       
+    </div>
+</form>
         </div>
     </div>
-    <br />
-    @if (Model.Count() > 0)
-    {
-        @*<table class="table table-bordered table-striped" style="width:100%">*@
-        <table class="table table-info table-hover">
-
-            <thead>
-                <tr>
-                    <th>
-                        Patient
-                    </th>
-                    <th>
-                        Question1
-                    </th>
-                    <th>
-                        Question2
-                    </th>
-                    <th>
-                        Question3
-                    </th>
-                    <th>
-                        Question4
-                    </th>
-                    <th>
-                        Question5
-                    </th>
-                    <th>
-                        Question6
-                    </th>
-                    <th>
-                        Date
-                    </th>
-                </tr>
-            </thead>
-
-            <tbody>
-                @foreach (var Scree in Model)
-                {
-                    <tr>
-                        
-                        <td width="20%">
-                            @if (Scree.Question1 == 6)
-                            {
-                                <p>yes</p>
-                            }
-                            else
-                            {
-                                <p>no</p>
-                            }
-                        </td>
-                        <td width="20%">
-                            @if (Scree.Question2 == 6)
-                            {
-                                <p>yes</p>
-                            }
-                            else
-                            {
-                                <p>no</p>
-                            }
-                        </td>
-                        <td width="20%">
-                            @if (Scree.Question3 == 0)
-                            {
-                                <p>yes</p>
-                            }
-                            else
-                            {
-                                <p>no</p>
-                            }
-                        </td>
-                        <td width="20%">
-                            @if (Scree.Question4 == 0)
-                            {
-                                <p>yes</p>
-                            }
-                            else
-                            {
-                                <p>no</p>
-                            }
-                        </td>
-                        <td width="20%">
-                            @if (Scree.Question5 == 0)
-                            {
-                                <p>yes</p>
-                            }
-                            else
-                            {
-                                <p>no</p>
-                            }
-                        </td>
-                        <td width="20%">
-                            @if (Scree.Question6 == 0)
-                            {
-                                <p>yes</p>
-                            }
-                            else
-                            {
-                                <p>no</p>
-                            }
-                        </td>
-                        <td width="20%">@Scree.Date</td>
-
-                        <td>
-                            <a asp-controller="Vaccs" asp-action="Update" asp-route-ID="@Scree.ScreeningID" class="btn btn-primary"><i class="bi bi-arrow-repeat"></i>Update</a>
-
-                            <a asp-controller="Vaccs" asp-action="Delete" asp-route-ID="@Scree.ScreeningID" class="btn btn-danger">
-                                <i class="bi bi-trash3-fill"></i>Delete
-                            </a>
-
-                        </td>
-
-                    </tr>
-                }
-            </tbody>
-        </table>
-
-    }
-    else
-    {
-        <p>No Avatars created yet</p>
-    }
 
 </div>
 

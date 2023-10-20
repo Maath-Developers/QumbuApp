@@ -14,7 +14,7 @@
 
 
     <div id="MainDiv" class="border p-4">
-        <div id="Header" class="bg-info">
+        <div id="Header" class="bg-primary">
             <h2 class="m-1 text-center text-white">REPORT OF FAMILY PLANNING</h2>
         </div>
         <button id="btnPrint" class="btn btn-info">
@@ -72,12 +72,32 @@
                         <td width="20%">@fed.MainUser.FirstName @fed.MainUser.LastName</td>
                         <td width="20%">@fed.Date</td>
                         <td width="20%">@fed.Status</td>
-                        <td width="20%">
-                            @if (TempData["Result"] != null)
-                            {
-
-                            }
-                        </td>
+                         <td width="20%">
+                                @if (fed.Total <= 30)
+                                {
+                                    <p>Pills</p>
+                                }
+                                else if (fed.Total <= 40)
+                                {
+                                    <p> 1 Months Injection</p>
+                                }
+                                else if (fed.Total <= 50)
+                                {
+                                    <p>2 Months Injection</p>
+                                }
+                                else if (fed.Total <= 60)
+                                {
+                                    <p> implant</p>
+                                }
+                                else if (fed.Total <= 70)
+                                {
+                                    <p> 3 years loop</p>
+                                }
+                                else if (fed.Total >= 80)
+                                {
+                                    <p> Viginal Ring</p>
+                                }
+                            </td>
                    
 
                     </tr>

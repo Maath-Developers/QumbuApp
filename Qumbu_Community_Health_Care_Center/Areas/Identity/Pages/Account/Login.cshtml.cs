@@ -125,10 +125,6 @@ namespace Qumbu_Community_Health_Care_Center.Areas.Identity.Pages.Account
                     {
                         return RedirectToAction("Counsellor", "Counseller");
                     }
-                    else if (Role.Contains("Patient"))
-                    {
-                        return RedirectToAction("Landing2", "Home");
-                    }
                     else
                     {
                         return RedirectToAction("Landing2", "Home");
