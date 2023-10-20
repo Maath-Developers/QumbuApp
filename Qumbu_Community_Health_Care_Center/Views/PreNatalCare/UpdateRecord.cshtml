@@ -13,11 +13,11 @@
     <form method="post" asp-action="UpdateRecord">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-        <div class="form-group">
-            <label asp-for="UserId"></label>@*These names come from our properties in the model *@
+        @*<div class="form-group">
+            <label asp-for="UserId"></label>
             <input asp-for="UserId" class="form-control" />
             <span asp-validation-for="UserId" class="text-danger"></span>
-        </div>
+        </div>*@
         <div class="form-group">
             <label asp-for="RecordedDate"></label>
             <input asp-for="RecordedDate" class="form-control" />

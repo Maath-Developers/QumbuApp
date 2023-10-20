@@ -30,17 +30,14 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         {
             return View();
         }
-        //public IActionResult PatientDashboard()
-        //{
-        //    return View();
-        //}
         public IActionResult NurseDashboard()
         {
             return View();
         }
-        public IActionResult IndexRecord()
+        public  IActionResult IndexRecord()
         {
-            IEnumerable<HealthRecord> objList = dbContext.HealthRecords;
+            IEnumerable<HealthRecord> objList = dbContext.HealthRecords.Include(a => a.MainUser);
+            //return View(dbContext.ultrasounds.ToList());
             return View(objList);
         }
         public IActionResult IndexAppointment()
@@ -48,27 +45,24 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             IEnumerable<Appointment> objList = dbContext.Appointments;
             return View(objList);
         }
-        [HttpGet]
-        public IActionResult CreateRecord()
-        {
-
-            return View();
-        }
+       
+       
         [HttpGet]
         public IActionResult CreateAppointment()
         {
 
             return View();
         }
-        //public IActionResult CreateRecord()
-        //{
-        //    ViewBag.Patients = (from U in dbContext.Users
-        //                        join UR in dbContext.UserRoles on U.Id equals UR.UserId
-        //                        join R in dbContext.Roles on UR.RoleId equals R.Id
-        //                        where R.Name == "Patient"
-        //                        select U).ToList();
-        //    return View();
-        //}
+        [HttpGet]
+        public IActionResult CreateRecord()
+        {
+            ViewBag.Patients = (from U in dbContext.Users
+                                join UR in dbContext.UserRoles on U.Id equals UR.UserId
+                                join R in dbContext.Roles on UR.RoleId equals R.Id
+                                where R.Name == "Patient"
+                                select U).ToList();
+            return View();
+        }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult CreateRecord(HealthRecord record)
