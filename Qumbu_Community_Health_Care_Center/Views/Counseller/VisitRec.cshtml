@@ -43,11 +43,9 @@
                             @v.LastName
                         </td>
                         <td width="20%">@v.Date</td>
-                       @* <td>
-                            <div class="w-50 btn-group" role="group">
-                                <a asp-controller="Counseller" asp-action="Delete" asp-route-ID="@pro.ProfileID" class="btn btn-primary mx-1">View</a>
-                            </div>
-                        </td>*@
+                        <div class="w-50 btn-group" role="group">
+                            <a asp-controller="Counseller" asp-action="DeleteLogs" asp-route-ID="@v.ProfileID" class="btn btn-danger mx-1">Remove</a>
+                        </div>
                     </tr>
 
 

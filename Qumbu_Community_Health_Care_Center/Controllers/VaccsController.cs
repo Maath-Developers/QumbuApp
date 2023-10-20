@@ -44,22 +44,29 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             return View();
         }
 
-        public IActionResult Indexscree()
+        public async Task<IActionResult> Indexscree()
         {
-			IEnumerable<ScreeningTool> objList = dbContext.Srcreening;
-			return View(objList);
-		}
-		public IActionResult Screen()
+            var ApplicationDbContext = dbContext.Srcreening.Include(f => f.MainUser);
+            return View(await ApplicationDbContext.ToListAsync());
+        }
+        public IActionResult Screen()
 		{
-			return View();
-		}
+
+            //ViewBag.Patients = (from U in dbContext.Users
+            //               +     join UR in dbContext.UserRoles on U.Id equals UR.UserId
+            //                    join R in dbContext.Roles on UR.RoleId equals R.Id
+            //                    where R.Name == "Patient"
+            //                    select U).ToList();
+            return View();
+
+        }
 		[HttpPost]
 		[ValidateAntiForgeryToken]
 		public IActionResult Screen(ScreeningTool Scree)
 		{
-			var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
-			Scree.PatientID = user;
-			int Total = 0;
+            var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            Scree.PatientID = user;
+            int Total = 0;
 			if (ModelState.IsValid)
 			{
 				Total = Convert.ToInt32(Scree.Question1);
@@ -78,8 +85,8 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
 				dbContext.SaveChanges();
 				return RedirectToAction("Indexscree");
 			}
-			ViewData["PatientID"] = new SelectList(dbContext.Users, "Id", "Id", Scree.PatientID);
-			return View(Scree);
+            ViewData["PatientID"] = new SelectList(dbContext.Users, "Id", "Id", Scree.PatientID);
+            return View(Scree);
 
 		}
         public IActionResult UpdateScreening(int? ScreeningID)
@@ -133,12 +140,15 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult VaccineFeedback(FeedbackV Fee)
         {
+            var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            Fee.PatientID = user;
             if (ModelState.IsValid)
             {
                 dbContext.VaccinationFeedback.Add(Fee);
                 dbContext.SaveChanges();
                 return RedirectToAction("IndexFeedback");
             }
+            ViewData["PatientID"] = new SelectList(dbContext.Users, "Id", "Id", Fee.PatientID);
             return View(Fee);
 
         }
@@ -193,22 +203,24 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             IEnumerable<Vaccine_MadicalRecord> objList = dbContext.vaccinerecord;
             return View(objList);
         }
+        public IActionResult Record()
+        {
+            return View();
+        }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Record(Vaccine_MadicalRecord reco)
         {
-            //var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            //reco.NurseID = user;
+            var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            reco.NurseID = user;
             if (ModelState.IsValid)
             {
                 dbContext.vaccinerecord.Add(reco);
                 dbContext.SaveChanges();
-                return RedirectToAction("IndexEducation");
+                return RedirectToAction("IndexRecord");
             }
-            //ViewData["NurseID"] = new SelectList(dbContext.Users, "Id", "Id", reco.NurseID);
-            //return View(reco);
-            return View();
-
+            ViewData["PatientID"] = new SelectList(dbContext.Users, "Id", "Id", reco.NurseID);
+            return View(reco);
         }
 
         public IActionResult IndexReport()
@@ -223,73 +235,5 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         {
             return View();
         }
-        //public IActionResult IndexAppointment()
-        //{
-        //    IEnumerable<VaccsAppointment> objList = dbContext.VaccinationAppointment;
-        //    return View(objList);
-
-        //}
-        //public IActionResult Create()
-        //{
-        //    return View();
-        //}
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public IActionResult Create(VaccsAppointment Appo)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        dbContext.VaccinationAppointment.Add(Appo);
-        //        dbContext.SaveChanges();
-        //        return RedirectToAction("IndexAppointment");
-        //    }
-        //    return View(Appo);
-
-        //}
-        //public IActionResult Update(int? ID)
-        //{
-        //    if (ID == null || ID == 0)
-        //    {
-        //        return NotFound();
-        //    }
-        //    var obj = dbContext.VaccinationAppointment.Find(ID);
-
-        //    if (ID == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    return View(obj);
-        //}
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public IActionResult Update(VaccsAppointment appo)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        dbContext.VaccinationAppointment.Update(appo);
-        //        dbContext.SaveChanges();
-        //        return RedirectToAction("IndexAppointment");
-        //    }
-        //    return View(appo);
-        //}
-
-
-        //This method adds data to the database using the ApplicationDBContext and Saves the data and redirects the user to the Index page
-        //POST-Create
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public IActionResult Create(ScreeningTool scre)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        dbContext.Srcreening.Add(scre);
-        //        dbContext.SaveChanges();
-        //        return RedirectToAction("Index");
-        //    }
-        //    return View(scre);
-
-        //}
-
-
     }
 }

@@ -1,4 +1,6 @@
-﻿@model Qumbu_Community_Health_Care_Center.Models.HealthRecord
+﻿@using Qumbu_Community_Health_Care_Center.Areas.Identity.Data;
+
+@model Qumbu_Community_Health_Care_Center.Models.HealthRecord
 
 @{
     //ViewData["Title"] = "Index";
@@ -12,11 +14,15 @@
     <br />
     <form method="post" asp-action="CreateRecord">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-       
+
         <div class="form-group">
-            <label asp-for="UserId"></label>@*These names come from our properties in the model *@
-            <input asp-for="UserId" class="form-control" />
-            <span asp-validation-for="UserId" class="text-danger"></span>
+            <label asp-for="PatientID" class="control-label">Choose Patient</label>
+            <select asp-for="PatientID" class="form-control">
+                @foreach (ApplicationUser item in ViewBag.Patients)
+                {
+                    <option value="@item.Id">@item.FirstName @item.LastName</option>
+                }
+            </select>
         </div>
         <div class="form-group">
             <label asp-for="RecordedDate"></label>
@@ -38,6 +44,12 @@
             <label asp-for="BloodPressureDiastolic"></label>
             <input asp-for="BloodPressureDiastolic" class="form-control" />
             <span asp-validation-for="BloodPressureDiastolic" class="text-danger"></span>
+
+        </div>
+        <div class="form-group">
+            <label asp-for="Temperature"></label>
+            <input asp-for="Temperature" class="form-control" />
+            <span asp-validation-for="Temperature" class="text-danger"></span>
 
         </div>
         <div class="form-group">

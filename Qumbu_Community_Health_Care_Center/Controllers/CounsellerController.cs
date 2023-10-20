@@ -120,31 +120,29 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Delete(int? ID)
+        public IActionResult DeleteReferrals(int? ID)
         {
-            var obj = Context.Profiling.Find(ID);
-            if (obj == null)
+            var list = Context.Referral.Find(ID);
+            if (list == null)
             {
                 return NotFound();
             }
-
-            Context.Profiling.Remove(obj);
-            Context.SaveChanges();
-            return RedirectToAction("Profile");
-        }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult DeleteRef(int? ID)
-        {
-            var obj = Context.Profiling.Find(ID);
-            if (obj == null)
-            {
-                return NotFound();
-            }
-
-            Context.Profiling.Remove(obj);
+            Context.Referral.Remove(list);
             Context.SaveChanges();
             return RedirectToAction("Referral");
+
+        }
+        public IActionResult DeleteLogs(int? ID)
+        {
+            var obj = Context.Profiling.Find(ID);
+            if (obj == null)
+            {
+                return NotFound();
+            }
+            Context.Profiling.Remove(obj);
+            Context.SaveChanges();
+            return RedirectToAction("VisitRec");
+
         }
         public IActionResult UpdateRe(int? ID)
         {
@@ -176,7 +174,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult CreateF(Referral referral)
+        public IActionResult CreateF(Referrals referral)
         {
             if (ModelState.IsValid)
             {
@@ -188,7 +186,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         }
         public IActionResult Referral()
         {
-            IEnumerable<Referral> Referrals = Context.Referral;
+            IEnumerable<Referrals> Referrals = Context.Referral;
             return View(Referrals);
         }
         public ActionResult Reports()
@@ -235,6 +233,11 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         }
         public IActionResult CreateG()
         {
+              ViewBag.Patients = (from U in Context.Users
+                                join UR in Context.UserRoles on U.Id equals UR.UserId
+                                join R in Context.Roles on UR.RoleId equals R.Id
+                                where R.Name == "Patient"
+                                select U).ToList();
             return View();
         }
         [HttpPost]

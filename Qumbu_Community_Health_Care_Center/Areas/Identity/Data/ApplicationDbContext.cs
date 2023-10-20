@@ -20,11 +20,10 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<ScreeningTool> Srcreening { get; set; }
     public DbSet<Feedbacks> Feedbacks { get; set; }
     public DbSet<HealthRecord> HealthRecords { get; set; }
-    public DbSet<Referral> Referral { get; set; }
+    public DbSet<Referrals> Referral { get; set; }
     public DbSet<FamilyReg> FamilyReg { get; set; }
     public DbSet<FeedbackV> VaccinationFeedback { get; set; }
     public DbSet<VaccsAppointment> VaccinationAppointment { get; set; }
-    public DbSet<VaccsRecord>Records { get; set; }
     public DbSet<UltrasoundAppointment> Ultrasounds { get; set; }
     public DbSet<Profiling> Profiling { get; set; }
     public DbSet<Appointment> Appointment {  get; set; }

@@ -1,175 +1,128 @@
-﻿@{
+﻿@using Qumbu_Community_Health_Care_Center.Models
+@using Microsoft.AspNetCore.Identity
+@using Qumbu_Community_Health_Care_Center.Areas.Identity.Data
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+@{
     Layout = "Vaccs";
 }
 
-@if (User.IsInRole("Patient"))
-{
+@model IEnumerable<Qumbu_Community_Health_Care_Center.Models.Vaccine_MadicalRecord>
 
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Vaccination Card</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-        <style>
-            body {
-                margin: 0;
-                padding: 0;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                min-height: 100vh;
-            }
 
-            .form-container {
-                border: 4px double green;
-                padding: 20px;
-                background-color: #ccffcc;
-                width: 100%;
-                max-width: 800px;
-            }
-
-            /*.logo {
-                width: 60px;
-                height: 60px;
-                background-color: red;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-radius: 50%;
-                color: white;
-            }*/
-
-            .vaccine-heading {
-                display: inline-block;
-                vertical-align: middle;
-                margin-left: 10px;
-            }
-
-            .sub-heading {
-                font-size: 20px;
-                margin-top: 20px;
-            }
-
-            .wide-row {
-                height: 3em;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="row justify-content-start">
-                <div class="col-md-12">
-                    <div class="form-container">
-                        <div class="justify-content-center">
-                            <div class="p_info_image">
-                                <img src="~/_Images/2.png" class="logo" alt="#" style="width=200px; height=80px;" />
-                            </div>
-                        </div>
-                        
-                        <h2 class="vaccine-heading text-center">Vaccination Card</h2>
-                        <h3 class="sub-heading">Vaccinee Details</h3>
-                        <table class="table mt-3">
-                            <tr>
-                                <td><h5>Surname</h5></td>
-                                <td>Kili</td>
-                            </tr>
-                            <tr>
-                                <td><h5>Name</h5></td>
-                                <td>Afikile</td>
-                            </tr>
-                            <tr>
-                                <td><h5>Identity number</h5></td>
-                                <td>9924875968574</td>
-                            </tr>
-                            <tr>
-                                <td><h5>Next vaccination date</h5></td>
-                                <td>25/08/2023</td>
-                            </tr>
-                        </table>
-                        <h3 class="sub-heading">Vaccine Details</h3>
-                        <table class="table mt-3">
-                            <thead>
-                                <tr>
-                                    <th><h5>VACCINE DOSE</h5></th>
-                                    <th><h5>VACCINE NAME</h5></th>
-                                    <th><h5>MANUFACTURER</h5></th>
-                                    <th><h5>BATCH NUMBER</h5></th>
-                                    <th><h5>VACCINE DATE</h5></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><h5>1st Dose</h5></td>
-                                    <td>Pfizer</td>
-                                    <td>BioNtech</td>
-                                    <td></td>
-                                    <td>25/06/2023</td>
-                                </tr>
-                                <tr>
-                                    <td><h5>2nd Dose</h5></td>
-                                    <td>Pfizer</td>
-                                    <td>BioNtech</td>
-                                    <td></td>
-                                    <td>25/07/2023</td>
-                                </tr>
-                                <tr>
-                                    <td><h5>3rd Dose</h5></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <h3 class="sub-heading">Vaccinator Details</h3>
-                        <table class="table mt-3">
-                            <tr>
-                                <td><h5>Surname</h5></td>
-                                <td><h5>First Names</h5></td>
-                            </tr>
-                            <tr class="wide-row">
-                                <td>Maguba</td>
-                                <td>Abulele</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td><h5>Email Address</h5></td>
-                            </tr>
-                            <tr class="wide-row">
-                                <td>drmaguba@gmail.com</td>
-
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td><h5>Date:</h5></td>
-                            </tr>
-                            <tr class="wide-row">
-                                <td>25/07/2023</td>
-
-                            </tr>
-                        </table>
-                        <br />
-                        <br />
-
-                        <div class="row mt-6 mb-6">
-                            <div class="col-md-12 text-end">
-                                <button class="btn green-btn">Back</button>
-                                <a href="javascript:window.print()" class="btn btn-success">Print</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div id="MainDiv" class="border p-4">
+        <div id="Header" class="bg-info">
+            <h2 class="m-1 text-center text-white">VACCINATION CARD</h2>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.18.0/font/bootstrap-icons.css"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <button id="btnPrint" class="btn btn-info">
+            View Report
+        </button>
+        <div class="row">
+            <div class="col-8">
+                <h4></h4>
+                <img src="~/_Images/2.png" style="width:200px" />
+                <p class="mt-3">Date of Report: @ViewBag.Date</p>
+                <p class="mt-3">Time of Report: @ViewBag.Time</p>
+            </div>
+            <div id="Information" class="col-4 justify-content-md-end">
+                <h4>NURSE INFORMATION</h4>
+                <p>First Name: @UserManager.GetUserAsync(User).Result.FirstName</p>
+                <p>Last Name: @UserManager.GetUserAsync(User).Result.LastName</p>
+                <p>Email Address: @UserManager.GetUserAsync(User).Result.Email</p>
+            </div>
+            </div>
 
-    </body>
-    </html>
-}
+            <div class="container-fluid">
+             <div class="row pt-4">
+         
+             </div>
+             <br />
+
+            @if (Model.Count() > 0)
+            {
+
+                <table class="table table-info table-hover">
+
+                    <thead>
+                        <tr>
+                            <th>
+                                BloodPressure
+                            </th>
+                            <th>
+                                Temperature
+                            </th>
+                            <th>
+                                HeartRate
+                            </th>
+                            <th>
+                                Date
+                            </th>
+                            <th>
+                                Weight
+                            </th>
+                            <th>
+                                Nurse
+                            </th>
+                            <th>
+                                NextDate
+                            </th>
+                            <th>
+                                dose
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @foreach (var reco in Model)
+                        {
+                            <tr>
+                                <td width="20%">@reco.BloodPressure</td>
+                                <td width="20%">@reco.Temperature</td>
+                                <td width="20%">@reco.HeartRate</td>
+                                <td width="20%">@reco.Date</td>
+                                <td width="20%">@reco.NextDate</td>
+                                <td width="20%">@reco.Weight</td>
+                                <td width="20%">@reco.dose</td>
+                                <td width="20%">@reco.Nurse</td>
+
+
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+            }
+
+    </div>
+   
+
+<script defer>
+    window.onload = function(){
+        Console.log("Its working");
+        document.getElementById('Information').style.visibility = "hidden";
+
+    }
+    const Prntbtn = document.getElementById('btnPrint');
+    Prntbtn.addEventListener("click",myPrint);
+
+    function myPrint(){
+        document.getElementById('Information').style.visibility = "visible"; 
+        document.getElementById('Header').style.visibility = "hidden";
+        document.getElementById('NavbarSide').style.visibility = "hidden"; 
+        document.getElementById('sidebar').style.visibility = "hidden";
+        Prntbtn.style.visibility = "hidden";
+        window.print();
+        Prntbtn.style.visibility = "visible";
+        document.getElementById('Information').style.visibility = "hidden"; 
+        document.getElementById('Header').style.visibility = "visible";
+        document.getElementById('NavbarSide').style.visibility = "visible"; 
+        document.getElementById('sidebar').style.visibility = "visible";
+    }
+
+</script>
+
+
 @if (User.IsInRole("Doctor"))
 {
     <div class="page-header">

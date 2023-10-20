@@ -17,7 +17,7 @@ namespace Qumbu_Community_Health_Care_Center.Models
         public DateTime PublishDate { get; set; } 
         public string? Author { get; set; }
         public string? ImageUrl { get; set; }
-        public string? PatientID { get; set; }
+        public string? NurseID { get; set; }
         [ForeignKey("PatientID")]
         public virtual ApplicationUser? MainUser { get; set; }
         public string? PdfUrl { get; set; }

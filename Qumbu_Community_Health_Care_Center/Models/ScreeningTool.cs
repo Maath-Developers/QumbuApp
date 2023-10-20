@@ -14,10 +14,13 @@ namespace Qumbu_Community_Health_Care_Center.Models
 
 		public string? PatientID { get; set; }
 		[ForeignKey("PatientID")]
-		public virtual ApplicationUser? Patient { get; set; }
+		//public virtual ApplicationUser? Patient { get; set; }
+		public virtual ApplicationUser? MainUser { get; set; }     
+        
 
 
-		[Required]
+
+        [Required]
 		[DisplayName("1) Do you have any allergies ?")]
 		public int? Question1 { get; set; }
 

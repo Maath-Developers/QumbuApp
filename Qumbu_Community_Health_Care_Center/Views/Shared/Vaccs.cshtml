@@ -71,7 +71,7 @@
 							</a>
 						</li>
 						<li class="sidebar-item">
-							<a asp-controller="Appointments" asp-action="All_Appointments" class="sidebar-link">
+							<a asp-controller="Appointments" asp-action="Vaccination" class="sidebar-link">
 								<i class="align-middle" data-feather="calendar"></i> <span class="align-middle">Appointment</span>
 							</a>
 						</li>
@@ -98,6 +98,12 @@
 						<li class="sidebar-item">
 							<a asp-controller="Vaccs" asp-action="IndexFeedback" class="sidebar-link">
 								<i class="align-middle" data-feather="twitch"></i> <span class="align-middle">Feedback</span>
+							</a>
+						</li>
+
+						<li class="sidebar-item">
+							<a asp-controller="Vaccs" asp-action="IndexReport" class="sidebar-link">
+								<i class="align-middle" data-feather="twitch"></i> <span class="align-middle">Reports</span>
 							</a>
 						</li>
 
@@ -438,8 +444,13 @@
 							</a>
 						</li>
 						<li class="sidebar-item ">
-							<a asp-controller="Vaccs" asp-action="Nurse" class="sidebar-link">
+							<a asp-controller="Vaccs" asp-action="Dashboard" class="sidebar-link">
 								<i class="align-middle" data-feather="home"></i> <span class="align-middle">Dashboard</span>
+							</a>
+						</li>
+						<li class="sidebar-item ">
+							<a asp-controller="Vaccs" asp-action="Record" class="sidebar-link">
+								<i class="align-middle" data-feather="home"></i> <span class="align-middle">Patient Records</span>
 							</a>
 						</li>
 

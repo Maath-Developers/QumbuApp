@@ -1,4 +1,4 @@
-﻿@model Qumbu_Community_Health_Care_Center.Models.Referral
+﻿@model Qumbu_Community_Health_Care_Center.Models.Referrals
 @using Microsoft.AspNetCore.Identity
 @using Qumbu_Community_Health_Care_Center.Areas.Identity.Data
 
@@ -38,14 +38,15 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-4">
-                            <div class="form-group">
-                                <label for="validityPeriod">Patient Name</label>
-                                <select id="PatientName" asp-for="PatientName" class="form-control" id="validationName" required>
-                                    <option value="Select" class="bg-opacity-50">Select</option>
-                                    <option value="Unako">Unako</option>
-                                    <option value="Liso">Liso</option>
-                                </select>
-                            </div>
+                    <div class="form-group">
+                        <label asp-for="PatientID" class="control-label">Full Names</label>
+                        <select asp-for="PatientID" class="form-control">
+                            @foreach (ApplicationUser item in ViewBag.Patients)
+                            {
+                                <option value="@item.Id">@item.FirstName @item.LastName</option>
+                            }
+                        </select>
+                    </div>
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">

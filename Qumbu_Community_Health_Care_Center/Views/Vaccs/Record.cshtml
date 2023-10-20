@@ -1,0 +1,152 @@
+﻿@model Qumbu_Community_Health_Care_Center.Models.Vaccine_MadicalRecord
+@using Qumbu_Community_Health_Care_Center.Models
+@using Microsoft.AspNetCore.Identity
+@using Qumbu_Community_Health_Care_Center.Areas.Identity.Data
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@{
+    Layout = "Vaccs";
+}
+
+@if (User.IsInRole("Patient"))
+{
+    
+}
+<div class="mx-0 mx-sm-auto">
+    <div class="card w-75">
+        <div class="card-body ">
+            <div class="col-6 text-end">
+                <a asp-controller="Vaccs" asp-action="Record" class="btn btn-primary"><i class="bi bi-plus-circle"></i> SCREEN YOURSELF</a>
+            </div>
+            <div class="card-header bg-primary">
+
+                <h3 class="card-title text-white mt-2" id="exampleModalLabel">PATIENT RECORDS</h3>
+            </div>
+            <form method="post" asp-action="Record">
+                <div class="border p-3 #FBD603">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>@*validation*@
+
+@*                     <h2 class="vaccine-heading text-center">Vaccination Card</h2>
+ *@                    <h3 class="sub-heading">Vaccinee Details</h3>
+                    <table class="table mt-3">
+                        <tr>
+                            <td>
+                                <h5><label asp-for="BloodPressure"></label></h5>
+                            </td>
+                            <td>
+                                <input asp-for="BloodPressure"  type="text" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h5><label asp-for="Temperature"></label></h5>
+                            </td>
+                            <td>
+                                <input asp-for="Temperature" type="text" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h5><label asp-for="HeartRate"></label></h5>
+                            </td>
+                            <td>
+                                <input asp-for="HeartRate" type="text" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h5><label asp-for="Weight"></label></h5>
+                            </td>
+                            <td>
+                                <input asp-for="Weight" type="text" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h5><label asp-for="NextDate"></label></h5>
+                            </td>
+                            <td>
+                                <input asp-for="NextDate" class="form-control" />
+                            </td>
+                        </tr>
+                    </table>
+                    <h3 class="sub-heading">Vaccine Details</h3>
+                    <table class="table mt-3">
+                        <thead>
+                            <tr>
+                                <th><h5>VACCINE DOSE</h5></th>
+                                <th><h5>VACCINE NAME</h5></th>
+                                <th>
+                                    <h5><label asp-for="Date"></label></h5>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <h5><label asp-for="dose"></label></h5>
+                                </td>
+                                <td>
+                                    <input asp-for="dose" type="text" />
+                                </td>                             
+                                <td></td>
+                                <td>
+                                    <input asp-for="NextDate" class="form-control" />
+                                </td>
+                            </tr>
+                   
+                        </tbody>
+                    </table>
+                    <h3 class="sub-heading">Vaccinator Details</h3>
+                    <div id="Information" class="col-4 justify-content-md-end">
+                        <h4>NURSE INFORMATION</h4>
+                        <p>First Name: @UserManager.GetUserAsync(User).Result.FirstName</p>
+                        <p>Last Name: @UserManager.GetUserAsync(User).Result.LastName</p>
+                        <p>Email Address: @UserManager.GetUserAsync(User).Result.Email</p>
+                    </div>
+                    @* <table class="table mt-3">
+                        <tr>
+                            <td><h5>Surname</h5></td>
+                            <td><h5>First Names</h5></td>
+                        </tr>
+                        <tr class="wide-row">
+                            <td>Maguba</td>
+                            <td>Abulele</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><h5>Email Address</h5></td>
+                        </tr>
+                        <tr class="wide-row">
+                            <td>drmaguba@gmail.com</td>
+
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><h5>Date:</h5></td>
+                        </tr>
+                        <tr class="wide-row">
+                            <td>25/07/2023</td>
+
+                        </tr>
+                    </table> *@
+                    <br />
+                    <br />
+                    <div class="form-group row">
+                        <div class="col-8 offset-2 row">
+                            <div class="col">
+                                <input type="submit" class="btn btn-info w-75 bi bi-arrow-left-circle" value="SUBMIT" />
+                            </div>
+                            <div class="col">
+                                <a asp-action="IndexRecord class="btn btn-danger w-75"><i class="bi bi-arrow-left-circle"></i>BACK</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
