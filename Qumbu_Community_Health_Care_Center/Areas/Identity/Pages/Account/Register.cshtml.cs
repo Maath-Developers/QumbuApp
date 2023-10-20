@@ -178,7 +178,7 @@ namespace Qumbu_Community_Health_Care_Center.Areas.Identity.Pages.Account
                         pageHandler: null,
                         values: new { area = "Identity", userId = userId, code = code, returnUrl = returnUrl },
                         protocol: Request.Scheme);
-                    string applicationName = "Qumbu Community Health Care Center";
+                    string applicationName = "Qumbu Health Care Centre";
                     string username = user.FirstName + " " + user.LastName;
                     string supportEmail = "monkimajor@gmail.com";
 
