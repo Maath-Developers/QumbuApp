@@ -17,6 +17,8 @@
 
 		<link href="~/Sidebar/css/app.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+		<script src="~/js/site.js" asp-append-version="true"></script>
+		@await RenderSectionAsync("Scripts", required: false)
 	</head>
 
 	@if (User.IsInRole("Admin"))
@@ -400,7 +402,7 @@
 								</a>
 							</li>
 							<li class="sidebar-item">
-								<a asp-controller="Home" asp-action="Landing2" class="sidebar-link">
+								<a asp-controller="" asp-action="Landing2" class="sidebar-link">
 									<i class="align-middle" data-feather="calendar"></i> <span class="align-middle">DashBoard</span>
 								</a>
 							</li>
