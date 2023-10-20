@@ -1,0 +1,89 @@
+﻿@model IEnumerable<Qumbu_Community_Health_Care_Center.Models.UltrasoundAppointment>
+@{
+    Layout = "_LayoutPrenatal";
+}
+<div class="mt-2 p-2 bg-white text-center text-white-50 rounded">
+    <h2>Combined Records</h2>
+</div>
+<div class="container-fluid">
+    <div class="row pt-4">
+        @*<div class="col-6">
+        <h2 class="text-primary">Counselling Records</h2>
+        </div>*@
+    </div>
+    <br />
+
+    @if (Model.Count() > 0)
+    {
+
+        <table class="table table-bordered table-striped" style="width:100%">
+            <thead>
+                <tr>
+                    <th>
+                        Appointment Date
+                    </th>
+                    <th>
+                        Gestational Ag eWeeks
+                    </th>
+                    <th>
+                        Fetal Heart Rate
+                    </th>
+                    <th>
+                        FetalHeartRate
+                    </th>
+                    <th>
+                        Observations
+                    </th>
+                    <th>
+                        GenderDetermined
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var pro in Model)
+                {
+                    <tr>
+                        <td width="20%">@pro.AppointmentDate</td>
+                        <td width="20%">
+                            @pro.GestationalAgeWeeks
+                            @pro.FetalHeartRate
+                        </td>
+
+                        <td width="20%">@pro.GenderDetermined</td>
+                        <td width="20%">@pro.Observations</td>
+                        <td>
+                            <div class="w-50 btn-group" role="group">
+                                <a asp-controller="Report" asp-action="Delete" asp-route-ID="@pro.PatientID" class="btn btn-info mx-1">View</a>
+                            </div>
+                        </td>
+                    </tr>
+
+
+                }
+            </tbody>
+        </table>
+        <div class="form-group row">
+            <div class="col-4 offset-2 row">
+                <div class="col">
+                    <input type="submit" class="btn btn-info w-75" value="Print" />
+                </div>
+                <div class="col">
+                    <a asp-action="Patient" class="btn btn-info w-75">Back</a>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <p>Nothing to show yet</p>
+    }
+
+</div>
+
+
+
+
+
+
+

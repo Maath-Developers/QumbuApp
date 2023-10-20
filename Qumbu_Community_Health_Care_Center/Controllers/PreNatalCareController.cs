@@ -34,6 +34,11 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         {
             return View();
         }
+        public IActionResult Report()
+        {
+            return View();
+        }
+
         public  IActionResult IndexRecord()
         {
             IEnumerable<HealthRecord> objList = dbContext.HealthRecords.Include(a => a.MainUser);
