@@ -118,16 +118,14 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             Context.SaveChanges();
             return RedirectToAction("PatientC");
         }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
         public IActionResult DeleteReferrals(int? ID)
         {
-            var list = Context.Referral.Find(ID);
-            if (list == null)
+            var obj = Context.Referral.Find(ID);
+            if (obj == null)
             {
                 return NotFound();
             }
-            Context.Referral.Remove(list);
+            Context.Referral.Remove(obj);
             Context.SaveChanges();
             return RedirectToAction("Referral");
 
