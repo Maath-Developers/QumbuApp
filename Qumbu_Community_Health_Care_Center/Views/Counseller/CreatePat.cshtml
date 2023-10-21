@@ -1,4 +1,10 @@
 ﻿@model Qumbu_Community_Health_Care_Center.Models.Profiling
+@using Microsoft.AspNetCore.Identity
+@using Qumbu_Community_Health_Care_Center.Areas.Identity.Data
+
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
 @{
 	Layout = "_CounsellorLayout";
 }
@@ -22,7 +28,7 @@
 					<div class="form-group col">
 						<div class="col-4 offset-2 row">
 							<div class="col">
-								<a asp-action="CreateConf" class="btn btn-info w-60">View History</a>
+								<a asp-action="IndRec" class="btn btn-info w-60">View History</a>
 							</div>
 							<br />
 							<div class="col">
@@ -37,11 +43,12 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="form-group">
-                    <label for="validityPeriod">First Name</label>
-                    <select id="PatientName" asp-for="FirstName" class="form-control" id="validationName" required>
-                        <option value="Select" class="bg-opacity-50">Select</option>
-                        <option value="Unako">Unako</option>
-                        <option value="Liso">Liso</option>
+                    <label asp-for="PatientID" class="control-label">Full Names</label>
+                    <select asp-for="PatientID" class="form-control">
+                        @foreach (ApplicationUser item in ViewBag.Patients)
+                        {
+                            <option value="@item.Id">@item.FirstName @item.LastName</option>
+                        }
                     </select>
                 </div>
             </div>
@@ -69,7 +76,7 @@
                     <input value="Submit"  type="submit" class="btn btn-info w-75"/>
                 </div>
                 <div class="col">
-                    <a asp-action="CreatePat" class="btn btn-info w-75">Back</a>
+                    <a asp-action="VisitRec" class="btn btn-info w-75">View</a>
                 </div>
             </div>
         </div>
