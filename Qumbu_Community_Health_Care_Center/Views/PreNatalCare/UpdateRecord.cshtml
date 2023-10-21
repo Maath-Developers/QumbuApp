@@ -1,4 +1,6 @@
-﻿@model Qumbu_Community_Health_Care_Center.Models.HealthRecord
+﻿@using Qumbu_Community_Health_Care_Center.Areas.Identity.Data;
+
+@model Qumbu_Community_Health_Care_Center.Models.HealthRecord
 
 @{
     //ViewData["Title"] = "Index";
@@ -7,17 +9,21 @@
 <div class="container">
     <br />
     <br />
-    <h1 class="display-4">Edit Health Mornitoring</h1>
+    <h1 class="display-4">Edit Health Record</h1>
     <br />
     <br />
     <form method="post" asp-action="UpdateRecord">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-        @*<div class="form-group">
-            <label asp-for="UserId"></label>
-            <input asp-for="UserId" class="form-control" />
-            <span asp-validation-for="UserId" class="text-danger"></span>
-        </div>*@
+        <div class="form-group">
+            <label asp-for="PatientID" class="control-label">Choose Patient</label>
+            <select asp-for="PatientID" class="form-control">
+                @foreach (ApplicationUser item in ViewBag.Patients)
+                {
+                    <option value="@item.Id">@item.FirstName @item.LastName</option>
+                }
+            </select>
+        </div>
         <div class="form-group">
             <label asp-for="RecordedDate"></label>
             <input asp-for="RecordedDate" class="form-control" />
@@ -41,10 +47,23 @@
 
         </div>
         <div class="form-group">
-            <label asp-for="Symptoms"></label>
-            <input asp-for="Symptoms" class="form-control" />
-            <span asp-validation-for="Symptoms" class="text-danger"></span>
+            <label asp-for="Temperature"></label>
+            <input asp-for="Temperature" class="form-control" />
+            <span asp-validation-for="Temperature" class="text-danger"></span>
 
+        </div>
+        <div class="form-group">
+            <label asp-for="Symptoms" class="control-label"></label>
+            <select asp-for="Symptoms" class="form-control">
+                <option value="">Select</option>
+                <option>Fausea</option>
+                <option>Fatigue</option>
+                <option>Contractions</option>
+                <option>Cramping</option>
+                <option>Missed Period</option>
+                <option>Frequent Urination</option>
+            </select>
+            <span asp-validation-for="Symptoms" class="text-danger"></span>
         </div>
 
         <button type="submit" class="btn btn-info" style="width:150px">Update</button>
