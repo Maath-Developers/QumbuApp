@@ -80,6 +80,11 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         }
         public IActionResult CreateRe()
         {
+            ViewBag.Patients = (from U in Context.Users
+                                join UR in Context.UserRoles on U.Id equals UR.UserId
+                                join R in Context.Roles on UR.RoleId equals R.Id
+                                where R.Name == "Patient"
+                                select U).ToList();
             return View();
         }
         [HttpPost]
@@ -251,7 +256,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             {
                 Context.Profiling.Add(pro);
                 Context.SaveChanges();
-                return RedirectToAction("Profile");
+                return RedirectToAction("GroupRec");
             }
             return View(pro);
         }
