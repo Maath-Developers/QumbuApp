@@ -30,6 +30,28 @@
 
         </div>
             <div class="card-body">
+                 <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label asp-for="PatientID" class="control-label">Full Names</label>
+                        <select asp-for="PatientID" class="form-control">
+                            @foreach (ApplicationUser item in ViewBag.Patients)
+                            {
+                                    <option value="@item.Id">@item.FirstName @item.LastName</option>
+                            }
+                        </select>
+                    </div>
+                    @*<br />
+                        <div class="col">
+                            <input type="submit" class="btn btn-info w-75" value="Remove" />
+                        </div*@
+
+                    </div>
+
+                @* <div class="col">
+                        <input type="submit" class="btn btn-info w-70" value="Add" />
+                    </div>*@
+            </div>
                 <div class="row">
                     <div class="col-md-8">
                         <div class="col-10">
@@ -79,7 +101,7 @@
                         <input type="submit" class="btn btn-info w-75" value="Submit" />
                     </div>
                     <div class="col">
-                        <a asp-action="CreateRe" class="btn btn-info w-75">Cancel</a>
+                        <a asp-action="Record" class="btn btn-info w-75">View</a>
                     </div>
                 </div>
             </div>
