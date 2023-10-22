@@ -53,15 +53,9 @@
 
         </div>
         <div class="form-group">
-            <label asp-for="Symptoms"></label>
-            <input asp-for="Symptoms" class="form-control" />
-            <span asp-validation-for="Symptoms" class="text-danger"></span>
-
-        </div>
-       @* <div class="form-group">
             <label asp-for="Symptoms" class="control-label"></label>
             <select asp-for="Symptoms" class="form-control">
-                <option value="">Please select gender</option>
+                <option value="">Select</option>
                 <option>Fausea</option>
                 <option>Fatigue</option>
                 <option>Contractions</option>
@@ -70,7 +64,7 @@
                 <option>Frequent Urination</option>
             </select>
             <span asp-validation-for="Symptoms" class="text-danger"></span>
-        </div>*@
+        </div>
 
         <button type="submit" class="btn btn-info" style="width:150px">Create</button>
         <a asp-controller="PrenatalCare" asp-action="IndexRecord" class="btn btn-danger" style="width:150px">Back to List</a>

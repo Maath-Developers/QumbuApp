@@ -36,27 +36,14 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         }
         public IActionResult Report()
         {
-            return View();
+            IEnumerable<UltrasoundAppointment> ultrasounds = dbContext.Ultrasounds;
+            return View(ultrasounds);
         }
 
         public  IActionResult IndexRecord()
         {
             IEnumerable<HealthRecord> objList = dbContext.HealthRecords.Include(a => a.MainUser);
-            //return View(dbContext.ultrasounds.ToList());
             return View(objList);
-        }
-        public IActionResult IndexAppointment()
-        {
-            IEnumerable<Appointment> objList = dbContext.Appointments;
-            return View(objList);
-        }
-       
-       
-        [HttpGet]
-        public IActionResult CreateAppointment()
-        {
-
-            return View();
         }
         [HttpGet]
         public IActionResult CreateRecord()
@@ -80,16 +67,6 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             }
             return View(record);
         }
-        public IActionResult CreateAppointment(Appointment appointment)
-        {
-            if (ModelState.IsValid)
-            {
-                dbContext.Appointments.Add(appointment);
-                dbContext.SaveChanges();
-                return RedirectToAction("IndexAppointment");
-            }
-            return View(appointment);
-        }
         public IActionResult UpdateRecord(int? ID)
         {
             if (ID == null || ID == 0)
@@ -101,6 +78,11 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             {
                 return NotFound();
             }
+             ViewBag.Patients = (from U in dbContext.Users
+                                join UR in dbContext.UserRoles on U.Id equals UR.UserId
+                                join R in dbContext.Roles on UR.RoleId equals R.Id
+                                where R.Name == "Patient"
+                                select U).ToList();
 
             return View(obj);
         }
@@ -112,59 +94,9 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             dbContext.SaveChanges();
             return RedirectToAction("IndexRecord");
         }
-        public IActionResult UpdateAppointment(int? ID)
-        {
-            if (ID == null || ID == 0)
-            {
-                return NotFound();
-            }
-            var obj = dbContext.Appointments.Find(ID);
-            if (obj == null)
-            {
-                return NotFound();
-            }
-
-            return View(obj);
-        }
-        [HttpGet]
-        public IActionResult UpdateUltrasound(int? ID)
-        {
-            if (ID == null || ID == 0)
-            {
-                return NotFound();
-            }
-            var obj = dbContext.Ultrasounds.Find(ID);
-            if (obj == null)
-            {
-                return NotFound();
-            }
-
-            return View(obj);
-        }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult UpdateAppointment(Appointment appointment)
-        {
-            dbContext.Appointments.Update(appointment);
-            dbContext.SaveChanges();
-            return RedirectToAction("IndexAppointment");
-        }
-        public IActionResult Delete(int? ID)
-        {
-            var obj = dbContext.Appointments.Find(ID);
-            if (obj == null)
-            {
-                return NotFound();
-            }
-
-            dbContext.Appointments.Remove(obj);
-            dbContext.SaveChanges();
-            return RedirectToAction("Index");
-        }
         public IActionResult IndexUltrasoundAppointment()
         {
             IEnumerable<UltrasoundAppointment> objList = dbContext.Ultrasounds.Include(a => a.MainUser);
-            //return View(dbContext.ultrasounds.ToList());
             return View(objList);
 
         }
@@ -200,6 +132,25 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             return View();
 
         }
+        [HttpGet]
+        public IActionResult UpdateUltrasound(int? ID)
+        {
+            if (ID == null || ID == 0)
+            {
+                return NotFound();
+            }
+            var obj = dbContext.Ultrasounds.Find(ID);
+            if (obj == null)
+            {
+                return NotFound();
+            }
+            ViewBag.Patients = (from U in dbContext.Users
+                                join UR in dbContext.UserRoles on U.Id equals UR.UserId
+                                join R in dbContext.Roles on UR.RoleId equals R.Id
+                                where R.Name == "Patient"
+                                select U).ToList();
+            return View(obj);
+        }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult UpdateUltrasound(UltrasoundAppointment ultrasound)
@@ -230,11 +181,11 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             dbContext.SaveChanges();
             return RedirectToAction("IndexUltrasoundAppointment", "PrenatalCare");
 
-            //var Ultrasound = await dbContext.Ultrasounds.FindAsync(ID);
+            //var Ultrasound =  dbContext.Ultrasounds.Find(ID);
             //var folder = Path.Combine(webHostEnvironment.WebRootPath, "UploadedFiles/FetalImage/", Ultrasound.UltrasoundImagePath);
             //if (System.IO.File.Exists(folder))
             //    dbContext.Ultrasounds.Remove(Ultrasound);
-            //await dbContext.SaveChangesAsync();
+            //dbContext.SaveChanges();
             //return RedirectToAction("IndexUltrasoundAppointment", "PrenatalCare");
         }
         public IActionResult IndexEducation()
