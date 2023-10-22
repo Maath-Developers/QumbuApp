@@ -181,11 +181,11 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             dbContext.SaveChanges();
             return RedirectToAction("IndexUltrasoundAppointment", "PrenatalCare");
 
-            //var Ultrasound = await dbContext.Ultrasounds.FindAsync(ID);
+            //var Ultrasound =  dbContext.Ultrasounds.Find(ID);
             //var folder = Path.Combine(webHostEnvironment.WebRootPath, "UploadedFiles/FetalImage/", Ultrasound.UltrasoundImagePath);
             //if (System.IO.File.Exists(folder))
             //    dbContext.Ultrasounds.Remove(Ultrasound);
-            //await dbContext.SaveChangesAsync();
+            //dbContext.SaveChanges();
             //return RedirectToAction("IndexUltrasoundAppointment", "PrenatalCare");
         }
         public IActionResult IndexEducation()
