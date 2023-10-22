@@ -13,8 +13,8 @@ namespace Qumbu_Community_Health_Care_Center.Services
 
         public async Task SendEmailAsync(string email, string subject, string htmlMessage)
         {
-            string from = "monkiMajor@gmail.com";
-            string Password = "sydroybluqeorckp";
+            string from = "qumbucommunityhealth@gmail.com";
+            string Password = "tmubgxpwfbyembqq";
             string SenderName = "Admin";
             MailMessage message = new MailMessage();
             message.From = new MailAddress(from);
