@@ -30,16 +30,16 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             var applicationDbContext = _context.Medical_File.Include(m => m.mainUser);
             return View(await applicationDbContext.ToListAsync());
         }
-		public async Task<IActionResult> My_Medical_File()
-		{
+        public async Task<IActionResult> My_Medical_File()
+        {
             var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
-			var applicationDbContext = _context.Medical_File.Where(a => a.PatientID ==user).Include(m => m.mainUser);
-			ViewBag.File = _context.Medical_File.Where(a => a.PatientID ==user).Include(m => m.mainUser);
-			return View(await applicationDbContext.ToListAsync());
-		}
+            var applicationDbContext = _context.Medical_File.Where(a => a.PatientID ==user).Include(m => m.mainUser);
+            ViewBag.File = _context.Medical_File.Where(a => a.PatientID ==user).Include(m => m.mainUser);
+            return View(await applicationDbContext.ToListAsync());
+        }
 
-		// GET: Medical_File/Details/5
-		public async Task<IActionResult> Details(int? id)
+        // GET: Medical_File/Details/5
+        public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Medical_File == null)
             {
@@ -56,19 +56,22 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
 
             return View(medical_File);
         }
+        public IActionResult Create_File()
+        {
+            ViewData["PatientID"] = new SelectList(_context.Users, "Id", "Id");
+            return View();
+        }
 
+    
         // GET: Medical_File/Create
         public IActionResult Create()
         {
             ViewData["PatientID"] = new SelectList(_context.Users, "Id", "Id");
             return View();
         }
-        public IActionResult Create_File()
-        {
-            ViewData["PatientID"] = new SelectList(_context.Users, "Id", "Id");
-            return View();
-        }
-        public async Task<IActionResult> Create_File([Bind("fileId,PatientID,IDNumber,DateofBirth,Gender,Status,Address,Province,postalCode,NextfoKin,kinCell,Relationship,BloodType,Allergies,Surgery,extraNotes")] Medical_File medical_File)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create_File(Medical_File medical_File)
         {
             var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
             medical_File.PatientID = user;
@@ -95,7 +98,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             {
                 _context.Add(medical_File);
                 await _context.SaveChangesAsync();
-                TempData["File"] = "File Succesfully Created ";
+                TempData["File"] = "File Successfully Created ";
                 return RedirectToAction(nameof(My_Medical_File));
             }
             ViewData["PatientID"] = new SelectList(_context.Users, "Id", "Id", medical_File.PatientID);

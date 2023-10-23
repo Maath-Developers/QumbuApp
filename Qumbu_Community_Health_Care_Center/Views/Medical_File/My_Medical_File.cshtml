@@ -5,134 +5,190 @@
     Layout = "~/Views/Shared/_Walk-in-Layout.cshtml";
 }
 
-<h1>My_Medical_File</h1>
+<h2>My_Medical_File</h2>
 
 @if(ViewBag.File != null)
 {
+    <div class="text-start">
+        <button  class=" btn btn-primary p-b-2">
+            <a asp-action="Create_File" class="text-white">Create File</a>
+        </button>
+    </div>
     <table class="table">
-    <thead>
-        <tr>
-            <th>
-                File Number
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PatientID)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IDNumber)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DateofBirth)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Gender)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Status)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Address)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Province)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.postalCode)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.NextfoKin)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.kinCell)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Relationship)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.BloodType)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Allergies)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Surgery)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.extraNotes)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
+        <thead>
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.fileId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.mainUser.FirstName)
-                    @Html.DisplayFor(modelItem => item.mainUser.LastName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.IDNumber)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DateofBirth)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Gender)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Status)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Address)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Province)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.postalCode)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.NextfoKin)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.kinCell)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Relationship)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.BloodType)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Allergies)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Surgery)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.extraNotes)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-                </td>
+                <th>
+                    File Number
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PatientID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IDNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DateofBirth)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Gender)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Status)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Address)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Province)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.postalCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NextfoKin)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.kinCell)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Relationship)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BloodType)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Allergies)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Surgery)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.extraNotes)
+                </th>
+                <th></th>
             </tr>
-        }
-    </tbody>
+        </thead>
     </table>
+    
 }
 else
 {
-    <div class="text-start">
-        <button  class=" btn btn-primary p-b-2">
-            <a asp-action="Create" class="text-white">Create File</a>
-        </button>
-    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    File Number
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PatientID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IDNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DateofBirth)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Gender)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Status)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Address)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Province)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.postalCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NextfoKin)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.kinCell)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Relationship)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BloodType)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Allergies)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Surgery)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.extraNotes)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.fileId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.mainUser.FirstName)
+                        @Html.DisplayFor(modelItem => item.mainUser.LastName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IDNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DateofBirth)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Gender)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Status)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Address)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Province)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.postalCode)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NextfoKin)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.kinCell)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Relationship)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.BloodType)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Allergies)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Surgery)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.extraNotes)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 }
 
 
