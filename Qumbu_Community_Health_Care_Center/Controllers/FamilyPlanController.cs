@@ -186,11 +186,11 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
                        $"" +
                        $"<h1>Qumbu Healthcare Center!</h1>" +
                        $"<p></p>" +
-                       $"<p> Thank for booking with us.</P>" +
-                       $"<p>Take note that your appointment has been accepted</P>" +
-                       $"<Strong><p>Appointment Date: {familyReg.Date}</P></strong>" +
-                       $"<Strong><p>Appointment Purpose: {familyReg.Status}</P></strong>" +
-                       $"<p>Please be on time, atleast 10 minutes before</P>" +
+                       $"<p> Thank your for screening.</P>" +
+                       $"<p>Take note that your request has been accepted</P>" +
+                       $"<Strong><p>Collection Date: {familyReg.Date}</P></strong>" +
+                       $"<Strong><p> Purpose: {familyReg.Status}</P></strong>" +
+                       $"<p></P>" +
 
                        $"" +
                        $"if you have any question ,contact our team at {supportEmail}</p>" +
