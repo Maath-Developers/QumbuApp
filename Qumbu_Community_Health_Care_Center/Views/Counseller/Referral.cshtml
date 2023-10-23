@@ -26,8 +26,8 @@
     @if (Model.Count() > 0)
     {
 
-        <table id="myTable" table class="table table-bordered table-striped" style="width:100%">
-            <thead>
+        <table id="myTable" table class="table table-hover table-sm" style="width:100%">
+            <thead class="table-secondary">
                 <tr>
                     <th>
                         Patient Name
@@ -37,6 +37,9 @@
                     </th>
                     <th>
                         Remarks
+                    </th> 
+                    <th>
+                        Action
                     </th>
                    
             </thead>
@@ -45,16 +48,35 @@
                 @foreach (var referrals in Model)
                 {
                     <tr>
-                        <td width="30%">
+                        <td width="20%">
                             @referrals.MainUser.FirstName
+                            @referrals.MainUser.LastName
                         </td>
-                        <td width="30%">@referrals.Departments</td>
-                        <td width="30%">@referrals.Remarks</td>
-                        <td>
+                        <td width="20%">@referrals.Departments</td>
+                        <td width="20%">@referrals.Remarks</td>
+                        <td width="20%">
                                 <div class="w-50 btn-group" role="group">
                                     <a asp-action="DeleteReferrals" asp-route-ID="@referrals.ReferralID" class="btn btn-danger mx-1">Remove</a>
                                 </div>
                         </td>
+                        <div class="modal fade" id="exampleModal-@referrals.ReferralID" tabindex="-1" aria-labelledby="exampleModalLabel-@referrals.ReferralID" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel-@referrals.ReferralID">Remove referral</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+
+                                    <div class="modal-body modal-dialog modal-dialog-centered">
+                                        <p>Are you sure you want to remove this?</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <a asp-action="Accept" asp-route-id="@referrals.ReferralID" button type="button" class="btn btn-danger">Proceed</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </tr>
                 }
             </tbody>

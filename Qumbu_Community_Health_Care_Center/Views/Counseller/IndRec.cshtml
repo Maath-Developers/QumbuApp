@@ -24,15 +24,15 @@
     @if (Model.Count() > 0)
     {
 
-        <table id="myTable" table class="table table-bordered table-striped" style="width:100%">
-            <thead>
+        <table id="myTable" table class="table table-hover  table-sm" style="width:100%">
+            <thead class="table-secondary">
                 <tr>
                     <th>
-                        Background
+                        Patient Name
                     </th>
-                   @*  <th>
-                        Counselling Plan
-                    </th> *@
+                     <th>
+                       Background
+                    </th> 
                     <th>
                         Counselling Approach
                     </th>
@@ -52,17 +52,20 @@
                 @foreach (var ind in Model)
                 {
                     <tr>
-                        <td width="20%">@ind.Background</td>
-                       @*  <td width="20%">@ind.CounsellingPlan</td> *@
+                        <td width="20%">
+                            @ind.MainUser.FirstName
+                            @ind.MainUser.LastName
+                        </td>
+                        <td width="20%">@ind..Background</td>
                         <td width="20%">@ind.CounsellingApproach</td>
                         <td width="20%">@ind.Goals</td> 
                         <td width="20%">@ind.comments</td> 
                         <td width="20%">@ind.recom</td>
-                       @* <td>
+                        <td width="20%">
                             <div class="w-50 btn-group" role="group">
-                                <a asp-controller="Counseller" asp-action="CreatePat" asp-route-ID="@app.ProfileID" class="btn btn-info mx-1">View</a>
+                                <a asp-controller="Counseller" asp-action="Update" asp-route-ID="@ind.ProfileID" class="btn btn-info mx-1">Update</a>
                             </div>
-                        </td>*@
+                        </td>
                     </tr>
 
 

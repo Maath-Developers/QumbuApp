@@ -6,14 +6,14 @@
     Layout = "/Views/Shared/_LayoutPrenatal.cshtml";
 }
 <div class="row pt-4">
-    <div class="container">
-        <h1 class="display-4">Fetal Monitoring</h1>
+    <div class="bg-primary p-3 mb-2">
+        <h4 class="text-white text-center">Fetal Monitoring</h4>
     </div>
-    
+
 </div>
 
-<br/>
-<br/>
+<br />
+<br />
 @if (User.IsInRole("Nurse"))
 {
     <p>
@@ -94,7 +94,7 @@
                         </div>
                     </td>
                 }
-               
+
             </tr>
         }
     </tbody>

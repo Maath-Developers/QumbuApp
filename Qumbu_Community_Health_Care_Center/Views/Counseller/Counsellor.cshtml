@@ -38,7 +38,6 @@
 }
 @if (User.IsInRole("Counsellor"))
 {
-    <br/>
 <!DOCTYPE html>
 <html>
 <head>
@@ -53,44 +52,70 @@
 <img src="~/_Images/mettaworldpeace1.jpg" width="1050" height="300" alt="#">
 <br />
 <br />
-   <div class="row">
-     
-            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Appointments</h5>
-                        <a href="index.html"><img class="img-responsive" height="268" src="~/images/images/logo/booking.png" ] alt="#" /></a>
-                        <button>
-                            <a class="nav-link text-dark" asp-controller="Counseller" asp-action="Booking">Click here...</a>
-                        </button>
-                    </div>
+    <style>
+        #dash-con {
+            background: rgba(39, 178, 245, 0.8);
+            box-shadow: 0 8px 32px 0 rgba(21, 88, 119, 0.87);
+            backdrop-filter: blur( 0px );
+            -webkit-backdrop-filter: blur( 0px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+        }
+
+            #dash-con:hover {
+                background: rgba( 0, 42, 255, 1 );
+                box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+                backdrop-filter: blur( 20px );
+                -webkit-backdrop-filter: blur( 20px );
+                border-radius: 10px;
+                border: 1px solid rgba( 255, 255, 255, 0.18 );
+            }
+    </style>
+
+
+    <div class="container-fluid pt-4 px-4">
+
+        <div class="row g-4">
+            <div class=" col-sm-6 col-xl-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <div id="dash-con" class="dash-con rounded d-flex align-items-center justify-content-between p-4">
+                    @*<img src="~/_Images/Contr.png" style="width: 85px" />*@
+                    <a asp-controller="Appointments" asp-action="Counselling">
+                        <h5 class="mb-2">Profiling<span class="badge bg-primary rounded-pill text-white"></span></h5>
+
+                    </a>
                 </div>
             </div>
 
-            <!-- Card 2 -->
-            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Files</h5>
-                        <a href="index.html"><img class="img-responsive" height="268" src="~/images/images/logo/Files.png" alt="#" /></a>
-                        <button>
-                            <a class="nav-link text-dark" asp-controller="Counseller" asp-action="PatientC">Click here...</a>
-                        </button>
-                    </div>
+
+            <div class="col-sm-6 col-xl-3" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                <div id="dash-con" class="dash-con rounded d-flex align-items-center justify-content-between p-4">
+                    @*<img src="~/_Images/Fscreen.png" style="width: 90px" />*@
+                    <a asp-controller="Counseller" asp-action="CreatePat">
+                        <h5 class="mb-2">Visit Logs<span class="badge bg-primary rounded-pill text-white"></span></h5>
+
+                    </a>
                 </div>
             </div>
-            <!-- Card 3 -->
-            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Referrals</h5>
-                        <a href="index.html"><img class="img-responsive" height="268" src="~/images/images/logo/Ref.png" alt="#" /></a>
 
-                        <button>
-                            <a class="nav-link text-dark" asp-controller="Counseller" asp-action="Referral">Click here...</a>
-                        </button>
-                    </div>
+
+            <div class="col-sm-6 col-xl-3" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                <div id="dash-con" class=" dash-con rounded d-flex align-items-center justify-content-between p-4">
+                   @* <img src="~/_Images/FFBACK.png" style="width: 105px" />*@
+                    <a asp-controller="Counseller" asp-action="CreateRe">
+                        <h5 class="mb-2">Individual Counselling<span class="badge bg-primary rounded-pill text-white"></span></h5>
+
+                    </a>
                 </div>
-            </div>     
-   </div>
+            </div>
+            <div class="col-sm-6 col-xl-3" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                <div id="dash-con" class="dash-con rounded d-flex align-items-center justify-content-between p-4">
+                   @* <img src="~/_Images/menstrualCycle.png" style="width: 70px" />*@
+                    <a asp-controller="Counseller" asp-action="Referral">
+                        <h5 class="mb-2">Referral<span class="badge bg-primary rounded-pill text-white"></span></h5>
+
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 }

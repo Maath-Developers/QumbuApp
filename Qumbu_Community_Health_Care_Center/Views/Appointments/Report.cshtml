@@ -21,7 +21,7 @@
     </div>
 </div>
 <div class="container-fluid p-4">
-    <a href="javascript:window.print()" id="btnPrint" class="btn btn-info">Print Report</a>
+    <a href="javascript:window.print()" id="btnPrint" class="btn btn-info">View Report</a>
     @*<button id="btnPrint" class="btn btn-info">View Report</button>*@
     <div id="Information" class="row">
         <div class="col-8">
@@ -37,8 +37,8 @@
             <p>Email Address: @UserManager.GetUserAsync(User).Result.Email</p>
         </div>
     </div>
-        <table id="myTable" table class="table table-bordered" style="width:100%">
-            <thead>
+    <table id="myTable" table class="table table-hover  table-sm" style="width:100%">
+        <thead class="table-secondary">
                 <tr>
                     <th>
                         Patient Information
@@ -80,10 +80,10 @@
                             @Html.DisplayFor(modelItem => item.Status)
                         </td>
                         <td>
-                            @if (item.Status == "New")
+                            @if (item.Status == "Accepted")
                             {
                                 <div class="col">
-                                    <a asp-action="CreatePat" class="btn btn-info w-75">View</a>
+                                    <a asp-controller="Counseller" asp-action="CreatePat" class="btn btn-info w-75">View</a>
                                 </div>
                             }
 

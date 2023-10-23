@@ -57,14 +57,14 @@
                     <label for="validityPeriod">Visit Purpose</label>
                     <select id="Departments" asp-for="VisitPurpose" class="form-control" id="validationName" required>
                         <option value="Select" class="bg-opacity-50">Select</option>
-                        <option value="Excuse">Excuse Letter</option>
-                        <option value="Clearance">Clearance Letter</option>
+                        <option value="Excuse Letter">Excuse Letter</option>
+                        <option value="Clearance Letter">Clearance Letter</option>
                     </select>
                 </div>
             </div>
             <div class="col-3">
             <label asp-for="Date"></label>
-            <input asp-for="Date" class="form-control" />
+                <input type="Date" id="date" id="Date" class="form-control" />
             <span asp-validation-for="Date" class="text-danger"></span>
             </div>
             

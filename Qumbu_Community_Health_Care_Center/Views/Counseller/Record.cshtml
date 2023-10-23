@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Qumbu_Community_Health_Care_Center.Models.Profiling>
+﻿@*@model IEnumerable<Qumbu_Community_Health_Care_Center.Models.Profiling>
 @{
     Layout = "_CounsellorLayout";
 }
@@ -12,7 +12,7 @@
 </div>
 <br />
 <div class="container-fluid">
-   @* <div class="row pt-4">
+    <div class="row pt-4">
        
         <div class="col-6 text-right">
             <div class="search-container">
@@ -28,7 +28,7 @@
             <a asp-controller="Counseller" asp-action="CreateP" class="btn btn-info">Start Counselling</a>
         </div>
     </div>
-    <br />*@
+    <br />
 
     @if (Model.Count() > 0)
     {
@@ -98,3 +98,4 @@
 
 
 
+*@

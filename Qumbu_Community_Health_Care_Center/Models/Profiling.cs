@@ -10,18 +10,20 @@ namespace Qumbu_Community_Health_Care_Center.Models
     {
         [Key]
         public int ProfileID { get; set; }
-        public string? ID { get; set; }
+        //public string? ID { get; set; }
+        public string? Id { get; set; }
+        [ForeignKey("Id")]
+        public virtual ApplicationUser? User { get; set; }
         public string? email { get; set; }
         public string? Cell { get; set; }
         [DisplayName("First Name")]
         public string? AppointmentID { get; set; }
         [ForeignKey("AppointmentID")]
-        public string? FirstName { get; set; }
-        [DisplayName("Last Name")]
-        public string? LastName { get; set; }
         [Required]
-		[DataType(DataType.DateTime)]
-		public DateTime Date { get; set; } = DateTime.Now;
+        [DataType(DataType.Date)]
+        public DateTime Date { get; set; } = DateTime.Now; 
+        [DataType(DataType.Time)]
+		public DateTime Time { get; set; } = DateTime.Now;
 		[DisplayName("Visit Purpose")]
         public string? VisitPurpose { get; set; }
         public string? Gender { get; set; }
