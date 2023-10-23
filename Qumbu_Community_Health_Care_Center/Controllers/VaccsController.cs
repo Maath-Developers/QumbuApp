@@ -52,11 +52,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         public IActionResult Screen()
 		{
 
-            //ViewBag.Patients = (from U in dbContext.Users
-            //               +     join UR in dbContext.UserRoles on U.Id equals UR.UserId
-            //                    join R in dbContext.Roles on UR.RoleId equals R.Id
-            //                    where R.Name == "Patient"
-            //                    select U).ToList();
+            
             return View();
 
         }
@@ -115,7 +111,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             }
             return View(Scree);
         }
-        public IActionResult Delete(int? ScreeningID)
+        public IActionResult DeleteScreen(int? ScreeningID)
         {
             var obj = dbContext.Srcreening.Find(ScreeningID);
 
@@ -140,38 +136,18 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult VaccineFeedback(FeedbackV Fee)
         {
-            var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            Fee.PatientID = user;
+           
             if (ModelState.IsValid)
             {
                 dbContext.VaccinationFeedback.Add(Fee);
                 dbContext.SaveChanges();
                 return RedirectToAction("IndexFeedback");
             }
-            ViewData["PatientID"] = new SelectList(dbContext.Users, "Id", "Id", Fee.PatientID);
             return View(Fee);
 
         }
 
 
-
-        //public IActionResult IndexFee()
-        //{
-        //    IEnumerable<FeedbackV> objList = dbContext.VaccinationFeedback;
-        //    return View(objList);
-        //}
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public IActionResult Feedback(FeedbackV Fee)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        dbContext.VaccinationFeedback.Add(Fee);
-        //        dbContext.SaveChanges();
-        //        return RedirectToAction("IndexFee");
-        //    }
-        //    return View(Fee);
-        //}
         public IActionResult IndexEducation()
 		{
 			IEnumerable<VaccinationEducation> objList = dbContext.VaccineEducation;
@@ -225,7 +201,10 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
 
         public IActionResult IndexReport()
         {
-            return View();
+
+			IEnumerable<Vaccine_MadicalRecord> objList = dbContext.vaccinerecord;
+			return View(objList);
+			
         }
         public IActionResult IndexStock()
         {

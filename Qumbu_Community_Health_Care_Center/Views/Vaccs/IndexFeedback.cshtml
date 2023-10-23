@@ -5,21 +5,18 @@
         <div class="col-6">
             <h2 class="text-primary">List Of Your Feedbacks </h2>
         </div>
-        <div class="col-6 text-end">
+        @* <div class="col-6 text-end">
             <a asp-controller="Vaccs" asp-action="VaccineFeedback" class="btn btn-primary"><i class="bi bi-plus-circle"></i>PROVIDE FEEDBACK</a>
-        </div>
+        </div> *@
     </div>
     <br />
     @if (Model.Count() > 0)
     {
-        @*<table class="table table-bordered table-striped" style="width:100%">*@
+       
         <table class="table table-info table-hover">
 
             <thead>
                 <tr>
-                    <th>
-                        Patient
-                    </th>
                     <th>
                         Name
                     </th>
@@ -27,19 +24,7 @@
                         Surname
                     </th>
                     <th>
-                        rating1
-                    </th>
-                    <th>
-                        rating2
-                    </th>
-                    <th>
-                        rating3
-                    </th>
-                    <th>
-                        rating4
-                    </th>
-                    <th>
-                        rating5
+                        rating
                     </th>
                     <th>
                         Comment
@@ -51,39 +36,39 @@
                 @foreach (var Fee in Model)
                 {
                     <tr>
-                        <td width="20%">@Fee.Patient</td>
+                        
                         <td width="20%">@Fee.Name</td>
                         <td width="20%">@Fee.Surname</td>
                         <td width="20%">
-                            @if (Fee.rating1 == 1)
+                            @if (Fee.rating == 1)
                             {
                                 <p> Very Good</p>
                             }
                           
                         </td>
                         <td width="20%">
-                            @if (Fee.rating2 == 2)
+                            @if (Fee.rating == 2)
                             {
                                 <p>Good</p>
                             }
                           
                         </td>
                         <td width="20%">
-                            @if (Fee.rating3 == 3)
+                            @if (Fee.rating == 3)
                             {
                                 <p>Mediocre</p>
                             }
                         
                         </td>
                         <td width="20%">
-                            @if (Fee.rating4 == 4)
+                            @if (Fee.rating == 4)
                             {
                                 <p>Bad</p>
                             }
                      
                         </td>
                         <td width="20%">
-                            @if (Fee.rating5 == 5)
+                            @if (Fee.rating == 5)
                             {
                                 <p>Very Bad</p>
                             }
@@ -92,9 +77,9 @@
                         <td width="20%">@Fee.Comment</td>
 
                         <td>
-                            <a asp-controller="Vaccs" asp-action="Update" asp-route-ID="@Fee.FeedbackID" class="btn btn-primary"><i class="bi bi-arrow-repeat"></i>Update</a>
+                            <a asp-controller="Vaccs" asp-action="UpdateFeedback" asp-route-ID="@Fee.FeedbackID" class="btn btn-primary"><i class="bi bi-arrow-repeat"></i>Update</a>
 
-                            <a asp-controller="Vaccs" asp-action="Delete" asp-route-ID="@Fee.FeedbackID" class="btn btn-danger">
+                            <a asp-controller="Vaccs" asp-action="DeleteFeedback" asp-route-ID="@Fee.FeedbackID" class="btn btn-danger">
                                 <i class="bi bi-trash3-fill"></i>Delete
                             </a>
 
@@ -108,7 +93,7 @@
     }
     else
     {
-        <p>No Avatars created yet</p>
+        <p>No Feedback provided yet</p>
     }
 
 </div>

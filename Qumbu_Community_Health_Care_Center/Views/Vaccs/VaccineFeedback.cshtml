@@ -3,8 +3,7 @@
     Layout = "Vaccs";
 }
 
-@if (User.IsInRole("Patient"))
-{
+
     <div class="mx-0 mx-sm-auto">
         <div class="card w-75">
             <div class="card-header bg-primary">
@@ -56,29 +55,43 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <div class="form-check">
-                                            <div>
-                                                <input asp-for="rating1" value="6" class="form-check-input" type="radio" id="radio3Example1" />
-                                                <label asp-for="rating1" class="control-label"></label>
+                                             <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label asp-for="rating" class="control-label"></label>
+                                            <div class="form-check">
+                                                <input asp-for="rating" value="1" class="form-check-input" type="radio" id="radio3Example1" />
+                                                <label class="form-check-label" for="radio3Example1">
+                                                    Very Good
+                                                </label>
                                             </div>
-                                            <div>
-                                                <input asp-for="rating2" value="6" class="form-check-input" type="radio" id="radio3Example1" />
-                                                <label asp-for="rating2" class="control-label"></label>
+                                                <div class="form-check">
+                                                    <input asp-for="rating" value="2" class="form-check-input" type="radio" id="radio3Example1" />
+                                                    <label class="form-check-label" for="radio3Example1">
+                                                         Good
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input asp-for="rating" value="3" class="form-check-input" type="radio" id="radio3Example1" />
+                                                    <label class="form-check-label" for="radio3Example1">
+                                                        Mediocre
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input asp-for="rating" value="4" class="form-check-input" type="radio" id="radio3Example1" />
+                                                    <label class="form-check-label" for="radio3Example1">
+                                                        Bad
+                                                    </label>
+                                                </div>
+                                            <div class="form-check">
+                                                <input asp-for="rating" value="5" class="form-check-input" type="radio" id="radio3Example1" />
+                                                <label class="form-check-label" for="radio3Example1">
+                                                    Very Bad
+                                                </label>
+                                                <span asp-validation-for="rating" class="text-danger"></span>
                                             </div>
-                                            <div>
-                                                <input asp-for="rating3" value="6" class="form-check-input" type="radio" id="radio3Example1" />
-                                                <label asp-for="rating3" class="control-label"></label>
-                                            </div>
-                                            <div>
-                                                <input asp-for="rating4" value="6" class="form-check-input" type="radio" id="radio3Example1" />
-                                                <label asp-for="rating4" class="control-label"></label>
-                                            </div>
-                                            <div>
-                                                <input asp-for="rating5" value="6" class="form-check-input" type="radio" id="radio3Example1" />
-                                                <label asp-for="rating5" class="control-label"></label>
-                                            </div>
-                                            
                                         </div>
-                     
+                                    </div>
+                                                            
                                     </div>
                                 </div>         
                                 <div class="col-6">
@@ -105,4 +118,4 @@
           
         </div>
     </div>
-}
+

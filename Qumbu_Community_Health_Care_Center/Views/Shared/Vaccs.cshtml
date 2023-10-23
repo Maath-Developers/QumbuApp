@@ -38,7 +38,9 @@
 
 	<link rel="stylesheet" href="~/css/css/flaticon.css">
 	<link rel="stylesheet" href="~/css/css/style.css">
-</head>
+	<!-- site css -->
+@*  	<link rel="stylesheet" href="~/css/css/css/css/style.css"/>
+ *@ </head>
 @if (User.IsInRole("Patient"))
 {
 	<body>
@@ -46,16 +48,20 @@
 			<nav id="sidebar" class="sidebar js-sidebar">
 				<div class="sidebar-content js-simplebar">
 					 <div class="user_info">
-                                    <h6>
-                                        <span class="text-light">
-                                            @UserManager.GetUserAsync(User).Result.FirstName  @UserManager.GetUserAsync(User).Result.LastName
-                                        </span>
-                                    </h6>
-                                    <p><span class="online_animation"></span> Online</p>
+						<a class="sidebar-brand" href="index.html">
+							<span class="align-middle"><img class="img-responsive" width="200" src="~/_Images/2.png" alt="#" /></span>
+						</a>
+                                    @* <h6> *@
+                                        @* <span class="text-light"> *@
+											@* <a>
+												@UserManager.GetUserAsync(User).Result.FirstName  @UserManager.GetUserAsync(User).Result.LastName
+
+											</a> *@
+                                        @* </span> *@
+                                    @* </h6> *@
+                                   @*  <p><span class="online_animation"></span> Online</p> *@
                                 </div>
-					<a class="sidebar-brand" href="index.html">
-						<span class="align-middle"><img class="img-responsive" width="200" src="~/_Images/2.png" alt="#" /></span>
-					</a>
+					
 
 					<ul class="sidebar-nav">
 
@@ -72,7 +78,7 @@
 						</li>
 						<li class="sidebar-item">
 							<a asp-controller="Appointments" asp-action="Vaccination" class="sidebar-link">
-								<i class="align-middle" data-feather="calendar"></i> <span class="align-middle">Appointment</span>
+								<i class="align-middle" data-feather="calendar"></i> <span class="align-middle">Appointments</span>
 							</a>
 						</li>
 
@@ -96,7 +102,7 @@
 						</li>
 
 						<li class="sidebar-item">
-							<a asp-controller="Vaccs" asp-action="IndexFeedback" class="sidebar-link">
+							<a asp-controller="Vaccs" asp-action="VaccineFeedback" class="sidebar-link">
 								<i class="align-middle" data-feather="twitch"></i> <span class="align-middle">Feedback</span>
 							</a>
 						</li>
@@ -106,6 +112,7 @@
 								<i class="align-middle" data-feather="twitch"></i> <span class="align-middle">Reports</span>
 							</a>
 						</li>
+						
 
 						<li class="sidebar-item">
 							<a asp-controller="Home" asp-action="Landing2" class="sidebar-link">
@@ -132,9 +139,7 @@
 									<i class="align-middle" data-feather="settings"></i>
 								</a>
 
-								@* <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
-									<img src="~/_Images/logo/user-solid.svg" class="avatar img-fluid rounded me-1" alt="Charles Hall" /> <span class="text-dark">@UserManager.GetUserAsync(User).Result.FirstName  @UserManager.GetUserAsync(User).Result.LastName</span>
-								</a> *@
+								
 								<div class="user_info">
 									<h6>
 										<span class="text-light">
@@ -451,6 +456,11 @@
 						<li class="sidebar-item ">
 							<a asp-controller="Vaccs" asp-action="Record" class="sidebar-link">
 								<i class="align-middle" data-feather="home"></i> <span class="align-middle">Patient Records</span>
+							</a>
+						</li>
+						<li class="sidebar-item ">
+							<a asp-controller="Vaccs" asp-action="IndexFeedback" class="sidebar-link">
+								<i class="align-middle" data-feather="home"></i> <span class="align-middle">Patient Feedback</span>
 							</a>
 						</li>
 
