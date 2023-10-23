@@ -78,6 +78,12 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             var applicationDbContext = Context.Appointments.Include(a => a.MainUser).Where(a => a.Purpose == "Vaccination").ToList();
             return View(applicationDbContext);
         }
+        public async Task<IActionResult> Prenatal()
+        {
+
+            var applicationDbContext = Context.Appointments.Include(a => a.MainUser).Where(a => a.Purpose == "Prenatal").ToList();
+            return View(applicationDbContext);
+        }
         //admin creates appointment based on the patient id
         public IActionResult Create()
         {
@@ -119,7 +125,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
                         $"" +
                         $"<h1>Qumbu Healthcare Center!</h1>" +
                         $"<p></p>" +
-                        $"<p> Thank for booking with us.</P>" +
+                        $"<p> Thanks for booking with us.</P>" +
                         $"<p>Take note that your appointment has been booked successfully</P>" + 
                         $"<Strong><p>Appointment Date: {appointments.Date_Time}</P></strong>" +
                         

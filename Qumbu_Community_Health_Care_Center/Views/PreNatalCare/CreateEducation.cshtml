@@ -35,12 +35,26 @@
                     </div>
                     <div class="form-group">
                         <label asp-for="Description" class="control-label"></label>
-                        <input asp-for="Description" class="form-control" />
+                        <textarea asp-for="Description" class="form-control"></textarea>
                         <span asp-validation-for="Description" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label asp-for="Category" class="control-label"></label>
-                        <input asp-for="Category" class="form-control" />
+                        <select asp-for="Category" class="form-control">
+                            <option value="">Select</option>
+                            <option>Introduction to Baby Basics and Body Vocabulary</option>
+                            <option>Health after the birth</option>
+                            <option>Nutrition and Building Healthy Eating Habits</option>
+                            <option>Exercises to keep you feet and active</option>
+                            <option>Pregnancy health and wellbeing</option>
+                            <option>Breastfeeding</option>
+                            <option>Safe sleeping and settling.</option>
+                            <option>Safe sleeping and settling.</option>
+                            <option>Pain relief during labour</option>
+                            <option>The role of the support person</option>
+                            <option>The different stages of labour</option>
+                            <option>The signs of labour and when to call the hospital</option>
+                        </select>
                         <span asp-validation-for="Category" class="text-danger"></span>
                     </div>
                     <div class="form-group">

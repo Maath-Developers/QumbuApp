@@ -180,7 +180,7 @@ namespace Qumbu_Community_Health_Care_Center.Areas.Identity.Pages.Account
                         protocol: Request.Scheme);
                     string applicationName = "Qumbu Health Care Centre";
                     string username = user.FirstName + " " + user.LastName;
-                    string supportEmail = "monkimajor@gmail.com";
+                    string supportEmail = "qumbucommunityhealth@gmail.com";
 
                     await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
                         $"<html><head><style>body{{font-family:Arial,sans-serif;}}" +
