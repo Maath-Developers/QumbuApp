@@ -20,14 +20,14 @@
     @if (Model.Count() > 0)
     {
 
-        <table id="myTable" table class="table table-hover" style="width:100%">
+        <table id="myTable" table class="table table-hover  table-sm" style="width:100%">
             <thead class="table-secondary">
                 <tr>
                     <th>
                         VisitPurpose
                     </th>
                     <th>
-                        FirstName
+                        Patient Name
                     </th>
                     <th>
                         Date
@@ -44,8 +44,8 @@
                     <tr>
                         <td width="20%">@v.VisitPurpose</td>
                         <td width="20%">
-                            @v.FirstName
-                            @v.LastName
+                            @v.MainUser.FirstName
+                            @v.MainUser.LastName
                         </td>
                         <td width="20%">@v.Date</td>
                         <td width="20%">

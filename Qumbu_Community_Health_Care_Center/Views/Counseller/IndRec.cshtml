@@ -24,11 +24,11 @@
     @if (Model.Count() > 0)
     {
 
-        <table id="myTable" table class="table table-hover" style="width:100%">
+        <table id="myTable" table class="table table-hover  table-sm" style="width:100%">
             <thead class="table-secondary">
                 <tr>
                     <th>
-                        FirstName
+                        Patient Name
                     </th>
                      <th>
                        Background
@@ -52,7 +52,10 @@
                 @foreach (var ind in Model)
                 {
                     <tr>
-                        <td width="20%">@ind.PatientID</td>
+                        <td width="20%">
+                            @ind.MainUser.FirstName
+                            @ind.MainUser.LastName
+                        </td>
                         <td width="20%">@ind..Background</td>
                         <td width="20%">@ind.CounsellingApproach</td>
                         <td width="20%">@ind.Goals</td> 

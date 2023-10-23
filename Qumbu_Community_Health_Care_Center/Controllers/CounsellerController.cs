@@ -199,7 +199,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         }
         public IActionResult Referral()
         {
-            IEnumerable<Referrals> Referrals = Context.Referral;
+            IEnumerable<Referrals> Referrals = Context.Referral.Include(a => a.MainUser);
             return View(Referrals);
         }
         public ActionResult Reports()
@@ -288,12 +288,12 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         }
         public IActionResult IndRec()
         {
-            IEnumerable<Profiling> profilings = Context.Profiling;
+            IEnumerable<Profiling> profilings = Context.Profiling.Include(a => a.MainUser);
             return View(profilings);
         }
         public IActionResult VisitRec()
         {
-            IEnumerable<Profiling> profilings = Context.Profiling;
+            IEnumerable<Profiling> profilings = Context.Profiling.Include(a => a.MainUser);
             return View(profilings);
         }
 
