@@ -84,10 +84,6 @@
                     @foreach (Appointment app in ViewBag.App)
                     {
                         <tr>
-                            @* <td width="20%">@app.MainUser.FirstName (@app.MainUser.LastName) </td> *@
-
-                            @* <td width="20%">@app.Name</td>
-                    <td width="20%">@app.Surname</td> *@
                             <td>
                                 @foreach (ApplicationUser user in ViewBag.Patient)
                                 {
@@ -187,14 +183,6 @@
                 </table>
           
 
-
-        <br />
-        @if (User.IsInRole("Admin"))
-        {
-            <div>
-                <a asp-action="Index" class="btn btn-info">Back to list</a>
-            </div>
-        }
 
     }
 </div>    

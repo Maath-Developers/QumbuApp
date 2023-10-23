@@ -12,22 +12,12 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         {
             return View();
         }
-        public IActionResult Appointment_Booking()
-        {
-            return View();
-        }
+       
         public IActionResult Doctor()
         {
             return View();
         }
-        public IActionResult Create_File()
-        {
-            return View();
-        }
-        public IActionResult Manage_Queue()
-        {
-            return View();
-        }
+       
 		public IActionResult Admin_Report()
 		{
 			return View();

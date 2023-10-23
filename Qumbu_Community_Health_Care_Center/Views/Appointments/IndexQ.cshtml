@@ -10,23 +10,21 @@
     Layout = "~/Views/Shared/_Walk-in-Layout.cshtml";
 }
 
+<div>
+    <h4 class="text-start bg-primary p-2">
+        Queue Patient
+    </h4>
+</div>
+<hr />
+<div class="row">
 
-<div class="row p-0">
-    
-    
     <div class="col-md-6">
-        <div>
-            <h4 class="text-start bg-primary p-2">
-                Queue Patient
-            </h4>
-        </div>
         <form asp-controller="Appointments" asp-action="Queue">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-           
+
             <div class="form-group">
                 <label asp-for="PatientID" class="control-label">Patient Name</label>
                 <select asp-for="PatientID" class="form-control">
-                    <option value="SelectPatient">Select Patient</option>
                     @foreach (ApplicationUser user in ViewBag.Patient)
                     {
                         <option value="@user.Id">@user.FirstName @user.LastName</option>
@@ -39,59 +37,55 @@
                 <input asp-for="Delay" class="form-control" />
                 <span asp-validation-for="Delay" class="text-danger"></span>
             </div>
-           
+
             <div class="form-group">
                 <label asp-for="Condition" class="control-label"></label>
                 <select asp-for="Condition" class="form-control">
-                    <option value="Urgent">Select Condition</option>
                     <option value="Urgent">Urgent</option>
                     <option value="Normal">Normal</option>
                 </select>
                 <span asp-validation-for="Condition" class="text-danger"></span>
             </div>
-            <div class="form-group text-start">
-                <input type="submit" value="Create" class="btn btn-primary p-3" />
+            <div class="form-group text-end">
+                <input type="submit" value="Create" class="btn btn-primary p-1" />
             </div>
         </form>
     </div>
 </div>
-<div class="col-md-6">
-    <div class="row">
-        <br />
-        <table class="table table-bordered table-striped" style="width:100%">
-            <thead class="table-primary">
+<div class="row">
+    <br />
+    <table class="table table-bordered table-striped" style="width:100%">
+        <thead class="table-primary">
+            <tr>
+                <th>
+                    Patient Name
+                </th>
+                <th>
+                    Delay Time
+                </th>
+                <th>
+                    Condition
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Queue que in ViewBag.queue)
+            {
                 <tr>
-                    <th>
-                        Patient Name
-                    </th>
-                    <th>
-                        Delay Time
-                    </th>
-                    <th>
-                        Condition
-                    </th>
-
+                    <td>
+                        @foreach (ApplicationUser user in ViewBag.Patient)
+                        {
+                            <option value="@user.Id">@user.FirstName @user.LastName</option>
+                        }
+                    </td>
+                    <td width="20%">@que.Delay</td>
+                    <td width="20%">@que.Condition</td>
                 </tr>
-            </thead>
-            <tbody>
-                @foreach (Queue que in ViewBag.queue)
-                {
-                    <tr>
-                        <td width="33%">
-                            @foreach (ApplicationUser user in ViewBag.Patient)
-                            {
-                                <option value="@user.Id">@user.FirstName @user.LastName</option>
-                            }
-                        </td>
-                        <td width="33%">@que.Delay</td>
-                        <td width="33%">@que.Condition</td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-    </div>
+            }
+        </tbody>
+    </table>
 </div>
-
 
 @* <div>
     <a asp-action="Index">Back to List</a>

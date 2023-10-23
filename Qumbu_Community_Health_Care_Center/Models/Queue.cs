@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Qumbu_Community_Health_Care_Center.Areas.Identity.Data;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Qumbu_Community_Health_Care_Center.Models
@@ -7,11 +8,15 @@ namespace Qumbu_Community_Health_Care_Center.Models
 	{
 		[Key]
 		public int QueID { get; set; }
-		public int? AppointmentID { get; set; }
-		[ForeignKey(nameof(AppointmentID))]
+
+		public string? PatientID { get; set; }
+		[ForeignKey("PatientID")]
 		[DataType(DataType.Time)]
 		public DateTime Delay { get; set; }
-		public virtual Appointment? Appointment { get; set; }
-		public string? Status { get; set; }
-	}
+        public virtual ApplicationUser? MainUser { get; set; }
+       
+		public string? Condition { get; set; }
+        
+
+    }
 }

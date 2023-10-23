@@ -28,24 +28,35 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             var applicationDbContext = Context.Appointments.Include(a => a.MainUser).Where(a => a.PatientID == user);
             return View(await applicationDbContext.ToListAsync());
         }
-		public IActionResult Queue(int? Id)
+		
+		public IActionResult Queue()
 		{
-			if(Id != null)
-            {
-                ViewBag.Id = Id;
-            }
-			return View();
+            var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            ViewBag.queue = Context.Queue.Where(a => a.PatientID == user).ToList();
+            ViewBag.Patient = (from U in Context.Users
+                               join UR in Context.UserRoles on U.Id equals UR.UserId
+                               join R in Context.Roles on UR.RoleId equals R.Id
+                               where R.Name == "Patient"
+                               select U).ToList();
+            return View();
 		}
 		[HttpPost]
 		[ValidateAntiForgeryToken]
-		public IActionResult Queue(Queue queue)
+		public async Task<IActionResult> Queue(Queue queue)
 		{
-			//if (Id != null)
-			//{
-			//	ViewBag.Id = Id;
-			//}
-			return View();
-		}
+            var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            queue.PatientID = user;
+            if (ModelState.IsValid)
+            {
+                Context.Queue.Add(queue);
+                await Context.SaveChangesAsync();
+                TempData["Success"] = "Successfully Queued";
+                return RedirectToAction("Queue");
+            }
+            ViewBag.queue = Context.Queue.Where(a => a.PatientID == user).ToList();
+            ViewData["PatientID"] = new SelectList(Context.Users, "Id", "Id", queue.PatientID);
+            return View(queue);
+        }
 		public async Task<IActionResult> All_Appointments()
         {
            
@@ -84,6 +95,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             var applicationDbContext = Context.Appointments.Include(a => a.MainUser).Where(a => a.Purpose == "Prenatal").ToList();
             return View(applicationDbContext);
         }
+      
         //admin creates appointment based on the patient id
         public IActionResult Create()
         {
@@ -94,6 +106,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
                                   join R in Context.Roles on UR.RoleId equals R.Id
                                   where R.Name == "Patient"
                                   select U).ToList();
+
             return View();
         }
         [HttpPost]
@@ -109,9 +122,9 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
                 TempData["Success"] = "Succesfully booked";
                 try
                 {
-                    string supportEmail = "Qumbuhealthcare@gmail.com";
+                    string supportEmail = "qumbucommunityhealth@gmail.com";
                     var email = User.FindFirstValue(ClaimTypes.Email);
-                    await _email.SendEmailAsync(email, "For appointment",
+                    await _email.SendEmailAsync(email, "Appointment Booking",
                         $"<html><head><style>body{{font-family:Arial,sans-serif;}}" +
                         $"h1{{color:#336699;}}" +
                         $".cta-button{{background-color:#336699;color:@fff;" +
@@ -139,7 +152,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
                 }
                 catch (Exception ex)
                 {
-                    TempData["Success"] = "Succesfully booked but email notification failed.";
+                    TempData["Success"] = "Successfully booked but email notification failed.";
                 }
                 return RedirectToAction("Create");
             }
