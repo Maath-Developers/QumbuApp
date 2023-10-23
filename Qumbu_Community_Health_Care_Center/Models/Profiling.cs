@@ -10,7 +10,10 @@ namespace Qumbu_Community_Health_Care_Center.Models
     {
         [Key]
         public int ProfileID { get; set; }
-        public string? ID { get; set; }
+        //public string? ID { get; set; }
+        public string? Id { get; set; }
+        [ForeignKey("Id")]
+        public virtual ApplicationUser? User { get; set; }
         public string? email { get; set; }
         public string? Cell { get; set; }
         [DisplayName("First Name")]

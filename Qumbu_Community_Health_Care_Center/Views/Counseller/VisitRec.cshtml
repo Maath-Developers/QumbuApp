@@ -20,8 +20,8 @@
     @if (Model.Count() > 0)
     {
 
-        <table id="myTable" table class="table table-bordered table-striped" style="width:100%">
-            <thead>
+        <table id="myTable" table class="table table-hover" style="width:100%">
+            <thead class="table-secondary">
                 <tr>
                     <th>
                         VisitPurpose
@@ -44,11 +44,11 @@
                     <tr>
                         <td width="20%">@v.VisitPurpose</td>
                         <td width="20%">
-                            @v.MainUser.FirstName
-                            @v.MainUser.LastName
+                            @v.FirstName
+                            @v.LastName
                         </td>
                         <td width="20%">@v.Date</td>
-                        <td>
+                        <td width="20%">
                             <div class="w-50 btn-group" role="group">
                                 <a asp-controller="Counseller" asp-action="DeleteLogs" asp-route-ID="@v.ProfileID" class="btn btn-danger mx-1">Remove</a>
                             </div>

@@ -97,6 +97,11 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
                 Context.SaveChanges();
                 return RedirectToAction("IndRec");
             }
+            ViewBag.Patients = (from U in Context.Users
+                                join UR in Context.UserRoles on U.Id equals UR.UserId
+                                join R in Context.Roles on UR.RoleId equals R.Id
+                                where R.Name == "Patient"
+                                select U).ToList();
             return View(pro);
         }
         public IActionResult Update(int? ID)
@@ -105,7 +110,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             {
                 return NotFound();
             }
-            var obj = Context.PatientReg.Find(ID);
+            var obj = Context.Profiling.Find(ID);
             if (obj == null)
             {
                 return NotFound();
@@ -117,11 +122,11 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         //POST-Update updating the current data we have 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Update(PatientReg pat)
+        public IActionResult Update(Profiling pro)
         {
-            Context.PatientReg.Update(pat);
+            Context.Profiling.Update(pro);
             Context.SaveChanges();
-            return RedirectToAction("PatientC");
+            return RedirectToAction("IndRec");
         }
         public IActionResult DeleteReferrals(int? ID)
         {
