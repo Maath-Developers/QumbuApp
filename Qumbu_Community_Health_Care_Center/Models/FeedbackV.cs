@@ -12,9 +12,9 @@ namespace Qumbu_Community_Health_Care_Center.Models
         [Key]
         public int FeedbackID { get; set; }
 
-        public string? PatientID { get; set; }
-        [ForeignKey("PatientID")]
-        public virtual ApplicationUser? Patient { get; set; }
+        //public string? PatientID { get; set; }
+        //[ForeignKey("PatientID")]
+        //public virtual ApplicationUser? Patient { get; set; }
 
         [Required]
         [DisplayName("First Name")]
@@ -24,25 +24,25 @@ namespace Qumbu_Community_Health_Care_Center.Models
         [DisplayName("Last Name")]
         public string? Surname { get; set; }
 
-        [Required]
-        [DisplayName("Very Good")]
-        public int? rating1 { get; set; }
+        
+        
+        public int? rating { get; set; }
 
-        [Required]
-        [DisplayName("Good")]
-        public int? rating2 { get; set; }
+        
+        //[DisplayName("Good")]
+        //public int? rating2 { get; set; }
 
-        [Required]
-        [DisplayName("Mediocre")]
-        public int? rating3 { get; set; }
+        
+        //[DisplayName("Mediocre")]
+        //public int? rating3 { get; set; }
 
-        [Required]
-        [DisplayName("Bad")]
-        public int? rating4 { get; set; }
+      
+        //[DisplayName("Bad")]
+        //public int? rating4 { get; set; }
 
-        [Required]
-        [DisplayName("Very Bad")]
-        public int? rating5 { get; set; }
+        
+        //[DisplayName("Very Bad")]
+        //public int? rating5 { get; set; }
 
         [Required]
         [DisplayName("Leave your comment here")]
