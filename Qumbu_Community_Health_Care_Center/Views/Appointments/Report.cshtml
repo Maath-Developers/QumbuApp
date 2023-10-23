@@ -9,13 +9,18 @@
     ViewData["Title"] = "Report";
     Layout = "~/Views/Shared/_CounsellorLayout.cshtml";
 }
+<head>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/dataTables.bootstrap4.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.bootstrap4.min.css" />
+</head>
 
 <div id="MainDiv">
     <div id="Header" class="bg-info">
         <h2 class="m-1 pt-4 text-center text-white">Counselling Records</h2>
     </div>
 </div>
-<div class="container-fluid border p-4">
+<div class="container-fluid p-4">
     <a href="javascript:window.print()" id="btnPrint" class="btn btn-info">Print Report</a>
     @*<button id="btnPrint" class="btn btn-info">View Report</button>*@
     <div id="Information" class="row">
@@ -32,7 +37,7 @@
             <p>Email Address: @UserManager.GetUserAsync(User).Result.Email</p>
         </div>
     </div>
-        <table id="myTable" table class="table table-bordered table-striped" style="width:100%">
+        <table id="myTable" table class="table table-bordered" style="width:100%">
             <thead>
                 <tr>
                     <th>
@@ -94,6 +99,8 @@
     window.onload = function(){
         console.log("Its working");
         document.getElementById('Information').style.visibility = "hidden";
+        document.getElementById('MyTable').id = "Table";
+
 
     }
     const Prntbtn = document.getElementById('btnPrint');
@@ -104,12 +111,22 @@
         document.getElementById('Header').style.visibility = "hidden";
         document.getElementById('NavbarSide').style.visibility = "hidden"; 
         document.getElementById('sidebar').style.visibility = "hidden";
+        document.getElementById('mainDiv').style.visibility = "hidden";
         Prntbtn.style.visibility = "hidden";
         window.print();
         Prntbtn.style.visibility = "visible";
         document.getElementById('Information').style.visibility = "hidden"; 
+        document.getElementById('MainDiv').style.visibility = "hidden"; 
         document.getElementById('Header').style.visibility = "visible";
         document.getElementById('NavbarSide').style.visibility = "visible"; 
         document.getElementById('sidebar').style.visibility = "visible";
     }
 </script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.4/js/dataTables.bootstrap4.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.bootstrap4.min.js"></script>
