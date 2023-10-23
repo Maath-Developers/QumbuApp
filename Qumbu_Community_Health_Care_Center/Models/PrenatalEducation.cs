@@ -10,16 +10,22 @@ namespace Qumbu_Community_Health_Care_Center.Models
     {
         [Key]
         public int ID { get; set; }
+        [Required]
         public string? Title { get; set; }
+        [Required]
         public string? Description { get; set; }
+        [Required]
         public string? Category { get; set; }
         [DisplayName("Publish date")]
+        [Required]
         public DateTime PublishDate { get; set; } 
         public string? Author { get; set; }
+        [Required]
         public string? ImageUrl { get; set; }
         public string? NurseID { get; set; }
         [ForeignKey("PatientID")]
         public virtual ApplicationUser? MainUser { get; set; }
+        [Required]
         public string? PdfUrl { get; set; }
         [DisplayName("Choose the cover image of content")]
         [NotMapped]

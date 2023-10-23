@@ -7,17 +7,14 @@
 }
 
 <div class="container p-3">
-    <div class="row pt-4">
-        <h1 class="display-4">Prenatal Education</h1>
-        <br />
-        <br />
-        <div>
-            <a asp-controller="PrenatalCare" asp-action="CreateRecord" class="text-primary">Add Health Record</a>
-        </div>
-       
-        
+    <div class="bg-primary p-3 mb-2">
+        <h4 class="text-white text-center">Health Monitoring</h4>
+         
     </div>
-    <br /><br />
+    <div>
+        <a asp-controller="PrenatalCare" asp-action="CreateRecord" class="text-primary">Add Health Record</a>
+    </div>
+    <br />
 
     @if (Model.Count() > 0)
     {
