@@ -292,6 +292,11 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         {
             IEnumerable<Profiling> profilings = Context.Profiling.Include(a => a.MainUser);
             return View(profilings);
+        } 
+        public IActionResult PatRec()
+        {
+            IEnumerable<Profiling> profilings = Context.Profiling.Include(a => a.MainUser);
+            return View(profilings);
         }
         public IActionResult VisitRec()
         {
