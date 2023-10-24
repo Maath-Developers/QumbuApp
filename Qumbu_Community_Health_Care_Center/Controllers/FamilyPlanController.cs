@@ -327,6 +327,25 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             IEnumerable<Feedbacks> feedlist = dbContext.Feedbacks;
             return View(feedlist);
         }
+        public IActionResult CreateReferrals()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult CreateReferrals(Feedbacks feedback)
+        {
+            if (ModelState.IsValid)
+            {
+                dbContext.Feedbacks.Add(feedback);
+                dbContext.SaveChanges();
+                return RedirectToAction("ViewReferrals");
+            }
+            return View(feedback);
+        }
+
 
 
 
