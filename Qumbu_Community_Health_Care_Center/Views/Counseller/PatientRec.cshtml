@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Qumbu_Community_Health_Care_Center.Models.Profiling>
+
+@{
+    Layout = "_CounsellorLayout";
+}
+
+<table id="myTable" table class="table table-hover  table-sm" style="width:100%">
+    <thead class="table-secondary">
+        <tr>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.CounsellingType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CounsellingApproach)
+            <th>
+                @Html.DisplayNameFor(model => model.Background)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Goals)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.comments)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.recom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MainUser)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CounsellingType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CounsellingApproach)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Background)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Goals)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.comments)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.recom)
+                </td>
+                <td>
+                    @item.MainUser.FirstName
+                    @item.MainUser.LastName
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ProfileID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.ProfileID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ProfileID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
