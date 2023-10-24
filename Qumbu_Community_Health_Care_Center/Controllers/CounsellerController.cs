@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Qumbu_Community_Health_Care_Center.Areas.Identity.Data;
 using Qumbu_Community_Health_Care_Center.Models;
 using System.IO;
-
+using System.Security.Claims;
 
 namespace Qumbu_Community_Health_Care_Center.Controllers
 
@@ -295,6 +295,12 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         {
             IEnumerable<Profiling> profilings = Context.Profiling.Include(a => a.MainUser);
             return View(profilings);
+        }  
+        public IActionResult IndividualRec()
+        {
+            var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var applicationDbContext = Context.Profiling.Where(a => a.PatientID == user).Include(a => a.MainUser);
+            return View(applicationDbContext.ToListAsync());
         }
 
 

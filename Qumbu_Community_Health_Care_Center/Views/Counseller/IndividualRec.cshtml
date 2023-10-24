@@ -1,0 +1,144 @@
+﻿@model IEnumerable<Qumbu_Community_Health_Care_Center.Models.Profiling>
+
+@*<p>
+    <a asp-action="Create">Create New</a>
+</p>*@
+<table class="table">
+    <thead>
+        <tr>
+            @*<th>
+                @Html.DisplayNameFor(model => model.User)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cell)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AppointmentID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Time)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VisitPurpose)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.CounsellingType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CounsellingApproach)
+            </th>
+           @* <th>
+                @Html.DisplayNameFor(model => model.GroupName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DOB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)*@
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Background)
+            </th>
+           @* <th>
+                @Html.DisplayNameFor(model => model.CounsellingPlan)
+            </th>*@
+            @*<th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.Goals)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.comments)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.recom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MainUser)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+           @* <td>
+                @Html.DisplayFor(modelItem => item.User.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cell)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AppointmentID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Time)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VisitPurpose)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.CounsellingType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CounsellingApproach)
+            </td>
+           @* <td>
+                @Html.DisplayFor(modelItem => item.GroupName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DOB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Background)
+            </td>
+           @* <td>
+                @Html.DisplayFor(modelItem => item.CounsellingPlan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Goals)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.comments)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.recom)
+            </td>
+            <td>
+                @item.MainUser.FirstName 
+                @item.MainUser.LastName
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ProfileID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ProfileID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ProfileID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
