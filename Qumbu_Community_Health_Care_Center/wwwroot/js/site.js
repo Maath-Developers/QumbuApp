@@ -17,7 +17,7 @@ setTimeout(function () {
         tempdat.remove();
         tempdat.textContent = '';
     }
-}, 5000);
+}, 3000);
 // Wait for the document to load
 document.addEventListener('DOMContentLoaded', function () {
     // Check if the student has registered (replace 'hasRegistered' with your condition)
