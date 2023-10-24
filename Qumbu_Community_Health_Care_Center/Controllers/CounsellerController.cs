@@ -91,8 +91,8 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult CreateRe([Bind("ProfileID,PatientID,Background,CounsellingApproach,Goals,comments,recom")] Profiling pro)
         {
-            var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            pro.PatientID = user;
+            //var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            //pro.PatientID = user;
             if (ModelState.IsValid)
             {
                 Context.Profiling.Add(pro);
@@ -301,14 +301,14 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         public IActionResult IndividualRec()
         {
             var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            var applicationDbContext = Context.Profiling.Where(a => a.PatientID == user).Include(a => a.MainUser);
-            return View(applicationDbContext.ToListAsync());
+            var applicationDbContext = Context.Profiling.Where(a => a.PatientID == user).Include(a => a.MainUser).FirstOrDefault();
+            return View(applicationDbContext);
         }
         public IActionResult PatientRec()
         {
             var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var applicationDbContext = Context.Profiling.Where(a => a.PatientID == user).Include(a => a.MainUser);
-            return View(applicationDbContext.ToListAsync());
+            return View(applicationDbContext);
         }
 
 
