@@ -48,23 +48,31 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         [HttpGet]
         public IActionResult CreateRecord()
         {
+            try
+            {
             ViewBag.Patients = (from U in dbContext.Users
                                 join UR in dbContext.UserRoles on U.Id equals UR.UserId
                                 join R in dbContext.Roles on UR.RoleId equals R.Id
                                 where R.Name == "Patient"
                                 select U).ToList();
+            }
+            catch (System.NullReferenceException)
+            {
+
+            }
             return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult CreateRecord(HealthRecord record)
         {
-            if (ModelState.IsValid)
-            {
-                dbContext.HealthRecords.Add(record);
-                dbContext.SaveChanges();
-                return RedirectToAction("IndexRecord");
-            }
+                if (ModelState.IsValid)
+                {
+                    dbContext.HealthRecords.Add(record);
+                    dbContext.SaveChanges();
+                    return RedirectToAction("IndexRecord");
+                }
+          
             return View(record);
         }
         public IActionResult UpdateRecord(int? ID)

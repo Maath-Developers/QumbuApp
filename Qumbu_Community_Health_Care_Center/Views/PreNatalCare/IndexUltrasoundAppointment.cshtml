@@ -9,7 +9,7 @@
     <div class="bg-primary p-3 mb-2">
         <h4 class="text-white text-center">Fetal Monitoring</h4>
     </div>
-
+    <br/>
 </div>
 
 @if (User.IsInRole("Nurse"))
@@ -23,7 +23,7 @@
     <thead class="table-dark">
         <tr>
             <th>
-                First Name
+                Full Name
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.AppointmentDate)
@@ -58,6 +58,7 @@
             <tr>
                 <td>
                     @Html.DisplayFor(modelItem => item.MainUser.FirstName) 
+                    @Html.DisplayFor(modelItem => item.MainUser.LastName) 
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.AppointmentDate)
