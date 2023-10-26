@@ -20,7 +20,7 @@ namespace Qumbu_Community_Health_Care_Center.Models
         public string? FetalHeartRate { get; set; }
         [Required]
         public string? Observations { get; set; }
-        [DisplayName("Is gender determined?")]
+        [DisplayName("Gender")]
         public string? GenderDetermined { get; set; }
         [Required]
         public string? Comments { get; set; }

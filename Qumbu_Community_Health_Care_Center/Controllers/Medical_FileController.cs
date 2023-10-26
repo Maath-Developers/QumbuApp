@@ -58,7 +58,14 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         }
         public IActionResult Create_File()
         {
-            ViewData["PatientID"] = new SelectList(_context.Users, "Id", "Id");
+            var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            ViewBag.App = _context.Appointments.Where(a => a.PatientID == user).ToList();
+            ViewBag.Patient = (from U in _context.Users
+                               join UR in _context.UserRoles on U.Id equals UR.UserId
+                               join R in _context.Roles on UR.RoleId equals R.Id
+                               where R.Name == "Patient"
+                               select U).ToList();
+
             return View();
         }
 
@@ -81,6 +88,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewBag.file = _context.Medical_File.Where(a => a.PatientID == user).ToList();
             ViewData["PatientID"] = new SelectList(_context.Users, "Id", "Id", medical_File.PatientID);
             return View(medical_File);
         }
