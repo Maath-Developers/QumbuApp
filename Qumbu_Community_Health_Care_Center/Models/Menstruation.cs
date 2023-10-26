@@ -16,7 +16,9 @@ namespace Qumbu_Community_Health_Care_Center.Models
 		[Required]
 		[DisplayName("Upcoming date for periods?")]
 		public DateTime EndDate { get; set; }
-		public int difference { get; set; }
+        [Required]
+        [DisplayName("Days to be on periods?")]
+        public int difference { get; set; }
 
 
 	}
