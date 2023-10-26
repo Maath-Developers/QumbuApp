@@ -289,7 +289,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         }
         public async Task<IActionResult> ViewReports()
         {
-            ViewBag.Date = DateTime.Now.ToString("dd/mm/yyyy");
+            ViewBag.Date = DateTime.Now.ToString("dd/mmmm/yyyy");
             ViewBag.Time = DateTime.Now.ToString("HH:MM");
             var applicationDbContext = dbContext.FamilyReg.Include(a => a.MainUser).ToList();
             return View(applicationDbContext);
