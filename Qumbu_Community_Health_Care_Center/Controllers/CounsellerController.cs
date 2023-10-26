@@ -160,7 +160,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             return RedirectToAction("VisitRec");
 
         }
-        public IActionResult UpdateRe(int? ID)
+        public IActionResult UpdateReferral(int? ID)
         {
             if (ID == null || ID == 0)
             {
@@ -171,20 +171,22 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             {
                 return NotFound();
             }
-
+            ViewBag.Patients = (from U in Context.Users
+                                join UR in Context.UserRoles on U.Id equals UR.UserId
+                                join R in Context.Roles on UR.RoleId equals R.Id
+                                where R.Name == "Patient"
+                                select U).ToList();
             return View(obj);
 
         }
         //POST-Update updating the current data we have 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult UpdateRe(PatientReg pat)
+        public IActionResult UpdateReferral(PatientReg pat)
         {
-            ViewBag.Date = DateTime.Now.ToString("dd/mm/yyyy");
-            ViewBag.Time = DateTime.Now.ToString("HH:MM");
             Context.PatientReg.Update(pat);
             Context.SaveChanges();
-            return RedirectToAction("Record");
+            return RedirectToAction("Referral");
         }
         public IActionResult CreateF()
         {
