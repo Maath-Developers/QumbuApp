@@ -53,6 +53,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
                                 join R in dbContext.Roles on UR.RoleId equals R.Id
                                 where R.Name == "Patient"
                                 select U).ToList();
+            
             return View();
         }
         [HttpPost]
@@ -65,6 +66,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
                 dbContext.SaveChanges();
                 return RedirectToAction("IndexRecord");
             }
+          
             return View(record);
         }
         public IActionResult UpdateRecord(int? ID)
