@@ -21,7 +21,6 @@ namespace Qumbu_Community_Health_Care_Center.Models
         [Required(AllowEmptyStrings = false, ErrorMessage = "Please enter your ID number")]
         [Display(Name = "ID Number")]
         [MaxLength(13)]
-        [MinLength(13)]
         public string? IDNumber { get; set; }
 
         [Required]
@@ -53,6 +52,7 @@ namespace Qumbu_Community_Health_Care_Center.Models
         [AllowNull]
         public string? NextfoKin { get; set; }
 
+        [MaxLength(10)]
         [Display(Name = "Cell Number")]
         [AllowNull]
         public string? kinCell { get; set; }

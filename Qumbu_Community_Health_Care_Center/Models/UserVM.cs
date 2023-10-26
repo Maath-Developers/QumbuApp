@@ -7,16 +7,18 @@ namespace Qumbu_Community_Health_Care_Center.Models
 		[Key]
 		public int UserID { get; set; }
 		[Required]
+		[Display(Name="Name")]
 		public string? FirstName { get; set; }
 		[Required]
-		public string? LastName { get; set; }
+        [Display(Name = "Surname")]
+        public string? LastName { get; set; }
 		[Required]
 		public string? Email { get; set; }
 		[Required]
-		public string? MobileNumber { get; set; }
+        [Display(Name = "Cell Number")]
+        public string? MobileNumber { get; set; }
 		[Required]
 		public string? Role { get; set; }
-        [Required]
         public string? Tittle { get; set; }
     }
 }

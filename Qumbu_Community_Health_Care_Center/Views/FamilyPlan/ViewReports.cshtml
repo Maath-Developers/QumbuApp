@@ -12,15 +12,17 @@
 
 @model IEnumerable<Qumbu_Community_Health_Care_Center.Models.FamilyReg>
 
-
+<head>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/dataTables.bootstrap4.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.bootstrap4.min.css" />
+</head>
     <div id="MainDiv" class="border p-4">
         <div id="Header" class="bg-info">
             <h4 class="m-1 text-center text-white">REPORT OF FAMILY PLANNING</h4>
         </div>
         <br/>
-       @* <button id="btnPrint" class="btn btn-info">
-            View Report
-        </button>*@
+       <a href="javascript:window.print()" id="btnPrint" class="btn btn-info">View Report</a>
         <div class="row">
             <div class="col-8">
                 <h4></h4>
@@ -133,3 +135,10 @@
         document.getElementById('sidebar').style.visibility = "visible";
     }
 </script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.11.4/js/dataTables.bootstrap4.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.bootstrap4.min.js"></script>

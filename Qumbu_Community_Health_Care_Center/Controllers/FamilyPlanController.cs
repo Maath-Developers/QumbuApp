@@ -121,32 +121,32 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
                 totalReg += Convert.ToInt32(familyReg.normal);
                 if(totalReg <= 30)
                 {
-                   TempData["Result"]= "Pills will be ";
+                   TempData["Result"]= "Pills will be suitable ";
                    TempData["_Image"] = "1";
                 }
                 else if( totalReg <= 40)
                 {
-                    TempData["Result"] = "1 month";
+                    TempData["Result"] = "1 month Injection will be suitable";
                     TempData["_Image"] = "2";
                 }
                 else if (totalReg <= 50)
                 {
-                    TempData["Result"] = "3 months";
+                    TempData["Result"] = "3 months Injection will be suitable";
                     TempData["_Image"] = "3";
                 }
                 else if (totalReg <= 60)
                 {
-                    TempData["Result"] = "1 implant";
+                    TempData["Result"] = "1 year implant will be suitable";
                     TempData["_Image"] = "4";
                 }
                 else if (totalReg <= 70)
                 {
-                    TempData["Result"] = "3 loop";
+                    TempData["Result"] = "3 years loop will be suitable";
                     TempData["_Image"] = "5";
                 }
                 else if (totalReg >= 80)
                 {
-                    TempData["Result"] = "Viginal Ring";
+                    TempData["Result"] = "Viginal Ring will be suitable";
                     TempData["_Image"] = "6";
                 }
                 familyReg .Total = totalReg;
