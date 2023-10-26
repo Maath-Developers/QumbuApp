@@ -293,11 +293,6 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             IEnumerable<Profiling> profilings = Context.Profiling.Include(a => a.MainUser);
             return View(profilings);
         } 
-        public IActionResult PatRec()
-        {
-            IEnumerable<Profiling> profilings = Context.Profiling.Include(a => a.MainUser);
-            return View(profilings);
-        }
         public IActionResult VisitRec()
         {
             IEnumerable<Profiling> profilings = Context.Profiling.Include(a => a.MainUser);
@@ -309,13 +304,6 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             var applicationDbContext = Context.Profiling.Where(a => a.PatientID == user).Include(a => a.MainUser).FirstOrDefault();
             return View(applicationDbContext);
         }
-        public IActionResult PatientRec()
-        {
-            var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            var applicationDbContext = Context.Profiling.Where(a => a.PatientID == user).Include(a => a.MainUser);
-            return View(applicationDbContext);
-        }
-
 
     }
 }
