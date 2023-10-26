@@ -31,24 +31,24 @@
 
         </div>
         <div class="card-body">
-            @* <div class="row">
-            <div class="col-md-3">
-            <div class="form-group">
-            <label asp-for="PatientID" class="control-label">Full Names</label>
-            <select asp-for="PatientID" class="form-control">
-            @foreach (ApplicationUser item in ViewBag.Patients)
-            {
-            <option value="@item.Id">@item.FirstName @item.LastName</option>
-            }
-            </select>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label asp-for="PatientID" class="control-label">Full Names</label>
+                        <select asp-for="PatientID" class="form-control">
+                            @foreach (ApplicationUser item in ViewBag.Patients)
+                            {
+                                <option value="@item.Id">@item.FirstName @item.LastName</option>
+                            }
+                        </select>
+                    </div>
+                </div>
             </div>
-            </div>
-            </div>*@
             <div class="row">
                 <div class="col-md-8">
                     <div class="col-10">
                         <label asp-for="Background"></label>
-                        <textarea asp-for="Background" disabled class="form-control" rows="6" id="Background" name="Background"></textarea>
+                        <textarea asp-for="Background" class="form-control" rows="6" id="Background" name="Background"></textarea>
                         <span asp-validation-for="Background" class="text-danger"></span>
                     </div>
                     <div class="col-8">
@@ -69,19 +69,19 @@
                     </div>
                     <div class="col-10">
                         <label asp-for="Goals"></label>
-                        <textarea asp-for="Goals" disabled class="form-control" rows="6" id="Goals" name="Goals"></textarea>
+                        <textarea asp-for="Goals" class="form-control" rows="6" id="Goals" name="Goals"></textarea>
                         <span asp-validation-for="Goals" class="text-danger"></span>
                     </div>
                     <br />
                     <div class="col-10">
                         <label asp-for="comments"></label>
-                        <textarea asp-for="comments" disabled class="form-control" rows="6" id="comments" name="comments"></textarea>
+                        <textarea asp-for="comments" class="form-control" rows="6" id="comments" name="comments"></textarea>
                         <span asp-validation-for="comments" class="text-danger"></span>
                     </div>
                     <br />
                     <div class="col-10">
                         <label asp-for="recom"></label>
-                        <textarea asp-for="recom" disabled class="form-control" rows="6" id="recom" name="recom"></textarea>
+                        <textarea asp-for="recom" class="form-control" rows="6" id="recom" name="recom"></textarea>
                         <span asp-validation-for="recom" class="text-danger"></span>
                     </div>
                 </div>
@@ -90,10 +90,10 @@
         <div class="form-group row">
             <div class="col-6 offset-2 row">
                 <div class="col">
-                    <a asp-action="IndRec" class="btn btn-info w-75">Back</a>
+                    <a asp-action="NewUpdate" class="btn btn-info w-75">Update</a>
                 </div>
                 <div class="col">
-                    <a asp-action="NewUpdate" disabled class="btn btn-info w-75">Update</a>
+                    <a asp-action="IndRec" class="btn btn-info w-75">Back</a>
                 </div>
             </div>
         </div>

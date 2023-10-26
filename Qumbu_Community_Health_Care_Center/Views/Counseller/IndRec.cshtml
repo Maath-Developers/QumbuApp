@@ -31,12 +31,12 @@
                         Patient Name
                     </th>
                      <th>
-                       Background
+                       Date
                     </th> 
                     <th>
                         Counselling Approach
                     </th>
-                    <th>
+                   @* <th>
                         Goals
                     </th>
                     <th>
@@ -44,7 +44,8 @@
                     </th>
                     <th>
                         Recommendations
-                    </th>
+                    </th>*@
+                    <th>Action</th>
                 </tr>
             </thead>
 
@@ -55,16 +56,26 @@
                         <td width="20%">
                             @ind.MainUser.FirstName @ind.MainUser.LastName
                         </td>
-                        <td width="20%">@ind..Background</td>
+                        <td width="20%">@ind.Date</td>
                         <td width="20%">@ind.CounsellingApproach</td>
-                        <td width="20%">@ind.Goals</td> 
+                        @*<td width="20%">@ind.Goals</td> 
                         <td width="20%">@ind.comments</td> 
-                        <td width="20%">@ind.recom</td>
+                        <td width="20%">@ind.recom</td>*@
                         <td width="20%">
                             <div class="w-50 btn-group" role="group">
-                                <a asp-controller="Counseller" asp-action="IndividualRec" asp-route-ID="@ind.ProfileID" class="btn btn-info mx-1">View</a>
+                                <a asp-controller="Counseller" asp-action="NewUpdate" asp-route-ID="@ind.ProfileID" class="btn btn-info mx-1">View</a>
+                            </div>
+                        </td> 
+                        <td width="20%">
+                            <div class="w-50 btn-group" role="group">
+                                <a asp-controller="Counseller" asp-action="NewUpdate" asp-route-ID="@ind.ProfileID" class="btn btn-info mx-1">Update</a>
                             </div>
                         </td>
+                        @*<div class="w-100 btn-group" role="group">
+                            <a asp-controller="FamilyPlan" asp-action="UpdateMenstruation" asp-route-ID="@Men.MenstruationId" class="btn btn-outline-info mx-1">Update</a>
+                            <a asp-controller="FamilyPlan" asp-action="DeleteMenstruation" asp-route-ID="@Men.MenstruationId" class="btn btn-outline-info mx-1">Delete</a>
+
+                        </div>*@
                     </tr>
 
 

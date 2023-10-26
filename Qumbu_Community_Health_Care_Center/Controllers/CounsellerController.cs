@@ -95,6 +95,8 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             //pro.PatientID = user;
             if (ModelState.IsValid)
             {
+                ViewBag.Date = DateTime.Now.ToString("dd/mm/yyyy");
+                ViewBag.Time = DateTime.Now.ToString("HH:MM");
                 Context.Profiling.Add(pro);
                 Context.SaveChanges();
                 return RedirectToAction("IndRec");
@@ -106,7 +108,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
                                 select U).ToList();
             return View(pro);
         }
-        public IActionResult Update(int? ID)
+        public IActionResult NewUpdate(int? ID)
         {
             if (ID == null || ID == 0)
             {
@@ -117,14 +119,18 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             {
                 return NotFound();
             }
-
+            ViewBag.Patients = (from U in Context.Users
+                                join UR in Context.UserRoles on U.Id equals UR.UserId
+                                join R in Context.Roles on UR.RoleId equals R.Id
+                                where R.Name == "Patient"
+                                select U).ToList();
             return View(obj);
 
         }
         //POST-Update updating the current data we have 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Update(Profiling pro)
+        public IActionResult NewUpdate(Profiling pro)
         {
             Context.Profiling.Update(pro);
             Context.SaveChanges();
@@ -174,6 +180,8 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult UpdateRe(PatientReg pat)
         {
+            ViewBag.Date = DateTime.Now.ToString("dd/mm/yyyy");
+            ViewBag.Time = DateTime.Now.ToString("HH:MM");
             Context.PatientReg.Update(pat);
             Context.SaveChanges();
             return RedirectToAction("Record");
