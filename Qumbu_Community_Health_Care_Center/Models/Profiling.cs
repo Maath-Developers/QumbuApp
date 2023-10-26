@@ -11,11 +11,11 @@ namespace Qumbu_Community_Health_Care_Center.Models
         [Key]
         public int ProfileID { get; set; }
         //public string? ID { get; set; }
-        public string? Id { get; set; }
-        [ForeignKey("Id")]
-        public virtual ApplicationUser? User { get; set; }
-        public string? email { get; set; }
-        public string? Cell { get; set; }
+        //public string? Id { get; set; }
+        //[ForeignKey("Id")]
+        //public virtual ApplicationUser? User { get; set; }
+        //public string? email { get; set; }
+        //public string? Cell { get; set; }
         [DisplayName("First Name")]
         public string? AppointmentID { get; set; }
         [ForeignKey("AppointmentID")]
@@ -26,13 +26,13 @@ namespace Qumbu_Community_Health_Care_Center.Models
 		public DateTime Time { get; set; } = DateTime.Now;
 		[DisplayName("Visit Purpose")]
         public string? VisitPurpose { get; set; }
-        public string? Gender { get; set; }
+        //public string? Gender { get; set; }
         [DisplayName("Counselling Type:")]
         public string? CounsellingType { get; set; }
         [DisplayName("(a).Counselling Approach:")]
         public string? CounsellingApproach { get; set; }
-        public string? GroupName { get; set; }
-        public string? DOB { get; set; }
+        //public string? GroupName { get; set; }
+        //public string? DOB { get; set; }
         public string? Status { get; set; }
         [DisplayName("I.Background of the Case:")]
         public string? Background { get; set; }

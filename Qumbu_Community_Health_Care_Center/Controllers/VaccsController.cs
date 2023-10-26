@@ -62,20 +62,9 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
 		{
             var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
             Scree.PatientID = user;
-            int Total = 0;
+           
 			if (ModelState.IsValid)
 			{
-				Total = Convert.ToInt32(Scree.Question1);
-				Total = Convert.ToInt32(Scree.Question2);
-				Total = Convert.ToInt32(Scree.Question3);
-				Total = Convert.ToInt32(Scree.Question4);
-				Total = Convert.ToInt32(Scree.Question5);
-				Total = Convert.ToInt32(Scree.Question6);
-				//if (Total <= 30)
-				//{
-				//	TempData["Result"] = "  ";
-				//	TempData["_Image"] = "1";
-				//}
 
 				dbContext.Srcreening.Add(Scree);
 				dbContext.SaveChanges();
@@ -85,15 +74,15 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             return View(Scree);
 
 		}
-        public IActionResult UpdateScreening(int? ScreeningID)
+        public IActionResult NewUpdateScreening(int?ID)
         {
-            if (ScreeningID == null || ScreeningID == 0)
+            if (ID == null || ID == 0)
             {
                 return NotFound();
             }
-            var obj = dbContext.Srcreening.Find(ScreeningID);
+            var obj = dbContext.Srcreening.Find(ID);
 
-            if (ScreeningID == null)
+            if (ID == null)
             {
                 return NotFound();
             }
@@ -101,19 +90,19 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult UpdateScreening(ScreeningTool Scree)
+        public IActionResult NewUpdateScreening(ScreeningTool Scree)
         {
             if (ModelState.IsValid)
             {
                 dbContext.Srcreening.Update(Scree);
                 dbContext.SaveChanges();
-                return RedirectToAction("IndexScree");
+                return RedirectToAction("Indexscree");
             }
             return View(Scree);
         }
-        public IActionResult DeleteScreen(int? ScreeningID)
+        public IActionResult DeleteScreen(int?ID)
         {
-            var obj = dbContext.Srcreening.Find(ScreeningID);
+            var obj = dbContext.Srcreening.Find(ID);
 
             if (obj == null)
             {
@@ -121,7 +110,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             }
             dbContext.Srcreening.Remove(obj);
             dbContext.SaveChanges();
-            return RedirectToAction("IndexScree");
+            return RedirectToAction("Indexscree");
         }
         public IActionResult IndexFeedback()
         {
@@ -146,9 +135,46 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             return View(Fee);
 
         }
+		public IActionResult UpdateFeedback(int? ID)
+		{
+			if (ID == null || ID == 0)
+			{
+				return NotFound();
+			}
+			var obj = dbContext.VaccinationFeedback.Find(ID);
 
+			if (ID == null)
+			{
+				return NotFound();
+			}
+			return View(obj);
+		}
+		[HttpPost]
+		[ValidateAntiForgeryToken]
+		public IActionResult UpdateFeedback(FeedbackV Fee)
+		{
+			if (ModelState.IsValid)
+			{
+				dbContext.VaccinationFeedback.Update(Fee);
+				dbContext.SaveChanges();
+				return RedirectToAction("IndexFeedback");
+			}
+			return View(Fee);
+		}
+		public IActionResult DeleteFeedback(int? ID)
+		{
+			var obj = dbContext.VaccinationFeedback.Find(ID);
 
-        public IActionResult IndexEducation()
+			if (obj == null)
+			{
+				return NotFound();
+			}
+			dbContext.VaccinationFeedback.Remove(obj);
+			dbContext.SaveChanges();
+			return RedirectToAction("IndexFeedback");
+		}
+
+		public IActionResult IndexEducation()
 		{
 			IEnumerable<VaccinationEducation> objList = dbContext.VaccineEducation;
 			return View(objList);
@@ -201,8 +227,9 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
 
         public IActionResult IndexReport()
         {
-
-			IEnumerable<Vaccine_MadicalRecord> objList = dbContext.vaccinerecord;
+            ViewBag.Date = DateTime.Now.ToString("dd/mm/yyyy");
+            ViewBag.Time = DateTime.Now.ToString("HH:MM");
+            IEnumerable<Vaccine_MadicalRecord> objList = dbContext.vaccinerecord;
 			return View(objList);
 			
         }
