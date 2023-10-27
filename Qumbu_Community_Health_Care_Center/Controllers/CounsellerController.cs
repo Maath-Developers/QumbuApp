@@ -136,7 +136,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             Context.Profiling.Update(pro);
             Context.SaveChanges();
             TempData["Success"] = "Details Succesfully Updated";
-            return RedirectToAction("IndRec");
+            return RedirectToAction("NewUpdate");
         }
         public IActionResult DeleteReferrals(int? ID)
         {
@@ -161,7 +161,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             Context.Profiling.Remove(obj);
             Context.SaveChanges();
             TempData["Success"] = "A log has been deleted";
-            return RedirectToAction("VisitRec");
+            return RedirectToAction("CreatePat");
 
         }
         public IActionResult UpdateReferral(int? ID)
@@ -210,7 +210,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
                 Context.Referral.Add(referral);
                 Context.SaveChanges();
                 TempData["Success"] = "A referral has been added";
-                return RedirectToAction("Referral");
+                return RedirectToAction("CreateF");
             }
             return View(referral);
         }
