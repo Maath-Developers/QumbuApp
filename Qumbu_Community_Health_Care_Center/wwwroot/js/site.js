@@ -18,6 +18,34 @@ setTimeout(function () {
         tempdat.textContent = '';
     }
 }, 3000);
+setTimeout(function () {
+    var tempdat = document.getElementById('temp');
+    if (tempdat) {
+        tempdat.remove();
+        tempdat.textContent = '';
+    }
+}, 3000);
+setTimeout(function () {
+    var tempdat = document.getElementById('tempd');
+    if (tempdat) {
+        tempdat.remove();
+        tempdat.textContent = '';
+    }
+}, 3000);
+setTimeout(function () {
+    var tempdat = document.getElementById('tempdat');
+    if (tempdat) {
+        tempdat.remove();
+        tempdat.textContent = '';
+    }
+}, 3000);
+setTimeout(function () {
+    var tempdat = document.getElementById('tempda');
+    if (tempdat) {
+        tempdat.remove();
+        tempdat.textContent = '';
+    }
+}, 3000);
 // Wait for the document to load
 document.addEventListener('DOMContentLoaded', function () {
     // Check if the student has registered (replace 'hasRegistered' with your condition)

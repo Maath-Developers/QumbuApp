@@ -99,6 +99,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
                 ViewBag.Time = DateTime.Now.ToString("HH:MM");
                 Context.Profiling.Add(pro);
                 Context.SaveChanges();
+                TempData["Success"] = "Succesfully added a new record";
                 return RedirectToAction("IndRec");
             }
             ViewBag.Patients = (from U in Context.Users
@@ -134,6 +135,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         {
             Context.Profiling.Update(pro);
             Context.SaveChanges();
+            TempData["Success"] = "Details Succesfully Updated";
             return RedirectToAction("IndRec");
         }
         public IActionResult DeleteReferrals(int? ID)
@@ -145,6 +147,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             }
             Context.Referral.Remove(obj);
             Context.SaveChanges();
+            TempData["Success"] = "A referral has been deleted";
             return RedirectToAction("Referral");
 
         }
@@ -157,6 +160,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             }
             Context.Profiling.Remove(obj);
             Context.SaveChanges();
+            TempData["Success"] = "A log has been deleted";
             return RedirectToAction("VisitRec");
 
         }
@@ -205,6 +209,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             {
                 Context.Referral.Add(referral);
                 Context.SaveChanges();
+                TempData["Success"] = "A referral has been added";
                 return RedirectToAction("Referral");
             }
             return View(referral);
@@ -212,6 +217,12 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         public IActionResult Referral()
         {
             IEnumerable<Referrals> Referrals = Context.Referral.Include(a => a.MainUser);
+            return View(Referrals);
+        } 
+        public IActionResult PatientReferral()
+        {
+            var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            IEnumerable<Referrals> Referrals = Context.Referral.Where(a => a.PatientID == user).Include(a => a.MainUser);
             return View(Referrals);
         }
         public ActionResult Reports()
@@ -303,6 +314,18 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             IEnumerable<Profiling> profilings = Context.Profiling.Include(a => a.MainUser);
             return View(profilings);
         } 
+        public IActionResult PatientRec()
+        {
+            var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            IEnumerable<Profiling> profilings = Context.Profiling.Where(a => a.PatientID == user).Include(a => a.MainUser);
+            return View(profilings);
+        }  
+        public IActionResult PatientVisitRec()
+        {
+            var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            IEnumerable<Profiling> profilings = Context.Profiling.Where(a => a.PatientID == user).Include(a => a.MainUser);
+            return View(profilings);
+        } 
         public IActionResult VisitRec()
         {
             IEnumerable<Profiling> profilings = Context.Profiling.Include(a => a.MainUser);
@@ -312,6 +335,11 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         {
             var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var applicationDbContext = Context.Profiling.Where(a => a.PatientID == user).Include(a => a.MainUser).FirstOrDefault();
+            ViewBag.Patients = (from U in Context.Users
+                                join UR in Context.UserRoles on U.Id equals UR.UserId
+                                join R in Context.Roles on UR.RoleId equals R.Id
+                                where R.Name == "Patient"
+                                select U).ToList();
             return View(applicationDbContext);
         }
 

@@ -80,12 +80,11 @@
                             @Html.DisplayFor(modelItem => item.Status)
                         </td>
                         <td>
-                            @if (item.Status == "Accepted")
-                            {
+                           
                                 <div class="col">
-                                    <a asp-controller="Counseller" asp-action="CreatePat" class="btn btn-info w-75">View</a>
+                                    <a asp-controller="Counseller" asp-action="NewUpdate" class="btn btn-info w-75">View</a>
                                 </div>
-                            }
+     
 
                             @* <a asp-action="Details" asp-route-id="@item.AppointmentID">Details</a> |
                         <a asp-action="Delete" asp-route-id="@item.AppointmentID">Delete</a>*@
