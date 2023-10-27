@@ -28,8 +28,14 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             var applicationDbContext = Context.Appointments.Include(a => a.MainUser).Where(a => a.PatientID == user);
             return View(await applicationDbContext.ToListAsync());
         }
-		
-		public IActionResult Queue()
+        //public async Task<IActionResult> Prenatal()
+        //{
+        //    var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
+        //    var applicationDbContext = Context.Appointments.Include(a => a.MainUser).Where(a => (a.PatientID == user && a.Purpose == "Pre-Natal"));
+        //    return View(await applicationDbContext.ToListAsync());
+        //}
+
+        public IActionResult Queue()
 		{
             var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
             ViewBag.queue = Context.Queue.Where(a => a.PatientID == user).ToList();
@@ -59,7 +65,6 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         }
 		public async Task<IActionResult> All_Appointments()
         {
-           
             var applicationDbContext = Context.Appointments.Include(a => a.MainUser).ToList();
             return View(applicationDbContext);
         }
@@ -95,7 +100,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             var applicationDbContext = Context.Appointments.Include(a => a.MainUser).Where(a => a.Purpose == "Prenatal").ToList();
             return View(applicationDbContext);
         }
-      
+
         //admin creates appointment based on the patient id
         public IActionResult Create()
         {
@@ -294,7 +299,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
                     appoint.Date_Time = appointments.Date_Time;
                     Context.Update(appoint);
                     Context.SaveChanges();
-                    TempData["Success"] = "The appointment has been postponed";
+                    TempData["Success"] = "The appointment has been Updated";
                     var patient = Context.Users.Where(a => a.Id == appoint.PatientID).FirstOrDefault();
                     try
                     {
