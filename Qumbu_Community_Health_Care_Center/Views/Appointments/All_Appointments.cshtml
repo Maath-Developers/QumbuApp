@@ -23,14 +23,17 @@
         </div>
     </div>
     <br />
-    <table class="table table-bordered table-striped" style="width:100%">
+    <table class="table table-bordered table-striped table-sm" style="width:100%">
         <thead class="table-primary">
             <tr>
                 <th>
-                    Booked By:
+                    Booked By
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.CreatedAt)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Date_Time)
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Purpose)
@@ -38,11 +41,9 @@
                 <th>
                     @Html.DisplayNameFor(model => model.Status)
                 </th>
-
                 <th>
-                    @Html.DisplayNameFor(model => model.Date_Time)
+                    Action
                 </th>
-                <th>Actions</th>
             </tr>
         </thead>
         
@@ -53,6 +54,7 @@
                         <td>
                             @item.MainUser.FirstName
                             @item.MainUser.LastName
+                            (Admin)
                         </td>
 
                         <td>
@@ -118,38 +120,3 @@
     </table>
 
 </div>
-@*     <tbody>
-            @foreach (var item in Model)
-            {
-                <tr>
-
-                    <td>
-                        @item.MainUser.FirstName
-                        @item.MainUser.LastName
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.CreatedAt)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Purpose)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Status)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Date_Time)
-                    </td>
-                    @if(item.Status == "New")
-                    {
-                        <td>
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal-@item.AppointmentID">
-                                Accept
-                            </button>|
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal-@item.AppointmentID">
-                                Decline
-                            </button>|
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal-@item.AppointmentID">
-                                Pending
-                            </button>
-                          @*   <a asp-action="Details" asp-route-id="@item.AppointmentID">Decline</a>|
-                            <a asp-action="Delete" asp-route-id="@item.AppointmentID">Postpone</a> *@

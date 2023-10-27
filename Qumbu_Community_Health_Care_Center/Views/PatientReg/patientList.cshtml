@@ -19,7 +19,7 @@
     </div>
     <br />
     <div class="col-md-4">
-        <form asp-action="PatientReg" asp-action="Add_New_Patient">
+        <form asp-controller="PatientReg" asp-action="Add_New_Patient">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
            @*  <div class="form-group">
                 <label asp-for="Tittle" class="control-label"></label>
@@ -55,7 +55,7 @@
                 <label asp-for="Role" class="control-label"></label>
                 <select asp-for="Role" class="form-control">
 
-                    <option disabled value="Patient"> Patient</option>
+                    <option value="Patient"> Patient</option>
                     
                 </select>
                 <span asp-validation-for="Role" class="text-danger pb-2"></span>
