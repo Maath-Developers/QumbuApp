@@ -1,4 +1,10 @@
-﻿@{
+﻿@model IEnumerable<Qumbu_Community_Health_Care_Center.Models.Medical_File>
+@using Qumbu_Community_Health_Care_Center.Models
+@using Microsoft.AspNetCore.Identity
+@using Qumbu_Community_Health_Care_Center.Areas.Identity.Data
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+@{
     ViewData["Title"] = "MyFile";
     Layout = "~/Views/Shared/_Walk-in-Layout.cshtml";
 }
@@ -149,26 +155,27 @@
 
 <div class="page-content page-container" id="page-content">
     <div class="container-fluid">
+        
         <div class="row container d-flex justify-content">
             <div class="col-xl-6 col-xl-12">
                 <h3 class="m-b-10 p-b-2 b-b-default f-w-600">Medical File Report</h3>
-                <div class="text-end">
+                @* <div class="text-end">
                     <button id="PrintBTn" class=" btn btn-primary p-b-2">
                         <i class="bi bi-printer-fill text-white">Print Report</i>
                     </button>
-                </div>
+                </div> *@
                 
                 <div class="card user-card-full">
                     <div class="row m-l-0 m-r-0">
-                        <div class="col-sm-6 bg-c-lite-green user-profile">
+                        @foreach (var item in Model)
+                        {
+                            <div class="col-sm-6 bg-c-lite-green user-profile">
                             <div class="card-block text-center text-white">
-                                <div class="m-b-25">
-                                    <img src="https://img.icons8.com/bubbles/100/000000/user.png" class="img-radius" alt="User-Profile-Image">
-                                </div>
-                                <h6 class="f-w-600">Hembo Tingor</h6>
-                                <p>Web Designer</p>
-                                <i class="mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
+                                <a class="sidebar-brand" href="index.html">
+                                    <span class="align-middle"><img class="img-responsive" width="230" src="~/_Images/1.png" alt="#" /></span>
+                                </a>
                             </div>
+                            
                             <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Medical Information</h6>
                             <div class="row">
                                 <div class="col-sm-6">
@@ -189,111 +196,133 @@
                                 <label for="Notes">Notes</label>
                                 <input type="text" class="form-control" id="Notes" value="">
                             </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="card-block">
-                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Personal Information</h6>
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <label for="firstName">First Name</label>
-                                        <input disabled type="text" class="form-control" id="firstName" value="" />
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <label for="lastName">Last Name</label>
-                                        <input disabled type="text" class="form-control" id="lastName" value="" />
-                                    </div>
+                            <div class="row">
+                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Next of kin Details (for emegerncy)</h6>
+                                <div>
+                                    <label for="NextfoKin">Name</label>
+                                    <input type="text" class="form-control" id="NextfoKin" value="">
                                 </div>
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <label for="idNumber">ID Number</label>
-                                        <input disabled type="text" class="form-control" id="idNumber" placeholder="0212035896584" value="" />
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <label for="dateOfBirth">Date of Birth</label>
-                                        <input type="date" class="form-control" id="dateOfBirth" value="" />
-                                    </div>
+                                <div class="col-sm-6">
+                                    <label for="kinCell">Cell Number</label>
+                                    <input type="text" class="form-control" id="kinCell" value="">
                                 </div>
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <label for="gender">Gender</label>
-                                        <select class="form-control" id="gender">
-                                            <option value="male">Click to select</option>
-                                            <option value="male">Male</option>
-                                            <option value="female">Female</option>
-                                            <option value="other">Other</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <label for="maritalStatus">Marital Status</label>
-                                        <select class="form-control" id="maritalStatus">
-                                            <option value="single">Click to select</option>
-                                            <option value="single">Single</option>
-                                            <option value="married">Married</option>
-                                            <option value="divorced">Divorced</option>
-                                            <option value="widowed">Widowed</option>
-                                        </select>
-                                    </div>
+                                <div class="col-sm-6">
+                                    <label for="Relationship">Relationship</label>
+                                    <select class="form-control" id="Relationship">
+                                        <option value="Mother">Click to select</option>
+                                        <option value="Mother">Mother</option>
+                                        <option value="Father">Father</option>
+                                        <option value="Aunt">Aunt</option>
+                                        <option value="Uncle">Uncle</option>
+                                        <option value="Sister">Sister</option>
+                                        <option value="Brother">Brother</option>
+                                        <option value="Extended_Family">Extended Family</option>
+                                    </select>
                                 </div>
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <label for="address">Address</label>
-                                        <input type="text" class="form-control" id="address" value="">
+                            </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="card-block">
+                                    <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Personal Information</h6>
+                                    <div class="row">
+                                        <div>
+                                            <label for="NextfoKin">Full Name(s)</label>
+                                            <input type="text" class="form-control" id="NextfoKin" value="">
+                                        </div>
                                     </div>
-                                    <div class="col-sm-6">
-                                        <label for="province">Province</label>
-                                        <select class="form-control" id="Province">
-                                            <option value="Mpumalanga">Click to select</option>
-                                            <option value="Mpumalanga">Mpumalanga</option>
-                                            <option value="Gauteng">Gauteng</option>
-                                            <option value="Eastern_Cape">Eastern Cape</option>
-                                            <option value="Western_Cape">Western Cape</option>
-                                            <option value="North_West">North West</option>
-                                            <option value="Free_State">Free State</option>
-                                            <option value="Kwazulu-Natal">Kwazulu-Natal</option>
-                                            <option value="Northern_Cape">Northern Cape</option>
-                                            <option value="Limpopo">Limpopo</option>
-                                        </select>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <label for="idNumber">ID Number</label>
+                                            <input disabled type="text" class="form-control" id="idNumber" placeholder="0212035896584" value="" />
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="dateOfBirth">Date of Birth</label>
+                                            <input type="date" class="form-control" id="dateOfBirth" value="" />
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <label for="postalCode">Postal Code</label>
-                                        <input type="text" class="form-control" id="postalCode" value="">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <label for="gender">Gender</label>
+                                            <select class="form-control" id="gender">
+                                                <option value="male">Click to select</option>
+                                                <option value="male">Male</option>
+                                                <option value="female">Female</option>
+                                                <option value="other">Other</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="maritalStatus">Marital Status</label>
+                                            <select class="form-control" id="maritalStatus">
+                                                <option value="single">Click to select</option>
+                                                <option value="single">Single</option>
+                                                <option value="married">Married</option>
+                                                <option value="divorced">Divorced</option>
+                                                <option value="widowed">Widowed</option>
+                                            </select>
+                                        </div>
                                     </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <label for="address">Address</label>
+                                            <input type="text" class="form-control" id="address" value="">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="province">Province</label>
+                                            <select class="form-control" id="Province">
+                                                <option value="Mpumalanga">Click to select</option>
+                                                <option value="Mpumalanga">Mpumalanga</option>
+                                                <option value="Gauteng">Gauteng</option>
+                                                <option value="Eastern_Cape">Eastern Cape</option>
+                                                <option value="Western_Cape">Western Cape</option>
+                                                <option value="North_West">North West</option>
+                                                <option value="Free_State">Free State</option>
+                                                <option value="Kwazulu-Natal">Kwazulu-Natal</option>
+                                                <option value="Northern_Cape">Northern Cape</option>
+                                                <option value="Limpopo">Limpopo</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <label for="postalCode">Postal Code</label>
+                                            <input type="text" class="form-control" id="postalCode" value="">
+                                        </div>
 
-                                </div>
-                                <br />
-                                <div class="row">
-                                    <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Next of kin Details (for emegerncy)</h6>
-                                    <div>
-                                        <label for="NextfoKin">Full Name(s)</label>
-                                        <input type="text" class="form-control" id="NextfoKin" value="">
                                     </div>
-                                    <div class="col-sm-6">
-                                        <label for="kinCell">Cell Number</label>
-                                        <input type="text" class="form-control" id="kinCell" value="">
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <label for="Relationship">Relationship</label>
-                                        <select class="form-control" id="Relationship">
-                                            <option value="Mother">Click to select</option>
-                                            <option value="Mother">Mother</option>
-                                            <option value="Father">Father</option>
-                                            <option value="Aunt">Aunt</option>
-                                            <option value="Uncle">Uncle</option>
-                                            <option value="Sister">Sister</option>
-                                            <option value="Brother">Brother</option>
-                                            <option value="Extended_Family">Extended Family</option>
-                                        </select>
+                                    <br />
+                                    <div class="row">
+                                        <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Next of kin Details (for emegerncy)</h6>
+                                        <div>
+                                            <label for="NextfoKin">Full Name(s)</label>
+                                            <input type="text" class="form-control" id="NextfoKin" value="">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="kinCell">Cell Number</label>
+                                            <input type="text" class="form-control" id="kinCell" value="">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="Relationship">Relationship</label>
+                                            <select class="form-control" id="Relationship">
+                                                <option value="Mother">Click to select</option>
+                                                <option value="Mother">Mother</option>
+                                                <option value="Father">Father</option>
+                                                <option value="Aunt">Aunt</option>
+                                                <option value="Uncle">Uncle</option>
+                                                <option value="Sister">Sister</option>
+                                                <option value="Brother">Brother</option>
+                                                <option value="Extended_Family">Extended Family</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="text-end">
+                        }
+                        
+                        @* <div class="text-end">
                             <button class=" btn btn-primary p-b-2">
                                 <i class="text-white">Save All</i>
                             </button>
-                        </div>
+                        </div> *@
                     </div>
                 </div>
             </div>

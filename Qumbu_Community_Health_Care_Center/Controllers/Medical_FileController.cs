@@ -22,6 +22,12 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
 
         public IActionResult MyFile()
         {
+            ViewBag.Date = DateTime.Now.ToString("dd/MM/yyy HH:MM");
+            ViewBag.Patient = (from U in _context.Users
+                               join UR in _context.UserRoles on U.Id equals UR.UserId
+                               join R in _context.Roles on UR.RoleId equals R.Id
+                               where R.Name == "Patient"
+                               select U).ToList();
             return View();
         }
         // GET: Medical_File
@@ -34,6 +40,11 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         {
             var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var applicationDbContext = _context.Medical_File.Where(a => a.PatientID ==user).Include(m => m.mainUser);
+            ViewBag.Patient = (from U in _context.Users
+                               join UR in _context.UserRoles on U.Id equals UR.UserId
+                               join R in _context.Roles on UR.RoleId equals R.Id
+                               where R.Name == "Patient"
+                               select U).ToList();
             ViewBag.File = _context.Medical_File.Where(a => a.PatientID ==user).Include(m => m.mainUser);
             return View(await applicationDbContext.ToListAsync());
         }
@@ -56,6 +67,12 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
 
             return View(medical_File);
         }
+        // GET: Medical_File/Create
+        public IActionResult Create()
+        {
+            ViewData["PatientID"] = new SelectList(_context.Users, "Id", "Id");
+            return View();
+        }
         public IActionResult Create_File()
         {
             var user = User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -69,13 +86,6 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
             return View();
         }
 
-    
-        // GET: Medical_File/Create
-        public IActionResult Create()
-        {
-            ViewData["PatientID"] = new SelectList(_context.Users, "Id", "Id");
-            return View();
-        }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create_File(Medical_File medical_File)
@@ -88,6 +98,11 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewBag.Patient = (from U in _context.Users
+                               join UR in _context.UserRoles on U.Id equals UR.UserId
+                               join R in _context.Roles on UR.RoleId equals R.Id
+                               where R.Name == "Patient"
+                               select U).ToList();
             ViewBag.file = _context.Medical_File.Where(a => a.PatientID == user).ToList();
             ViewData["PatientID"] = new SelectList(_context.Users, "Id", "Id", medical_File.PatientID);
             return View(medical_File);
@@ -109,6 +124,11 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
                 TempData["File"] = "File Successfully Created ";
                 return RedirectToAction(nameof(My_Medical_File));
             }
+            ViewBag.Patient = (from U in _context.Users
+                               join UR in _context.UserRoles on U.Id equals UR.UserId
+                               join R in _context.Roles on UR.RoleId equals R.Id
+                               where R.Name == "Patient"
+                               select U).ToList();
             ViewData["PatientID"] = new SelectList(_context.Users, "Id", "Id", medical_File.PatientID);
             return RedirectToAction("Create");
         }
@@ -162,6 +182,11 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewBag.Patient = (from U in _context.Users
+                               join UR in _context.UserRoles on U.Id equals UR.UserId
+                               join R in _context.Roles on UR.RoleId equals R.Id
+                               where R.Name == "Patient"
+                               select U).ToList();
             ViewData["PatientID"] = new SelectList(_context.Users, "Id", "Id", medical_File.PatientID);
             return View(medical_File);
         }
