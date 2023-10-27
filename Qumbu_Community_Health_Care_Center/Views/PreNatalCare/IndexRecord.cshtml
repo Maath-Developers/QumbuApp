@@ -7,13 +7,16 @@
 }
 
 <div class="container p-3">
-    <div class="bg-primary p-3 mb-2">
+    <div class="bg-info p-3 mb-2">
         <h4 class="text-white text-center">Health Monitoring</h4>
          
     </div>
+    @if (User.IsInRole("Patient"))
+    {
     <div>
         <a asp-controller="PrenatalCare" asp-action="CreateRecord" class="text-primary">Add Health Record</a>
-    </div>
+    </div>   
+    }
     <br />
 
     @if (Model.Count() > 0)
@@ -59,12 +62,15 @@
                         <td width="20%">@healthRecord.BloodPressureDiastolic</td>
                         <td width="20%">@healthRecord.Temperature</td>
                         <td width="10%">@healthRecord.Symptoms</td>
-                        <td width="10%">
+                        <td width="">
+                            @if (User.IsInRole("Patient"))
+                            {
                             <div class="w-100 btn-group" role="group">
                                 <a asp-controller="PrenatalCare" asp-action="UpdateRecord" asp-route-ID="@healthRecord.Id" class="btn btn-primary mx-1"><i class="bi bi-pencil-square"></i>Edit</a>
                                 @* <a asp-controller="Expense" asp-action="Delete" asp-route-ID="@healthRecord.Id" class="btn btn-danger mx-1">Delete</a>
                         *@
-                            </div>
+                            </div>   
+                            }
                         </td>
 
                     </tr>
