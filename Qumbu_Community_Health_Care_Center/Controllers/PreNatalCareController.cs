@@ -215,11 +215,11 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         }
         public IActionResult CreateEducation()
         {
-            ViewBag.Patients = (from U in dbContext.Users
-                                join UR in dbContext.UserRoles on U.Id equals UR.UserId
-                                join R in dbContext.Roles on UR.RoleId equals R.Id
-                                where R.Name == "Patient"
-                                select U).ToList();
+            //ViewBag.Patients = (from U in dbContext.Users
+            //                    join UR in dbContext.UserRoles on U.Id equals UR.UserId
+            //                    join R in dbContext.Roles on UR.RoleId equals R.Id
+            //                    where R.Name == "Patient"
+            //                    select U).ToList();
             return View();
 
         }
