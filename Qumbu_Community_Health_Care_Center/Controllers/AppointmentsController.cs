@@ -174,7 +174,7 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
                 {
                     TempData["Success"] = "Successfully booked but email notification failed.";
                 }
-                return RedirectToAction("Create");
+                return RedirectToAction("All_Appointments");
             }
             ViewBag.Patient = (from U in Context.Users
                                join UR in Context.UserRoles on U.Id equals UR.UserId
@@ -382,6 +382,42 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
                                select U).ToList();
             ViewData["PatientID"] = new SelectList(Context.Users, "Id", "Id", appointments.PatientID);
             return View(appointments);
+        }
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null || Context.Appointments == null)
+            {
+                return NotFound();
+            }
+
+            var appointments = await Context.Appointments
+                .Include(m => m.MainUser)
+                .FirstOrDefaultAsync(m => m.AppointmentID == id);
+            if (appointments == null)
+            {
+                return NotFound();
+            }
+
+            return View(appointments);
+        }
+
+        // POST: Medical_File/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            if (Context.Appointments == null)
+            {
+                return Problem("Entity set 'ApplicationDbContext.Appointments'  is null.");
+            }
+            var appointments = await Context.Appointments.FindAsync(id);
+            if (appointments != null)
+            {
+                Context.Appointments.Remove(appointments);
+            }
+
+            await Context.SaveChangesAsync();
+            return RedirectToAction(nameof(All_Appointments));
         }
     }
 }

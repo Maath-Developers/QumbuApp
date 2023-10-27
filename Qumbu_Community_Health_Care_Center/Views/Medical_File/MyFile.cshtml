@@ -167,8 +167,7 @@
                 
                 <div class="card user-card-full">
                     <div class="row m-l-0 m-r-0">
-                        @foreach (var item in Model)
-                        {
+                       
                             <div class="col-sm-6 bg-c-lite-green user-profile">
                             <div class="card-block text-center text-white">
                                 <a class="sidebar-brand" href="index.html">
@@ -177,21 +176,25 @@
                             </div>
                             
                             <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Medical Information</h6>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <label for="bloodTytpe">Blood Type</label>
-                                    <input type="text" class="form-control" id="bloodType" value="">
-                                </div>
-                                <div class="col-sm-6">
-                                    <label for="Surgery">Surgery</label>
-                                    <select class="form-control" id="Surgery">
-                                        <option value="Yes">Click to select</option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
-                                    </select>
-                                </div>
+                            @foreach(var item in Model)
+                            {
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <label for="bloodTytpe">Blood Type</label>
+                                        <input type="text" class="form-control" id="bloodType" value="@Html.DisplayFor(modelItem => item.BloodType)">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="Surgery">Surgery</label>
+                                        <select class="form-control" id="Surgery">
+                                            <option value="Yes">Click to select</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                    </div>
 
-                            </div>
+                                </div>
+                            }
+                            
                             <div>
                                 <label for="Notes">Notes</label>
                                 <input type="text" class="form-control" id="Notes" value="">
@@ -227,13 +230,12 @@
                                     <div class="row">
                                         <div>
                                             <label for="NextfoKin">Full Name(s)</label>
-                                            <input type="text" class="form-control" id="NextfoKin" value="">
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <label for="idNumber">ID Number</label>
-                                            <input disabled type="text" class="form-control" id="idNumber" placeholder="0212035896584" value="" />
+                                            <input disabled type="text" class="form-control" id="idNumber"  value="" />
                                         </div>
                                         <div class="col-sm-6">
                                             <label for="dateOfBirth">Date of Birth</label>
@@ -316,13 +318,7 @@
                                     </div>
                                 </div>
                             </div>
-                        }
                         
-                        @* <div class="text-end">
-                            <button class=" btn btn-primary p-b-2">
-                                <i class="text-white">Save All</i>
-                            </button>
-                        </div> *@
                     </div>
                 </div>
             </div>
