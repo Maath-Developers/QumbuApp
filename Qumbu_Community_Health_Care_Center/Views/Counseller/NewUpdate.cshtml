@@ -8,6 +8,12 @@
 @{
     Layout = "_CounsellorLayout";
 }
+@if (TempData["Success"] != null)
+{
+    <div class="bg-success text-center w-100 p-3 rounded" id="temp" role="alert">
+        <h4 class="text-white">@TempData["Success"]</h4>
+    </div>
+}
 <div id="Header" class="bg-info">
     <h2 class="m-1 pt-4 text-center text-white">Individual Counselling</h2>
 </div>
@@ -90,7 +96,7 @@
         <div class="form-group row">
             <div class="col-6 offset-2 row">
                 <div class=" col">
-                    <input type="submit" class="btn-primary btn-lg  " value="submit" />
+                    <input type="submit" class="btn-info btn-lg" value="Update" />
                 </div>
                 <div class="col">
                     <a asp-action="IndRec" class="btn btn-info w-75">Back</a>

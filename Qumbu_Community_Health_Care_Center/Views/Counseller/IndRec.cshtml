@@ -16,7 +16,7 @@
             <a asp-controller="Counseller" asp-action="CreateRe" class="btn btn-info">Start Counselling</a>
         </div>
         <div class="col-6 text-left">
-            <a asp-controller="Counseller" asp-action="Profile" class="btn btn-info">Go Back</a>
+            <a asp-controller="Counseller" asp-action="CreateF" class="btn btn-info">Next</a>
         </div>
     </div>
     <br />
@@ -64,18 +64,15 @@
                         <td width="20%">
                             <div class="w-50 btn-group" role="group">
                                 <a asp-controller="Counseller" asp-action="NewUpdate" asp-route-ID="@ind.ProfileID" class="btn btn-info mx-1">View</a>
+                                <a asp-controller="Counseller" asp-action="NewUpdate" asp-route-ID="@ind.ProfileID" class="btn btn-info mx-1">Update</a>
                             </div>
                         </td> 
-                        <td width="20%">
+                       @* <td width="20%">
                             <div class="w-50 btn-group" role="group">
                                 <a asp-controller="Counseller" asp-action="NewUpdate" asp-route-ID="@ind.ProfileID" class="btn btn-info mx-1">Update</a>
                             </div>
-                        </td>
-                        @*<div class="w-100 btn-group" role="group">
-                            <a asp-controller="FamilyPlan" asp-action="UpdateMenstruation" asp-route-ID="@Men.MenstruationId" class="btn btn-outline-info mx-1">Update</a>
-                            <a asp-controller="FamilyPlan" asp-action="DeleteMenstruation" asp-route-ID="@Men.MenstruationId" class="btn btn-outline-info mx-1">Delete</a>
-
-                        </div>*@
+                        </td>*@
+                        
                     </tr>
 
 

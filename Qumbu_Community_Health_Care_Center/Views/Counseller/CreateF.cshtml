@@ -8,6 +8,12 @@
 @{
     Layout = "_CounsellorLayout";
 }
+@if (TempData["Success"] != null)
+{
+    <div class="bg-success text-center w-100 p-3 rounded" id="tempda" role="alert">
+        <h4 class="text-white">@TempData["Success"]</h4>
+    </div>
+}
 <div id="Header" class="bg-info">
     <h2 class="m-1 pt-4 text-center text-white">Referr Patient(s)</h2>
 </div>
