@@ -24,30 +24,31 @@
                     File Number
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.PatientID)
+                    Patient Full Name
                 </th>
-                <th>
+                @* <th>
                     @Html.DisplayNameFor(model => model.IDNumber)
-                </th>
+                </th> *@
                 <th>
                     @Html.DisplayNameFor(model => model.DateofBirth)
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Gender)
                 </th>
-                <th>
+               @*  <th>
                     @Html.DisplayNameFor(model => model.Status)
-                </th>
-                <th>
+                </th> *@
+               <th>
                     @Html.DisplayNameFor(model => model.Address)
                 </th>
-                <th>
+                @*
+            <th>
                     @Html.DisplayNameFor(model => model.Province)
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.postalCode)
-                </th>
-                <th>
+                </th> *@
+               @*  <th>
                     @Html.DisplayNameFor(model => model.NextfoKin)
                 </th>
                 <th>
@@ -67,8 +68,8 @@
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.extraNotes)
-                </th>
-                <th></th>
+                </th> *@
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -78,34 +79,37 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.fileId)
                     </td>
+                    @* <td>
+                        @Html.DisplayFor(modelItem => item.PatientID)
+                    </td> *@
                     <td>
                         @foreach (ApplicationUser user in ViewBag.Patient)
                         {
                             <option value="@user.Id">@user.FirstName @user.LastName</option>
                         }
                     </td>
-                    <td>
+                    @* <td>
                         @Html.DisplayFor(modelItem => item.IDNumber)
-                    </td>
+                    </td> *@
                     <td>
                         @Html.DisplayFor(modelItem => item.DateofBirth)
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Gender)
                     </td>
-                    <td>
+                    @* <td>
                         @Html.DisplayFor(modelItem => item.Status)
-                    </td>
+                    </td> *@
                     <td>
                         @Html.DisplayFor(modelItem => item.Address)
                     </td>
-                    <td>
+                   @*  <td>
                         @Html.DisplayFor(modelItem => item.Province)
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.postalCode)
-                    </td>
-                    <td>
+                    </td> *@
+                    @* <td>
                         @Html.DisplayFor(modelItem => item.NextfoKin)
                     </td>
                     <td>
@@ -125,11 +129,23 @@
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.extraNotes)
-                    </td>
-                    <td>
+                    </td> *@
+                    @* <td>
                         @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
                         @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
                         @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                    </td> *@
+             
+                    <td >
+                        <button class="btn-outline-primary">
+                            <a asp-controller="Medical_File" asp-action="MyFile" >View Report</a>
+                        </button>
+                        @* <button class="btn-outline-primary">
+                            <a asp-controller="" asp-action="Details" asp-route-id="@item.PatientID">Delay</a>
+                        </button>
+                        <button class="btn-outline-primary">
+                            <a asp-controller="" asp-action="Delete" asp-route-id="@item.PatientID">Delete</a>
+                        </button> *@
                     </td>
                 </tr>
             }

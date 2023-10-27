@@ -32,6 +32,7 @@
                                     <option value="@user.Id">@user.FirstName @user.LastName</option>
                                 }
                             </select>
+
                             <span asp-validation-for="PatientID" class="text-danger mt-2"></span>
                         }
                     </div>
@@ -89,10 +90,12 @@
                     {
                         <tr>
                             <td width="15%">
-                                @foreach (ApplicationUser user in ViewBag.Patient)
+                                
+                                @foreach(ApplicationUser user in ViewBag.Patient)
                                 {
                                     <option value="@user.Id">@user.FirstName @user.LastName</option>
                                 }
+
                             </td>
                             <td width="20%">@app.CreatedAt</td>
                             <td width="15%">@app.Date_Time</td>

@@ -11,9 +11,51 @@
             <h2 class="text-primary">Learn More About Vaccination</h2>
         </div> *@
         <div class="col-6 text-end">
-            <a asp-controller="Vaccs" asp-action="Education" class="btn btn-primary"><i class="bi bi-plus-circle"></i>LEARN ABOUT VACCINATION</a>
+            <a asp-controller="Vaccs" asp-action="Education" class="btn btn-primary"><i class="bi bi-plus-circle"></i>LEARN MORE ABOUT VACCINATION</a>
         </div>
     </div>
+    <br />
+    <div>
+        <form method="post" asp-action="VaccineFeedback">
+            <div class="border p-3 #FBD603 bg-info">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>@*validation*@
+                <div class="form-group row">
+                    <div class="card-header bg-primary">
+
+                        <h3 class="card-title text-white mt-2" id="exampleModalLabel">VACCINATION EDUCATION</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <a class="sidebar-brand" href="index.html">
+                            <span class="align-middle"><img class="bg" width="250" src="~/_Images/Vaccs/Musk.jpg" alt="#" /></span>
+                            <h3>Wear a mask in public when you cannot keep at distance </h3>
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <a class="sidebar-brand" href="index.html">
+                            <span class="align-middle"><img class="bg" width="250" src="~/_Images/Vaccs/SocialDistance.jpg" alt="#" /></span>
+                            <h3>Practice Social Distancing </h3>
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <a class="sidebar-brand" href="index.html">
+                            <span class="align-middle"><img class="bg" width="250" src="~/_Images/Vaccs/WashHands.jpg" alt="#" /></span>
+                            <h3>Wash your hands regularly </h3>
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <a class="sidebar-brand" href="index.html">
+                            <span class="align-middle"><img class="bg" width="250" src="~/_Images/Vaccs/Vacc.jpg" alt="#" /></span>
+                            <h3>Learn how to get vaccinated </h3>
+                        </a>
+                    </div>
+
+                   
+        
+                </div>
+ 
+        </form>
+    </div>
+
     <br />
     @if (Model.Count() > 0)
     {

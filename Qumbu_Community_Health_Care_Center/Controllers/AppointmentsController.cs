@@ -59,6 +59,11 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
                 TempData["Success"] = "Successfully Queued";
                 return RedirectToAction("Queue");
             }
+            ViewBag.Patient = (from U in Context.Users
+                               join UR in Context.UserRoles on U.Id equals UR.UserId
+                               join R in Context.Roles on UR.RoleId equals R.Id
+                               where R.Name == "Patient"
+                               select U).ToList();
             ViewBag.queue = Context.Queue.Where(a => a.PatientID == user).ToList();
             ViewData["PatientID"] = new SelectList(Context.Users, "Id", "Id", queue.PatientID);
             return View(queue);
@@ -66,6 +71,11 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
 		public async Task<IActionResult> All_Appointments()
         {
             var applicationDbContext = Context.Appointments.Include(a => a.MainUser).ToList();
+            ViewBag.Patient = (from U in Context.Users
+                               join UR in Context.UserRoles on U.Id equals UR.UserId
+                               join R in Context.Roles on UR.RoleId equals R.Id
+                               where R.Name == "Patient"
+                               select U).ToList();
             return View(applicationDbContext);
         }
         public async Task<IActionResult> Report()
@@ -98,6 +108,11 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
         {
 
             var applicationDbContext = Context.Appointments.Include(a => a.MainUser).Where(a => a.Purpose == "Prenatal").ToList();
+            ViewBag.Patient = (from U in Context.Users
+                               join UR in Context.UserRoles on U.Id equals UR.UserId
+                               join R in Context.Roles on UR.RoleId equals R.Id
+                               where R.Name == "Patient"
+                               select U).ToList();
             return View(applicationDbContext);
         }
 
@@ -161,6 +176,11 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
                 }
                 return RedirectToAction("Create");
             }
+            ViewBag.Patient = (from U in Context.Users
+                               join UR in Context.UserRoles on U.Id equals UR.UserId
+                               join R in Context.Roles on UR.RoleId equals R.Id
+                               where R.Name == "Patient"
+                               select U).ToList();
             ViewBag.App = Context.Appointments.Where(a => a.PatientID == user).ToList();
             ViewData["PatientID"] = new SelectList(Context.Users, "Id", "Id", appointments.PatientID);
             return View(appointments);
@@ -266,6 +286,11 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
                 }
                 return RedirectToAction("All_Appointments");
             }
+            ViewBag.Patient = (from U in Context.Users
+                               join UR in Context.UserRoles on U.Id equals UR.UserId
+                               join R in Context.Roles on UR.RoleId equals R.Id
+                               where R.Name == "Patient"
+                               select U).ToList();
             ViewData["PatientID"] = new SelectList(Context.Users, "Id", "Id", appointments.PatientID);
             return View(appointments);
         }
@@ -350,6 +375,11 @@ namespace Qumbu_Community_Health_Care_Center.Controllers
                     //}
                 }
             }
+            ViewBag.Patient = (from U in Context.Users
+                               join UR in Context.UserRoles on U.Id equals UR.UserId
+                               join R in Context.Roles on UR.RoleId equals R.Id
+                               where R.Name == "Patient"
+                               select U).ToList();
             ViewData["PatientID"] = new SelectList(Context.Users, "Id", "Id", appointments.PatientID);
             return View(appointments);
         }
